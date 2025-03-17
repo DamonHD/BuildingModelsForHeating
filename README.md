@@ -4,6 +4,9 @@ Models of building for heating simulations and similar.
 
 This includes models for EnergyPlus(TM).
 
+Models here are in various states of usefulness and polish;
+please read the documentation accompanying each.
+
 These models are intended to explore optimisation of space heating,
 such as with heat pumps and micro-zoning with TRVs,
 for a UK / northern European climate in particular.
