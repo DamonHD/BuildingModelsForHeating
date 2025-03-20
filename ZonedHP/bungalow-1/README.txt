@@ -28,3 +28,8 @@ This is designed to run in EnergyPlus V24.2 or newer.
 !
 ! See https://energyplus.readthedocs.io/en/latest/acknowledgments/acknowledgments.html
 ! NOTICE: The U.S. Government is granted for itself and others acting on its behalf a paid-up, nonexclusive, irrevocable, worldwide license in this data to reproduce, prepare derivative works, and perform publicly and display publicly. Beginning five (5) years after permission to assert copyright is granted, subject to two possible five year renewals, the U.S. Government is granted for itself and others acting on its behalf a paid-up, non-exclusive, irrevocable worldwide license in this data to reproduce, prepare derivative works, distribute copies to the public, perform publicly and display publicly, and to permit others to do so.
+
+Note that GB weather files are available from:
+    https://energyplus.net/weather-region/europe_wmo_region_6/GBR
+The licence does not apparently allow redistribution:
+    https://energyplus.net/assets/nrel_custom/weather/ashrae_license_agreement.txt
