@@ -6,4 +6,4 @@ if [ "" = "${WEATHERDIR}" ]; then
     exit 1
 fi
 
-exec /Applications/EnergyPlus-24-2-0/energyplus -d out-2-GBRBirm -w ${WEATHERDIR}/GBR_Birmingham.035340_IWEC.epw bungalow-1.idf
+exec /Applications/EnergyPlus-24-2-0/energyplus -d out-GBRBirm -w ${WEATHERDIR}/GBR_Birmingham.035340_IWEC.epw bungalow-1.idf
