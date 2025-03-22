@@ -1,5 +1,7 @@
 ! bungalow-1.idf
 !
+! Initial approximation to initial design-day bungalow from 10.3390/su16114710 paper.
+!
 ! IN PROGRESS
 !
 ! Some features of 10.3390/su16114710 bungalow, Salford EH1 weather.
@@ -511,7 +513,6 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
   Output:Constructions,Constructions;
 
   Output:VariableDictionary,Regular;
-
 
 
 ! DHD Extras
