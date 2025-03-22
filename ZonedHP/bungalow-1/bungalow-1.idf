@@ -179,7 +179,8 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
 
 !-   ===========  ALL OBJECTS IN CLASS: GROUNDTEMPERATURES ===========
 
-  Site:GroundTemperature:BuildingSurface,18.3,18.2,18.3,18.4,20.1,22.0,22.3,22.5,22.5,20.7,18.9,18.5;
+! DHD20250322: ground temperatures like EH1 model.
+  Site:GroundTemperature:BuildingSurface,18,18,18,18,18,18,18,18,18,18,18,18;
 
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
 
