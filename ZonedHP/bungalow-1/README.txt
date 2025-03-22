@@ -20,6 +20,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 ! Floor Area:        64 m2
 ! No internal walls / partitions.
 ! Number of Stories: 1
+! Computed effective wall and roof U value (EWRU): 0.61 W/m2K
 
 ! Acknowledgements:
 !
