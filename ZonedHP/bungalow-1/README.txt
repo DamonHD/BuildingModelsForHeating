@@ -33,3 +33,9 @@ Note that GB weather files are available from:
     https://energyplus.net/weather-region/europe_wmo_region_6/GBR
 The licence does not apparently allow redistribution:
     https://energyplus.net/assets/nrel_custom/weather/ashrae_license_agreement.txt
+
+
+NOTES
+=====
+
+DHD20250322: Total Site Energy now 15.76GJ (at 21C heat setpoint), was 11.44GJ.
