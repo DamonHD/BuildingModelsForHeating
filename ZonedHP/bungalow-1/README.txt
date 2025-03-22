@@ -12,6 +12,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 ! hart-davis2024zone bungalow parameters:
 !     IWL (Internal Wall Length) = 4m, thus whole external wall length 8m.
 !     IWH (Internal Wall Height) = 2.3m
+!     EWRU (Effective Wall and Roof U-value): 0.61 W/m2K
 !
 ! Building: Fictional 1 zone building with resistive walls and flat roof.
 !
@@ -20,7 +21,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 ! Floor Area:        64 m2
 ! No internal walls / partitions.
 ! Number of Stories: 1
-! Computed effective wall and roof U value (EWRU): 0.61 W/m2K  (1.31 ???)
+! Computed effective wall and roof U value (EWRU): 0.61 W/m2K
 
 ! Acknowledgements:
 !
