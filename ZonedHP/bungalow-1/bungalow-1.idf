@@ -492,7 +492,7 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
 
   Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
 
-  Output:Variable,*,Zone Air System Sensible Cooling Energy,Hourly;
+  ! Output:Variable,*,Zone Air System Sensible Cooling Energy,Hourly;
 
   Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
 
@@ -502,7 +502,7 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
 
   Output:Meter,DistrictHeatingWater:Facility,Hourly;
 
-  Output:Meter,DistrictCooling:Facility,Hourly;
+  ! Output:Meter,DistrictCooling:Facility,Hourly;
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT ===========
 
