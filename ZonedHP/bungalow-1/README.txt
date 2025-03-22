@@ -40,3 +40,4 @@ NOTES
 
 DHD20250322: Total Site Energy now 15.76GJ (at 21C heat setpoint), was 11.44GJ.
 DHD20250322: TSE at 24.96GJ once ground temperatures updated.
+DHD20250322: Added EH1 shallow and deep ground temps: no TSE change.
