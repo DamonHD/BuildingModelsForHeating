@@ -427,6 +427,22 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
     For: AllDays,            !- Field 2
     Until: 24:00,24;         !- Field 3
 
+  ! DHD addition: target 21C temperature continuous
+  Schedule:Compact,
+    ALWAYS 21,               !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,21;         !- Field 3
+
+  ! DHD addition: type 1 (single heat only) setpoint.
+  Schedule:Compact,
+    ALWAYS 1,                !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1;          !- Field 3
+
 !-   ===========  ALL OBJECTS IN CLASS: CONTROLLED ZONE EQUIP CONFIGURATION ===========
 
   ZoneHVAC:EquipmentConnections,
@@ -482,19 +498,27 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE CONTROL:THERMOSTATIC ===========
 
+!  ZoneControl:Thermostat,
+!    ZONE ONE Thermostat,     !- Name
+!    ZONE ONE,                !- Zone or ZoneList Name
+!    ALWAYS 4,                !- Control Type Schedule Name
+!    ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+!    Office Thermostat Dual SP Control;  !- Control 1 Name
+!  ThermostatSetpoint:DualSetpoint,
+!    Office Thermostat Dual SP Control,  !- Name
+!    ALWAYS 20,               !- Heating Setpoint Temperature Schedule Name
+!    ALWAYS 24;               !- Cooling Setpoint Temperature Schedule Name
+
+  ! Single set point heating.
   ZoneControl:Thermostat,
     ZONE ONE Thermostat,     !- Name
     ZONE ONE,                !- Zone or ZoneList Name
-    ALWAYS 4,                !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
-    Office Thermostat Dual SP Control;  !- Control 1 Name
-
-!-   ===========  ALL OBJECTS IN CLASS: DUAL SETPOINT WITH DEADBAND ===========
-
-  ThermostatSetpoint:DualSetpoint,
-    Office Thermostat Dual SP Control,  !- Name
-    ALWAYS 20,               !- Heating Setpoint Temperature Schedule Name
-    ALWAYS 24;               !- Cooling Setpoint Temperature Schedule Name
+    ALWAYS 1,                !- Control Type Schedule Name
+    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
+    Office Thermostat Heat SP Control;  !- Control 1 Name
+  ThermostatSetpoint:SingleHeating,
+    Office Thermostat Heat SP Control,  !- Name
+    ALWAYS 21;               !- Cooling Setpoint Temperature Schedule Name
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
 
