@@ -187,39 +187,6 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
 
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
 
-  Material,
-    PLASTERBOARD-1,          !- Name
-    MediumSmooth,            !- Roughness
-    0.01200,                 !- Thickness {m}
-    0.16000,                 !- Conductivity {W/m-K}
-    950.000,                 !- Density {kg/m3}
-    840.00,                  !- Specific Heat {J/kg-K}
-    0.900000,                !- Thermal Absorptance
-    0.600000,                !- Solar Absorptance
-    0.600000;                !- Visible Absorptance
-
-  Material,
-    FIBERGLASS QUILT-1,      !- Name
-    Rough,                   !- Roughness
-    0.066,                   !- Thickness {m}
-    0.040,                   !- Conductivity {W/m-K}
-    12.000,                  !- Density {kg/m3}
-    840.00,                  !- Specific Heat {J/kg-K}
-    0.900000,                !- Thermal Absorptance
-    0.600000,                !- Solar Absorptance
-    0.600000;                !- Visible Absorptance
-
-  Material,
-    WOOD SIDING-1,           !- Name
-    Rough,                   !- Roughness
-    0.00900,                 !- Thickness {m}
-    0.14000,                 !- Conductivity {W/m-K}
-    530.000,                 !- Density {kg/m3}
-    900.00,                  !- Specific Heat {J/kg-K}
-    0.900000,                !- Thermal Absorptance
-    0.600000,                !- Solar Absorptance
-    0.600000;                !- Visible Absorptance
-
 ! DHD20250330: low-thermal-capacity (~fibreglass quit) insulation adjusted to achieve 0.61 STDEWR U-value.
   Material,
     STDEWR INSULATION,       !- Name
@@ -232,27 +199,17 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
     0.0000001,               !- Solar Absorptance
     0.0000001;               !- Visible Absorptance
 
+! DHD20250330: low-thermal-capacity external surface based on roofing material.
   Material,
-    ROOF DECK,               !- Name
+    EXTERNAL SURFACE,        !- Name
     Rough,                   !- Roughness
     0.01900,                 !- Thickness {m}
     0.14000,                 !- Conductivity {W/m-K}
     530.000,                 !- Density {kg/m3}
-    900.00,                  !- Specific Heat {J/kg-K}
-    0.900000,                !- Thermal Absorptance
-    0.600000,                !- Solar Absorptance
-    0.600000;                !- Visible Absorptance
-
-!  Material,
-!    HF-C5,                   !- Name
-!    MediumRough,             !- Roughness
-!    0.1015000,               !- Thickness {m}
-!    1.729600,                !- Conductivity {W/m-K}
-!    2243.000,                !- Density {kg/m3}
-!    837.0000,                !- Specific Heat {J/kg-K}
-!    0.9000000,               !- Thermal Absorptance
-!    0.6500000,               !- Solar Absorptance
-!    0.6500000;               !- Visible Absorptance
+    100.00,                  !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
 
 ! DH20250322: (near) zero U-value, (near) zero thermal capacity magic flooring based on HF-C5.
   Material,
@@ -271,14 +228,8 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
 ! DHD20250330: roof and wall with computed U-value and low/no thermal mass.
   Construction,
     STDEWR,                  !- Name
-    ROOF DECK,               !- Outside Layer
+    EXTERNAL SURFACE,        !- Outside Layer
     STDEWR INSULATION;       !- Layer 2
-
-  Construction,
-    LTWALL,                  !- Name
-    WOOD SIDING-1,           !- Outside Layer
-    FIBERGLASS QUILT-1,      !- Layer 2
-    PLASTERBOARD-1;          !- Layer 3
 
   Construction,
     LTFLOOR,                 !- Name
@@ -309,7 +260,7 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
   BuildingSurface:Detailed,
     SURFACE NORTH,           !- Name
     Wall,                    !- Surface Type
-    LTWALL,                  !- Construction Name
+    STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -326,7 +277,7 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
   BuildingSurface:Detailed,
     ZONE SURFACE EAST,       !- Name
     Wall,                    !- Surface Type
-    LTWALL,                  !- Construction Name
+    STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -343,7 +294,7 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
   BuildingSurface:Detailed,
     ZONE SURFACE SOUTH,      !- Name
     Wall,                    !- Surface Type
-    LTWALL,                  !- Construction Name
+    STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -360,7 +311,7 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
   BuildingSurface:Detailed,
     ZONE SURFACE WEST,       !- Name
     Wall,                    !- Surface Type
-    LTWALL,                  !- Construction Name
+    STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
