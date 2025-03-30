@@ -264,7 +264,7 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
 !    0.6500000,               !- Solar Absorptance
 !    0.6500000;               !- Visible Absorptance
 
-  ! DH20250322: (near) zero U-value, (near) zero thermal capacity magic flooring based on HF-C5.
+! DH20250322: (near) zero U-value, (near) zero thermal capacity magic flooring based on HF-C5.
   Material,
     ZEROU,                   !- Name
     MediumRough,             !- Roughness
@@ -287,6 +287,13 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
   Construction,
     LTFLOOR,                 !- Name
     ZEROU;                   !- Outside Layer
+
+! DHD20250330: roof and wall with computed U-value and low/no thermal mass.
+  Construction,
+    STDEWR,                  !- Name
+    ROOF DECK,               !- Outside Layer
+    FIBERGLASS QUILT-2,      !- Layer 2
+    PLASTERBOARD-2;          !- Layer 3
 
   Construction,
     LTROOF,                  !- Name
@@ -404,7 +411,7 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
   BuildingSurface:Detailed,
     ZONE SURFACE ROOF,       !- Name
     Roof,                    !- Surface Type
-    LTROOF,                  !- Construction Name
+    STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
