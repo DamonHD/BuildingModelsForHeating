@@ -36,6 +36,8 @@ Note that GB weather files are available from:
 The licence does not apparently allow redistribution:
     https://energyplus.net/assets/nrel_custom/weather/ashrae_license_agreement.txt
 
+Note that Construction CTF shows U-value (ThermalConductance) for each construction
+
 
 NOTES
 =====
@@ -44,3 +46,4 @@ DHD20250322: Total Site Energy now 15.76GJ (at 21C heat setpoint), was 11.44GJ.
 DHD20250322: TSE at 24.96GJ once ground temperatures updated.
 DHD20250322: TSE at 16.68GJ once floor made near lossless.
 DHD20250322: Added EH1 shallow and deep ground temps: no TSE change.
+DHD20250320: Adjusted STDEWR so Construction CTF shows U-value (ThermalConductance) EWRU of 0.61W/m2K.
