@@ -278,6 +278,13 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
 
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
 
+! DHD20250330: roof and wall with computed U-value and low/no thermal mass.
+  Construction,
+    STDEWR,                  !- Name
+    ROOF DECK,               !- Outside Layer
+    FIBERGLASS QUILT-2,      !- Layer 2
+    PLASTERBOARD-2;          !- Layer 3
+
   Construction,
     LTWALL,                  !- Name
     WOOD SIDING-1,           !- Outside Layer
@@ -288,18 +295,11 @@ SizingPeriod:DesignDay, Winter Design Day in Salford Energy House 1.0 (01-01:31-
     LTFLOOR,                 !- Name
     ZEROU;                   !- Outside Layer
 
-! DHD20250330: roof and wall with computed U-value and low/no thermal mass.
-  Construction,
-    STDEWR,                  !- Name
-    ROOF DECK,               !- Outside Layer
-    FIBERGLASS QUILT-2,      !- Layer 2
-    PLASTERBOARD-2;          !- Layer 3
-
-  Construction,
-    LTROOF,                  !- Name
-    ROOF DECK,               !- Outside Layer
-    FIBERGLASS QUILT-2,      !- Layer 2
-    PLASTERBOARD-2;          !- Layer 3
+!  Construction,
+!    LTROOF,                  !- Name
+!    ROOF DECK,               !- Outside Layer
+!    FIBERGLASS QUILT-2,      !- Layer 2
+!    PLASTERBOARD-2;          !- Layer 3
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
 
