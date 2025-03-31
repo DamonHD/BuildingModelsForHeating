@@ -48,3 +48,4 @@ DHD20250322: TSE at 16.68GJ once floor made near lossless.
 DHD20250322: Added EH1 shallow and deep ground temps: no TSE change.
 DHD20250330: Adjusted STDEWR so Construction CTF shows U-value (ThermalConductance) EWRU of 0.61W/m2K.
 DHD20250330: Roof and walls now STDEWR: TSE now 21.94GJ (6094kWh, ~696W), vs London EGLL 2018 AAAA 719W.
+DHD20250331: Adjusted terrain to Suburbs (from Country) and TSE fell marginally to 21.72GJ.
