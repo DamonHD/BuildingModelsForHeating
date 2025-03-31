@@ -36,7 +36,10 @@ Note that GB weather files are available from:
 The licence does not apparently allow redistribution:
     https://energyplus.net/assets/nrel_custom/weather/ashrae_license_agreement.txt
 
-Note that Construction CTF shows U-value (ThermalConductance) for each construction
+Note that Construction CTF shows U-value (ThermalConductance) for each construction.
+
+See some basics of the IDF file:
+    https://bigladdersoftware.com/epx/docs/9-2/input-output-reference/group-simulation-parameters.html
 
 
 NOTES
@@ -47,5 +50,5 @@ DHD20250322: TSE at 24.96GJ once ground temperatures updated.
 DHD20250322: TSE at 16.68GJ once floor made near lossless.
 DHD20250322: Added EH1 shallow and deep ground temps: no TSE change.
 DHD20250330: Adjusted STDEWR so Construction CTF shows U-value (ThermalConductance) EWRU of 0.61W/m2K.
-DHD20250330: Roof and walls now STDEWR: TSE now 21.94GJ (6094kWh, ~696W), vs London EGLL 2018 AAAA 719W.
+DHD20250330: Roof and walls now STDEWR: TSE now 21.94GJ (6094kWh, ~696W), vs paper's London EGLL 2018 AAAA 719W.
 DHD20250331: Adjusted terrain to Suburbs (from Country) and TSE fell marginally to 21.72GJ.
