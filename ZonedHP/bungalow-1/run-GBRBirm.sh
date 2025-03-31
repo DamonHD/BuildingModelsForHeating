@@ -1,5 +1,5 @@
 #!/bin/sh
-# bungalow-1.idf
+# Run bungalow-1.idf for a whole year with UK representative weather.
 
 if [ "" = "${WEATHERDIR}" ]; then
     echo "ERROR: please set WEATHERDIR" 1>&2
