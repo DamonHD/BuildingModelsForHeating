@@ -14,6 +14,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 !     IWH (Internal Wall Height) = 2.3m
 !     EWRU (Effective Wall and Roof U-value): 0.61 W/m2K
 !     Wall and roof surface: 137.6m2
+!     Floor non-conducting
 !     Interior and exterior temperatures at design conditions: 21C / -3C
 !     Expected heat demand at design conditions: 2000W
 !
