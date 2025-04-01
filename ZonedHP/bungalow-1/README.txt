@@ -13,6 +13,9 @@ This is designed to run in EnergyPlus V24.2 or newer.
 !     IWL (Internal Wall Length) = 4m, thus whole external wall length 8m.
 !     IWH (Internal Wall Height) = 2.3m
 !     EWRU (Effective Wall and Roof U-value): 0.61 W/m2K
+!     Wall and roof surface: 137.6m2
+!     Interior and exterior temperatures at design conditions: 21C / -3C
+!     Expected heat demand at design conditions: 2000W
 !
 ! Building: Fictional 1 zone building with resistive walls and flat roof.
 !
@@ -58,3 +61,4 @@ DHD20250401: Annual and Peak Values - Other -> (eg) Heating:EnergyTransfer max o
 DHD20250401: adjusted winter DD to 'UK' -3C, no wind, Heating:EnergyTransfer max on 15 Jan is 1309.69W.
 DHD20250401: simplified wall/roof to one layer, Heating:EnergyTransfer max on 15 Jan is 1400.14W.
 DHD20250401: roof set to Surface Type 'Wall' for same film coefficients as walls: U-Factor with Film now 0.61W/m2K.
+DHD20250401: manual calc of heat demand suggests 2014W, not 1400W!  (Ext -3C, int 21C, 137.6m^2 @ 0.61W/m2K.)
