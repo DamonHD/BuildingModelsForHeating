@@ -6,7 +6,7 @@ https://www.mdpi.com/2071-1050/16/11/4710
 
 This is designed to run in EnergyPlus V24.2 or newer.
 
-! Some features of 10.3390/su16114710 bungalow, Salford EH1 weather.
+! Some features of 10.3390/su16114710 bungalow, mid-UK / Salford EH1 / Birmingham weather.
 ! NOTE: Salford location and design day lines copied in from EH1 model.
 !
 ! hart-davis2024zone bungalow parameters:
@@ -63,3 +63,4 @@ DHD20250401: adjusted winter DD to 'UK' -3C, no wind, Heating:EnergyTransfer max
 DHD20250401: simplified wall/roof to one layer, Heating:EnergyTransfer max on 15 Jan is 1400.14W.
 DHD20250401: roof set to Surface Type 'Wall' for same film coefficients as walls: U-Factor with Film now 0.61W/m2K.
 DHD20250401: manual calc of heat demand suggests 2014W, not 1400W!  (Ext -3C, int 21C, 137.6m^2 @ 0.61W/m2K.)
+DHD20250401: TSE now 23.31GJ (6475kWh, ~739W), vs paper's London EGLL 2018 AAAA 719W.
