@@ -331,9 +331,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     8.00,0,0;  !- X,Y,Z ==> Vertex 4 {m}
 
+! DHD20250401: Surface Type 'Wall' to get same film coefficients as Wall.
   BuildingSurface:Detailed,
     ZONE SURFACE ROOF,       !- Name
-    Roof,                    !- Surface Type
+    Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
     ,                        !- Space Name

@@ -57,3 +57,4 @@ DHD20250331: adjusted terrain to Suburbs (from Country) and TSE fell marginally 
 DHD20250401: Annual and Peak Values - Other -> (eg) Heating:EnergyTransfer max on 15 Jan is 1520.92W.
 DHD20250401: adjusted winter DD to 'UK' -3C, no wind, Heating:EnergyTransfer max on 15 Jan is 1309.69W.
 DHD20250401: simplified wall/roof to one layer, Heating:EnergyTransfer max on 15 Jan is 1400.14W.
+DHD20250401: roof set to Surface Type 'Wall' for same film coefficients as walls: U-Factor with Film now 0.61W/m2K.
