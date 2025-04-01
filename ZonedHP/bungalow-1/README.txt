@@ -40,6 +40,8 @@ Note that Construction CTF shows U-value (ThermalConductance) for each construct
 
 See some basics of the IDF file:
     https://bigladdersoftware.com/epx/docs/9-2/input-output-reference/group-simulation-parameters.html
+    
+When running design day, "Annual and Peak Values - Other" maximum seems useful.
 
 
 NOTES
@@ -52,3 +54,4 @@ DHD20250322: Added EH1 shallow and deep ground temps: no TSE change.
 DHD20250330: Adjusted STDEWR so Construction CTF shows U-value (ThermalConductance) EWRU of 0.61W/m2K.
 DHD20250330: Roof and walls now STDEWR: TSE now 21.94GJ (6094kWh, ~696W), vs paper's London EGLL 2018 AAAA 719W.
 DHD20250331: Adjusted terrain to Suburbs (from Country) and TSE fell marginally to 21.72GJ.
+DHD20250401: Annual and Peak Values - Other -> (eg) Heating:EnergyTransfer max on 15 Jan is 1520.92W.
