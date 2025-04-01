@@ -56,3 +56,4 @@ DHD20250330: roof and walls now STDEWR: TSE now 21.94GJ (6094kWh, ~696W), vs pap
 DHD20250331: adjusted terrain to Suburbs (from Country) and TSE fell marginally to 21.72GJ.
 DHD20250401: Annual and Peak Values - Other -> (eg) Heating:EnergyTransfer max on 15 Jan is 1520.92W.
 DHD20250401: adjusted winter DD to 'UK' -3C, no wind, Heating:EnergyTransfer max on 15 Jan is 1309.69W.
+DHD20250401: simplified wall/roof to one layer, Heating:EnergyTransfer max on 15 Jan is 1400.14W.
