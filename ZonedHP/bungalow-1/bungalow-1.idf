@@ -479,4 +479,4 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     HTML;                    !- Column Separator
 
   Output:Table:SummaryReports,
-    AllSummary;              !- Report 1 Name
+    AllSummaryAndSizingPeriod;

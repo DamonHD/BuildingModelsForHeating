@@ -42,11 +42,9 @@ The licence does not apparently allow redistribution:
 
 Note that Construction CTF shows U-value (ThermalConductance) for each construction.
 
-See some basics of the IDF file:
+Some basics of the IDF file:
     https://bigladdersoftware.com/epx/docs/9-2/input-output-reference/group-simulation-parameters.html
     
-When running design day, "Annual and Peak Values - Other" maximum seems useful.
-
 
 NOTES
 =====
@@ -71,3 +69,4 @@ DHD20250407: Zone Air System Sensible Heating Energy [J] agrees with above.
 DHD20250407: Also ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W].
 DHD20250407: verified no solar gains with: Surface Outside Face Solar Radiation Heat Gain Rate [W].
 DHD20250407: surface heat losses: Surface Average Face Conduction Heat Transfer Rate [W]: 4x183+667 winter dd.
+DHD20250407: trying Output:Table:SummaryReports,AllSummaryAndSizingPeriod vs AllSummary.
