@@ -64,3 +64,7 @@ DHD20250401: simplified wall/roof to one layer, Heating:EnergyTransfer max on 15
 DHD20250401: roof set to Surface Type 'Wall' for same film coefficients as walls: U-Factor with Film now 0.61W/m2K.
 DHD20250401: manual calc of heat demand suggests 2014W, not 1400W!  (Ext -3C, int 21C, 137.6m^2 @ 0.61W/m2K.)
 DHD20250401: TSE now 23.31GJ (6475kWh, ~739W), vs paper's London EGLL 2018 AAAA 719W.
+DHD20250407: added extra/final 'Yes' to SimulationControl to try to enable zone sizing.
+DHD20250407: read: https://unmethours.com/question/13245/energyplus-output-of-heat-load/
+DHD20250407: added to variables output to eplusout.eso Zone Predicted Sensible Load to Setpoint Heat Transfer Rate [W] (shows 1400W winter dd),]
+DHD20250407: Zone Air System Sensible Heating Energy [J] agrees with above.

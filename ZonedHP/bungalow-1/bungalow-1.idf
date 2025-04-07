@@ -74,7 +74,8 @@ SimulationControl,
    Yes,                                           !- Do the system sizing calculation
    Yes,                                           !- Do the plant sizing calculation
    Yes,                                           !- Do the design day calculation
-   Yes;                                           !- Do the weather file calculation
+   Yes,                                           !- Do the weather file calculation
+   Yes;                                           ! Zone sizing.
 
 
 !-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
@@ -447,6 +448,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
 
   Output:Variable,*,Zone Air Temperature,Hourly;
+  
+ ! DHD20250407: capturing heat demand in W.
+ Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT METER ===========
 
