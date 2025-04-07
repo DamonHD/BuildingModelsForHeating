@@ -449,9 +449,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
   Output:Variable,*,Zone Air Temperature,Hourly;
   
- ! DHD20250407: capturing heat demand in W.
+ ! DHD20250407: heat demand in W.
  Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
  Output:Variable,*,Zone Ideal Loads Zone Total Heating Rate, Hourly;
+ ! DHD20250407: solar gains in W; should be all zero.
+ !Output:Variable,*,Surface Outside Face Solar Radiation Heat Gain Rate,Hourly;
+ ! DHD20250407: heat flows in W.
+ Output:Variable,*,Surface Average Face Conduction Heat Transfer Rate,Hourly;
+ 
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT METER ===========
 

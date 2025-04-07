@@ -69,3 +69,5 @@ DHD20250407: read: https://unmethours.com/question/13245/energyplus-output-of-he
 DHD20250407: added to variables output to eplusout.eso Zone Predicted Sensible Load to Setpoint Heat Transfer Rate [W] (shows 1400W winter dd),]
 DHD20250407: Zone Air System Sensible Heating Energy [J] agrees with above.
 DHD20250407: Also ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W].
+DHD20250407: verified no solar gains with: Surface Outside Face Solar Radiation Heat Gain Rate [W].
+DHD20250407: surface heat losses: Surface Average Face Conduction Heat Transfer Rate [W].
