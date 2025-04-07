@@ -1,0 +1,207 @@
+Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2025.04.07 13:38
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Meters Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Meters Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Meters Requested
+6,1,Calendar Year of Simulation[] ! When Annual Meters Requested
+152,1,DistrictHeatingWater:Facility [J] !Hourly
+End of Data Dictionary
+1,SUMMER DESIGN DAY IN SALFORD ENERGY HOUSE 1.0 (01-01:31-12) JUN HVAC Sizing Pass 1,  53.35,  -2.28,   0.00,  69.00
+2,1, 6,15, 1, 1, 0.00,60.00,SummerDesignDay
+152,310090.07467012573
+2,1, 6,15, 1, 2, 0.00,60.00,SummerDesignDay
+152,375194.37382696
+2,1, 6,15, 1, 3, 0.00,60.00,SummerDesignDay
+152,421542.6365643195
+2,1, 6,15, 1, 4, 0.00,60.00,SummerDesignDay
+152,463578.3447447914
+2,1, 6,15, 1, 5, 0.00,60.00,SummerDesignDay
+152,496968.5526770861
+2,1, 6,15, 1, 6, 0.00,60.00,SummerDesignDay
+152,494159.68705730507
+2,1, 6,15, 1, 7, 0.00,60.00,SummerDesignDay
+152,419597.09773912316
+2,1, 6,15, 1, 8, 0.00,60.00,SummerDesignDay
+152,234877.36695595126
+2,1, 6,15, 1, 9, 0.00,60.00,SummerDesignDay
+152,31329.946511647413
+2,1, 6,15, 1,10, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,11, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,12, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,13, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,14, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,15, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,16, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,17, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,18, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,19, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,20, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,21, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,22, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,23, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,24, 0.00,60.00,SummerDesignDay
+152,181673.57871556573
+1,WINTER DESIGN DAY IN (MID) UK HVAC Sizing Pass 1,  53.35,  -2.28,   0.00,  69.00
+2,1, 1,15, 0, 1, 0.00,60.00,WinterDesignDay
+152,5040486.783774225
+2,1, 1,15, 0, 2, 0.00,60.00,WinterDesignDay
+152,5040486.783801347
+2,1, 1,15, 0, 3, 0.00,60.00,WinterDesignDay
+152,5040486.783826396
+2,1, 1,15, 0, 4, 0.00,60.00,WinterDesignDay
+152,5040486.783849537
+2,1, 1,15, 0, 5, 0.00,60.00,WinterDesignDay
+152,5040486.783870922
+2,1, 1,15, 0, 6, 0.00,60.00,WinterDesignDay
+152,5040486.783890673
+2,1, 1,15, 0, 7, 0.00,60.00,WinterDesignDay
+152,5040486.783908926
+2,1, 1,15, 0, 8, 0.00,60.00,WinterDesignDay
+152,5040486.783925787
+2,1, 1,15, 0, 9, 0.00,60.00,WinterDesignDay
+152,5040486.783941361
+2,1, 1,15, 0,10, 0.00,60.00,WinterDesignDay
+152,5040486.783955748
+2,1, 1,15, 0,11, 0.00,60.00,WinterDesignDay
+152,5040486.783969044
+2,1, 1,15, 0,12, 0.00,60.00,WinterDesignDay
+152,5040486.783981325
+2,1, 1,15, 0,13, 0.00,60.00,WinterDesignDay
+152,5040486.783992665
+2,1, 1,15, 0,14, 0.00,60.00,WinterDesignDay
+152,5040486.78400315
+2,1, 1,15, 0,15, 0.00,60.00,WinterDesignDay
+152,5040486.784012834
+2,1, 1,15, 0,16, 0.00,60.00,WinterDesignDay
+152,5040486.784021776
+2,1, 1,15, 0,17, 0.00,60.00,WinterDesignDay
+152,5040486.784030041
+2,1, 1,15, 0,18, 0.00,60.00,WinterDesignDay
+152,5040486.784037677
+2,1, 1,15, 0,19, 0.00,60.00,WinterDesignDay
+152,5040486.78404473
+2,1, 1,15, 0,20, 0.00,60.00,WinterDesignDay
+152,5040486.784051248
+2,1, 1,15, 0,21, 0.00,60.00,WinterDesignDay
+152,5040486.784057266
+2,1, 1,15, 0,22, 0.00,60.00,WinterDesignDay
+152,5040486.78406283
+2,1, 1,15, 0,23, 0.00,60.00,WinterDesignDay
+152,5040486.784067964
+2,1, 1,15, 0,24, 0.00,60.00,WinterDesignDay
+152,5040486.784072713
+1,SUMMER DESIGN DAY IN SALFORD ENERGY HOUSE 1.0 (01-01:31-12) JUN,  53.35,  -2.28,   0.00,  69.00
+2,1, 6,15, 1, 1, 0.00,60.00,SummerDesignDay
+152,310090.07467012573
+2,1, 6,15, 1, 2, 0.00,60.00,SummerDesignDay
+152,375194.37382696
+2,1, 6,15, 1, 3, 0.00,60.00,SummerDesignDay
+152,421542.6365643195
+2,1, 6,15, 1, 4, 0.00,60.00,SummerDesignDay
+152,463578.3447447914
+2,1, 6,15, 1, 5, 0.00,60.00,SummerDesignDay
+152,496968.5526770861
+2,1, 6,15, 1, 6, 0.00,60.00,SummerDesignDay
+152,494159.68705730507
+2,1, 6,15, 1, 7, 0.00,60.00,SummerDesignDay
+152,419597.09773912316
+2,1, 6,15, 1, 8, 0.00,60.00,SummerDesignDay
+152,234877.36695595126
+2,1, 6,15, 1, 9, 0.00,60.00,SummerDesignDay
+152,31329.946511647413
+2,1, 6,15, 1,10, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,11, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,12, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,13, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,14, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,15, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,16, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,17, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,18, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,19, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,20, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,21, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,22, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,23, 0.00,60.00,SummerDesignDay
+152,0.0
+2,1, 6,15, 1,24, 0.00,60.00,SummerDesignDay
+152,181673.57871556573
+1,WINTER DESIGN DAY IN (MID) UK,  53.35,  -2.28,   0.00,  69.00
+2,1, 1,15, 0, 1, 0.00,60.00,WinterDesignDay
+152,5040486.783774225
+2,1, 1,15, 0, 2, 0.00,60.00,WinterDesignDay
+152,5040486.783801347
+2,1, 1,15, 0, 3, 0.00,60.00,WinterDesignDay
+152,5040486.783826396
+2,1, 1,15, 0, 4, 0.00,60.00,WinterDesignDay
+152,5040486.783849537
+2,1, 1,15, 0, 5, 0.00,60.00,WinterDesignDay
+152,5040486.783870922
+2,1, 1,15, 0, 6, 0.00,60.00,WinterDesignDay
+152,5040486.783890673
+2,1, 1,15, 0, 7, 0.00,60.00,WinterDesignDay
+152,5040486.783908926
+2,1, 1,15, 0, 8, 0.00,60.00,WinterDesignDay
+152,5040486.783925787
+2,1, 1,15, 0, 9, 0.00,60.00,WinterDesignDay
+152,5040486.783941361
+2,1, 1,15, 0,10, 0.00,60.00,WinterDesignDay
+152,5040486.783955748
+2,1, 1,15, 0,11, 0.00,60.00,WinterDesignDay
+152,5040486.783969044
+2,1, 1,15, 0,12, 0.00,60.00,WinterDesignDay
+152,5040486.783981325
+2,1, 1,15, 0,13, 0.00,60.00,WinterDesignDay
+152,5040486.783992665
+2,1, 1,15, 0,14, 0.00,60.00,WinterDesignDay
+152,5040486.78400315
+2,1, 1,15, 0,15, 0.00,60.00,WinterDesignDay
+152,5040486.784012834
+2,1, 1,15, 0,16, 0.00,60.00,WinterDesignDay
+152,5040486.784021776
+2,1, 1,15, 0,17, 0.00,60.00,WinterDesignDay
+152,5040486.784030041
+2,1, 1,15, 0,18, 0.00,60.00,WinterDesignDay
+152,5040486.784037677
+2,1, 1,15, 0,19, 0.00,60.00,WinterDesignDay
+152,5040486.78404473
+2,1, 1,15, 0,20, 0.00,60.00,WinterDesignDay
+152,5040486.784051248
+2,1, 1,15, 0,21, 0.00,60.00,WinterDesignDay
+152,5040486.784057266
+2,1, 1,15, 0,22, 0.00,60.00,WinterDesignDay
+152,5040486.78406283
+2,1, 1,15, 0,23, 0.00,60.00,WinterDesignDay
+152,5040486.784067964
+2,1, 1,15, 0,24, 0.00,60.00,WinterDesignDay
+152,5040486.784072713
+End of Data
+ Number of Records Written=          96
