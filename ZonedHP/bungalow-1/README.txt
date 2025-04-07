@@ -70,3 +70,5 @@ DHD20250407: Also ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rat
 DHD20250407: verified no solar gains with: Surface Outside Face Solar Radiation Heat Gain Rate [W].
 DHD20250407: surface heat losses: Surface Average Face Conduction Heat Transfer Rate [W]: 4x183+667 winter dd vs expected 4x269+936.
 DHD20250407: trying Output:Table:SummaryReports,AllSummaryAndSizingPeriod vs AllSummary.
+DHD20250407: asked https://unmethours.com/question/101466/unexpected-design-day-heat-flows-vs-u-values-in-simple-building/
+
