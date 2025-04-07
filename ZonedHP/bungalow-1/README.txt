@@ -13,7 +13,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 !     IWL (Internal Wall Length) = 4m, thus whole external wall length 8m.
 !     IWH (Internal Wall Height) = 2.3m
 !     EWRU (Effective Wall and Roof U-value): 0.61 W/m2K
-!     Wall and roof surface: 137.6m2
+!     Wall and roof surface: (4x18.4m2 + 64m2) 137.6m2
 !     Floor non-conducting
 !     Interior and exterior temperatures at design conditions: 21C / -3C
 !     Expected heat demand at design conditions: 2000W
@@ -70,4 +70,4 @@ DHD20250407: added to variables output to eplusout.eso Zone Predicted Sensible L
 DHD20250407: Zone Air System Sensible Heating Energy [J] agrees with above.
 DHD20250407: Also ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W].
 DHD20250407: verified no solar gains with: Surface Outside Face Solar Radiation Heat Gain Rate [W].
-DHD20250407: surface heat losses: Surface Average Face Conduction Heat Transfer Rate [W].
+DHD20250407: surface heat losses: Surface Average Face Conduction Heat Transfer Rate [W]: 4x183+667 winter dd.
