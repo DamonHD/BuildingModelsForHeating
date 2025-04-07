@@ -451,6 +451,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   
  ! DHD20250407: capturing heat demand in W.
  Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
+ Output:Variable,*,Zone Ideal Loads Zone Total Heating Rate, Hourly;
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT METER ===========
 
