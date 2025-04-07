@@ -68,5 +68,5 @@ DHD20250407: added to variables output to eplusout.eso Zone Predicted Sensible L
 DHD20250407: Zone Air System Sensible Heating Energy [J] agrees with above.
 DHD20250407: Also ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W].
 DHD20250407: verified no solar gains with: Surface Outside Face Solar Radiation Heat Gain Rate [W].
-DHD20250407: surface heat losses: Surface Average Face Conduction Heat Transfer Rate [W]: 4x183+667 winter dd.
+DHD20250407: surface heat losses: Surface Average Face Conduction Heat Transfer Rate [W]: 4x183+667 winter dd vs expected 4x269+936.
 DHD20250407: trying Output:Table:SummaryReports,AllSummaryAndSizingPeriod vs AllSummary.
