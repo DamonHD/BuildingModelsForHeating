@@ -75,3 +75,4 @@ DHD20250410: UnmetHours comment suggests eg Surface Convection Algorithm:Inside 
 DHD20250413: above Surface Convection Algorithm changes raise heat loss to ~1800W.
 DHD20250413: note: surface convective heat transfer coefficient = CHTC
 DHD20250413: inside and outside surface temperatures are significantly different to expected (eg 17C/-2C), maybe explaining heat low demand.
+DHD20240413: 'operative' (0.5) thermostat raises ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W] to 2025W.
