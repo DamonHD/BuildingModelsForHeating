@@ -73,3 +73,5 @@ DHD20250407: trying Output:Table:SummaryReports,AllSummaryAndSizingPeriod vs All
 DHD20250407: asked https://unmethours.com/question/101466/unexpected-design-day-heat-flows-vs-u-values-in-simple-building/
 DHD20250410: UnmetHours comment suggests eg Surface Convection Algorithm:Inside "Simple" (vs "TARP") and Surface Convection Algorithm:Outside "SimpleCombined" (vs "TARP").
 DHD20250413: above Surface Convection Algorithm changes raise heat loss to ~1800W.
+DHD20250413: note: surface convective heat transfer coefficient = CHTC
+DHD20250413: inside and outside surface temperatures are significantly different to expected (eg 17C/-2C), maybe explaining heat low demand.
