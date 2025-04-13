@@ -22,6 +22,12 @@ RELEASES
 ========
 
 
+20250413:
+    freezepoint name: V0.0.3 (main)
+    Changes since last freezepoint (developer/mgr initials and brief description):
+    DHD20250413: bungalow-1 now tolerably close in heat demand for initial HG and mid-UK annual simulation.
+
+
 20250317:
     freezepoint name: V0.0.2 (main)
     Changes since last freezepoint (developer/mgr initials and brief description):
