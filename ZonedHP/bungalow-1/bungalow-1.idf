@@ -96,11 +96,13 @@ SimulationControl,
 
 !-   ===========  ALL OBJECTS IN CLASS: INSIDE CONVECTION ALGORITHM ===========
 
-  SurfaceConvectionAlgorithm:Inside,TARP;
+! DHD20250413: bringing heat flows closer to U-values (was TARP).
+  SurfaceConvectionAlgorithm:Inside,Simple;
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTSIDE CONVECTION ALGORITHM ===========
 
-  SurfaceConvectionAlgorithm:Outside,TARP;
+! DHD20250413: bringing heat flows closer to U-values (was TARP).
+  SurfaceConvectionAlgorithm:Outside,SimpleCombined;
 
 !-   ===========  ALL OBJECTS IN CLASS: SOLUTION ALGORITHM ===========
 

@@ -72,3 +72,4 @@ DHD20250407: surface heat losses: Surface Average Face Conduction Heat Transfer 
 DHD20250407: trying Output:Table:SummaryReports,AllSummaryAndSizingPeriod vs AllSummary.
 DHD20250407: asked https://unmethours.com/question/101466/unexpected-design-day-heat-flows-vs-u-values-in-simple-building/
 DHD20250410: UnmetHours comment suggests eg Surface Convection Algorithm:Inside "Simple" (vs "TARP") and Surface Convection Algorithm:Outside "SimpleCombined" (vs "TARP").
+DHD20250413: above Surface Convection Algorithm changes raise heat loss to ~1800W.
