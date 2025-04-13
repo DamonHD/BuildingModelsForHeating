@@ -436,9 +436,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ZONE ONE,                !- Zone or ZoneList Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
-    Office Thermostat Heat SP Control;  !- Control 1 Name
+    Thermostat Heat SP Control;  !- Control 1 Name
   ThermostatSetpoint:SingleHeating,
-    Office Thermostat Heat SP Control,  !- Name
+    Thermostat Heat SP Control,  !- Name
     ALWAYS 21;               !- Heating Setpoint Temperature Schedule Name
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
