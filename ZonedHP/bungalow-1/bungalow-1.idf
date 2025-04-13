@@ -458,6 +458,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
  !Output:Variable,*,Surface Outside Face Solar Radiation Heat Gain Rate,Hourly;
  ! DHD20250407: heat flows in W.
  Output:Variable,*,Surface Average Face Conduction Heat Transfer Rate,Hourly;
+ ! DHD20250413: convection heat flows in W.
+ !Output:Variable,*,Surface Outside Face Convection Heat Gain Rate,Hourly;
+ !Output:Variable,*,Surface Inside Face Convection Heat Gain Rate,Hourly;
+ 
  
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT METER ===========
