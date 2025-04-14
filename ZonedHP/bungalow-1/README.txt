@@ -37,6 +37,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 
 Note that GB weather files are available from:
     https://energyplus.net/weather-region/europe_wmo_region_6/GBR
+These include Aberdeen, Birmingham, Jersey, London Gatwick.
 The licence does not apparently allow redistribution:
     https://energyplus.net/assets/nrel_custom/weather/ashrae_license_agreement.txt
 
