@@ -76,5 +76,5 @@ DHD20250410: UnmetHours comment suggests eg Surface Convection Algorithm:Inside 
 DHD20250413: above Surface Convection Algorithm changes raise heat loss to ~1800W.
 DHD20250413: note: surface convective heat transfer coefficient = CHTC
 DHD20250413: inside and outside surface temperatures are significantly different to expected (eg 17C/-2C), maybe explaining heat low demand.
-DHD20240413: 'operative' (@0.5) thermostat raises ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W] to 2025W (cf 3825W at 0.89).
-DHD20240413: now 28.35GJ (7876kWh, 900W) annual for Birmingham weather annual simulation.  (Manchester EGCC from paper 875W.)
+DHD20250413: 'operative' (@0.5) thermostat raises ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W] to 2025W (cf 3825W at 0.89).
+DHD20250413: now 28.35GJ (7876kWh, 900W) annual for Birmingham weather annual simulation.  (Manchester EGCC from paper 875W.)

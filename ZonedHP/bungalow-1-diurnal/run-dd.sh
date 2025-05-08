@@ -6,4 +6,4 @@
 #    exit 1
 #fi
 
-exec /Applications/EnergyPlus-24-2-0/energyplus -d out-dd -D bungalow-1.idf
+exec /Applications/EnergyPlus-24-2-0/energyplus -d out-dd -D bungalow-1-diurnal.idf
