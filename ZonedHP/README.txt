@@ -9,5 +9,7 @@ Items no note:
         DHD20240413: now 28.35GJ (7876kWh, 900W) annual for Birmingham weather annual simulation.  (Manchester EGCC from paper 875W.)
         
    * bungalow-1-diurnal
-     As bungalow-1/20250413-snapshot but with 2.5C peak-to-peak diurnal temperature swing.
+     As bungalow-1/20250413-snapshot but with 3C peak-to-peak diurnal temperature swing. 
+        DHD20250508: adjusted Daily Temp Range {C} to 3 (and max to -1.5 to approx preserve mean), for similar range to CIBSE Leeds (UK) typical winter day.
+        DHD20250508: ext temperature and Zone Ideal Loads Zone Total Heating Rate [W] range from -4.5C to -1.5C and 1993W and 2188W.
    
