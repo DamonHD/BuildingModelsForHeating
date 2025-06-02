@@ -450,7 +450,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE CONTROL:THERMOSTATIC ===========
 
-  ! DHD20250602: zone(s) to be heated to 'normal' temmperature.
+  ! DHD20250602: zone(s) to be heated to 'normal' temperature.
   ZoneList,
     NOTSETBACK ROOMS,        !- Name
     ZONE ONE;
