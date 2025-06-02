@@ -11,6 +11,8 @@
 !     IWL (Internal Wall Length) = 4m, thus whole external wall length 8m.
 !     IWH (Internal Wall Height) = 2.3m
 !     EWRU (Effective Wall and Roof U-value): 0.61 W/m2K
+!     IDU (Internal Door U-value): 8 W/m2K
+!     IWU (Internal Wall U-value): 2 W/m2K
 !
 ! Building: Fictional 4 zone building with resistive walls and flat roof.
 !
@@ -212,8 +214,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.0000001,               !- Thermal Absorptance
     0.0000001,               !- Solar Absorptance
     0.0000001;               !- Visible Absorptance
-    
- ! DHD20250602: internal wall approximation including door in mean U-value.
+ 
+ 
+ 
+ 
+ 
+ ! DHD20250602: internal wall approximation including door in mean U-value: < 2 W/m2K (from IDU and IWU).
    Material,
     IW MEAN,                 !- Name
     Rough,                   !- Roughness
@@ -224,6 +230,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.0000001,               !- Thermal Absorptance
     0.0000001,               !- Solar Absorptance
     0.0000001;               !- Visible Absorptance
+ 
+ 
+ 
+ 
  
 
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
