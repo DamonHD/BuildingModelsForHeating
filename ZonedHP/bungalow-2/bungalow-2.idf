@@ -275,7 +275,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !-   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
 
   BuildingSurface:Detailed,
-    SURFACE NORTH,           !- Name
+    EXT SURFACE NORTH,       !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -292,7 +292,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
-    ZONE SURFACE EAST,       !- Name
+    EXT SURFACE EAST,        !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -309,7 +309,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
-    ZONE SURFACE SOUTH,      !- Name
+    EXT SURFACE SOUTH,       !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -326,7 +326,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8.00,0,2.30;  !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
-    ZONE SURFACE WEST,       !- Name
+    EXT SURFACE WEST,        !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -343,7 +343,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,0,2.30;  !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
-    ZONE SURFACE FLOOR,      !- Name
+    EXT SURFACE FLOOR,       !- Name
     Floor,                   !- Surface Type
     LTFLOOR,                 !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -361,7 +361,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 ! DHD20250401: Surface Type 'Wall' to get same film coefficients as Wall.
   BuildingSurface:Detailed,
-    ZONE SURFACE ROOF,       !- Name
+    EXT SURFACE ROOF,        !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
