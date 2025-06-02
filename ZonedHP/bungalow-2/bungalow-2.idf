@@ -274,25 +274,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
 
-! DHD20250602: splitting external wall to match internal zones.
+! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
     EXT SURFACE NORTH WEST,  !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8.00,8.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
-    8.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-    4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-    4.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
-  BuildingSurface:Detailed,
-    EXT SURFACE NORTH EAST,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -307,6 +291,26 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     0,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     0,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+  BuildingSurface:Detailed,
+    EXT SURFACE NORTH EAST,  !- Name
+    Wall,                    !- Surface Type
+    STDEWR,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.50,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.00,8.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
+    8.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+    4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+    4.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+! DHD20250602: split external wall to match internal zones.
+
 
 
   BuildingSurface:Detailed,
