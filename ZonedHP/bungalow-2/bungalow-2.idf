@@ -219,6 +219,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 
  ! DHD20250602: internal wall approximation including door in mean U-value: > 2 W/m2K (from IDU and IWU).
+ ! Like plasterboard on studs.
+ ! TODO FIXME not finished
    Material,
     IW MEAN,                 !- Name
     MediumSmooth,            !- Roughness
@@ -454,15 +456,47 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ZONE ONE,                !- Zone or ZoneList Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
-    Thermostat Heat SP Control;  !- Control 1 Name
-  ThermostatSetpoint:SingleHeating,
-    Thermostat Heat SP Control,  !- Name
-    ALWAYS 21;               !- Heating Setpoint Temperature Schedule Name
+    NOTSETBACK Thermostat Heat SP Control;  !- Control 1 Name
  
   ! DHD20259413: operative control.  Helps compensate for convection/film effects at inner surfaces.
   ZoneControl:Thermostat:OperativeTemperature,
     ZONE ONE Thermostat,     !- Name
     CONSTANT, 0.5;
+    
+  ! Thermostat for not-setback rooms.
+  ThermostatSetpoint:SingleHeating,
+    NOTSETBACK Thermostat Heat SP Control,  !- Name
+    ALWAYS 21;               !- Heating Setpoint Temperature Schedule Name
+
+
+
+
+
+!  ! Zones for each room.
+!  ZoneList,
+!    ALL ROOMS,               !- Name
+!    ZONE ONE;
+!    ! Z1, Z2, Z3, Z4;
+!  ZoneList,
+!    NOTSETBACK ROOMS,        !- Name
+!    ZONE ONE;
+!    ! Z1, Z2, Z3, Z4;
+!  ! DHD20259413: operative control.  Helps compensate for convection/film effects at inner surfaces.
+!  ZoneControl:Thermostat:OperativeTemperature,
+!    ALL ROOMS Thermostat,!- Name
+!    CONSTANT, 0.5;
+! 
+!  ! DHD20250602: single set-point heating per room.
+!  ! Z1
+!  ZoneControl:Thermostat,
+!    Z1 NOTSETBACK Thermostat,!- Name
+!    NOTSETBACK ROOMS,        !- Zone or ZoneList Name
+!    ALWAYS 1,                !- Control Type Schedule Name
+!    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
+!    NOTSETBACK Thermostat Heat SP Control;  !- Control 1 Name
+
+
+
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
 
