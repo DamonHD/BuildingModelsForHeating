@@ -308,13 +308,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     4.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
 
-
 ! DHD20250602: split external wall to match internal zones.
-
-
-
   BuildingSurface:Detailed,
-    EXT SURFACE EAST,        !- Name
+    EXT SURFACE EAST NORTH,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -327,8 +323,28 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4,                       !- Number of Vertices
     8.00,0,2.30,  !- X,Y,Z ==> Vertex 1 {m}
     8.00,0,0,  !- X,Y,Z ==> Vertex 2 {m}
+    8.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+    8.00,4.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+  BuildingSurface:Detailed,
+    EXT SURFACE EAST SOUTH,  !- Name
+    Wall,                    !- Surface Type
+    STDEWR,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.50,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.00,4.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
+    8.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     8.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+! TODO: wall split
 
   BuildingSurface:Detailed,
     EXT SURFACE SOUTH,       !- Name
