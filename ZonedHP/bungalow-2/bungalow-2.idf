@@ -450,24 +450,28 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE CONTROL:THERMOSTATIC ===========
 
+  ! DHD20250602: zone(s) to be heated to 'normal' temmperature.
+  ZoneList,
+    NOTSETBACK ROOMS,        !- Name
+    ZONE ONE;
+
   ! DHD20250322: single set point heating.
   ZoneControl:Thermostat,
-    ZONE ONE Thermostat,     !- Name
-    ZONE ONE,                !- Zone or ZoneList Name
+    NOTSETBACK ROOMS Thermostat, !- Name
+    NOTSETBACK ROOMS,        !- Zone or ZoneList Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     NOTSETBACK Thermostat Heat SP Control;  !- Control 1 Name
  
   ! DHD20259413: operative control.  Helps compensate for convection/film effects at inner surfaces.
   ZoneControl:Thermostat:OperativeTemperature,
-    ZONE ONE Thermostat,     !- Name
+    NOTSETBACK ROOMS Thermostat, !- Name
     CONSTANT, 0.5;
-    
+
   ! Thermostat for not-setback rooms.
   ThermostatSetpoint:SingleHeating,
     NOTSETBACK Thermostat Heat SP Control,  !- Name
     ALWAYS 21;               !- Heating Setpoint Temperature Schedule Name
-
 
 
 
@@ -477,6 +481,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !    ALL ROOMS,               !- Name
 !    ZONE ONE;
 !    ! Z1, Z2, Z3, Z4;
+!  ! Rooms that are NOT set back.
 !  ZoneList,
 !    NOTSETBACK ROOMS,        !- Name
 !    ZONE ONE;
