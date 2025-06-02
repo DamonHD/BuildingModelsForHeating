@@ -219,7 +219,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
  
  
  
- ! DHD20250602: internal wall approximation including door in mean U-value: < 2 W/m2K (from IDU and IWU).
+ ! DHD20250602: internal wall approximation including door in mean U-value: > 2 W/m2K (from IDU and IWU).
    Material,
     IW MEAN,                 !- Name
     Rough,                   !- Roughness
