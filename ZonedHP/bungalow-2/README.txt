@@ -13,8 +13,10 @@ This is designed to run in EnergyPlus V24.2 or newer.
 !     IWL (Internal Wall Length) = 4m, thus whole external wall length 8m.
 !     IWH (Internal Wall Height) = 2.3m
 !     EWRU (Effective Wall and Roof U-value): 0.61 W/m2K
-!     Wall and roof surface: (4x18.4m2 + 64m2) 137.6m2
+!     External wall and roof surface: (4x18.4m2 + 64m2) 137.6m2
 !     Floor non-conducting
+!     IDU (Internal Door U-value): 8 W/m2K
+!     IWU (Internal Wall U-value): 2 W/m2K
 !     Interior and exterior temperatures at design conditions: 21C / -3C
 !     Expected heat demand at design conditions: 2000W
 !
@@ -25,7 +27,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 ! Floor Area:        64 m2
 ! No internal walls / partitions.
 ! Number of Stories: 1
-! Computed effective wall and roof U value (EWRU): 0.61 W/m2K
+! Computed effective external wall and roof U value (EWRU): 0.61 W/m2K
 
 ! Acknowledgements:
 !
@@ -52,3 +54,4 @@ NOTES
 
 DHD20250413: now 28.35GJ (7876kWh, 900W) annual for Birmingham weather annual simulation.  (Manchester EGCC from paper 875W.)
 DHD20250531: ... bungalow-1 nominally cloned to bungalow-2.
+DHD20250602: ... conversion to 4-zone continues ...

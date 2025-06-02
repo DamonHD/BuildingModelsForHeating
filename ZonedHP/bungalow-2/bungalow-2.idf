@@ -467,7 +467,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ZoneControl:Thermostat:OperativeTemperature,
     NOTSETBACK ROOMS Thermostat, !- Name
     CONSTANT, 0.5;
-
+    
   ! Thermostat for not-setback rooms.
   ThermostatSetpoint:SingleHeating,
     NOTSETBACK Thermostat Heat SP Control,  !- Name
