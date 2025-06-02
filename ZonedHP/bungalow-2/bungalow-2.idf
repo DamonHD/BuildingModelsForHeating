@@ -247,6 +247,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     LTFLOOR,                 !- Name
     ZEROU;                   !- Outside Layer
 
+  ! DHD20250602: internal partition walls. 
+  Construction,
+    PARTITION,               !- Name
+    IW MEAN;  !- Outside Layer
+
 !-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
 
   Zone,
