@@ -342,12 +342,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     8.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
 
-
-
-! TODO: wall split
-
+! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
-    EXT SURFACE SOUTH,       !- Name
+    EXT SURFACE SOUTH EAST,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -360,8 +357,30 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4,                       !- Number of Vertices
     0,0,2.30,  !- X,Y,Z ==> Vertex 1 {m}
     0,0,0,  !- X,Y,Z ==> Vertex 2 {m}
+    4.00,0,0,  !- X,Y,Z ==> Vertex 3 {m}
+    4.00,0,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+  BuildingSurface:Detailed,
+    EXT SURFACE SOUTH WEST,  !- Name
+    Wall,                    !- Surface Type
+    STDEWR,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.50,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4.00,0,2.30,  !- X,Y,Z ==> Vertex 1 {m}
+    4.00,0,0,  !- X,Y,Z ==> Vertex 2 {m}
     8.00,0,0,  !- X,Y,Z ==> Vertex 3 {m}
     8.00,0,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+! TODO: wall split
+
+
 
   BuildingSurface:Detailed,
     EXT SURFACE WEST,        !- Name
@@ -379,6 +398,15 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     0,0,0,  !- X,Y,Z ==> Vertex 3 {m}
     0,0,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+    
+    
+
+
+! TODO: floor split
+
+
+
+    
 
   BuildingSurface:Detailed,
     EXT SURFACE FLOOR,       !- Name
@@ -396,6 +424,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     8.00,0,0;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+! TODO: roof split
+
+
 
 ! DHD20250401: Surface Type 'Wall' to get same film coefficients as Wall.
   BuildingSurface:Detailed,
