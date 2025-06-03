@@ -52,6 +52,7 @@ Some basics of the IDF file:
 NOTES
 =====
 
+DHD20250413: 'operative' (@0.5) thermostat raises ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W] to 2025W (cf 3825W at 0.89).
 DHD20250413: now 28.35GJ (7876kWh, 900W) annual for Birmingham weather annual simulation.  (Manchester EGCC from paper 875W.)
 DHD20250531: ... bungalow-1 nominally cloned to bungalow-2.
 DHD20250602: ... conversion to 4-zone continues ...
