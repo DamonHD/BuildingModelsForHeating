@@ -416,13 +416,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 
 ! TODO: floor split
-
-
-
     
-
+! NW = Z4
   BuildingSurface:Detailed,
-    EXT SURFACE FLOOR,       !- Name
+    EXT SURFACE FLOOR NW,    !- Name
     Floor,                   !- Surface Type
     LTFLOOR,                 !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -433,10 +430,65 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     NoWind,                  !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices
-    0,0,0,  !- X,Y,Z ==> Vertex 1 {m}
-    0,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+    4.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+    4.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-    8.00,0,0;  !- X,Y,Z ==> Vertex 4 {m}
+    8.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! NE = Z3
+  BuildingSurface:Detailed,
+    EXT SURFACE FLOOR NE,    !- Name
+    Floor,                   !- Surface Type
+    LTFLOOR,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Ground,                  !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+    4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+    4.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! SE = Z1
+  BuildingSurface:Detailed,
+    EXT SURFACE FLOOR SE,    !- Name
+    Floor,                   !- Surface Type
+    LTFLOOR,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Ground,                  !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.00,0.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+    4.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+    4.00,0.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! SW = Z2
+  BuildingSurface:Detailed,
+    EXT SURFACE FLOOR SW,    !- Name
+    Floor,                   !- Surface Type
+    LTFLOOR,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Ground,                  !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4.00,0.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+    4.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+    8.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+    8.00,0.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+
 
 
 
