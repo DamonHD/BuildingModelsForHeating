@@ -47,7 +47,49 @@ Note that Construction CTF shows U-value (ThermalConductance) for each construct
 
 Some basics of the IDF file:
     https://bigladdersoftware.com/epx/docs/9-2/input-output-reference/group-simulation-parameters.html
-    
+
+
+! Zone Description Details:
+!
+!          (0,8,0)        (4,8,0)       (8,8,0)
+!              ______NE____________NW______
+!             |              |             |
+!             |              |             |
+!             |              |             |
+!           EN|      Z3      |     Z4      |WN
+!             |              |             |
+!             |              | (4,4,0)     |
+!     (0,4,0) |--------------+-------------| (8,4,0)
+!             |              |             |
+!             |              |             |
+!           ES|      Z1      |     Z2      |WS
+!             |              |             |
+!             |              |             |
+!             |______________|_____________|
+!                    SE            SW
+!          (0,0,0)        (4,0,0)       (8,0,0)
+!
+! NW = Z4
+!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    4.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    8.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! NE = Z3
+!    0.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    0.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    4.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! SE = Z1
+!    0.00,0.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    0.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    4.00,0.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! SW = Z2
+!    4.00,0.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    8.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    8.00,0.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+
 
 NOTES
 =====
