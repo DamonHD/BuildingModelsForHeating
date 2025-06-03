@@ -43,6 +43,27 @@
 !                    SE            SW
 !          (0,0,0)        (4,0,0)       (8,0,0)
 !
+! NW = Z4
+!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    4.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    8.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! NE = Z3
+!    0.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    0.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    4.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! SE = Z1
+!    0.00,0.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    0.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    4.00,0.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+! SW = Z2
+!    4.00,0.00,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    8.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    8.00,0.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+!
 ! Acknowledgements:
 ! 
 ! DERIVED FROM:
@@ -290,7 +311,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4.00,8.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
     4.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     0,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-    0,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+    0,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}    **** FIXME ****
   BuildingSurface:Detailed,
     EXT SURFACE NORTH EAST,  !- Name
     Wall,                    !- Surface Type
@@ -307,7 +328,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     4.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
-
 ! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
     EXT SURFACE EAST NORTH,  !- Name
@@ -341,7 +361,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     8.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
-
 ! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
     EXT SURFACE SOUTH EAST,  !- Name
@@ -375,10 +394,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4.00,0,0,  !- X,Y,Z ==> Vertex 2 {m}
     8.00,0,0,  !- X,Y,Z ==> Vertex 3 {m}
     8.00,0,2.30;  !- X,Y,Z ==> Vertex 4 {m}
-
-
-
-! TODO: wall split
+! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
     EXT SURFACE WEST SOUTH,  !- Name
     Wall,                    !- Surface Type
@@ -411,12 +427,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,0.00,0,  !- X,Y,Z ==> Vertex 2 {m}
     0,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
     0,4.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
-    
-    
 
-
-! TODO: floor split
-    
+! FLOOR: essentially lossless.
+! DHD20250603: floor split to match the rooms/zones.    
 ! NW = Z4
   BuildingSurface:Detailed,
     EXT SURFACE FLOOR NW,    !- Name
@@ -449,7 +462,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4,                       !- Number of Vertices
     0.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
     0.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-    4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
+    4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}     **** FIXME ****
     4.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
 ! SE = Z1
   BuildingSurface:Detailed,
@@ -488,17 +501,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 
 
-
-
-
-
-! TODO: roof split
-
-
-
 ! DHD20250401: Surface Type 'Wall' to get same film coefficients as Wall.
+! DHD20250603: roof split to match the rooms/zones.    
+! NW = Z4
   BuildingSurface:Detailed,
-    EXT SURFACE ROOF,        !- Name
+    EXT SURFACE ROOF NW,     !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
     ZONE ONE,                !- Zone Name
@@ -509,10 +516,66 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices
-    0,8.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
-    0,0,2.30,  !- X,Y,Z ==> Vertex 2 {m}
-    8.00,0,2.30,  !- X,Y,Z ==> Vertex 3 {m}
-    8.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+    4.00,4.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
+    4.00,8.00,2.30,  !- X,Y,Z ==> Vertex 2 {m}
+    8.00,8.00,2.30,  !- X,Y,Z ==> Vertex 3 {m}
+    8.00,4.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+! NE = Z3
+  BuildingSurface:Detailed,
+    EXT SURFACE ROOF NE,     !- Name
+    Wall,                    !- Surface Type
+    STDEWR,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices    
+    0.00,4.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,8.00,2.30,  !- X,Y,Z ==> Vertex 2 {m}
+    4.00,8.00,2.30,  !- X,Y,Z ==> Vertex 3 {m}
+    4.00,4.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+! SE = Z1
+  BuildingSurface:Detailed,
+    EXT SURFACE ROOF SE,     !- Name
+    Wall,                    !- Surface Type
+    STDEWR,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.00,0.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,4.00,2.30,  !- X,Y,Z ==> Vertex 2 {m}
+    4.00,4.00,2.30,  !- X,Y,Z ==> Vertex 3 {m}
+    4.00,0.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+! SW = Z2
+  BuildingSurface:Detailed,
+    EXT SURFACE ROOF SW,     !- Name
+    Wall,                    !- Surface Type
+    STDEWR,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    ,                        !- Space Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4.00,0.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
+    4.00,4.00,2.30,  !- X,Y,Z ==> Vertex 2 {m}
+    8.00,4.00,2.30,  !- X,Y,Z ==> Vertex 3 {m}
+    8.00,0.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+
+
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPE ===========
 
@@ -697,3 +760,5 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
   Output:Table:SummaryReports,
     AllSummaryAndSizingPeriod;
+    
+  Output:Diagnostics,DisplayExtrawarnings;
