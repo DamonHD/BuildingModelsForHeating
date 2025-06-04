@@ -514,10 +514,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices
-    4,4,2.3,  !- X,Y,Z ==> Vertex 1 {m}
-    4,8,2.3,  !- X,Y,Z ==> Vertex 2 {m}
-    8,8,2.3,  !- X,Y,Z ==> Vertex 3 {m}
-    8,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
+    8,4,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    8,8,2.3,  !- X,Y,Z ==> Vertex 2 {m}
+    4,8,2.3,  !- X,Y,Z ==> Vertex 3 {m}
+    4,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
 ! NE = Z3
   BuildingSurface:Detailed,
     EXT SURFACE ROOF NE,     !- Name
@@ -531,10 +531,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices    
-    0,4,2.3,  !- X,Y,Z ==> Vertex 1 {m}
-    0,8,2.3,  !- X,Y,Z ==> Vertex 2 {m}
-    4,8,2.3,  !- X,Y,Z ==> Vertex 3 {m}
-    4,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
+    4,4,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    4,8,2.3,  !- X,Y,Z ==> Vertex 2 {m}
+    0,8,2.3,  !- X,Y,Z ==> Vertex 3 {m}
+    0,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
 ! SE = Z1
   BuildingSurface:Detailed,
     EXT SURFACE ROOF SE,     !- Name
@@ -548,10 +548,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices
-    0,0,2.3,  !- X,Y,Z ==> Vertex 1 {m}
-    0,4,2.3,  !- X,Y,Z ==> Vertex 2 {m}
-    4,4,2.3,  !- X,Y,Z ==> Vertex 3 {m}
-    4,0,2.3;  !- X,Y,Z ==> Vertex 4 {m}
+    4,0,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    4,4,2.3,  !- X,Y,Z ==> Vertex 2 {m}
+    0,4,2.3,  !- X,Y,Z ==> Vertex 3 {m}
+    0,0,2.3;  !- X,Y,Z ==> Vertex 4 {m}
 ! SW = Z2
   BuildingSurface:Detailed,
     EXT SURFACE ROOF SW,     !- Name
@@ -565,10 +565,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices
-    4,0,2.3,  !- X,Y,Z ==> Vertex 1 {m}
-    4,4,2.3,  !- X,Y,Z ==> Vertex 2 {m}
-    8,4,2.3,  !- X,Y,Z ==> Vertex 3 {m}
-    8,0,2.3;  !- X,Y,Z ==> Vertex 4 {m}
+    8,0,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    8,4,2.3,  !- X,Y,Z ==> Vertex 2 {m}
+    4,4,2.3,  !- X,Y,Z ==> Vertex 3 {m}
+    4,0,2.3;  !- X,Y,Z ==> Vertex 4 {m}
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPE ===========
 
