@@ -70,25 +70,25 @@ Some basics of the IDF file:
 !          (0,0,0)        (4,0,0)       (8,0,0)
 !
 ! NW = Z4
-!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
-!    4.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-!    8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-!    8.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+!    4,4,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    4,8,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    8,8,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    8,4,0;  !- X,Y,Z ==> Vertex 4 {m}
 ! NE = Z3
-!    0.00,4.00,0,  !- X,Y,Z ==> Vertex 1 {m}
-!    0.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-!    4.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-!    4.00,4.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+!    0,4,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    0,8,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    4,8,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    4,4,0;  !- X,Y,Z ==> Vertex 4 {m}
 ! SE = Z1
-!    0.00,0.00,0,  !- X,Y,Z ==> Vertex 1 {m}
-!    0.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-!    4.00,0.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+!    0,4,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    0,0,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    4,0,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    4,4,0;  !- X,Y,Z ==> Vertex 4 {m}
 ! SW = Z2
-!    4.00,0.00,0,  !- X,Y,Z ==> Vertex 1 {m}
-!    4.00,4.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-!    8.00,4.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-!    8.00,0.00,0;  !- X,Y,Z ==> Vertex 4 {m}
+!    4,0,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    4,4,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    8,4,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    8,0,0;  !- X,Y,Z ==> Vertex 4 {m}
 
 
 NOTES
