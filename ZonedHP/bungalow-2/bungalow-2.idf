@@ -276,7 +276,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
 
   Zone,
-    ZONE ONE,                !- Name
+    Z1,                      !- Name
     0,                       !- Direction of Relative North {deg}
     0,                       !- X Origin {m}
     0,                       !- Y Origin {m}
@@ -284,7 +284,40 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     1,                       !- Type
     1,                       !- Multiplier
     2.3000,                  !- Ceiling Height {m}
-    147.2;                   !- Volume {m3}
+    36.8;                    !- Volume {m3}
+
+  Zone,
+    Z2,                      !- Name
+    0,                       !- Direction of Relative North {deg}
+    4,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.3000,                  !- Ceiling Height {m}
+    36.8;                    !- Volume {m3}
+
+  Zone,
+    Z3,                      !- Name
+    0,                       !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    4,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.3000,                  !- Ceiling Height {m}
+    36.8;                    !- Volume {m3}
+
+  Zone,
+    Z4,                      !- Name
+    0,                       !- Direction of Relative North {deg}
+    4,                       !- X Origin {m}
+    4,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.3000,                  !- Ceiling Height {m}
+    36.8;                    !- Volume {m3}
 
 !-   ===========  ALL OBJECTS IN CLASS: SURFACEGEOMETRY ===========
 
@@ -596,20 +629,74 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !-   ===========  ALL OBJECTS IN CLASS: CONTROLLED ZONE EQUIP CONFIGURATION ===========
 
   ZoneHVAC:EquipmentConnections,
-    ZONE ONE,                !- Zone Name
-    ZONE ONE Equipment,      !- Zone Conditioning Equipment List Name
-    ZONE ONE Supply Inlet,   !- Zone Air Inlet Node or NodeList Name
+    Z1,                      !- Zone Name
+    Z1 Equipment,            !- Zone Conditioning Equipment List Name
+    Z1 Supply Inlet,         !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    ZONE ONE Zone Air Node,  !- Zone Air Node Name
-    ZONE ONE Return Outlet;  !- Zone Return Air Node or NodeList Name
+    Z1 Zone Air Node,        !- Zone Air Node Name
+    Z1 Return Outlet;        !- Zone Return Air Node or NodeList Name
+
+  ZoneHVAC:EquipmentConnections,
+    Z2,                      !- Zone Name
+    Z2 Equipment,            !- Zone Conditioning Equipment List Name
+    Z2 Supply Inlet,         !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Z2 Zone Air Node,        !- Zone Air Node Name
+    Z2 Return Outlet;        !- Zone Return Air Node or NodeList Name
+
+  ZoneHVAC:EquipmentConnections,
+    Z3,                      !- Zone Name
+    Z3 Equipment,            !- Zone Conditioning Equipment List Name
+    Z3 Supply Inlet,         !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Z3 Zone Air Node,        !- Zone Air Node Name
+    Z3 Return Outlet;        !- Zone Return Air Node or NodeList Name
+
+  ZoneHVAC:EquipmentConnections,
+    Z4,                      !- Zone Name
+    Z4 Equipment,            !- Zone Conditioning Equipment List Name
+    Z4 Supply Inlet,         !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Z4 Zone Air Node,        !- Zone Air Node Name
+    Z4 Return Outlet;        !- Zone Return Air Node or NodeList Name
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE EQUIPMENT LIST ===========
 
   ZoneHVAC:EquipmentList,
-    ZONE ONE Equipment,      !- Name
+    Z1 Equipment,            !- Name
     SequentialLoad,          !- Load Distribution Scheme
     ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
-    ZONE ONE Purchased Air,  !- Zone Equipment 1 Name
+    Z1 Purchased Air,        !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
+    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+
+  ZoneHVAC:EquipmentList,
+    Z2 Equipment,            !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Z2 Purchased Air,        !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
+    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+
+  ZoneHVAC:EquipmentList,
+    Z3 Equipment,            !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Z3 Purchased Air,        !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
+    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+
+  ZoneHVAC:EquipmentList,
+    Z4 Equipment,            !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Z4 Purchased Air,        !- Zone Equipment 1 Name
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
@@ -618,9 +705,96 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !-   ===========  ALL OBJECTS IN CLASS: PURCHASED AIR ===========
 
   ZoneHVAC:IdealLoadsAirSystem,
-    ZONE ONE Purchased Air,  !- Name
+    Z1 Purchased Air,  !- Name
     ,                        !- Availability Schedule Name
-    ZONE ONE Supply Inlet,   !- Zone Supply Air Node Name
+    Z1 Supply Inlet,         !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    ,                        !- System Inlet Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Z2 Purchased Air,        !- Name
+    ,                        !- Availability Schedule Name
+    Z2 Supply Inlet,         !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    ,                        !- System Inlet Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Z3 Purchased Air,        !- Name
+    ,                        !- Availability Schedule Name
+    Z3 Supply Inlet,         !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    ,                        !- System Inlet Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Z4 Purchased Air,        !- Name
+    ,                        !- Availability Schedule Name
+    Z4,                      !- Zone Supply Air Node Name
     ,                        !- Zone Exhaust Air Node Name
     ,                        !- System Inlet Air Node Name
     50,                      !- Maximum Heating Supply Air Temperature {C}
@@ -648,10 +822,15 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE CONTROL:THERMOSTATIC ===========
 
+  ! Zones for each room.
+  ZoneList,
+    ALL ROOMS,               !- Name
+    Z1, Z2, Z3, Z4;
+
   ! DHD20250602: zone(s) to be heated to 'normal' temperature.
   ZoneList,
     NOTSETBACK ROOMS,        !- Name
-    ZONE ONE;
+    Z1, Z2, Z3, Z4;
 
   ! DHD20250322: single set point heating.
   ZoneControl:Thermostat,
@@ -670,36 +849,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ThermostatSetpoint:SingleHeating,
     NOTSETBACK Thermostat Heat SP Control,  !- Name
     ALWAYS 21;               !- Heating Setpoint Temperature Schedule Name
-
-
-
-
-!  ! Zones for each room.
-!  ZoneList,
-!    ALL ROOMS,               !- Name
-!    ZONE ONE;
-!    ! Z1, Z2, Z3, Z4;
-!  ! Rooms that are NOT set back.
-!  ZoneList,
-!    NOTSETBACK ROOMS,        !- Name
-!    ZONE ONE;
-!    ! Z1, Z2, Z3, Z4;
-!  ! DHD20259413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-!  ZoneControl:Thermostat:OperativeTemperature,
-!    ALL ROOMS Thermostat,!- Name
-!    CONSTANT, 0.5;
-! 
-!  ! DHD20250602: single set-point heating per room.
-!  ! Z1
-!  ZoneControl:Thermostat,
-!    Z1 NOTSETBACK Thermostat,!- Name
-!    NOTSETBACK ROOMS,        !- Zone or ZoneList Name
-!    ALWAYS 1,                !- Control Type Schedule Name
-!    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
-!    NOTSETBACK Thermostat Heat SP Control;  !- Control 1 Name
-
-
-
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
 
