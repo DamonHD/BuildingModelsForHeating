@@ -80,10 +80,10 @@ Some basics of the IDF file:
 !    4,8,0,  !- X,Y,Z ==> Vertex 3 {m}
 !    4,4,0;  !- X,Y,Z ==> Vertex 4 {m}
 ! SE = Z1
-!    0,4,0,  !- X,Y,Z ==> Vertex 1 {m}
-!    0,0,0,  !- X,Y,Z ==> Vertex 2 {m}
-!    4,0,0,  !- X,Y,Z ==> Vertex 3 {m}
-!    4,4,0;  !- X,Y,Z ==> Vertex 4 {m}
+!    0,0,0,  !- X,Y,Z ==> Vertex 1 {m}
+!    0,4,0,  !- X,Y,Z ==> Vertex 2 {m}
+!    4,4,0,  !- X,Y,Z ==> Vertex 3 {m}
+!    4,0,0;  !- X,Y,Z ==> Vertex 4 {m}
 ! SW = Z2
 !    4,0,0,  !- X,Y,Z ==> Vertex 1 {m}
 !    4,4,0,  !- X,Y,Z ==> Vertex 2 {m}
