@@ -49,7 +49,7 @@ Some basics of the IDF file:
     https://bigladdersoftware.com/epx/docs/9-2/input-output-reference/group-simulation-parameters.html
 
 
-! Zone Description Details:
+! Zone Description Details, floor plan:
 !
 !          (0,8,0)        (4,8,0)       (8,8,0)
 !              ______NE____________NW______
