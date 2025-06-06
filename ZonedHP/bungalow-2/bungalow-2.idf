@@ -333,7 +333,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE NORTH WEST,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z4,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -349,7 +349,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE NORTH EAST,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z3,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -366,7 +366,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE EAST NORTH,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z3,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -382,7 +382,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE EAST SOUTH,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z1,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -399,7 +399,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE SOUTH EAST,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z1,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -415,7 +415,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE SOUTH WEST,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z2,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -432,7 +432,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE WEST SOUTH,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z2,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -448,7 +448,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE WEST NORTH,  !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z4,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -468,7 +468,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE FLOOR NW,    !- Name
     Floor,                   !- Surface Type
     LTFLOOR,                 !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z4,                      !- Zone Name
     ,                        !- Space Name
     Ground,                  !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -485,7 +485,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE FLOOR NE,    !- Name
     Floor,                   !- Surface Type
     LTFLOOR,                 !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z3,                      !- Zone Name
     ,                        !- Space Name
     Ground,                  !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -502,7 +502,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE FLOOR SE,    !- Name
     Floor,                   !- Surface Type
     LTFLOOR,                 !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z1,                      !- Zone Name
     ,                        !- Space Name
     Ground,                  !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -519,7 +519,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE FLOOR SW,    !- Name
     Floor,                   !- Surface Type
     LTFLOOR,                 !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z2,                      !- Zone Name
     ,                        !- Space Name
     Ground,                  !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -539,7 +539,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE ROOF NW,     !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z4,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -556,7 +556,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE ROOF NE,     !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z3,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -573,7 +573,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE ROOF SE,     !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z1,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -590,7 +590,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE ROOF SW,     !- Name
     Wall,                    !- Surface Type
     STDEWR,                  !- Construction Name
-    ZONE ONE,                !- Zone Name
+    Z2,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
