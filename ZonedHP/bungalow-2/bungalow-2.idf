@@ -532,7 +532,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8,4,0,  !- X,Y,Z ==> Vertex 3 {m}
     8,0,0;  !- X,Y,Z ==> Vertex 4 {m}
 
-! DHD20250401: Surface Type 'Wall' to get same film coefficients as Wall.
+! ROOF
+! DHD20250401: using Surface Type 'Wall' to get same film coefficients as Wall.
 ! DHD20250603: roof split to match the rooms/zones.    
 ! NW = Z4
   BuildingSurface:Detailed,
@@ -705,7 +706,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !-   ===========  ALL OBJECTS IN CLASS: PURCHASED AIR ===========
 
   ZoneHVAC:IdealLoadsAirSystem,
-    Z1 Purchased Air,  !- Name
+    Z1 Purchased Air,        !- Name
     ,                        !- Availability Schedule Name
     Z1 Supply Inlet,         !- Zone Supply Air Node Name
     ,                        !- Zone Exhaust Air Node Name
@@ -794,7 +795,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ZoneHVAC:IdealLoadsAirSystem,
     Z4 Purchased Air,        !- Name
     ,                        !- Availability Schedule Name
-    Z4,                      !- Zone Supply Air Node Name
+    Z4 Supply Inlet,         !- Zone Supply Air Node Name
     ,                        !- Zone Exhaust Air Node Name
     ,                        !- System Inlet Air Node Name
     50,                      !- Maximum Heating Supply Air Temperature {C}
