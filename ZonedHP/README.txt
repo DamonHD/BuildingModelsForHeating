@@ -15,3 +15,12 @@ Items to note:
 
   * bungalow-2
      As bungalow-1 but partitioned into 4 rooms/zones.
+
+
+
+
+
+
+
+Useful tools:
+  * Online DXF viewer: https://sharecad.org/ (3D Wireframe view was especially revealing with bungalow-2!)
