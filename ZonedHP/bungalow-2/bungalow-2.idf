@@ -704,10 +704,39 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4,4,0,  !- X,Y,Z ==> Vertex 2 {m}
     8,4,0,  !- X,Y,Z ==> Vertex 3 {m}
     8,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
-
-
-
-
+! Z3/Z4 partition.
+  BuildingSurface:Detailed,
+    PZ3Z4,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z3,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ4Z3,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4,8,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    4,8,0,  !- X,Y,Z ==> Vertex 2 {m}
+    4,4,0,  !- X,Y,Z ==> Vertex 3 {m}
+    4,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
+  BuildingSurface:Detailed,
+    PZ4Z3,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z4,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ3Z4,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4,4,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    4,4,0,  !- X,Y,Z ==> Vertex 2 {m}
+    4,8,0,  !- X,Y,Z ==> Vertex 3 {m}
+    4,8,2.3;  !- X,Y,Z ==> Vertex 4 {m}
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPE ===========
 
