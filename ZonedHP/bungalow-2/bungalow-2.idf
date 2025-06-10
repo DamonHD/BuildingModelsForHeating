@@ -283,49 +283,48 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
-    2.3000,                  !- Ceiling Height {m}
-    36.8;                    !- Volume {m3}
+    autocalculate,           !- Ceiling Height {m}
+    autocalculate;           !- Volume {m3}
 
   Zone,
     Z2,                      !- Name
     0,                       !- Direction of Relative North {deg}
-    4,                       !- X Origin {m}
+    0,                       !- X Origin {m}
     0,                       !- Y Origin {m}
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
-    2.3000,                  !- Ceiling Height {m}
-    36.8;                    !- Volume {m3}
+    autocalculate,           !- Ceiling Height {m}
+    autocalculate;           !- Volume {m3}
 
   Zone,
     Z3,                      !- Name
     0,                       !- Direction of Relative North {deg}
     0,                       !- X Origin {m}
-    4,                       !- Y Origin {m}
+    0,                       !- Y Origin {m}
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
-    2.3000,                  !- Ceiling Height {m}
-    36.8;                    !- Volume {m3}
+    autocalculate,           !- Ceiling Height {m}
+    autocalculate;           !- Volume {m3}
 
   Zone,
     Z4,                      !- Name
     0,                       !- Direction of Relative North {deg}
-    4,                       !- X Origin {m}
-    4,                       !- Y Origin {m}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
-    2.3000,                  !- Ceiling Height {m}
-    36.8;                    !- Volume {m3}
+    autocalculate,           !- Ceiling Height {m}
+    autocalculate;           !- Volume {m3}
 
 !-   ===========  ALL OBJECTS IN CLASS: SURFACEGEOMETRY ===========
 
-! DHD20250606: switched from World to Relative coordinate system.
   GlobalGeometryRules,
     UpperLeftCorner,         !- Starting Vertex Position
     Counterclockwise,        !- Vertex Entry Direction
-    Relative;                !- Coordinate System
+    World;                   !- Coordinate System
 
 !-   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
 
