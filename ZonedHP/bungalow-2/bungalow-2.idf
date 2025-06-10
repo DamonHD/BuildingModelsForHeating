@@ -390,10 +390,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0.50,                    !- View Factor to Ground
     4,                       !- Number of Vertices
-    0,4,2.3,  !- X,Y,Z ==> Vertex 1 {m}
-    0,4,0,  !- X,Y,Z ==> Vertex 2 {m}
-    0,0,0,  !- X,Y,Z ==> Vertex 3 {m}
-    0,0,2.3;  !- X,Y,Z ==> Vertex 4 {m}
+    0,0,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    0,0,0,  !- X,Y,Z ==> Vertex 2 {m}
+    0,4,0,  !- X,Y,Z ==> Vertex 3 {m}
+    0,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
 ! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
     EXT SURFACE SOUTH EAST,  !- Name
