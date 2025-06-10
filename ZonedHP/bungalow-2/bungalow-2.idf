@@ -268,7 +268,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     LTFLOOR,                 !- Name
     ZEROU;                   !- Outside Layer
 
-  ! DHD20250602: internal partition walls. 
+  ! DHD20250602: one side of internal partition wall.
   Construction,
     PARTITION,               !- Name
     IW MEAN;  !- Outside Layer
@@ -639,6 +639,40 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4,4,0,  !- X,Y,Z ==> Vertex 3 {m}
     4,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
 
+
+! Z1/Z3 partition.
+  BuildingSurface:Detailed,
+    PZ1Z3,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z1,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ3Z1,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4,4,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    4,4,0,  !- X,Y,Z ==> Vertex 2 {m}
+    0,4,0,  !- X,Y,Z ==> Vertex 3 {m}
+    0,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
+  BuildingSurface:Detailed,
+    PZ3Z1,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z3,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ1Z3,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0,4,2.3,  !- X,Y,Z ==> Vertex 1 {m}
+    0,4,0,  !- X,Y,Z ==> Vertex 2 {m}
+    4,4,0,  !- X,Y,Z ==> Vertex 3 {m}
+    4,4,2.3;  !- X,Y,Z ==> Vertex 4 {m}
 
 
 
