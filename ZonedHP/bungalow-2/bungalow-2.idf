@@ -283,11 +283,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
-    autocalculate,           !- Ceiling Height {m}
-    autocalculate;           !- Volume {m3}
- !   2.3,                     !- Ceiling Height {m}
- !   36.8,                    !- Volume {m3}
- !   16;                      !- Floor Area {m3}
+ !   autocalculate,           !- Ceiling Height {m}
+ !   autocalculate;           !- Volume {m3}
+    2.3,                     !- Ceiling Height {m}
+    36.8,                    !- Volume {m3}
+    16;                      !- Floor Area {m3}
 
   Zone,
     Z2,                      !- Name
@@ -297,8 +297,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
-    autocalculate,           !- Ceiling Height {m}
-    autocalculate;           !- Volume {m3}
+ !   autocalculate,           !- Ceiling Height {m}
+ !   autocalculate;           !- Volume {m3}
+    2.3,                     !- Ceiling Height {m}
+    36.8,                    !- Volume {m3}
+    16;                      !- Floor Area {m3}
 
   Zone,
     Z3,                      !- Name
@@ -308,8 +311,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
-    autocalculate,           !- Ceiling Height {m}
-    autocalculate;           !- Volume {m3}
+ !   autocalculate,           !- Ceiling Height {m}
+ !   autocalculate;           !- Volume {m3}
+    2.3,                     !- Ceiling Height {m}
+    36.8,                    !- Volume {m3}
+    16;                      !- Floor Area {m3}
 
   Zone,
     Z4,                      !- Name
@@ -319,8 +325,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
-    autocalculate,           !- Ceiling Height {m}
-    autocalculate;           !- Volume {m3}
+ !   autocalculate,           !- Ceiling Height {m}
+ !   autocalculate;           !- Volume {m3}
+    2.3,                     !- Ceiling Height {m}
+    36.8,                    !- Volume {m3}
+    16;                      !- Floor Area {m3}
 
 !-   ===========  ALL OBJECTS IN CLASS: SURFACEGEOMETRY ===========
 
