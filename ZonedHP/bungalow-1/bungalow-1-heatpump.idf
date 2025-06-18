@@ -375,6 +375,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     For: AllDays,            !- Field 2
     Until: 24:00,21;         !- Field 3
 
+  ! DE20250618: target 55C temperature continuous.
+  Schedule:Compact,
+    ALWAYS 55 C,               !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,55;         !- Field 3
+
 !-   ===========  ALL OBJECTS IN CLASS: CONTROLLED ZONE EQUIP CONFIGURATION ===========
 
   ZoneHVAC:EquipmentConnections,
@@ -392,59 +400,369 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     SequentialLoad,          !- Load Distribution Scheme
     ! ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
     ! ZONE ONE Purchased Air,  !- Zone Equipment 1 Name
-	ZoneHVAC:Baseboard:Convective:Electric,
-	Zone1BaseBoard,
+	ZoneHVAC:Baseboard:Convective:Water,
+	Radiator,
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
     ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
 
 
-!-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:BASEBOARD:CONVECTIVE:ELECTRIC ===========
+!--------------------------------------------------------------------------------------------
+!============================================================================================
+!===================================HEATING LOOP (HeatSys1)==================================
+  PlantLoop,
+    Hot Water Loop,          !- Name
+    Water,                   !- Fluid Type
+    ,                        !- User Defined Fluid Type
+    Hot Loop Operation,      !- Plant Equipment Operation Scheme Name
+    Supply Outlet Outlet Node,   !- Loop Temperature Setpoint Node Name
+    100,                     !- Maximum Loop Temperature {C}
+    10,                      !- Minimum Loop Temperature {C}
+    autosize,                !- Maximum Loop Flow Rate {m3/s}
+    0.0,                     !- Minimum Loop Flow Rate {m3/s}
+    ,                        !- Plant Loop Volume {m3}
+    Supply Pump Inlet Node,    !- Plant Side Inlet Node Name
+    Supply Outlet Outlet Node,   !- Plant Side Outlet Node Name
+    Supply Branches,  !- Plant Side Branch List Name
+    Supply Connectors,  !- Plant Side Connector List Name
+    Demand Inlet Inlet Node,    !- Demand Side Inlet Node Name
+    Demand Outlet Outlet Node,   !- Demand Side Outlet Node Name
+    Demand Branches,  !- Demand Side Branch List Name
+    Demand Connectors,  !- Demand Side Connector List Name
+    Optimal;          !- Load Distribution Scheme
+
+!========================HEATING LOOP SUPPLY SIDE LOOP CONSTRUCTION========================
+!-----------------------LISTING AND MODELING ALL THE SUPPLY SIDE BRANCHES--------------------
+
+  BranchList,
+    Supply Branches, !- Name
+    Supply Inlet Branch,
+    Supply Boiler Branch,
+    Supply Bypass Branch,
+    Supply Outlet Branch;
+
+  Branch,
+    Supply Inlet Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    Pump:VariableSpeed,          !- Component 1 Object Type
+    Supply Pump,  !- Component 1 Name
+    Supply Pump Inlet Node,  !- Component 1 Inlet Node Name
+    Supply Pump Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Supply Boiler Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    HeatPump:PlantLoop:EIR:Heating,          !- Component 1 Object Type
+    Heat Pump,  !- Component 1 Name
+    Heat Pump Inlet Node,  !- Component 1 Inlet Node Name
+    Heat Pump Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Supply Bypass Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    Pipe:Adiabatic,          !- Component 1 Object Type
+    Supply Bypass Pipe,  !- Component 1 Name
+    Supply Bypass Inlet Node,  !- Component 1 Inlet Node Name
+    Supply Bypass Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Supply Outlet Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    Pipe:Adiabatic,          !- Component 1 Object Type
+    Supply Outlet Pipe,  !- Component 1 Name
+    Supply Outlet Inlet Node,  !- Component 1 Inlet Node Name
+    Supply Outlet Outlet Node;  !- Component 1 Outlet Node Name
+
+!---------------------------------------------------------------------------------------------
+!---------------------LISTING AND MODELING ALL THE SUPPLY SIDE CONNECTORS---------------------
+
+  ConnectorList,
+    Supply Connectors,  !- Name
+    Connector:Splitter,      !- Connector 1 Object Type
+    Supply Splitter,!- Connector 1 Name
+    Connector:Mixer,         !- Connector 2 Object Type
+    Supply Mixer;   !- Connector 2 Name
+
+  Connector:Splitter,
+    Supply Splitter,!- Name
+    Supply Inlet Branch,  !- Inlet Branch Name
+    Supply Boiler Branch,  !- Outlet Branch 1 Name
+    Supply Bypass Branch;  !- Outlet Branch 2 Name
+
+  Connector:Mixer,
+    Supply Mixer,   !- Name
+    Supply Outlet Branch,  !- Outlet Branch Name
+    Supply Boiler Branch,  !- Inlet Branch 1 Name
+    Supply Bypass Branch;  !- Inlet Branch 2 Name
+
+!---------------------------------------------------------------------------------------------
+!---------------------------HEATING LOOP SUPPLY SIDE COMPONENTS---------------------------
+  Pump:VariableSpeed,
+    Supply Pump,           !- Name
+    Supply Pump Inlet Node,  !- Inlet Node Name
+    Supply Pump Outlet Node,  !- Outlet Node Name
+    AUTOSIZE,                !- Design Maximum Flow Rate {m3/s}
+    15000,                   !- Design Pump Head {Pa}
+    AUTOSIZE,                !- Design Power Consumption {W}
+    0.9,                     !- Motor Efficiency
+    0.0,                     !- Fraction of Motor Inefficiencies to Fluid Stream
+    0,                       !- Coefficient 1 of the Part Load Performance Curve
+    1,                       !- Coefficient 2 of the Part Load Performance Curve
+    0,                       !- Coefficient 3 of the Part Load Performance Curve
+    0,                       !- Coefficient 4 of the Part Load Performance Curve
+    0.0,                     !- Design Minimum Flow Rate {m3/s}
+    INTERMITTENT;            !- Pump Control Type
+  
+!   Boiler:HotWater,
+!     Central Boiler,          !- Name
+!     Electricity,              !- Fuel Type
+!     autosize,                !- Nominal Capacity {W}
+!     1.0,                     !- Nominal Thermal Efficiency
+!     LeavingBoiler,           !- Efficiency Curve Temperature Evaluation Variable
+!     ,        !- Normalized Boiler Efficiency Curve Name
+!     autosize,                !- Design Water Flow Rate {m3/s}
+!     0.0,                     !- Minimum Part Load Ratio
+!     1.2,                     !- Maximum Part Load Ratio
+!     1.0,                     !- Optimum Part Load Ratio
+!     Central Boiler Inlet Node,  !- Boiler Water Inlet Node Name
+!     Central Boiler Outlet Node,  !- Boiler Water Outlet Node Name
+!     ,                    !- Water Outlet Upper Temperature Limit {C} (default 99.9)
+!     LeavingSetpointModulated;!- Boiler Flow Mode
+
+  ! DE20250618: There's a few options for air to water heatpumps,
+  ! but this seemed the most direct.
+  HeatPump:PlantLoop:EIR:Heating,
+    Heat Pump,            !- Name
+    Heat Pump Inlet Node,  !- Load Side Inlet Node Name
+    Heat Pump Outlet Node,  !- Load Side Outlet Node Name
+    AirSource,               !- Condenser Type
+    Outdoor Air Inlet Node,  !- Source Side Inlet Node Name
+    Outdoor Air Outlet Node, !- Source Side Outlet Node Name
+    ,                        !- Heat Recovery Inlet Node Name
+    ,                        !- Heat Recovery Outlet Node Name      
+    ,            !- Companion Heat Pump Name
+    0.005,                   !- Load Side Reference Flow Rate {m3/s}
+    2,                       !- Source Side Reference Flow Rate {m3/s}
+    ,                        !- Heat Recovery Reference Flow Rate {m3/s}
+    1000,                   !- Reference Capacity {W}
+    3.5,                     !- Reference Coefficient of Performance {W/W}
+    ,                        !- Sizing Factor
+    CapCurveFuncTemp,        !- Capacity Modifier Function of Temperature Curve Name
+    EIRCurveFuncTemp,        !- Electric Input to Output Ratio Modifier Function of Temperature Curve Name
+    EIRCurveFuncPLR;         !- Electric Input to Output Ratio Modifier Function of Part Load Ratio Curve Name
+
+  Curve:Biquadratic,
+    CapCurveFuncTemp,        !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    5.0,                     !- Minimum Value of x
+    10.0,                    !- Maximum Value of x
+    24.0,                    !- Minimum Value of y
+    35.0,                    !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+  Curve:Biquadratic,
+    EIRCurveFuncTemp,        !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    5.0,                     !- Minimum Value of x
+    10.0,                    !- Maximum Value of x
+    24.0,                    !- Minimum Value of y
+    35.0,                    !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+  Curve:Quadratic,
+    EIRCurveFuncPLR,         !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+  Pipe:Adiabatic,
+    Supply Bypass Pipe,  !- Name
+    Supply Bypass Inlet Node,  !- Inlet Node Name
+    Supply Bypass Outlet Node;  !- Outlet Node Name
+
+  Pipe:Adiabatic,
+    Supply Outlet Pipe,  !- Name
+    Supply Outlet Inlet Node,  !- Inlet Node Name
+    Supply Outlet Outlet Node;  !- Outlet Node Name
+
+!--------------------------------------------------------------------------------------------
+!============================================================================================
+!=======================HEATING LOOP DEMAND SIDE LOOP CONSTRUCTION=======================
+!----------------------LISTING AND MODELING ALL THE DEMAND SIDE BRANCHES---------------------
+  BranchList,
+    Demand Branches, !- Name
+    Demand Inlet Branch,
+    Demand Radiator Branch,
+    Demand Bypass Branch,
+    Demand Outlet Branch;
+
+  Branch,
+    Demand Inlet Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    Pipe:Adiabatic,          !- Component 1 Object Type
+    Demand Inlet Pipe,  !- Component 1 Name
+    Demand Inlet Inlet Node,  !- Component 1 Inlet Node Name
+    Demand Inlet Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Demand Radiator Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
+    Radiator,  !- Component 1 Name
+    Radiator Inlet Node,  !- Component 1 Inlet Node Name
+    Radiator Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Demand Bypass Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    Pipe:Adiabatic,          !- Component 1 Object Type
+    Demand Bypass Pipe,  !- Component 1 Name
+    Demand Bypass Inlet Node,  !- Component 1 Inlet Node Name
+    Demand Bypass Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Demand Outlet Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    Pipe:Adiabatic,          !- Component 1 Object Type
+    Demand Outlet Pipe,  !- Component 1 Name
+    Demand Outlet Inlet Node,  !- Component 1 Inlet Node Name
+    Demand Outlet Outlet Node;  !- Component 1 Outlet Node Name
+
+!--------------------------------------------------------------------------------------------
+!---------------------LISTING AND MODELING ALL THE DEMAND SIDE CONNECTORS--------------------
+
+  ConnectorList,
+    Demand Connectors,  !- Name
+    Connector:Splitter,      !- Connector 1 Object Type
+    Demand Splitter,!- Connector 1 Name
+    Connector:Mixer,         !- Connector 2 Object Type
+    Demand Mixer;   !- Connector 2 Name
+
+  Connector:Splitter,
+    Demand Splitter,!- Name
+    Demand Inlet Branch,  !- Inlet Branch Name
+    Demand Radiator Branch,  !- Outlet Branch 1 Name
+    Demand Bypass Branch;  !- Outlet Branch 2 Name
+
+  Connector:Mixer,
+    Demand Mixer,   !- Name
+    Demand Outlet Branch,  !- Outlet Branch Name
+    Demand Radiator Branch,  !- Inlet Branch 1 Name
+    Demand Bypass Branch;  !- Inlet Branch 2 Name
+
+!--------------------------------------------------------------------------------------------
+!---------------------------HEATING LOOP DEMAND SIDE COMPONENTS--------------------------
 
 	! DE20250616: Note this is a convective only model.
 	! For a full model, use `ZoneHVAC:Baseboard:RadiantConvective:{Electric, Water}`
 
-  ZoneHVAC:Baseboard:Convective:Electric,
-    Zone1Baseboard,          !- Name
+  ! Convective Radiator model
+  ! Reference: https://bigladdersoftware.com/epx/docs/22-2/input-output-reference/group-radiative-convective-units.html#zonehvacbaseboardconvectivewater
+  ZoneHVAC:Baseboard:Convective:Water,
+    Radiator,          !- Name
     ,                        !- Availability Schedule Name
+    Radiator Inlet Node, !- Inlet Node Name
+    Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    5000,                    !- Heating Design Capacity {W}
+    500,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    0.97;                    !- Efficiency
+    ! U-Factor times area value should be 25
+    ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
+    ! This isn't efficient enough to heat the room, so setting it to 250 to match
+    ! the behaviour of the ideal loads model.
+    250, !- U-Factor Times Area Value
+    0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.001;                   !- Field Convergence Tolerance (from example in reference)
+
+  Pipe:Adiabatic,
+    Demand Inlet Pipe,  !- Name
+    Demand Inlet Inlet Node,  !- Inlet Node Name
+    Demand Inlet Outlet Node;  !- Outlet Node Name
+
+  Pipe:Adiabatic,
+    Demand Bypass Pipe,  !- Name
+    Demand Bypass Inlet Node,  !- Inlet Node Name
+    Demand Bypass Outlet Node;  !- Outlet Node Name
+
+  Pipe:Adiabatic,
+    Demand Outlet Pipe,  !- Name
+    Demand Outlet Inlet Node,  !- Inlet Node Name
+    Demand Outlet Outlet Node;  !- Outlet Node Name
+
+!--------------------------------------------------------------------------------------------
+!============================================================================================
+!==================================HEATING LOOP CONTROLS==================================
+!--------------------------------------PLANT SIZING------------------------------------------
+
+  Sizing:Plant,
+    Hot Water Loop,                !- Plant or Condenser Loop Name
+    HEATING,                 !- Loop Type
+    55.0,                    !- Design Loop Exit Temperature {C} TODO: Work out what this should be
+    10.0;                    !- Loop Design Temperature Difference {deltaC} TODO: Work out what this should be
+
+!---------------------------------------------------------------------------------------------
+!----------------------------------------SETPOINTS---------------------------------------------
+
+  SetpointManager:Scheduled,
+    HeatSys1 Loop Setpoint Manager,  !- Name
+    Temperature,             !- Control Variable
+    ALWAYS 55 C,   !- Schedule Name
+    Supply Outlet Outlet Node;  !- Setpoint Node or NodeList Name
+
+  SetpointManager:Scheduled,
+    HeatSys1 Boiler Setpoint Manager,  !- Name
+    Temperature,             !- Control Variable
+    ALWAYS 55 C,   !- Schedule Name
+    Heat Pump Outlet Node;  !- Setpoint Node or NodeList Name
+
+!---------------------------------------------------------------------------------------------
+!--------------------------------PLANTEQUIPMENTSCHEMES----------------------------------------
 
 
-!-   ===========  ALL OBJECTS IN CLASS: PURCHASED AIR ===========
+  PlantEquipmentOperationSchemes,
+    Hot Loop Operation,      !- Name
+    PlantEquipmentOperation:HeatingLoad,  !- Control Scheme 1 Object Type
+    Central Boiler Only,     !- Control Scheme 1 Name
+    ALWAYS 1;            !- Control Scheme 1 Schedule Name
 
-!  ZoneHVAC:IdealLoadsAirSystem,
-!    ZONE ONE Purchased Air,  !- Name
-!    ,                        !- Availability Schedule Name
-!    ZONE ONE Supply Inlet,   !- Zone Supply Air Node Name
-!    ,                        !- Zone Exhaust Air Node Name
-!    ,                        !- System Inlet Air Node Name
-!    50,                      !- Maximum Heating Supply Air Temperature {C}
-!    13,                      !- Minimum Cooling Supply Air Temperature {C}
-!    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-!    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-!    NoLimit,                 !- Heating Limit
-!    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-!    ,                        !- Maximum Sensible Heating Capacity {W}
-!    NoLimit,                 !- Cooling Limit
-!    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-!    ,                        !- Maximum Total Cooling Capacity {W}
-!    ,                        !- Heating Availability Schedule Name
-!    ,                        !- Cooling Availability Schedule Name
-!    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
-!    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
-!    ConstantSupplyHumidityRatio,  !- Humidification Control Type
-!    ,                        !- Design Specification Outdoor Air Object Name
-!    ,                        !- Outdoor Air Inlet Node Name
-!    ,                        !- Demand Controlled Ventilation Type
-!    ,                        !- Outdoor Air Economizer Type
-!    ,                        !- Heat Recovery Type
-!    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
-!    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+  PlantEquipmentOperation:HeatingLoad,
+    Central Boiler Only,     !- Name
+    0,                       !- Load Range 1 Lower Limit {W}
+    1000000,                 !- Load Range 1 Upper Limit {W}
+    heating plant;           !- Range 1 Equipment List Name
+
+  PlantEquipmentList,
+    heating plant,           !- Name
+    HeatPump:PlantLoop:EIR:Heating,         !- Equipment 1 Object Type
+    Heat Pump;          !- Equipment 1 Name
+
+
+
+
+
+
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE CONTROL:THERMOSTATIC ===========
 
@@ -455,6 +773,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     Thermostat Heat SP Control;  !- Control 1 Name
+
   ThermostatSetpoint:SingleHeating,
     Thermostat Heat SP Control,  !- Name
     ALWAYS 21;               !- Heating Setpoint Temperature Schedule Name
