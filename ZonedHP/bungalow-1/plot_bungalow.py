@@ -12,6 +12,7 @@ def load_results(
         "ZONE ONE:Zone Air System Sensible Heating Energy [J](Hourly)": "heating_energy_1_J",
         "ZONE ONE:Zone Predicted Sensible Load to Setpoint Heat Transfer Rate [W](Hourly)": "heat_transfer_rate_1_W",
         "ZONE1BASEBOARD:Baseboard Total Heating Rate [W](Hourly)": "heating_rate_1_W",
+        "RADIATOR:Baseboard Total Heating Rate [W](Hourly)": "heating_rate_1_W",
         "ZONE ONE PURCHASED AIR:Zone Ideal Loads Zone Total Heating Rate [W](Hourly)": "heating_rate_1_W",
     }
 
