@@ -1,0 +1,37 @@
+Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2025.06.18 11:45,
+   ** Warning ** ManageSizing: The ZoneComponentLoadSummary report was requested but no sizing objects were found so that report cannot be generated.
+   ** Warning ** ManageSizing: For a zone sizing run, there must be at least 1 Sizing:Zone input object. SimulationControl Zone Sizing option ignored.
+   ************* Beginning Plant Sizing Calculations
+   ** Warning ** ComputeIntSWAbsorbFactors: Sum of area times inside solar absorption for all surfaces is zero in Enclosure: ZONE ONE
+   ** Warning ** Zone areas*inside surface emissivities are summing to zero, for Zone="ZONE ONE"
+   **   ~~~   ** As a result, MRT will be set to MAT for that zone
+   ** Warning ** Enclosure areas*inside surface emissivities are summing to zero, for Enclosure="ZONE ONE"
+   **   ~~~   ** As a result, MRT will be set to the volume weighted average MAT for that enclosure
+   ** Warning ** Output:Meter: invalid Key Name="DISTRICTHEATINGWATER:FACILITY" - not found.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ** Severe  ** Node Connection Error, Node="ZONE ONE SUPPLY INLET", ZoneInlet node did not find an outlet node.
+   **   ~~~   ** Reference Object=ZoneHVAC:EquipmentConnections, Name=ZONE ONE
+   ************* There was 1 node connection error noted.
+   ************* Beginning Simulation
+   ** Warning ** WriteVeriSumTable: InputVerificationsAndResultsSummary: Wall area based on [>=60,<=120] degrees (tilt) as walls
+   **   ~~~   ** differs ~46.5% from user entered Wall class surfaces. Degree calculation based on ASHRAE 90.1 wall definitions.
+   **   ~~~   ** Total wall area by ASHRAE 90.1 definition=73.600 m2.
+   **   ~~~   ** Total exterior wall area from user entered classes=137.600 m2.
+   **   ~~~   ** Total ground contact wall area from user entered classes=0.000 m2.
+   ************* Simulation Error Summary *************
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Node Connection Errors
+   ************* ..Node connection errors are often caused by spelling mistakes in a node name field.
+   ************* ..To track down the problem, search the idf file for each node name listed to see if it
+   ************* ..occurs in the expected input fields.
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 2 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 7 Warning; 1 Severe Errors; Elapsed Time=00hr 00min  0.21sec
