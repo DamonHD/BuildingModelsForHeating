@@ -388,7 +388,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ZoneHVAC:EquipmentConnections,
     ZONE ONE,                !- Zone Name
     ZONE ONE Equipment,      !- Zone Conditioning Equipment List Name
-    ZONE ONE Supply Inlet,   !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
     ZONE ONE Zone Air Node,  !- Zone Air Node Name
     ZONE ONE Return Outlet;  !- Zone Return Air Node or NodeList Name
@@ -815,7 +815,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT METER ===========
 
-  Output:Meter,DistrictHeatingWater:Facility,Hourly;
+  ! Output:Meter,DistrictHeatingWater:Facility,Hourly;
 
   ! Output:Meter,DistrictCooling:Facility,Hourly;
 
