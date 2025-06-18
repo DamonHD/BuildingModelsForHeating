@@ -514,22 +514,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.0,                     !- Design Minimum Flow Rate {m3/s}
     INTERMITTENT;            !- Pump Control Type
   
-!   Boiler:HotWater,
-!     Central Boiler,          !- Name
-!     Electricity,              !- Fuel Type
-!     autosize,                !- Nominal Capacity {W}
-!     1.0,                     !- Nominal Thermal Efficiency
-!     LeavingBoiler,           !- Efficiency Curve Temperature Evaluation Variable
-!     ,        !- Normalized Boiler Efficiency Curve Name
-!     autosize,                !- Design Water Flow Rate {m3/s}
-!     0.0,                     !- Minimum Part Load Ratio
-!     1.2,                     !- Maximum Part Load Ratio
-!     1.0,                     !- Optimum Part Load Ratio
-!     Central Boiler Inlet Node,  !- Boiler Water Inlet Node Name
-!     Central Boiler Outlet Node,  !- Boiler Water Outlet Node Name
-!     ,                    !- Water Outlet Upper Temperature Limit {C} (default 99.9)
-!     LeavingSetpointModulated;!- Boiler Flow Mode
-
   ! DE20250618: There's a few options for air to water heatpumps,
   ! but this seemed the most direct.
   HeatPump:PlantLoop:EIR:Heating,
@@ -545,7 +529,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.005,                   !- Load Side Reference Flow Rate {m3/s}
     2,                       !- Source Side Reference Flow Rate {m3/s}
     ,                        !- Heat Recovery Reference Flow Rate {m3/s}
-    1000,                   !- Reference Capacity {W}
+    5000,                   !- Reference Capacity {W}
     3.5,                     !- Reference Coefficient of Performance {W/W}
     ,                        !- Sizing Factor
     CapCurveFuncTemp,        !- Capacity Modifier Function of Temperature Curve Name
@@ -595,6 +579,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.0,                     !- Coefficient3 x**2
     0.0,                     !- Minimum Value of x
     1.0;                     !- Maximum Value of x
+
+  OutdoorAir:Node,
+    Outdoor Air Inlet Node;  !- Name
 
   Pipe:Adiabatic,
     Supply Bypass Pipe,  !- Name
