@@ -398,10 +398,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ZoneHVAC:EquipmentList,
     ZONE ONE Equipment,      !- Name
     SequentialLoad,          !- Load Distribution Scheme
-    ! ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
-    ! ZONE ONE Purchased Air,  !- Zone Equipment 1 Name
-	ZoneHVAC:Baseboard:Convective:Water,
-	Radiator,
+	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
+	Radiator,                            !- Zone Equipment 1 Name
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
@@ -718,15 +716,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 55 C,   !- Schedule Name
     Supply Outlet Outlet Node;  !- Setpoint Node or NodeList Name
 
-  SetpointManager:Scheduled,
-    HeatSys1 Boiler Setpoint Manager,  !- Name
-    Temperature,             !- Control Variable
-    ALWAYS 55 C,   !- Schedule Name
-    Heat Pump Outlet Node;  !- Setpoint Node or NodeList Name
-
 !---------------------------------------------------------------------------------------------
 !--------------------------------PLANTEQUIPMENTSCHEMES----------------------------------------
-
 
   PlantEquipmentOperationSchemes,
     Hot Loop Operation,      !- Name
@@ -734,6 +725,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Central Boiler Only,     !- Control Scheme 1 Name
     ALWAYS 1;            !- Control Scheme 1 Schedule Name
 
+!- TODO: What do these do?
   PlantEquipmentOperation:HeatingLoad,
     Central Boiler Only,     !- Name
     0,                       !- Load Range 1 Lower Limit {W}
@@ -801,10 +793,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT METER ===========
-
-  ! Output:Meter,DistrictHeatingWater:Facility,Hourly;
-
-  ! Output:Meter,DistrictCooling:Facility,Hourly;
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT ===========
 
