@@ -46,6 +46,34 @@ on unmethours.
 The `HeatPump:PlantLoop:EIR:Heating` model seems like the most direct option,
 so I went with that.
 
+## COP
+
+I'm not exactly sure what the right way of doing this calculation is,
+but the Energy Meters Report[^3] seems the most promising.
+The following annual and peak values seem relevant to the calculation: 
+
+- `Electricity:Plant`: the electricity usage by the heating plant loop.
+- `Heating:Electricity`: the electricity usage by the heating system,
+   excluding the water pump.
+- `HeatPump:Heating:Electricity`: the electricity usage by just the heat pump.
+- `General:Heating:EnergyTransfer`: the heat transfer into the building
+  from just the heating system.
+- `General:Heating:EnergyTransfer:Zone:*`: the heat transfer into each zone
+  from just the heating system.
+- `EnergyTransfer:Plant`: Energy transfer by the plant. I'm not entirely sure
+   why this is different to `General:Heating:EnergyTransfer`. See [^4].
+
+I'm choosing to calculate the COP in the following way as this seems to be
+the most consistent in terms of naming, but we may have to revise it.
+
+```
+  COP[max. W] = Electricity:Plant[max. W] / EnergyTransfer:Plant[max. W]
+  3.4 = 3185 / 938
+```
+
+[^3]: out-dd/eplustbl.htm#EnergyMeters::EntireFacility
+[^4]: https://bigladdersoftware.com/epx/docs/8-3/output-details-and-examples/eplusout.mdd.html#additional-end-use-types-only-used-for-energytransfer
+
 ## TODO
 
 - [ ] Understand Radiator U-Factor Times Area Value.

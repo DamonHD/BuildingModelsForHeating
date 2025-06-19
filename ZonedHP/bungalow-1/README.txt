@@ -79,3 +79,4 @@ DHD20250413: inside and outside surface temperatures are significantly different
 DHD20250413: 'operative' (@0.5) thermostat raises ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W] to 2025W (cf 3825W at 0.89).
 DHD20250413: now 28.35GJ (7876kWh, 900W) annual for Birmingham weather annual simulation.  (Manchester EGCC from paper 875W.)
 DHD20250616: DE gets same answer for DD for bungalow-1 20250413 snapshot to 13SF on Linux (Fedora 42 on AMD Ryzen 5 5600X) as DHD does on macOS (15.5 on an MBA M1 2020), with same E+ version.
+ DE20250619: Heatpump COP for bungalow-1-heatpump 20250618 snapshot is 3.4 (EnergyTransfer:Plant / Electricity:Plant Maximum Value [W])
