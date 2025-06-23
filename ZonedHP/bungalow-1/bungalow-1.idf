@@ -261,10 +261,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0.50,                    !- View Factor to Ground
     4,                       !- Number of Vertices
-    8.00,8.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
-    8.00,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-    0,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-    0,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+    8, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    8, 8, 0,                 !- X,Y,Z ==> Vertex 2 {m}
+    0, 8, 0,                 !- X,Y,Z ==> Vertex 3 {m}
+    0, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
     ZONE SURFACE EAST,       !- Name
@@ -278,10 +278,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0.50,                    !- View Factor to Ground
     4,                       !- Number of Vertices
-    8.00,0,2.30,  !- X,Y,Z ==> Vertex 1 {m}
-    8.00,0,0,  !- X,Y,Z ==> Vertex 2 {m}
-    8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-    8.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+    0, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    0, 8, 0,                 !- X,Y,Z ==> Vertex 2 {m}
+    0, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
+    0, 0, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
     ZONE SURFACE SOUTH,      !- Name
@@ -295,10 +295,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0.50,                    !- View Factor to Ground
     4,                       !- Number of Vertices
-    0,0,2.30,  !- X,Y,Z ==> Vertex 1 {m}
-    0,0,0,  !- X,Y,Z ==> Vertex 2 {m}
-    8.00,0,0,  !- X,Y,Z ==> Vertex 3 {m}
-    8.00,0,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+    0, 0, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    0, 0, 0,                 !- X,Y,Z ==> Vertex 2 {m}
+    8, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
+    8, 0, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
     ZONE SURFACE WEST,       !- Name
@@ -312,10 +312,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0.50,                    !- View Factor to Ground
     4,                       !- Number of Vertices
-    0,8.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
-    0,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-    0,0,0,  !- X,Y,Z ==> Vertex 3 {m}
-    0,0,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+    8, 0, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    8, 0, 0,                 !- X,Y,Z ==> Vertex 2 {m}
+    8, 8, 0,                 !- X,Y,Z ==> Vertex 3 {m}
+    8, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
     ZONE SURFACE FLOOR,      !- Name
@@ -329,10 +329,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     NoWind,                  !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices
-    0,0,0,  !- X,Y,Z ==> Vertex 1 {m}
-    0,8.00,0,  !- X,Y,Z ==> Vertex 2 {m}
-    8.00,8.00,0,  !- X,Y,Z ==> Vertex 3 {m}
-    8.00,0,0;  !- X,Y,Z ==> Vertex 4 {m}
+    8, 8, 0,                 !- X,Y,Z ==> Vertex 1 {m}
+    8, 0, 0,                 !- X,Y,Z ==> Vertex 2 {m}
+    0, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
+    0, 8, 0;                 !- X,Y,Z ==> Vertex 4 {m}
 
 ! DHD20250401: Surface Type 'Wall' to get same film coefficients as Wall.
   BuildingSurface:Detailed,
@@ -347,10 +347,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     WindExposed,             !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices
-    0,8.00,2.30,  !- X,Y,Z ==> Vertex 1 {m}
-    0,0,2.30,  !- X,Y,Z ==> Vertex 2 {m}
-    8.00,0,2.30,  !- X,Y,Z ==> Vertex 3 {m}
-    8.00,8.00,2.30;  !- X,Y,Z ==> Vertex 4 {m}
+    0, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    0, 0, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    8, 0, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    8, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPE ===========
 
