@@ -80,4 +80,4 @@ DHD20250413: 'operative' (@0.5) thermostat raises ZONE ONE PURCHASED AIR,Zone Id
 DHD20250413: now 28.35GJ (7876kWh, 900W) annual for Birmingham weather annual simulation.  (Manchester EGCC from paper 875W.)
 DHD20250616: DE gets same answer for DD for bungalow-1 20250413 snapshot to 13SF on Linux (Fedora 42 on AMD Ryzen 5 5600X) as DHD does on macOS (15.5 on an MBA M1 2020), with same E+ version.
  DE20250619: Heatpump COP for bungalow-1-heatpump 20250618 snapshot is 3.4 (EnergyTransfer:Plant / Electricity:Plant Maximum Value [W])
- DE20250623: coordinate errors fixed; heat demand from 1 still 2025W.
+ DE20250623: coordinate errors fixed for bungalow-1 and -heatpump; heat demand from 1 still 2025W, 1-heatpump 2006W.
