@@ -1,0 +1,13 @@
+ ReadVarsESO
+ processing:./bungalow-1-heatpump.rvi
+ input file:20250623DE-heatpump-snapshot/out-dd/eplusout.eso
+ output file:20250623DE-heatpump-snapshot/out-dd/eplusout.csv
+ getting all vars from:20250623DE-heatpump-snapshot/out-dd/eplusout.eso
+  number variables requested for output=           4
+ ReadVars Run Time=00hr 00min  0.02sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:./bungalow-1-heatpump.mvi
+ Requested ESO file=20250623DE-heatpump-snapshot/out-dd/eplusout.mtr
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.
