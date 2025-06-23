@@ -1,0 +1,16 @@
+ ReadVarsESO
+ processing:./bungalow-2.rvi
+ input file:20250623DE-snapshot/out-dd/eplusout.eso
+ output file:20250623DE-snapshot/out-dd/eplusout.csv
+ getting all vars from:20250623DE-snapshot/out-dd/eplusout.eso
+  number variables requested for output=         126
+ ReadVars Run Time=00hr 00min  0.03sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:./bungalow-2.mvi
+ input file:20250623DE-snapshot/out-dd/eplusout.mtr
+ output file:20250623DE-snapshot/out-dd/eplusmtr.csv
+ getting all vars from:20250623DE-snapshot/out-dd/eplusout.mtr
+  number variables requested for output=           1
+ ReadVars Run Time=00hr 00min  0.02sec
+ ReadVarsESO program completed successfully.
