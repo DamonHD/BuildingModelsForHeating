@@ -772,23 +772,30 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
   Output:Variable,*,Zone Air Temperature,Hourly;
   
- ! DHD20250407: heat demand in W.
- Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
+! DHD20250407: heat demand in W.
+Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
   Output:Variable,*,Baseboard Total Heating Rate,hourly;
- ! DHD20250407: solar gains in W; should be all zero.
- !Output:Variable,*,Surface Outside Face Solar Radiation Heat Gain Rate,Hourly;
- ! DHD20250407: heat flows in W.
- ! Output:Variable,*,Surface Average Face Conduction Heat Transfer Rate,Hourly;
- !Output:Variable,*,Surface Outside Face Heat Emission to Air Rate,Hourly;
- ! DHD20250413: convection heat flows in W.
- !Output:Variable,*,Surface Outside Face Convection Heat Gain Rate,Hourly;
- !Output:Variable,*,Surface Inside Face Convection Heat Gain Rate,Hourly;
+! DHD20250407: solar gains in W; should be all zero.
+!Output:Variable,*,Surface Outside Face Solar Radiation Heat Gain Rate,Hourly;
+! DHD20250407: heat flows in W.
+! Output:Variable,*,Surface Average Face Conduction Heat Transfer Rate,Hourly;
+!Output:Variable,*,Surface Outside Face Heat Emission to Air Rate,Hourly;
+! DHD20250413: convection heat flows in W.
+!Output:Variable,*,Surface Outside Face Convection Heat Gain Rate,Hourly;
+!Output:Variable,*,Surface Inside Face Convection Heat Gain Rate,Hourly;
  
- ! DHD20250413: surface temperatures.
+! DHD20250413: surface temperatures.
 ! Output:Variable,*,Surface Outside Face Outdoor Air Drybulb Temperature,Hourly;
 ! Output:Variable,*,Surface Inside Face Temperature,Hourly;
 ! Output:Variable,*,Surface Outside Face Temperature,Hourly;
 ! Output:Variable,*,Surface Inside Face Adjacent Air Temperature,Hourly;
+
+! DHD20250623: heat pump system inputs.
+Output:Variable,*,Heat Pump Electricity Rate,Hourly;
+Output:Variable,*,Pump Electricity Rate,Hourly;
+!HVAC,Average,Heat Pump Electricity Rate [W]
+!HVAC,Average,Pump Electricity Rate [W]
+
  
 
 
