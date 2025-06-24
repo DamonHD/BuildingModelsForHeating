@@ -240,7 +240,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 
  ! DHD20250602: internal wall approximation including door in mean U-value: > 2 W/m2K (from IDU and IWU).
- ! Like plasterboard on studs.
+ ! Like plasterboard on studs, but almost no thermal capacity.
  ! TODO FIXME not finished
    Material,
     IW MEAN,                 !- Name
@@ -248,7 +248,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.01200,                 !- Thickness {m}
     0.16000,                 !- Conductivity {W/m-K}
     950.000,                 !- Density {kg/m3}
-    840,                     !- Specific Heat {J/kg-K}
+    100,                     !- Specific Heat {J/kg-K}
     0.900000,                !- Thermal Absorptance
     0.600000,                !- Solar Absorptance
     0.600000;                !- Visible Absorptance
