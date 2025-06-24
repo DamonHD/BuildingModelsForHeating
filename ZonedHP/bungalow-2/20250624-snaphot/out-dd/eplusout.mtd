@@ -1,0 +1,298 @@
+
+ Meters for 117,Z1:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:Z1 [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:Z1 [J]
+  OnMeter=General:Heating:EnergyTransfer [J]
+  OnMeter=General:Heating:EnergyTransfer:Zone:Z1 [J]
+
+ Meters for 202,Z1:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:Z1 [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:Z1 [J]
+  OnMeter=General:Cooling:EnergyTransfer [J]
+  OnMeter=General:Cooling:EnergyTransfer:Zone:Z1 [J]
+
+ Meters for 253,Z2:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:Z2 [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:Z2 [J]
+  OnMeter=General:Heating:EnergyTransfer [J]
+  OnMeter=General:Heating:EnergyTransfer:Zone:Z2 [J]
+
+ Meters for 290,Z2:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:Z2 [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:Z2 [J]
+  OnMeter=General:Cooling:EnergyTransfer [J]
+  OnMeter=General:Cooling:EnergyTransfer:Zone:Z2 [J]
+
+ Meters for 317,Z3:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:Z3 [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:Z3 [J]
+  OnMeter=General:Heating:EnergyTransfer [J]
+  OnMeter=General:Heating:EnergyTransfer:Zone:Z3 [J]
+
+ Meters for 354,Z3:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:Z3 [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:Z3 [J]
+  OnMeter=General:Cooling:EnergyTransfer [J]
+  OnMeter=General:Cooling:EnergyTransfer:Zone:Z3 [J]
+
+ Meters for 381,Z4:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:Z4 [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:Z4 [J]
+  OnMeter=General:Heating:EnergyTransfer [J]
+  OnMeter=General:Heating:EnergyTransfer:Zone:Z4 [J]
+
+ Meters for 418,Z4:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:Z4 [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:Z4 [J]
+  OnMeter=General:Cooling:EnergyTransfer [J]
+  OnMeter=General:Cooling:EnergyTransfer:Zone:Z4 [J]
+
+ Meters for 444,Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy [J]
+  OnMeter=DistrictHeatingWater:Facility [J]
+  OnMeter=DistrictHeatingWater:HVAC [J]
+  OnMeter=Heating:DistrictHeatingWater [J]
+  OnMeter=General:Heating:DistrictHeatingWater [J]
+
+ Meters for 493,Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy [J]
+  OnMeter=DistrictCooling:Facility [J]
+  OnMeter=DistrictCooling:HVAC [J]
+  OnMeter=Cooling:DistrictCooling [J]
+  OnMeter=General:Cooling:DistrictCooling [J]
+
+ Meters for 543,Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy [J]
+  OnMeter=DistrictHeatingWater:Facility [J]
+  OnMeter=DistrictHeatingWater:HVAC [J]
+  OnMeter=Heating:DistrictHeatingWater [J]
+  OnMeter=General:Heating:DistrictHeatingWater [J]
+
+ Meters for 544,Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy [J]
+  OnMeter=DistrictCooling:Facility [J]
+  OnMeter=DistrictCooling:HVAC [J]
+  OnMeter=Cooling:DistrictCooling [J]
+  OnMeter=General:Cooling:DistrictCooling [J]
+
+ Meters for 546,Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy [J]
+  OnMeter=DistrictHeatingWater:Facility [J]
+  OnMeter=DistrictHeatingWater:HVAC [J]
+  OnMeter=Heating:DistrictHeatingWater [J]
+  OnMeter=General:Heating:DistrictHeatingWater [J]
+
+ Meters for 547,Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy [J]
+  OnMeter=DistrictCooling:Facility [J]
+  OnMeter=DistrictCooling:HVAC [J]
+  OnMeter=Cooling:DistrictCooling [J]
+  OnMeter=General:Cooling:DistrictCooling [J]
+
+ Meters for 549,Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy [J]
+  OnMeter=DistrictHeatingWater:Facility [J]
+  OnMeter=DistrictHeatingWater:HVAC [J]
+  OnMeter=Heating:DistrictHeatingWater [J]
+  OnMeter=General:Heating:DistrictHeatingWater [J]
+
+ Meters for 550,Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy [J]
+  OnMeter=DistrictCooling:Facility [J]
+  OnMeter=DistrictCooling:HVAC [J]
+  OnMeter=Cooling:DistrictCooling [J]
+  OnMeter=General:Cooling:DistrictCooling [J]
+
+ Meters for 552,Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ Meters for 577,Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ Meters for 578,Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ For Meter=EnergyTransfer:Facility [J], ResourceType=EnergyTransfer, contents are:
+  Z1:Zone Air System Sensible Heating Energy
+  Z1:Zone Air System Sensible Cooling Energy
+  Z2:Zone Air System Sensible Heating Energy
+  Z2:Zone Air System Sensible Cooling Energy
+  Z3:Zone Air System Sensible Heating Energy
+  Z3:Zone Air System Sensible Cooling Energy
+  Z4:Zone Air System Sensible Heating Energy
+  Z4:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Building [J], ResourceType=EnergyTransfer, Group=Building, contents are:
+  Z1:Zone Air System Sensible Heating Energy
+  Z1:Zone Air System Sensible Cooling Energy
+  Z2:Zone Air System Sensible Heating Energy
+  Z2:Zone Air System Sensible Cooling Energy
+  Z3:Zone Air System Sensible Heating Energy
+  Z3:Zone Air System Sensible Cooling Energy
+  Z4:Zone Air System Sensible Heating Energy
+  Z4:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:Z1 [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  Z1:Zone Air System Sensible Heating Energy
+  Z1:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Heating, contents are:
+  Z1:Zone Air System Sensible Heating Energy
+  Z2:Zone Air System Sensible Heating Energy
+  Z3:Zone Air System Sensible Heating Energy
+  Z4:Zone Air System Sensible Heating Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:Z1 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  Z1:Zone Air System Sensible Heating Energy
+
+ For Meter=General:Heating:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Heating, contents are:
+  Z1:Zone Air System Sensible Heating Energy
+  Z2:Zone Air System Sensible Heating Energy
+  Z3:Zone Air System Sensible Heating Energy
+  Z4:Zone Air System Sensible Heating Energy
+
+ For Meter=General:Heating:EnergyTransfer:Zone:Z1 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  Z1:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Cooling, contents are:
+  Z1:Zone Air System Sensible Cooling Energy
+  Z2:Zone Air System Sensible Cooling Energy
+  Z3:Zone Air System Sensible Cooling Energy
+  Z4:Zone Air System Sensible Cooling Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:Z1 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  Z1:Zone Air System Sensible Cooling Energy
+
+ For Meter=General:Cooling:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Cooling, contents are:
+  Z1:Zone Air System Sensible Cooling Energy
+  Z2:Zone Air System Sensible Cooling Energy
+  Z3:Zone Air System Sensible Cooling Energy
+  Z4:Zone Air System Sensible Cooling Energy
+
+ For Meter=General:Cooling:EnergyTransfer:Zone:Z1 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  Z1:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:Z2 [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  Z2:Zone Air System Sensible Heating Energy
+  Z2:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:Z2 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  Z2:Zone Air System Sensible Heating Energy
+
+ For Meter=General:Heating:EnergyTransfer:Zone:Z2 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  Z2:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:Z2 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  Z2:Zone Air System Sensible Cooling Energy
+
+ For Meter=General:Cooling:EnergyTransfer:Zone:Z2 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  Z2:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:Z3 [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  Z3:Zone Air System Sensible Heating Energy
+  Z3:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:Z3 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  Z3:Zone Air System Sensible Heating Energy
+
+ For Meter=General:Heating:EnergyTransfer:Zone:Z3 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  Z3:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:Z3 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  Z3:Zone Air System Sensible Cooling Energy
+
+ For Meter=General:Cooling:EnergyTransfer:Zone:Z3 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  Z3:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:Z4 [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  Z4:Zone Air System Sensible Heating Energy
+  Z4:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:Z4 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  Z4:Zone Air System Sensible Heating Energy
+
+ For Meter=General:Heating:EnergyTransfer:Zone:Z4 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  Z4:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:Z4 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  Z4:Zone Air System Sensible Cooling Energy
+
+ For Meter=General:Cooling:EnergyTransfer:Zone:Z4 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  Z4:Zone Air System Sensible Cooling Energy
+
+ For Meter=DistrictHeatingWater:Facility [J], ResourceType=DistrictHeatingWater, contents are:
+  Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+
+ For Meter=DistrictHeatingWater:HVAC [J], ResourceType=DistrictHeatingWater, Group=HVAC, contents are:
+  Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+
+ For Meter=Heating:DistrictHeatingWater [J], ResourceType=DistrictHeatingWater, EndUse=Heating, contents are:
+  Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+
+ For Meter=General:Heating:DistrictHeatingWater [J], ResourceType=DistrictHeatingWater, EndUse=Heating, contents are:
+  Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Heating Energy
+
+ For Meter=DistrictCooling:Facility [J], ResourceType=DistrictCooling, contents are:
+  Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+
+ For Meter=DistrictCooling:HVAC [J], ResourceType=DistrictCooling, Group=HVAC, contents are:
+  Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+
+ For Meter=Cooling:DistrictCooling [J], ResourceType=DistrictCooling, EndUse=Cooling, contents are:
+  Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+
+ For Meter=General:Cooling:DistrictCooling [J], ResourceType=DistrictCooling, EndUse=Cooling, contents are:
+  Z1 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z2 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z3 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  Z4 PURCHASED AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+
+ For Meter=Carbon Equivalent:Facility [kg], ResourceType=Carbon Equivalent, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass
+
+ For Meter=CarbonEquivalentEmissions:Carbon Equivalent [kg], ResourceType=Carbon Equivalent, EndUse=CarbonEquivalentEmissions, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass
