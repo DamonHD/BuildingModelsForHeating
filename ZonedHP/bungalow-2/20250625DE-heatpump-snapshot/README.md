@@ -7,9 +7,8 @@ Based on `20250623DE-fix-snapshot/bungalow-2.idf`
 A simple single room, single zone hot water heating loop.
 
 - Heat Pump set point: 55 C
-- Zone set point: 21 C
-- Heating Rate per rad \[W](Hourly): 444.5
-- Total Heating Rate \[W](Hourly): 1778
+- "A" Zone room set point: 21 C
+- "B" Zone room set point: 18 C
 
 ```
                   +-----+-------------+------+------------+------------+------------+
@@ -46,6 +45,31 @@ The peak value is `~1680 W`, but the peak radiator ouput power is `~444.5 * 4 = 
 
 I'm not sure if this is a problem with the model, a bug in E+,
 or just me not understanding the model/outputs.
+
+
+## Unexpected Setback Behaviour
+
+With some rooms set back to 18 C, I would expect the warm rooms
+to be slightly below or at their setpoints, and the cool rooms
+to be slightly above their setpoints.
+Additionally, the bad setback model predicts that electricity usage
+should be higher.
+
+Neither of these is true for the current model.
+
+| variable      | location   | aaaa   | aabb   | abab   |
+|--------------:|-----------:|-------:|-------:|-------:|
+| air_temp_c    | z1         |   21.0 |   21.7 |   22.2 |
+|               | z2         |   21.0 |   21.7 |   16.8 |
+|               | z3         |   21.0 |   17.3 |   16.8 |
+|               | z4         |   21.0 |   17.3 |   22.2 |
+| electricity_w | total      |  588.3 |  556.6 |  556.6 |
+| power_w       | heat_pump  | 1679.8 | 1568.7 | 1568.7 |
+| rad_power_w   | total      | 1777.3 | 1666.2 | 1666.2 |
+|               | z1         |  444.3 |  535.9 |  604.8 |
+|               | z2         |  444.3 |  535.9 |  228.3 |
+|               | z3         |  444.3 |  297.2 |  228.3 |
+|               | z4         |  444.3 |  297.2 |  604.8 |
 
 ## TODO
 
