@@ -102,4 +102,3 @@ DHD20250604: walls, roof, floor split to allow creation of Z1, Z2, Z3, Z4; 2025W
  DE20250623: coordinate errors fixed for bungalow-2; heat demand before and after 1777W.
 DHD20250624: bungalow-2-dezoned.idf heat load back to 2025W.
 DHD20250624: asked question: https://unmethours.com/question/102055/adding-internal-partitions-reduces-heatflow-to-outside-why/
-
