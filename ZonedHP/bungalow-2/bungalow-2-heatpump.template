@@ -979,7 +979,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Supply Pump,           !- Name
     Supply Pump Inlet Node,  !- Inlet Node Name
     Supply Pump Outlet Node,  !- Outlet Node Name
-    AUTOSIZE,                !- Design Maximum Flow Rate {m3/s}
+    0.0004,                !- Design Maximum Flow Rate {m3/s}
     15000,                   !- Design Pump Head {Pa}
     AUTOSIZE,                !- Design Power Consumption {W}
     0.9,                     !- Motor Efficiency
@@ -1003,7 +1003,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ,                        !- Heat Recovery Inlet Node Name
     ,                        !- Heat Recovery Outlet Node Name      
     ,            !- Companion Heat Pump Name
-    0.005,                   !- Load Side Reference Flow Rate {m3/s}
+    0.00013,                   !- Load Side Reference Flow Rate {m3/s}
     2,                       !- Source Side Reference Flow Rate {m3/s}
     ,                        !- Heat Recovery Reference Flow Rate {m3/s}
     5000,                   !- Reference Capacity {W}
@@ -1182,14 +1182,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z1 Radiator Inlet Node,  !- Inlet Node Name
     Z1 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    500,                     !- Heating Design Capacity {W}
+    445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ! U-Factor times area value should be 25
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    25,                      !- U-Factor Times Area Value TODO: adjust
+    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
     0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1199,14 +1199,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z2 Radiator Inlet Node,  !- Inlet Node Name
     Z2 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    500,                     !- Heating Design Capacity {W}
+    445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ! U-Factor times area value should be 25
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    25,                      !- U-Factor Times Area Value TODO: adjust
+    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
     0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1216,14 +1216,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z3 Radiator Inlet Node,  !- Inlet Node Name
     Z3 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    500,                     !- Heating Design Capacity {W}
+    445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ! U-Factor times area value should be 25
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    25,                      !- U-Factor Times Area Value TODO: adjust
+    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
     0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1233,14 +1233,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z4 Radiator Inlet Node,  !- Inlet Node Name
     Z4 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    500,                     !- Heating Design Capacity {W}
+    445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ! U-Factor times area value should be 25
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    25,                      !- U-Factor Times Area Value TODO: adjust
+    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
     0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1316,9 +1316,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z1_SETPOINT_CONTROL::;  !- Control 1 Name
   ! DHD20259413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-  ZoneControl:Thermostat:OperativeTemperature,
-    Z1 Thermostat, !- Name
-    CONSTANT, 0.5;
+!  ZoneControl:Thermostat:OperativeTemperature,
+!    Z1 Thermostat, !- Name
+!    CONSTANT, 0.5;
    
   ZoneList, Z2 Rooms, Z2;
   ZoneControl:Thermostat,
@@ -1328,9 +1328,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z2_SETPOINT_CONTROL::;  !- Control 1 Name
   ! DHD20259413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-  ZoneControl:Thermostat:OperativeTemperature,
-    Z2 Thermostat, !- Name
-    CONSTANT, 0.5;
+!  ZoneControl:Thermostat:OperativeTemperature,
+!    Z2 Thermostat, !- Name
+!    CONSTANT, 0.5;
    
   ZoneList, Z3 Rooms, Z3;
   ZoneControl:Thermostat,
@@ -1340,9 +1340,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z3_SETPOINT_CONTROL::;  !- Control 1 Name
   ! DHD20259413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-  ZoneControl:Thermostat:OperativeTemperature,
-    Z3 Thermostat, !- Name
-    CONSTANT, 0.5;
+!  ZoneControl:Thermostat:OperativeTemperature,
+!    Z3 Thermostat, !- Name
+!    CONSTANT, 0.5;
    
   ZoneList, Z4 Rooms, Z4;
   ZoneControl:Thermostat,
@@ -1352,9 +1352,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z4_SETPOINT_CONTROL::;  !- Control 1 Name
   ! DHD20259413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-  ZoneControl:Thermostat:OperativeTemperature,
-    Z4 Thermostat, !- Name
-    CONSTANT, 0.5;
+!  ZoneControl:Thermostat:OperativeTemperature,
+!    Z4 Thermostat, !- Name
+!    CONSTANT, 0.5;
   
   ! Thermostat for not-setback rooms.
   ThermostatSetpoint:SingleHeating,
@@ -1368,37 +1368,41 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
 
-  ! Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
 
-  ! Output:Variable,*,Zone Air System Sensible Cooling Energy,Hourly;
-
-  ! Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
-
+  ! DE Outputs
   Output:Variable,*,Zone Air Temperature,Hourly;
-  
- ! DHD20250407: heat demand in W.
- ! Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
- ! DHD20250407: solar gains in W; should be all zero.
- !Output:Variable,*,Surface Outside Face Solar Radiation Heat Gain Rate,Hourly;
- ! DHD20250407: heat flows in W.
- ! Output:Variable,*,Surface Average Face Conduction Heat Transfer Rate,Hourly;
- !Output:Variable,*,Surface Outside Face Heat Emission to Air Rate,Hourly;
- ! DHD20250413: convection heat flows in W.
- !Output:Variable,*,Surface Outside Face Convection Heat Gain Rate,Hourly;
- !Output:Variable,*,Surface Inside Face Convection Heat Gain Rate,Hourly;
- 
- ! DHD20250413: surface temperatures.
- ! Output:Variable,*,Surface Outside Face Outdoor Air Drybulb Temperature,Hourly;
- ! Output:Variable,*,Surface Inside Face Temperature,Hourly;
- ! Output:Variable,*,Surface Outside Face Temperature,Hourly;
- ! Output:Variable,*,Surface Inside Face Adjacent Air Temperature,Hourly;
- 
-
   Output:Variable,*,Baseboard Total Heating Rate,hourly;
   Output:Variable,*,Heat Pump Electricity Rate,Hourly;
   Output:Variable,*,Heat Pump Load Side Heat Transfer Rate,Hourly;
   Output:Variable,*,Pump Electricity Rate,Hourly;
 
+  ! DE Debug outputs
+  ! Output:Variable,*,Plant Supply Side Inlet Mass Flow Rate,Hourly;
+  ! Output:Variable,*,Plant Supply Side Outlet Temperature,Hourly;
+  ! Output:Variable,*,Plant Supply Side Inlet Temperature,Hourly;
+  ! Output:Variable,*,Baseboard Water Inlet Temperature,Hourly;
+  ! Output:Variable,*,Baseboard Water Outlet Temperature,Hourly;
+
+  ! DHD outputs:
+  ! Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
+  ! Output:Variable,*,Zone Air System Sensible Cooling Energy,Hourly;
+  ! Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
+  ! DHD20250407: heat demand in W.
+  ! Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
+  ! DHD20250407: solar gains in W; should be all zero.
+  ! Output:Variable,*,Surface Outside Face Solar Radiation Heat Gain Rate,Hourly;
+  ! DHD20250407: heat flows in W.
+  ! Output:Variable,*,Surface Average Face Conduction Heat Transfer Rate,Hourly;
+  ! Output:Variable,*,Surface Outside Face Heat Emission to Air Rate,Hourly;
+  ! DHD20250413: convection heat flows in W.
+  ! Output:Variable,*,Surface Outside Face Convection Heat Gain Rate,Hourly;
+  ! Output:Variable,*,Surface Inside Face Convection Heat Gain Rate,Hourly;
+  ! DHD20250413: surface temperatures.
+  ! Output:Variable,*,Surface Outside Face Outdoor Air Drybulb Temperature,Hourly;
+  ! Output:Variable,*,Surface Inside Face Temperature,Hourly;
+  ! Output:Variable,*,Surface Outside Face Temperature,Hourly;
+  ! Output:Variable,*,Surface Inside Face Adjacent Air Temperature,Hourly;
+ 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT METER ===========
 
   ! Output:Meter,DistrictHeatingWater:Facility,Hourly;
