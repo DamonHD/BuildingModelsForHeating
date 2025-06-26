@@ -20,7 +20,7 @@ To support and link to conclusions from DHD’s paper:
 5. EH1 HTC is \~170W/K.  For bungalow 1 or 2 its is 2kW/(21 \- \-3).  From that, max mass flow rate can be constrained.  
 6. Flow temp should be no higher than 55C (per English Building regs and DHD’s home system).  But use the values from DHD’s paper.  Use the CoP curve from the paper.  
 7. Suggest lower bound on flow temperature is 25C per DHD’s home system.  
-8. DHD’s weather curve is 25C flow at 15C external, 55C flow at \-7C external.  Full horrors: [https://www.earth.org.uk/heat-pump-16WW-control.html](https://www.earth.org.uk/heat-pump-16WW-control.html)  
+8. DHD’s weather curve is 25C flow at 15C external, 50C flow at \-7C external.  Full horrors: [https://www.earth.org.uk/heat-pump-16WW-control.html](https://www.earth.org.uk/heat-pump-16WW-control.html)  
 9. DHD’s flow rate bounds nominally 6l/min to 24l/min.  Usually runs at 8l/min for spce heat, 24l/min for DHW.  
 10. DHD experience suggests that \> 8l/min makes for noisy radiator valves.
 
