@@ -1,4 +1,5 @@
 import pandas as pd
+
 # from matplotlib import pyplot as plt
 import altair as alt
 
@@ -49,48 +50,69 @@ def summarise(df):
     summary = df.drop(columns="time").groupby(["case", "variable", "location"]).mean()
     summary = summary.reset_index()
 
-    rad_power = summary[summary["variable"]=="rad_power_w"].groupby("case")[["value"]].sum()
+    rad_power = (
+        summary[summary["variable"] == "rad_power_w"].groupby("case")[["value"]].sum()
+    )
     rad_power["variable"] = "rad_power_w"
     rad_power["location"] = "total"
     rad_power.reset_index(inplace=True)
     rad_power
 
-    electricity = summary[summary["variable"]=="electricity_w"].groupby("case")[["value"]].sum()
+    electricity = (
+        summary[summary["variable"] == "electricity_w"].groupby("case")[["value"]].sum()
+    )
     electricity["variable"] = "electricity_w"
     electricity["location"] = "total"
     electricity.reset_index(inplace=True)
 
     return pd.concat([summary, rad_power, electricity])
 
-# electricity = electricity.set_index(["variable", "location"], append=True)
-# summary = summary.unstack(0)
-# summary.columns = summary.columns.droplevel(0)
 
-summary.set_index(["case", "variable", "location"]).unstack(0)
+def format_summary(summary):
+    return summary.set_index(["case", "variable", "location"]).unstack(0)
+
 
 def plot(summary):
-    return alt.Chart(summary[summary.variable=="air_temp_c"]).mark_bar().encode(
-        x = "location",
-        y= "value",
-        color = "case",
-        column="case"
+    return alt.Chart(summary[summary.variable == "air_temp_c"]).mark_bar().encode(
+        x="location", y="value", color="case", column="case"
     ).properties(title="Mean Zone Air Temperature (C)") & (
-        alt.Chart(summary[(summary.variable=="rad_power_w") & (summary.location != "total")]).mark_bar().encode(
-            x = "location",
-            y= alt.Y("value", scale=alt.Scale(domain=(0,1800))),
-            color = "case",
-            column="case"
-        ).properties(
-            title="Mean Zone Radiator Power Output (W)"
-        ) | alt.Chart(
-            summary[(summary.variable.isin(["electricity_w", "rad_power_w"]) & (summary.location=="total")) | (summary.variable=="power_w")]
-                .replace({"electricity_w": "Total Electricity", "power_w": "Heat Pump Heat", "rad_power_w": "Total Radiator Heat"})
-        ).mark_bar().encode(
-            x=alt.X("variable", sort=["Total Electricity", "Heat Pump Heat", "Total Radiator Heat"]),
-            y= alt.Y("value", scale=alt.Scale(domain=(0,1800))),
+        alt.Chart(
+            summary[(summary.variable == "rad_power_w") & (summary.location != "total")]
+        )
+        .mark_bar()
+        .encode(
+            x="location",
+            y=alt.Y("value", scale=alt.Scale(domain=(0, 1800))),
             color="case",
             column="case",
-        ).properties(
+        )
+        .properties(title="Mean Zone Radiator Power Output (W)")
+        | alt.Chart(
+            summary[
+                (
+                    summary.variable.isin(["electricity_w", "rad_power_w"])
+                    & (summary.location == "total")
+                )
+                | (summary.variable == "power_w")
+            ].replace(
+                {
+                    "electricity_w": "Total Electricity",
+                    "power_w": "Heat Pump Heat",
+                    "rad_power_w": "Total Radiator Heat",
+                }
+            )
+        )
+        .mark_bar()
+        .encode(
+            x=alt.X(
+                "variable",
+                sort=["Total Electricity", "Heat Pump Heat", "Total Radiator Heat"],
+            ),
+            y=alt.Y("value", scale=alt.Scale(domain=(0, 1800))),
+            color="case",
+            column="case",
+        )
+        .properties(
             title="Mean Power Transfer (W)",
         )
     )
