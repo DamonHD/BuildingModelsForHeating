@@ -982,9 +982,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Supply Pump Inlet Node,  !- Inlet Node Name
     Supply Pump Outlet Node,  !- Outlet Node Name
     0.0004,                !- Design Maximum Flow Rate {m3/s}
-    15000,                   !- Design Pump Head {Pa}
-    AUTOSIZE,                !- Design Power Consumption {W}
-    0.9,                     !- Motor Efficiency
+    ! Reduced to silence warning TODO: find out what this should be
+    14000,                   !- Design Pump Head {Pa}
+    ! Based on autosized sims
+    6,                !- Design Power Consumption {W}
+    1.0,                     !- Motor Efficiency
     0.0,                     !- Fraction of Motor Inefficiencies to Fluid Stream
     0,                       !- Coefficient 1 of the Part Load Performance Curve
     1,                       !- Coefficient 2 of the Part Load Performance Curve
