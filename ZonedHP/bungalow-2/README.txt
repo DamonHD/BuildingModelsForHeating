@@ -12,6 +12,10 @@ This is designed to run in EnergyPlus V24.2 or newer.
 ! hart-davis2024zone bungalow parameters:
 !     IWL (Internal Wall Length) = 4m, thus whole external wall length 8m.
 !     IWH (Internal Wall Height) = 2.3m
+!     IDU (Internal Door U-value) = 8W/m2K
+!     IDA (Internal Door Area) = 2m2 (with one full door per wall)
+!     IWU (Internal Wall U-value) = 2W/m2K (~plasterboard on studs)     
+!         Effective overall internal wall (7.2m2) and door (2m2) U-value ~ 3.30W/m2K.
 !     EWRU (Effective Wall and Roof U-value): 0.61 W/m2K
 !     External wall and roof surface: (4x18.4m2 + 64m2) 137.6m2
 !     Floor non-conducting
@@ -19,6 +23,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 !     IWU (Internal Wall U-value): 2 W/m2K
 !     Interior and exterior temperatures at design conditions: 21C / -3C
 !     Expected heat demand at design conditions: 2000W
+!     Whole house HTC ~ 83.3W/K
 !
 ! Building: Fictional 1 zone building with resistive walls and flat roof.
 !

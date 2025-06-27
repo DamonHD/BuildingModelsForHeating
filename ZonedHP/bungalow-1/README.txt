@@ -17,6 +17,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 !     Floor non-conducting
 !     Interior and exterior temperatures at design conditions: 21C / -3C
 !     Expected heat demand at design conditions: 2000W
+!     Whole house HTC ~ 83.3W/K
 !
 ! Building: Fictional 1 zone building with resistive walls and flat roof.
 !
