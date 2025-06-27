@@ -109,3 +109,4 @@ DHD20250624: bungalow-2-dezoned.idf heat load back to 2025W.
 DHD20250624: asked question: https://unmethours.com/question/102055/adding-internal-partitions-reduces-heatflow-to-outside-why/
  DE20250625: Implemented setback scenarios
  DE20250626: Fixed bungalow-2 flow rates and radiator sizing, disabled Thermostat:OperativeTemparature.
+DHD20250627: partition effective U-value (w/film) now 3.30W/m2K to match paper's implied values.
