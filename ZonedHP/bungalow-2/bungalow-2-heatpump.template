@@ -90,12 +90,12 @@ RunPeriod,                                        !- Annual simulation
 
 ! DHD change.
 SimulationControl,
-   Yes,                                           !- Do the zone sizing calculation
-   Yes,                                           !- Do the system sizing calculation
-   Yes,                                           !- Do the plant sizing calculation
+   No,                                           !- Do the zone sizing calculation
+   No,                                           !- Do the system sizing calculation
+   No,                                           !- Do the plant sizing calculation
    Yes,                                           !- Do the design day calculation
    Yes,                                           !- Do the weather file calculation
-   Yes;                                           ! Zone sizing.
+   No;                                           ! Zone sizing.
 
 
 !-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
@@ -894,11 +894,13 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ,                        !- User Defined Fluid Type
     Hot Loop Operation,      !- Plant Equipment Operation Scheme Name
     Supply Outlet Outlet Node,   !- Loop Temperature Setpoint Node Name
-    100,                     !- Maximum Loop Temperature {C}
+    55,                     !- Maximum Loop Temperature {C}
     10,                      !- Minimum Loop Temperature {C}
-    autosize,                !- Maximum Loop Flow Rate {m3/s}
+    ! 24 L/m
+    0.0004,                !- Maximum Loop Flow Rate {m3/s}
     0.0,                     !- Minimum Loop Flow Rate {m3/s}
-    ,                        !- Plant Loop Volume {m3}
+    ! 30 L
+    0.03,                        !- Plant Loop Volume {m3}
     Supply Pump Inlet Node,    !- Plant Side Inlet Node Name
     Supply Outlet Outlet Node,   !- Plant Side Outlet Node Name
     Supply Branches,  !- Plant Side Branch List Name
@@ -1263,14 +1265,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !--------------------------------------------------------------------------------------------
 !============================================================================================
 !==================================HEATING LOOP CONTROLS==================================
-!--------------------------------------PLANT SIZING------------------------------------------
-
-  Sizing:Plant,
-    Hot Water Loop,                !- Plant or Condenser Loop Name
-    HEATING,                 !- Loop Type
-    55.0,                    !- Design Loop Exit Temperature {C} TODO: Work out what this should be
-    10.0;                    !- Loop Design Temperature Difference {deltaC} TODO: Work out what this should be
-
 !---------------------------------------------------------------------------------------------
 !----------------------------------------SETPOINTS---------------------------------------------
 
