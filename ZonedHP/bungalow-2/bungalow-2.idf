@@ -90,12 +90,12 @@ RunPeriod,                                        !- Annual simulation
 
 ! DHD change.
 SimulationControl,
-   Yes,                                           !- Do the zone sizing calculation
-   Yes,                                           !- Do the system sizing calculation
-   Yes,                                           !- Do the plant sizing calculation
+   No,                                            !- Do the zone sizing calculation
+   No,                                            !- Do the system sizing calculation
+   No,                                            !- Do the plant sizing calculation
    Yes,                                           !- Do the design day calculation
    Yes,                                           !- Do the weather file calculation
-   Yes;                                           ! Zone sizing.
+   No;                                            ! Zone sizing.
 
 
 !-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
