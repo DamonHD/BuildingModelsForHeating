@@ -147,33 +147,6 @@ Site:Location,Salford Energy House 1.0 (01-01:31-12)  (01-01:31-12),  !- Locatio
 !-   ===========  ALL OBJECTS IN CLASS: DESIGNDAY ===========
 
 ! From EH1 model.
-SizingPeriod:DesignDay, Summer Design Day in Salford Energy House 1.0 (01-01:31-12) Jun,  !- Design Day Name
-   6,                                             !- Month
-   15,                                            !- Day of Month
-   SummerDesignDay,                               !- Day Type -- used for schedules
-   25.5,                                          !- Maximum Dry-Bulb Temperature {C}
-   7.6,                                           !- Daily Dry-Bulb Temperature Range {C}
-   ,                                              !- Dry-Bulb Temperature Range Modifier Type
-   ,                                              !- Dry-Bulb Temperature Range Modifier Schedule
-   WetBulb,                                       !- Humidity Condition Type
-   17.8,                                          !- Wetbulb at Maximum Dry-Bulb{C}
-   ,                                              !- Humidity Condition Day Schedule Name
-   ,                                              !- Humidity Ratio at Maximum Dry-Bulb
-   ,                                              !- Enthalpy Ratio at Maximum Dry-Bulb
-   ,                                              !- Daily Wet-Bulb Temperature Range
-   100498.8,                                      !- Barometric Pressure {N/M**2}
-   0,                                             !- Wind Speed {m/s}
-   0,                                             !- Wind Direction {Degrees N=0, S=180}
-   No,                                            !- Rain Indicator
-   No,                                            !- Snow on ground indicator
-   Yes,                                           !- Daylight Savings Time Indicator
-   ASHRAEClearSky,                                !- Solar Model Indicator
-   ,                                              !- Beam Solar Day Schedule Name
-   ,                                              !- Diffuse Solar Day Schedule Name
-   ,                                              !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub)
-   ,                                              !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud)
-   0.98;                                          !- Clearness {0.0 to 1.2}
-
 ! DHD20250401: adjusted winter DD to 'UK' -3C, no wind.
 SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
    1,                                             !- Month
