@@ -1167,7 +1167,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1184,7 +1184,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1201,7 +1201,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1218,7 +1218,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    0.0013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
 
@@ -1339,6 +1339,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 
   ! DE Outputs
+  ! ----------
   Output:Variable,*,Zone Air Temperature,Hourly;
   Output:Variable,*,Baseboard Total Heating Rate,hourly;
   Output:Variable,*,Heat Pump Electricity Rate,Hourly;
@@ -1346,13 +1347,39 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   Output:Variable,*,Pump Electricity Rate,Hourly;
 
   ! DE Debug outputs
+  ! ----------------
+  ! Output:Variable,*,Zone Air Temperature,Hourly;
+  ! Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
+  ! Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
+  ! Output:Variable,*,Zone Total Internal Total Heating Energy,Hourly;
+
+  ! Output:Variable,*,Heat Pump Source Side Heat Transfer Rate,Hourly;
+  ! Output:Variable,*,Heat Pump Load Side Heat Transfer Rate,Hourly;
+  ! Output:Variable,*,Heat Pump Electricity Rate,Hourly;
+
+  ! Output:Variable,*,Pump Electricity Rate,Hourly;
+  ! Output:Variable,*,Pump Fluid Heat Gain Rate,Hourly;
+  ! Output:Variable,*,Pump Outlet Temperature,Hourly;
+  ! Output:Variable,*,Pump Mass Flow Rate,Hourly;
+
+  ! Output:Variable,*,Plant Supply Side Heating Demand Rate,Hourly;
   ! Output:Variable,*,Plant Supply Side Inlet Mass Flow Rate,Hourly;
   ! Output:Variable,*,Plant Supply Side Outlet Temperature,Hourly;
   ! Output:Variable,*,Plant Supply Side Inlet Temperature,Hourly;
+  ! Output:Variable,*,Plant Supply Side Not Distributed Demand Rate,Hourly;
+  ! Output:Variable,*,Plant Supply Side Unmet Demand Rate,Hourly;
+
+  ! Output:Variable,*,Baseboard Total Heating Rate,hourly;
+  ! Output:Variable,*,Baseboard Total Heating Energy,hourly;
+  ! Output:Variable,*,Baseboard Hot Water Energy,Hourly;
+  ! Output:Variable,*,Baseboard Hot Water Mass Flow Rate,Hourly;
   ! Output:Variable,*,Baseboard Water Inlet Temperature,Hourly;
   ! Output:Variable,*,Baseboard Water Outlet Temperature,Hourly;
 
+  ! Output:Diagnostics,DisplayAdvancedReportVariables;
+  
   ! DHD outputs:
+  ! ------------
   ! Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
   ! Output:Variable,*,Zone Air System Sensible Cooling Energy,Hourly;
   ! Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
