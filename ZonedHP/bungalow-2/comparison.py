@@ -96,7 +96,7 @@ def format_summary(summary):
     summary = summary.reindex(
         ["z1", "z2", "z3", "z4", "heat_pump", "water_pump", "total"], level=1
     )
-    return summary
+    return summary.droplevel(0, axis=1).reset_index()
 
 
 def plot(summary):
@@ -142,4 +142,10 @@ def plot(summary):
         .properties(
             title="Mean Power Transfer (W)",
         )
+    )
+
+
+if __name__ == "__main__":
+    format_summary(summarise(load_all(FILES))).to_markdown(
+        "summary.md", index=False, floatfmt=".2f"
     )
