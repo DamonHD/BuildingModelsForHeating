@@ -63,7 +63,7 @@ so I went with that.
 
 The `HeatPump:PlantLoop:EIR:Heating` provides the `Heat Pump Load Side Heat Transfer Rate` output, 
 which I think is the heat transfered from the heatpump to the hot water loop in W.
-The peak value is `~1680 W`, but the peak radiator ouput power is `~444.5 * 4 = 1778 W`.
+The peak value is `~1680 W`, but the peak radiator output power is `~444.5 * 4 = 1778 W`.
 
 I'm not sure if this is a problem with the model, a bug in E+,
 or just me not understanding the model/outputs.
