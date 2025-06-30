@@ -1166,7 +1166,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    13.35,       !- U-Factor Times Area Value
+    13.90,       !- U-Factor Times Area Value
     0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1183,7 +1183,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    13.35,       !- U-Factor Times Area Value
+    13.90,       !- U-Factor Times Area Value
     0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1200,7 +1200,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    13.35,       !- U-Factor Times Area Value
+    13.90,       !- U-Factor Times Area Value
     0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1217,7 +1217,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    13.35,       !- U-Factor Times Area Value
+    13.90,       !- U-Factor Times Area Value
     0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
