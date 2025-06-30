@@ -95,6 +95,40 @@ Some basics of the IDF file:
 !    8,4,0,  !- X,Y,Z ==> Vertex 3 {m}
 !    8,0,0;  !- X,Y,Z ==> Vertex 4 {m}
 
+USAGE
+=====
+
+Basic command:
+	$ ./generate_rooms.sh && ./runall-dd.sh
+
+Generating .idf files
+---------------------
+
+In order to support multiple scenarios, an .idf file is generated per scenario using
+the `generate_rooms.sh` script.
+- Input file: bungalow-2-heatpump.template
+- Output files: bungalow-2-{scenario-name}.idf
+
+Running the Simulations
+-----------------------
+
+All scenarios can be run at once using the `runall-dd.sh` script.
+An output folder is generated per scenario.
+- Input files: bungalow-2-{scenario-name}.idf
+- Output folders: out-dd-{scenario-name}/
+
+Running Tests
+-------------
+
+If python is installed (tested on v3.13.3), outputs can by sanity checked
+by running test_bungalow-2.py.
+
+If pytest is installed as an optional dependency,
+it can be used as a test harness using the following command in this folder:
+	bungalow-2$ pytest
+
+Otherwise, tests can be run as a normal python script:
+	bungalow-2$ python test_bungalow-2.py
 
 NOTES
 =====
@@ -111,3 +145,4 @@ DHD20250624: asked question: https://unmethours.com/question/102055/adding-inter
  DE20250626: Fixed bungalow-2 flow rates and radiator sizing, disabled Thermostat:OperativeTemparature.
 DHD20250627: partition effective U-value (w/film) now 3.30W/m2K to match paper's implied values.
  DE20250628: Fixed simulation issues.
+ DE20250630: Added python sense check
