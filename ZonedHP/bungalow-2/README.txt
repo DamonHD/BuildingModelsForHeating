@@ -128,7 +128,7 @@ it can be used as a test harness using the following command in this folder:
 	bungalow-2$ pytest
 
 Otherwise, tests can be run as a normal python script:
-	bungalow-2$ python test_bungalow-2.py
+	bungalow-2$ python test_bungalow_2.py
 
 NOTES
 =====
