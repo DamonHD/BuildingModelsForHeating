@@ -146,3 +146,4 @@ DHD20250624: asked question: https://unmethours.com/question/102055/adding-inter
 DHD20250627: partition effective U-value (w/film) now 3.30W/m2K to match paper's implied values.
  DE20250628: Fixed simulation issues.
  DE20250630: Added python sense check
+ DE20250630: Fixed simulation issues (again)
