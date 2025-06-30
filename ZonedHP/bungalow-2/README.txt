@@ -99,7 +99,7 @@ USAGE
 =====
 
 Basic command:
-	$ ./generate_rooms.sh && ./runall-dd.sh
+        $ ./generate_rooms.sh && ./runall-dd.sh
 
 Generating .idf files
 ---------------------
@@ -125,10 +125,24 @@ by running test_bungalow-2.py.
 
 If pytest is installed as an optional dependency,
 it can be used as a test harness using the following command in this folder:
-	bungalow-2$ pytest
+        bungalow-2$ pytest
 
 Otherwise, tests can be run as a normal python script:
-	bungalow-2$ python test_bungalow_2.py
+        bungalow-2$ python test_bungalow_2.py
+        Running 9 tests.
+
+        Running test 0 test_AAAA_converges: PASS
+        Running test 1 test_AAAA_heatflows_balance: PASS
+        Running test 2 test_AAAA_room_temps: PASS
+        Running test 3 test_AABB_converges: PASS
+        Running test 4 test_AABB_heatflows_balance: PASS
+        Running test 5 test_AABB_room_temps: PASS
+        Running test 6 test_ABAB_converges: PASS
+        Running test 7 test_ABAB_heatflows_balance: PASS
+        Running test 8 test_ABAB_room_temps: PASS
+
+        9 tests passed, 0 tests failed.
+
 
 NOTES
 =====
