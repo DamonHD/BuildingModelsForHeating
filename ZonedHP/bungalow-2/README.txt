@@ -121,7 +121,9 @@ Running Tests
 -------------
 
 If python is installed (tested on v3.13.3), outputs can by sanity checked
-by running test_bungalow-2.py.
+by running test_bungalow-2.py. Note that tests are run against the output
+of runall-dd.sh, and so `$ ./generate_rooms.sh && ./runall-dd.sh`
+should be run before running the tests.
 
 If pytest is installed as an optional dependency,
 it can be used as a test harness using the following command in this folder:
