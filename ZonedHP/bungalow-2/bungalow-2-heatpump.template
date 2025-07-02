@@ -967,9 +967,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Coefficient 4 of the Part Load Performance Curve
     0.0,                     !- Design Minimum Flow Rate {m3/s}
     INTERMITTENT;            !- Pump Control Type
-  
-  ! DE20250618: There's a few options for air to water heatpumps,
-  ! but this seemed the most direct.
+
+  !---------------------------------------------------------------------------------------
+  ! DE20250702: Translation of DHD linear heat pump model from paper
+  ! Note:
+  ! - This is an approximation that assumes a linear EIR is equivalent to a linear CoP.
+  ! - The error is < 0.4 % between 46.0 C and 51.5 C.
+  ! - EIR as a function of temperature is assumed to only vary
+  !   with load side outlet temperature, as per DHD's HG model.
   HeatPump:PlantLoop:EIR:Heating,
     Heat Pump,            !- Name
     Heat Pump Inlet Node,  !- Load Side Inlet Node Name
@@ -984,12 +989,15 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     2,                       !- Source Side Reference Flow Rate {m3/s}
     ,                        !- Heat Recovery Reference Flow Rate {m3/s}
     5000,                   !- Reference Capacity {W}
-    3.5,                     !- Reference Coefficient of Performance {W/W}
+    ! DE 20250702: Using CoP at 46 C as the reference.
+    2.6,                     !- Reference Coefficient of Performance {W/W}
     ,                        !- Sizing Factor
     CapCurveFuncTemp,        !- Capacity Modifier Function of Temperature Curve Name
     EIRCurveFuncTemp,        !- Electric Input to Output Ratio Modifier Function of Temperature Curve Name
     EIRCurveFuncPLR;         !- Electric Input to Output Ratio Modifier Function of Part Load Ratio Curve Name
 
+  ! Constant capacity modifier curve (always 1.0)
+  ! (x: Load outlet temperature, y: Source inlet temperature) -> Capacity modifier
   Curve:Biquadratic,
     CapCurveFuncTemp,        !- Name
     1.0,                     !- Coefficient1 Constant
@@ -1008,16 +1016,17 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Temperature,             !- Input Unit Type for Y
     Dimensionless;           !- Output Unit Type
 
+  ! (x: Load outlet temperature, y: Source inlet temperature) -> EIR modifier
   Curve:Biquadratic,
     EIRCurveFuncTemp,        !- Name
-    1.0,                     !- Coefficient1 Constant
-    0.0,                     !- Coefficient2 x
+    -0.09087,                !- Coefficient1 Constant
+    0.02371,                !- Coefficient2 x
     0.0,                     !- Coefficient3 x**2
     0.0,                     !- Coefficient4 y
     0.0,                     !- Coefficient5 y**2
     0.0,                     !- Coefficient6 x*y
-    5.0,                     !- Minimum Value of x
-    10.0,                    !- Maximum Value of x
+    30.0,                     !- Minimum Value of x
+    55.0,                    !- Maximum Value of x
     24.0,                    !- Minimum Value of y
     35.0,                    !- Maximum Value of y
     ,                        !- Minimum Curve Output
@@ -1026,6 +1035,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Temperature,             !- Input Unit Type for Y
     Dimensionless;           !- Output Unit Type
 
+  ! Constant EIR modifier curve (always 1.0)
+  ! (x: Part load ratio) -> EIR modifier
   Curve:Quadratic,
     EIRCurveFuncPLR,         !- Name
     1.0,                     !- Coefficient1 Constant
