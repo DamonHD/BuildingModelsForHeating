@@ -21,10 +21,12 @@ def load_file(name, file):
         "Z2 RADIATOR:Baseboard Total Heating Rate [W](Hourly)": "z2:rad_power_w",
         "Z3 RADIATOR:Baseboard Total Heating Rate [W](Hourly)": "z3:rad_power_w",
         "Z4 RADIATOR:Baseboard Total Heating Rate [W](Hourly)": "z4:rad_power_w",
+        "Baseboard Total Heating Rate All Zones:PythonPlugin:OutputVariable [W](Hourly)": "total:rad_power_w",
         "HEAT PUMP:Heat Pump Load Side Heat Transfer Rate [W](Hourly)": "heat_pump:heat_gain_w",
         "HEAT PUMP:Heat Pump Electricity Rate [W](Hourly)": "heat_pump:electricity_w",
         "SUPPLY PUMP:Pump Electricity Rate [W](Hourly)": "water_pump:electricity_w",
         "SUPPLY PUMP:Pump Fluid Heat Gain Rate [W](Hourly)": "water_pump:heat_gain_w",
+        "HOT WATER LOOP:Plant Supply Side Outlet Temperature [C](Hourly)": "heat_pump:flow_temp_c",
     }
 
     df = pd.read_csv(file).rename(columns=lambda x: x.strip()).rename(columns=renamer)
@@ -61,13 +63,6 @@ def summarise(df):
     )
     cop = total_heat / electricity
 
-    rad_power = (
-        summary[summary["variable"] == "rad_power_w"].groupby("case")[["value"]].sum()
-    )
-    rad_power["variable"] = "rad_power_w"
-    rad_power["location"] = "total"
-    rad_power.reset_index(inplace=True)
-
     electricity["variable"] = "electricity_w"
     electricity["location"] = "total"
     electricity.reset_index(inplace=True)
@@ -78,13 +73,9 @@ def summarise(df):
     cop["location"] = "total"
     cop.reset_index(inplace=True)
 
-    df = pd.concat([summary, rad_power, electricity, total_heat, cop])
+    df = pd.concat([summary, electricity, total_heat, cop])
 
     return df
-
-
-df = load_all(FILES)
-summarise(df)
 
 
 def format_summary(summary):

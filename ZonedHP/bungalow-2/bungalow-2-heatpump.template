@@ -750,6 +750,13 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
 
+  ScheduleTypeLimits,
+    Temperature,             !- Name
+    -60,                     !- Lower Limit Value
+    200,                     !- Upper Limit Value
+    CONTINUOUS,              !- Numeric Type
+    Temperature;             !- Unit Type
+
   ! DHD20250322: type 1 (single heat only) setpoint.
   Schedule:Compact,
     ALWAYS 1,                !- Name
@@ -775,12 +782,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Until: 24:00,18;         !- Field 3
 
   ! DE20250618: target 55C temperature continuous.
-  Schedule:Compact,
+  Schedule:Constant,
     ALWAYS 55 C,               !- Name
-    Any Number,              !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: AllDays,            !- Field 2
-    Until: 24:00,55;         !- Field 3
+    Temperature,55;
 
 !-   ===========  ALL OBJECTS IN CLASS: CONTROLLED ZONE EQUIP CONFIGURATION ===========
 
@@ -1346,6 +1350,38 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Setback Setpoint Control,  !- Name
     ALWAYS 18;               !- Heating Setpoint Temperature Schedule Name
 
+
+! ==============  Plugin work =====================================
+
+! PythonPlugin:Instance,
+!   Heat Pump Outlet Flow Setpoint,        !- Name
+!   Yes,                                   !- Run During Warmup days
+!   bungalow-2-plugin,                     !- Python Module Name
+!   LoadCompHeatPumpController;            !- Plugin Class Name
+!   
+! PythonPlugin:Instance,
+!   Total Baseboard Heating Transfer Rate, !- Name
+!   Yes,                                   !- Run During Warmup days
+!   bungalow-2-plugin,                     !- Python Module Name
+!   BaseboardTotalHeatDemand;              !- Plugin Class Name
+!   
+! PythonPlugin:Variables,
+!   MyGlobalVariables, !- Name
+!   TotalBaseboardHeatTransferRate; !- Variable Name 1
+! 
+! PythonPlugin:OutputVariable,
+!   Baseboard Total Heating Rate All Zones, !- Name
+!   TotalBaseboardHeatTransferRate,         !- Python Plugin Variable Name
+!   Averaged,                               !- Type of Data in Variable FIXME: dunno what the options are
+!   ZoneTimeStep,                                 !- Update Frequency
+!   W;                                      !- Units
+! 
+Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariable,Hourly;
+! Output:EnergyManagementSystem,
+!     Verbose,    ! Actuator Availability Dictionary Reporting
+!     Verbose,    ! Internal Variable Availability Dictionary Reporting
+!     ErrorsOnly; ! EnergyPlus Runtime Language Debug Output Level
+
 !-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
 
 
@@ -1357,6 +1393,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   Output:Variable,*,Heat Pump Load Side Heat Transfer Rate,Hourly;
   Output:Variable,*,Pump Fluid Heat Gain Rate,Hourly;
   Output:Variable,*,Pump Electricity Rate,Hourly;
+  ! Required for plugins
+  Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
+  Output:Variable,*,Heat Pump Load Side Inlet Temperature,Hourly;
+  Output:Variable,*,Pump Mass Flow Rate,Hourly;
+  Output:Variable,*,Plant Supply Side Outlet Temperature,Hourly;
 
   ! DE Debug outputs
   ! ----------------
@@ -1368,6 +1409,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ! Output:Variable,*,Heat Pump Source Side Heat Transfer Rate,Hourly;
   ! Output:Variable,*,Heat Pump Load Side Heat Transfer Rate,Hourly;
   ! Output:Variable,*,Heat Pump Electricity Rate,Hourly;
+  ! Output:Variable,*,Heat Pump Load Side Inlet Temperature,Hourly;
+  ! Output:Variable,*,Heat Pump Load Side Outlet Temperature,Hourly;
 
   ! Output:Variable,*,Pump Electricity Rate,Hourly;
   ! Output:Variable,*,Pump Fluid Heat Gain Rate,Hourly;
