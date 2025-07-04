@@ -95,7 +95,16 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
             # Inputs:
             def get_var_handle(var, object):
                 handle = self.api.exchange.get_variable_handle(state, var, object)
-                assert handle != -1, f"Could not get handle to {object}:{var}"
+                assert handle != -1, f"Could not get handle to variable {object}:{var}"
+                return handle
+
+            def get_act_handle(object_type, object, var):
+                handle = self.api.exchange.get_actuator_handle(
+                    state, object_type, var, object
+                )
+                assert handle != -1, (
+                    f"Could not get handle to actuator {object_type}{object}:{var}"
+                )
                 return handle
 
             try:
@@ -110,34 +119,20 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
                 self.outside_temp = get_var_handle(
                     "Site Outdoor Air Drybulb Temperature", "Environment"
                 )
+                # Outputs:
+                self.flow_temp_setpoint = get_act_handle(
+                    "Schedule:Constant", "HP Flow Temp Setpoint", "Schedule Value"
+                )
+                self.flow_rate_setpoint = get_act_handle(
+                    "Pump", "SUPPLY PUMP", "Pump Mass Flow Rate"
+                )
+                # FIXME: Unused as I couldn't retrieve the value from the simulation.
+                # Technically an input but I'm keeping it together with the actuators
+                self.z1_setpoint = get_act_handle(
+                    "Schedule:Compact", "ALWAYS 21", "Schedule Value"
+                )
             except AssertionError as e:
                 self.api.runtime.issue_severe(state, str(e))
-                return 1
-
-            # Outputs:
-            self.flow_temp_setpoint = self.api.exchange.get_actuator_handle(
-                state,
-                "Schedule:Constant",  # object type
-                "Schedule Value",  # variable name
-                "HP Flow Temp Setpoint",  # object name
-            )
-            self.flow_rate_setpoint = self.api.exchange.get_actuator_handle(
-                state,
-                "Pump",
-                "Pump Mass Flow Rate",
-                "SUPPLY PUMP",
-            )
-            # FIXME: Unused as I couldn't retrieve the value from the simulation.
-            # Technically an input but I'm keeping it together with the actuators
-            self.z1_setpoint = self.api.exchange.get_actuator_handle(
-                state, "Schedule:Compact", "Schedule Value", "ALWAYS 21"
-            )
-
-            if (
-                self.flow_temp_setpoint == -1
-                or self.flow_rate_setpoint == -1
-                or self.z1_setpoint == -1
-            ):
                 return 1
 
         z1_temp = self.get_val(state, self.z1_temp)
