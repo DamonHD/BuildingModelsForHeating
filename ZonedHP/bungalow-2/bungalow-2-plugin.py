@@ -90,14 +90,21 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
         if not self.api.exchange.api_data_fully_ready(state):
             return 0
 
-        # Move this out into another calling point
+        # TODO: Move this out into another calling point
         if self.flow_temp_setpoint is None:
-
+            # Returns a handle to an input variable.
+            #
+            # NOTE: These are *output* values of the E+ simulation, as written
+            # to eplusout.eso and as such, they must be set as 'Output:Variable's
+            # in the .idf file.
             def get_var_handle(var, object):
                 handle = self.api.exchange.get_variable_handle(state, var, object)
                 assert handle != -1, f"Could not get handle to variable {object}:{var}"
                 return handle
 
+            # Returns a handle to an actuator variable (i.e. readable and writable).
+            #
+            # These are generally control outputs for the simulation.
             def get_act_handle(object_type, object, var):
                 handle = self.api.exchange.get_actuator_handle(
                     state, object_type, var, object
@@ -136,17 +143,15 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
                 self.api.runtime.issue_severe(state, str(e))
                 return 1
 
-        z1_temp = self.get_val(state, self.z1_temp)
-
-        flow_temp_setpoint = self.api.exchange.get_actuator_value(
-            state, self.flow_temp_setpoint
-        )
-
         # FIXME: Hard coded as I couldn't retrieve the value from the simulation for some reason.
         # z1_setpoint_c = self.api.exchange.get_actuator_value(state, self.z1_setpoint)
         # print(f"z1_setpoint: {z1_setpoint_c}")
         z1_setpoint_c = 21.0
 
+        z1_temp = self.get_val(state, self.z1_temp)
+        flow_temp_setpoint = self.api.exchange.get_actuator_value(
+            state, self.flow_temp_setpoint
+        )
         flow_temp_setpoint += self.flow_setpoint_gain * (z1_setpoint_c - z1_temp)
         self.set_flow_temp(state, flow_temp_setpoint)
 
