@@ -119,8 +119,16 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
                 "Schedule Value",  # variable name
                 "HP Flow Temp Setpoint",  # object name
             )
+            self.flow_rate_setpoint = self.api.exchange.get_actuator_handle(
+                state,
+                "Pump",
+                "Pump Mass Flow Rate",
+                "SUPPLY PUMP",
+            )
+
             if (
                 self.flow_temp_setpoint == -1
+                or self.flow_rate_setpoint == -1
                 or self.outside_temp == -1
                 or self.flow_rate == -1
                 or self.return_temp == -1
