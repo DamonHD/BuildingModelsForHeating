@@ -18,7 +18,9 @@ TEMPLATE='bungalow-2-heatpump.template'
 # This value is chosen so that the not-setback case is correctly sized,
 # but the setback cases are undersized, causing a ~1K drop in room temperature
 # in the A rooms.
-RAD_SIZING_AAAA=25.00
+RAD_UA_FACTOR=20.00
+RAD_FLOW_MAX=0.03e-3
+
 # This value is chosen so that the radiators are oversized in all rooms/cases.
 # The A rooms will maintain their temperature in all cases.
 RAD_SIZING_OVERSIZED=20.00
@@ -33,7 +35,8 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
-    -e "s/::RAD_UA_FACTOR::/${RAD_SIZING_AAAA}/g" \
+    -e "s/::RAD_UA_FACTOR::/${RAD_UA_FACTOR}/g" \
+    -e "s/::RAD_FLOW_MAX::/${RAD_FLOW_MAX}/g" \
     $TEMPLATE > bungalow-2-heatpump-AAAA.idf
 
 # ABAB
@@ -46,7 +49,8 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
-    -e "s/::RAD_UA_FACTOR::/${RAD_SIZING_AAAA}/g" \
+    -e "s/::RAD_UA_FACTOR::/${RAD_UA_FACTOR}/g" \
+    -e "s/::RAD_FLOW_MAX::/${RAD_FLOW_MAX}/g" \
     $TEMPLATE > bungalow-2-heatpump-ABAB.idf
 
 # AABB
@@ -59,5 +63,6 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
-    -e "s/::RAD_UA_FACTOR::/${RAD_SIZING_AAAA}/g" \
+    -e "s/::RAD_UA_FACTOR::/${RAD_UA_FACTOR}/g" \
+    -e "s/::RAD_FLOW_MAX::/${RAD_FLOW_MAX}/g" \
     $TEMPLATE > bungalow-2-heatpump-AABB.idf
