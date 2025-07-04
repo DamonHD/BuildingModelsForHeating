@@ -77,6 +77,7 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
     def __init__(self):
         super().__init__()
         self.flow_temp_setpoint = None
+        self.flow_setpoint_gain = 0.01
 
     def set_flow_temp(self, state, t):
         self.api.exchange.set_actuator_value(state, self.flow_temp_setpoint, t)
@@ -125,6 +126,11 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
                 "Pump Mass Flow Rate",
                 "SUPPLY PUMP",
             )
+            # FIXME: Unused as I couldn't retrieve the value from the simulation.
+            # Technically an input but I'm keeping it together with the actuators
+            self.z1_setpoint = self.api.exchange.get_actuator_handle(
+                state, "Schedule:Constant", "Schedule Value", "ALWAYS 21"
+            )
 
             if (
                 self.flow_temp_setpoint == -1
@@ -142,7 +148,13 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
         flow_temp_setpoint = self.api.exchange.get_actuator_value(
             state, self.flow_temp_setpoint
         )
-        flow_temp_setpoint += 0.01 * (21.0 - z1_temp)
+
+        # FIXME: Hard coded as I couldn't retrieve the value from the simulation for some reason.
+        # z1_setpoint_c = self.api.exchange.get_actuator_value(state, self.z1_setpoint)
+        # print(f"z1_setpoint: {z1_setpoint_c}")
+        z1_setpoint_c = 21.0
+
+        flow_temp_setpoint += self.flow_setpoint_gain * (z1_setpoint_c - z1_temp)
         self.set_flow_temp(state, flow_temp_setpoint)
 
         return 0
