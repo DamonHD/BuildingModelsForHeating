@@ -92,7 +92,7 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
 
         # Move this out into another calling point
         if self.flow_temp_setpoint is None:
-            # Inputs:
+
             def get_var_handle(var, object):
                 handle = self.api.exchange.get_variable_handle(state, var, object)
                 assert handle != -1, f"Could not get handle to variable {object}:{var}"
@@ -108,6 +108,7 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
                 return handle
 
             try:
+                # Inputs:
                 self.flow_temp = get_var_handle(
                     "Plant Supply Side Outlet Temperature", "HOT WATER LOOP"
                 )
