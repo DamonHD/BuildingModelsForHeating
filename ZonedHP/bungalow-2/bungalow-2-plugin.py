@@ -95,23 +95,24 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
             # Inputs:
             def get_var_handle(var, object):
                 handle = self.api.exchange.get_variable_handle(state, var, object)
-                if handle == -1:
-                    self.api.runtime.issue_severe(
-                        state, f"Could not get handle to {object}:{var}"
-                    )
+                assert handle != -1, f"Could not get handle to {object}:{var}"
                 return handle
 
-            self.flow_temp = get_var_handle(
-                "Plant Supply Side Outlet Temperature", "HOT WATER LOOP"
-            )
-            self.return_temp = get_var_handle(
-                "Heat Pump Load Side Inlet Temperature", "Heat Pump"
-            )
-            self.flow_rate = get_var_handle("Pump Mass Flow Rate", "SUPPLY PUMP")
-            self.z1_temp = get_var_handle("Zone Air Temperature", "Z1")
-            self.outside_temp = get_var_handle(
-                "Site Outdoor Air Drybulb Temperature", "Environment"
-            )
+            try:
+                self.flow_temp = get_var_handle(
+                    "Plant Supply Side Outlet Temperature", "HOT WATER LOOP"
+                )
+                self.return_temp = get_var_handle(
+                    "Heat Pump Load Side Inlet Temperature", "Heat Pump"
+                )
+                self.flow_rate = get_var_handle("Pump Mass Flow Rate", "SUPPLY PUMP")
+                self.z1_temp = get_var_handle("Zone Air Temperature", "Z1")
+                self.outside_temp = get_var_handle(
+                    "Site Outdoor Air Drybulb Temperature", "Environment"
+                )
+            except AssertionError as e:
+                self.api.runtime.issue_severe(state, str(e))
+                return 1
 
             # Outputs:
             self.flow_temp_setpoint = self.api.exchange.get_actuator_handle(
@@ -129,17 +130,13 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
             # FIXME: Unused as I couldn't retrieve the value from the simulation.
             # Technically an input but I'm keeping it together with the actuators
             self.z1_setpoint = self.api.exchange.get_actuator_handle(
-                state, "Schedule:Constant", "Schedule Value", "ALWAYS 21"
+                state, "Schedule:Compact", "Schedule Value", "ALWAYS 21"
             )
 
             if (
                 self.flow_temp_setpoint == -1
                 or self.flow_rate_setpoint == -1
-                or self.outside_temp == -1
-                or self.flow_rate == -1
-                or self.return_temp == -1
-                or self.flow_temp == -1
-                or self.z1_temp == -1
+                or self.z1_setpoint == -1
             ):
                 return 1
 
