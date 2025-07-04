@@ -783,8 +783,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
   ! DE20250618: target 55C temperature continuous.
   Schedule:Constant,
-    ALWAYS 55 C,               !- Name
-    Temperature,55;
+    HP Flow Temp Setpoint,               !- Name
+    Temperature,49.52;
 
 !-   ===========  ALL OBJECTS IN CLASS: CONTROLLED ZONE EQUIP CONFIGURATION ===========
 
@@ -1181,8 +1181,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    25.00,       !- U-Factor Times Area Value
-    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    20.00,       !- U-Factor Times Area Value
+    0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1198,7 +1198,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    25.00,       !- U-Factor Times Area Value
+    20.00,       !- U-Factor Times Area Value
     0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1215,7 +1215,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    25.00,       !- U-Factor Times Area Value
+    20.00,       !- U-Factor Times Area Value
     0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1232,7 +1232,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    25.00,       !- U-Factor Times Area Value
+    20.00,       !- U-Factor Times Area Value
     0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1261,7 +1261,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   SetpointManager:Scheduled,
     HeatSys1 Loop Setpoint Manager,  !- Name
     Temperature,             !- Control Variable
-    ALWAYS 55 C,   !- Schedule Name
+    HP Flow Temp Setpoint,   !- Schedule Name
     Supply Outlet Outlet Node;  !- Setpoint Node or NodeList Name
 
 !---------------------------------------------------------------------------------------------
@@ -1353,11 +1353,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 ! ==============  Plugin work =====================================
 
-! PythonPlugin:Instance,
-!   Heat Pump Outlet Flow Setpoint,        !- Name
-!   Yes,                                   !- Run During Warmup days
-!   bungalow-2-plugin,                     !- Python Module Name
-!   LoadCompHeatPumpController;            !- Plugin Class Name
+PythonPlugin:Instance,
+  Heat Pump Control Scheme,              !- Name
+  Yes,                                   !- Run During Warmup days
+  bungalow-2-plugin,                     !- Python Module Name
+  WeatherCompHeatPumpController;                 !- Plugin Class Name
   
 PythonPlugin:Instance,
   Total Baseboard Heating Transfer Rate, !- Name

@@ -12,6 +12,10 @@
 
 TEMPLATE='bungalow-2-heatpump.template'
 
+# Chooses between the load and weather compensated control schemes.
+LC_CONTROL_SCHEME=LoadCompHeatPumpController
+WC_CONTROL_SCHEME=WeatherCompHeatPumpController
+
 # Controls the radiator sizing using the
 # ZoneHVAC:Baseboard:Convective:Water::UA-factor parameter.
 #
@@ -37,6 +41,7 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::RAD_UA_FACTOR::/${RAD_UA_FACTOR}/g" \
     -e "s/::RAD_FLOW_MAX::/${RAD_FLOW_MAX}/g" \
+    -e "s/::HP_CONTROL_SCHEME::/${WC_CONTROL_SCHEME}/g" \
     $TEMPLATE > bungalow-2-heatpump-AAAA.idf
 
 # ABAB
@@ -51,6 +56,7 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::RAD_UA_FACTOR::/${RAD_UA_FACTOR}/g" \
     -e "s/::RAD_FLOW_MAX::/${RAD_FLOW_MAX}/g" \
+    -e "s/::HP_CONTROL_SCHEME::/${WC_CONTROL_SCHEME}/g" \
     $TEMPLATE > bungalow-2-heatpump-ABAB.idf
 
 # AABB
@@ -65,4 +71,5 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::RAD_UA_FACTOR::/${RAD_UA_FACTOR}/g" \
     -e "s/::RAD_FLOW_MAX::/${RAD_FLOW_MAX}/g" \
+    -e "s/::HP_CONTROL_SCHEME::/${WC_CONTROL_SCHEME}/g" \
     $TEMPLATE > bungalow-2-heatpump-AABB.idf
