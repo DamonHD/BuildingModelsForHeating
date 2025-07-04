@@ -783,8 +783,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
   ! DE20250618: target 55C temperature continuous.
   Schedule:Constant,
-    ALWAYS 55 C,               !- Name
-    Temperature,55;
+    HP Flow Temp Setpoint,               !- Name
+    Temperature,49.52;
 
 !-   ===========  ALL OBJECTS IN CLASS: CONTROLLED ZONE EQUIP CONFIGURATION ===========
 
@@ -1261,7 +1261,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   SetpointManager:Scheduled,
     HeatSys1 Loop Setpoint Manager,  !- Name
     Temperature,             !- Control Variable
-    ALWAYS 55 C,   !- Schedule Name
+    HP Flow Temp Setpoint,   !- Schedule Name
     Supply Outlet Outlet Node;  !- Setpoint Node or NodeList Name
 
 !---------------------------------------------------------------------------------------------

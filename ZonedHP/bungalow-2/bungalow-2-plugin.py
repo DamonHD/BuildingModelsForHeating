@@ -117,7 +117,7 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
                 state,
                 "Schedule:Constant",  # object type
                 "Schedule Value",  # variable name
-                "ALWAYS 55 C",  # object name
+                "HP Flow Temp Setpoint",  # object name
             )
             if (
                 self.flow_temp_setpoint == -1
