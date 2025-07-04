@@ -1182,7 +1182,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1199,7 +1199,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1216,7 +1216,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1233,7 +1233,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
 
@@ -1358,25 +1358,26 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !   Yes,                                   !- Run During Warmup days
 !   bungalow-2-plugin,                     !- Python Module Name
 !   LoadCompHeatPumpController;            !- Plugin Class Name
-!   
-! PythonPlugin:Instance,
-!   Total Baseboard Heating Transfer Rate, !- Name
-!   Yes,                                   !- Run During Warmup days
-!   bungalow-2-plugin,                     !- Python Module Name
-!   BaseboardTotalHeatDemand;              !- Plugin Class Name
-!   
-! PythonPlugin:Variables,
-!   MyGlobalVariables, !- Name
-!   TotalBaseboardHeatTransferRate; !- Variable Name 1
-! 
-! PythonPlugin:OutputVariable,
-!   Baseboard Total Heating Rate All Zones, !- Name
-!   TotalBaseboardHeatTransferRate,         !- Python Plugin Variable Name
-!   Averaged,                               !- Type of Data in Variable FIXME: dunno what the options are
-!   ZoneTimeStep,                                 !- Update Frequency
-!   W;                                      !- Units
-! 
+  
+PythonPlugin:Instance,
+  Total Baseboard Heating Transfer Rate, !- Name
+  Yes,                                   !- Run During Warmup days
+  bungalow-2-plugin,                     !- Python Module Name
+  BaseboardTotalHeatDemand;              !- Plugin Class Name
+  
+PythonPlugin:Variables,
+  MyGlobalVariables, !- Name
+  TotalBaseboardHeatTransferRate; !- Variable Name 1
+
+PythonPlugin:OutputVariable,
+  Baseboard Total Heating Rate All Zones, !- Name
+  TotalBaseboardHeatTransferRate,         !- Python Plugin Variable Name
+  Averaged,                               !- Type of Data in Variable FIXME: dunno what the options are
+  ZoneTimeStep,                                 !- Update Frequency
+  W;                                      !- Units
+
 Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariable,Hourly;
+
 ! Output:EnergyManagementSystem,
 !     Verbose,    ! Actuator Availability Dictionary Reporting
 !     Verbose,    ! Internal Variable Availability Dictionary Reporting
@@ -1427,7 +1428,7 @@ Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariab
   ! Output:Variable,*,Baseboard Total Heating Rate,hourly;
   ! Output:Variable,*,Baseboard Total Heating Energy,hourly;
   ! Output:Variable,*,Baseboard Hot Water Energy,Hourly;
-  ! Output:Variable,*,Baseboard Hot Water Mass Flow Rate,Hourly;
+  Output:Variable,*,Baseboard Hot Water Mass Flow Rate,Hourly;
   ! Output:Variable,*,Baseboard Water Inlet Temperature,Hourly;
   ! Output:Variable,*,Baseboard Water Outlet Temperature,Hourly;
 

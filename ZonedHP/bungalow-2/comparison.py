@@ -13,6 +13,7 @@ FILES = {
 def load_file(name, file):
     renamer = {
         "Date/Time": "time",
+        "Environment:Site Outdoor Air Drybulb Temperature [C](Hourly)": "outdoor:air_temp_c",
         "Z1:Zone Air Temperature [C](Hourly)": "z1:air_temp_c",
         "Z2:Zone Air Temperature [C](Hourly)": "z2:air_temp_c",
         "Z3:Zone Air Temperature [C](Hourly)": "z3:air_temp_c",
@@ -21,12 +22,18 @@ def load_file(name, file):
         "Z2 RADIATOR:Baseboard Total Heating Rate [W](Hourly)": "z2:rad_power_w",
         "Z3 RADIATOR:Baseboard Total Heating Rate [W](Hourly)": "z3:rad_power_w",
         "Z4 RADIATOR:Baseboard Total Heating Rate [W](Hourly)": "z4:rad_power_w",
+        "Z1 RADIATOR:Baseboard Hot Water Mass Flow Rate [kg/s](Hourly)": "z1:mass_flow_kgps",
+        "Z2 RADIATOR:Baseboard Hot Water Mass Flow Rate [kg/s](Hourly)": "z2:mass_flow_kgps",
+        "Z3 RADIATOR:Baseboard Hot Water Mass Flow Rate [kg/s](Hourly)": "z3:mass_flow_kgps",
+        "Z4 RADIATOR:Baseboard Hot Water Mass Flow Rate [kg/s](Hourly)": "z4:mass_flow_kgps",
         "Baseboard Total Heating Rate All Zones:PythonPlugin:OutputVariable [W](Hourly)": "total:rad_power_w",
         "HEAT PUMP:Heat Pump Load Side Heat Transfer Rate [W](Hourly)": "heat_pump:heat_gain_w",
         "HEAT PUMP:Heat Pump Electricity Rate [W](Hourly)": "heat_pump:electricity_w",
+        "HEAT PUMP:Heat Pump Load Side Inlet Temperature [C](Hourly)": "heat_pump:return_temp_c",
+        "HOT WATER LOOP:Plant Supply Side Outlet Temperature [C](Hourly)": "heat_pump:flow_temp_c",
         "SUPPLY PUMP:Pump Electricity Rate [W](Hourly)": "water_pump:electricity_w",
         "SUPPLY PUMP:Pump Fluid Heat Gain Rate [W](Hourly)": "water_pump:heat_gain_w",
-        "HOT WATER LOOP:Plant Supply Side Outlet Temperature [C](Hourly)": "heat_pump:flow_temp_c",
+        "SUPPLY PUMP:Pump Mass Flow Rate [kg/s](Hourly)": "water_pump:mass_flow_kgps",
     }
 
     df = pd.read_csv(file).rename(columns=lambda x: x.strip()).rename(columns=renamer)
@@ -81,11 +88,20 @@ def summarise(df):
 def format_summary(summary):
     summary = summary.set_index(["case", "variable", "location"]).unstack(0)
     summary = summary.reindex(
-        ["air_temp_c", "rad_power_w", "electricity_w", "heat_gain_w", "COP (H4)"],
+        [
+            "air_temp_c",
+            "rad_power_w",
+            "mass_flow_kgps",
+            "flow_temp_c",
+            "return_temp_c",
+            "heat_gain_w",
+            "electricity_w",
+            "COP (H4)",
+        ],
         level=0,
     )
     summary = summary.reindex(
-        ["z1", "z2", "z3", "z4", "heat_pump", "water_pump", "total"], level=1
+        ["outdoor", "z1", "z2", "z3", "z4", "heat_pump", "water_pump", "total"], level=1
     )
     return summary.droplevel(0, axis=1).reset_index()
 

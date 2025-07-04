@@ -18,7 +18,7 @@ TEMPLATE='bungalow-2-heatpump.template'
 # This value is chosen so that the not-setback case is correctly sized,
 # but the setback cases are undersized, causing a ~1K drop in room temperature
 # in the A rooms.
-RAD_SIZING_AAAA=13.90
+RAD_SIZING_AAAA=25.00
 # This value is chosen so that the radiators are oversized in all rooms/cases.
 # The A rooms will maintain their temperature in all cases.
 RAD_SIZING_OVERSIZED=20.00
