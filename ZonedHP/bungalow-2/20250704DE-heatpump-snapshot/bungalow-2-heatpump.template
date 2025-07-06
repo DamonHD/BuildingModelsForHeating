@@ -783,8 +783,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
   ! DE20250618: target 55C temperature continuous.
   Schedule:Constant,
-    HP Flow Temp Setpoint,               !- Name
-    Temperature,49.52;
+    ALWAYS 55 C,               !- Name
+    Temperature,55;
 
 !-   ===========  ALL OBJECTS IN CLASS: CONTROLLED ZONE EQUIP CONFIGURATION ===========
 
@@ -1182,7 +1182,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1199,7 +1199,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1216,7 +1216,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1233,7 +1233,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
 
@@ -1261,7 +1261,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   SetpointManager:Scheduled,
     HeatSys1 Loop Setpoint Manager,  !- Name
     Temperature,             !- Control Variable
-    HP Flow Temp Setpoint,   !- Schedule Name
+    ALWAYS 55 C,   !- Schedule Name
     Supply Outlet Outlet Node;  !- Setpoint Node or NodeList Name
 
 !---------------------------------------------------------------------------------------------
@@ -1354,10 +1354,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! ==============  Plugin work =====================================
 
 PythonPlugin:Instance,
-  Heat Pump Control Scheme,              !- Name
+  Heat Pump Outlet Flow Setpoint,        !- Name
   Yes,                                   !- Run During Warmup days
   bungalow-2-plugin,                     !- Python Module Name
-  ::HP_CONTROL_SCHEME::;                 !- Plugin Class Name
+  LoadCompHeatPumpController;            !- Plugin Class Name
   
 PythonPlugin:Instance,
   Total Baseboard Heating Transfer Rate, !- Name

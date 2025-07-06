@@ -750,6 +750,13 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
 
+  ScheduleTypeLimits,
+    Temperature,             !- Name
+    -60,                     !- Lower Limit Value
+    200,                     !- Upper Limit Value
+    CONTINUOUS,              !- Numeric Type
+    Temperature;             !- Unit Type
+
   ! DHD20250322: type 1 (single heat only) setpoint.
   Schedule:Compact,
     ALWAYS 1,                !- Name
@@ -775,12 +782,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Until: 24:00,18;         !- Field 3
 
   ! DE20250618: target 55C temperature continuous.
-  Schedule:Compact,
-    ALWAYS 55 C,               !- Name
-    Any Number,              !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: AllDays,            !- Field 2
-    Until: 24:00,55;         !- Field 3
+  Schedule:Constant,
+    HP Flow Temp Setpoint,               !- Name
+    Temperature,49.52;
 
 !-   ===========  ALL OBJECTS IN CLASS: CONTROLLED ZONE EQUIP CONFIGURATION ===========
 
@@ -967,9 +971,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Coefficient 4 of the Part Load Performance Curve
     0.0,                     !- Design Minimum Flow Rate {m3/s}
     INTERMITTENT;            !- Pump Control Type
-  
-  ! DE20250618: There's a few options for air to water heatpumps,
-  ! but this seemed the most direct.
+
+  !---------------------------------------------------------------------------------------
+  ! DE20250702: Translation of DHD linear heat pump model from paper
+  ! Note:
+  ! - This is an approximation that assumes a linear EIR is equivalent to a linear CoP.
+  ! - The error is < 0.4 % between 46.0 C and 51.5 C.
+  ! - EIR as a function of temperature is assumed to only vary
+  !   with load side outlet temperature, as per DHD's HG model.
   HeatPump:PlantLoop:EIR:Heating,
     Heat Pump,            !- Name
     Heat Pump Inlet Node,  !- Load Side Inlet Node Name
@@ -1172,8 +1181,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    13.90,       !- U-Factor Times Area Value
-    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    20.00,       !- U-Factor Times Area Value
+    0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1189,8 +1198,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    13.90,       !- U-Factor Times Area Value
-    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    20.00,       !- U-Factor Times Area Value
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1206,8 +1215,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    13.90,       !- U-Factor Times Area Value
-    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    20.00,       !- U-Factor Times Area Value
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1223,8 +1232,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
     ! This isn't efficient enough to heat the room, so setting it to 250 to match
     ! the behaviour of the ideal loads model.
-    13.90,       !- U-Factor Times Area Value
-    0.00013,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    20.00,       !- U-Factor Times Area Value
+    0.03e-3,                  !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
 
@@ -1252,7 +1261,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   SetpointManager:Scheduled,
     HeatSys1 Loop Setpoint Manager,  !- Name
     Temperature,             !- Control Variable
-    ALWAYS 55 C,   !- Schedule Name
+    HP Flow Temp Setpoint,   !- Schedule Name
     Supply Outlet Outlet Node;  !- Setpoint Node or NodeList Name
 
 !---------------------------------------------------------------------------------------------
@@ -1341,6 +1350,39 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Setback Setpoint Control,  !- Name
     ALWAYS 18;               !- Heating Setpoint Temperature Schedule Name
 
+
+! ==============  Plugin work =====================================
+
+PythonPlugin:Instance,
+  Heat Pump Control Scheme,              !- Name
+  Yes,                                   !- Run During Warmup days
+  bungalow-2-plugin,                     !- Python Module Name
+  WeatherCompHeatPumpController;                 !- Plugin Class Name
+  
+PythonPlugin:Instance,
+  Total Baseboard Heating Transfer Rate, !- Name
+  Yes,                                   !- Run During Warmup days
+  bungalow-2-plugin,                     !- Python Module Name
+  BaseboardTotalHeatDemand;              !- Plugin Class Name
+  
+PythonPlugin:Variables,
+  MyGlobalVariables, !- Name
+  TotalBaseboardHeatTransferRate; !- Variable Name 1
+
+PythonPlugin:OutputVariable,
+  Baseboard Total Heating Rate All Zones, !- Name
+  TotalBaseboardHeatTransferRate,         !- Python Plugin Variable Name
+  Averaged,                               !- Type of Data in Variable FIXME: dunno what the options are
+  ZoneTimeStep,                                 !- Update Frequency
+  W;                                      !- Units
+
+Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariable,Hourly;
+
+! Output:EnergyManagementSystem,
+!     Verbose,    ! Actuator Availability Dictionary Reporting
+!     Verbose,    ! Internal Variable Availability Dictionary Reporting
+!     ErrorsOnly; ! EnergyPlus Runtime Language Debug Output Level
+
 !-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
 
 
@@ -1352,6 +1394,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   Output:Variable,*,Heat Pump Load Side Heat Transfer Rate,Hourly;
   Output:Variable,*,Pump Fluid Heat Gain Rate,Hourly;
   Output:Variable,*,Pump Electricity Rate,Hourly;
+  ! Required for plugins
+  Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
+  Output:Variable,*,Heat Pump Load Side Inlet Temperature,Hourly;
+  Output:Variable,*,Pump Mass Flow Rate,Hourly;
+  Output:Variable,*,Plant Supply Side Outlet Temperature,Hourly;
 
   ! DE Debug outputs
   ! ----------------
@@ -1363,6 +1410,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ! Output:Variable,*,Heat Pump Source Side Heat Transfer Rate,Hourly;
   ! Output:Variable,*,Heat Pump Load Side Heat Transfer Rate,Hourly;
   ! Output:Variable,*,Heat Pump Electricity Rate,Hourly;
+  ! Output:Variable,*,Heat Pump Load Side Inlet Temperature,Hourly;
+  ! Output:Variable,*,Heat Pump Load Side Outlet Temperature,Hourly;
 
   ! Output:Variable,*,Pump Electricity Rate,Hourly;
   ! Output:Variable,*,Pump Fluid Heat Gain Rate,Hourly;
@@ -1379,7 +1428,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ! Output:Variable,*,Baseboard Total Heating Rate,hourly;
   ! Output:Variable,*,Baseboard Total Heating Energy,hourly;
   ! Output:Variable,*,Baseboard Hot Water Energy,Hourly;
-  ! Output:Variable,*,Baseboard Hot Water Mass Flow Rate,Hourly;
+  Output:Variable,*,Baseboard Hot Water Mass Flow Rate,Hourly;
   ! Output:Variable,*,Baseboard Water Inlet Temperature,Hourly;
   ! Output:Variable,*,Baseboard Water Outlet Temperature,Hourly;
 

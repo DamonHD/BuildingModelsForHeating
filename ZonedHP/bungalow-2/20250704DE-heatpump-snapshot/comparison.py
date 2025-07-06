@@ -4,12 +4,9 @@ import pandas as pd
 import altair as alt
 
 FILES = {
-    "aaaa-lc": "out-dd-AAAA-LC/eplusout.csv",
-    "abab-lc": "out-dd-ABAB-LC/eplusout.csv",
-    "aabb-lc": "out-dd-AABB-LC/eplusout.csv",
-    "aaaa-wc": "out-dd-AAAA-WC/eplusout.csv",
-    "abab-wc": "out-dd-ABAB-WC/eplusout.csv",
-    "aabb-wc": "out-dd-AABB-WC/eplusout.csv",
+    "aaaa": "out-dd-AAAA/eplusout.csv",
+    "abab": "out-dd-ABAB/eplusout.csv",
+    "aabb": "out-dd-AABB/eplusout.csv",
 }
 
 
