@@ -28,6 +28,7 @@ RAD_FLOW_MAX=0.03e-3
 # Design day outside air temperature
 #
 # Sets both the wet and dry bulbs to this value.
+# NOTE: Bad setback effect on LC models stops above 2 C
 DD_OUTSIDE_TEMP=-3.0
 
 # Generate the AAAA, ABAB and AABB cases from the given parameters
