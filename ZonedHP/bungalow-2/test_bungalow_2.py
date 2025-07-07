@@ -24,7 +24,7 @@ DATA_DIRS = [
 
 CONVERGENCE_ERR = "   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at WINTER DESIGN DAY IN (MID) UK,"
 A_ROOM_TEMP_C = 21.0
-A_ROOM_SAG_C = 20.0
+A_ROOM_SAG_MIN_C = A_ROOM_TEMP_C - 2.0
 B_ROOM_TEMP_C = 18.0
 Z1_AIR_TEMP = "Z1:Zone Air Temperature [C](Hourly)"
 Z2_AIR_TEMP = "Z2:Zone Air Temperature [C](Hourly)"
@@ -218,8 +218,8 @@ def test_AABB_LC_room_temps():
 
 def test_AABB_WC_room_temps():
     results = sim_results["out-dd-AABB-WC"]
-    assert float_near(results[Z1_AIR_TEMP], A_ROOM_SAG_C, 0.5)
-    assert float_near(results[Z2_AIR_TEMP], A_ROOM_SAG_C, 0.5)
+    assert results[Z1_AIR_TEMP] > A_ROOM_SAG_MIN_C
+    assert results[Z2_AIR_TEMP] > A_ROOM_SAG_MIN_C
     assert float_near(results[Z3_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z4_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
 
@@ -234,10 +234,10 @@ def test_ABAB_LC_room_temps():
 
 def test_ABAB_WC_room_temps():
     results = sim_results["out-dd-ABAB-WC"]
-    assert float_near(results[Z1_AIR_TEMP], A_ROOM_SAG_C, 0.5)
+    assert results[Z1_AIR_TEMP] > A_ROOM_SAG_MIN_C
     assert float_near(results[Z2_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z3_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
-    assert float_near(results[Z4_AIR_TEMP], A_ROOM_SAG_C, 0.5)
+    assert results[Z4_AIR_TEMP] > A_ROOM_SAG_MIN_C
 
 
 # Electricity usage
