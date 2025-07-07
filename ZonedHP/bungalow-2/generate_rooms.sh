@@ -25,10 +25,17 @@ WC_CONTROL_SCHEME=WeatherCompHeatPumpController
 RAD_UA_FACTOR=20.00
 RAD_FLOW_MAX=0.03e-3
 
-# This value is chosen so that the radiators are oversized in all rooms/cases.
-# The A rooms will maintain their temperature in all cases.
-RAD_SIZING_OVERSIZED=20.00
+# Design day outside air temperature
+#
+# Sets both the wet and dry bulbs to this value.
+# NOTE: Bad setback effect on LC models stops above 2 C
+DD_OUTSIDE_TEMP=-3.0
 
+# Generate the AAAA, ABAB and AABB cases from the given parameters
+# $1: Heat pump control scheme, one of LC_CONTROL_SCHEME and WC_CONTROL_SCHEME
+# $2: Radiator UA Factor (sizing).
+# $3: Maximum radiator flow rate.
+# $4: Design day outside temperature
 generate_case () {
 # AAAA
 # +-------+
@@ -40,9 +47,10 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
+    -e "s/::HP_CONTROL_SCHEME::/$1/g" \
     -e "s/::RAD_UA_FACTOR::/$2/g" \
     -e "s/::RAD_FLOW_MAX::/$3/g" \
-    -e "s/::HP_CONTROL_SCHEME::/$1/g" \
+    -e "s/::DD_OUTSIDE_TEMP::/$4/g" \
     $TEMPLATE > bungalow-2-heatpump-AAAA-$1.idf
 
 # ABAB
@@ -55,9 +63,10 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
+    -e "s/::HP_CONTROL_SCHEME::/$1/g" \
     -e "s/::RAD_UA_FACTOR::/$2/g" \
     -e "s/::RAD_FLOW_MAX::/$3/g" \
-    -e "s/::HP_CONTROL_SCHEME::/$1/g" \
+    -e "s/::DD_OUTSIDE_TEMP::/$4/g" \
     $TEMPLATE > bungalow-2-heatpump-ABAB-$1.idf
 
 # AABB
@@ -70,12 +79,13 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
+    -e "s/::HP_CONTROL_SCHEME::/$1/g" \
     -e "s/::RAD_UA_FACTOR::/$2/g" \
     -e "s/::RAD_FLOW_MAX::/$3/g" \
-    -e "s/::HP_CONTROL_SCHEME::/$1/g" \
+    -e "s/::DD_OUTSIDE_TEMP::/$4/g" \
     $TEMPLATE > bungalow-2-heatpump-AABB-$1.idf
 }
 
-generate_case $LC_CONTROL_SCHEME $RAD_UA_FACTOR $RAD_FLOW_MAX
-generate_case $WC_CONTROL_SCHEME $RAD_UA_FACTOR $RAD_FLOW_MAX
+generate_case $LC_CONTROL_SCHEME $RAD_UA_FACTOR $RAD_FLOW_MAX $DD_OUTSIDE_TEMP
+generate_case $WC_CONTROL_SCHEME $RAD_UA_FACTOR $RAD_FLOW_MAX $DD_OUTSIDE_TEMP
 

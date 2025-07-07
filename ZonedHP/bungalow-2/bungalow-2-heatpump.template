@@ -152,12 +152,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
    1,                                             !- Month
    15,                                            !- Day of Month
    WinterDesignDay,                               !- Day Type -- used for schedules
-   -3.0,                                          !- Max Dry-Bulb {C}
+   ::DD_OUTSIDE_TEMP::,                           !- Max Dry-Bulb {C}
    0,                                             !- Daily Temp Range {C}
    ,                                              !- Dry-Bulb Temperature Range Modifier Type
    ,                                              !- Dry-Bulb Temperature Range Modifier Schedule
    WetBulb,                                       !- Humidity Condition Type
-   -3.0,                                          !- Wet-Bulb at Max {C}
+   ::DD_OUTSIDE_TEMP::,                           !- Wet-Bulb at Max {C}
    ,                                              !- Humidity Condition Day Schedule Name
    ,                                              !- Humidity Ratio at Maximum Dry-Bulb
    ,                                              !- Enthalpy Ratio at Maximum Dry-Bulb
