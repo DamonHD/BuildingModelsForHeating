@@ -150,3 +150,4 @@ DHD20250627: partition effective U-value (w/film) now 3.30W/m2K to match paper's
  DE20250630: Added python sense check
  DE20250630: Fixed simulation issues (again)
  DE20250702: Modified heatpump to reflect DHD model from paper
+ DE20250707: Implemented load and weather compensation plugins

@@ -70,7 +70,12 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
     def __init__(self):
         super().__init__()
         self.flow_temp_setpoint = None
+
+        # LC Parameters
         self.flow_setpoint_gain = 0.01
+        # FIXME: Hard coded as I couldn't retrieve the value from the simulation for some reason.
+        # This should be set to the same value as the Z1 temperature setpoint in the .idf
+        self.z1_setpoint_c = 21.0
 
     def get_flow_temp(self, state) -> int:
         return self.api.exchange.get_actuator_value(state, self.flow_temp_setpoint)
@@ -141,14 +146,9 @@ class LoadCompHeatPumpController(EnergyPlusPlugin):
                 self.api.runtime.issue_severe(state, str(e))
                 return 1
 
-        # FIXME: Hard coded as I couldn't retrieve the value from the simulation for some reason.
-        # z1_setpoint_c = self.api.exchange.get_actuator_value(state, self.z1_setpoint)
-        # print(f"z1_setpoint: {z1_setpoint_c}")
-        z1_setpoint_c = 21.0
-
         z1_temp = self.get_val(state, self.z1_temp)
         flow_temp_setpoint = self.get_flow_temp(state)
-        flow_temp_setpoint += self.flow_setpoint_gain * (z1_setpoint_c - z1_temp)
+        flow_temp_setpoint += self.flow_setpoint_gain * (self.z1_setpoint_c - z1_temp)
         self.set_flow_temp(state, flow_temp_setpoint)
 
         return 0
@@ -190,6 +190,13 @@ class WeatherCompHeatPumpController(EnergyPlusPlugin):
     def __init__(self):
         super().__init__()
         self.flow_temp_setpoint = None
+
+        # WC parameters
+        #
+        # Chosen by running the load compensated model against a design day
+        # with the outside temperatures set at -3 C and 15 C.
+        self.wc_slope = -1.19
+        self.wc_intercept = 46.0
 
     def set_flow_temp(self, state, t):
         self.api.exchange.set_actuator_value(state, self.flow_temp_setpoint, t)
@@ -251,9 +258,8 @@ class WeatherCompHeatPumpController(EnergyPlusPlugin):
                 self.api.runtime.issue_severe(state, str(e))
                 return 1
 
-        # TODO: Weather compensation curve
-        # outside_temp = self.get_val(state, self.outside_temp)
-        # flow_temp_setpoint = wc_slope * outside_temp + wc_intercept
-        # self.set_flow_temp(state, flow_temp_setpoint)
+        outside_temp = self.get_val(state, self.outside_temp)
+        flow_temp_setpoint = self.wc_slope * outside_temp + self.wc_intercept
+        self.set_flow_temp(state, flow_temp_setpoint)
 
         return 0
