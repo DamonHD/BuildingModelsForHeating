@@ -21,6 +21,16 @@ SIGNIFICANT CHANGES SINCE LAST RELEASE
 RELEASES
 ========
 
+20250713:
+    freezepoint name: V0.1.0 (main)
+    Changes since last freezepoint (developer/mgr initials and brief description):
+    DHD20250531: ... bungalow-1 nominally cloned to bungalow-2.
+    DE20250625: Implemented setback scenarios
+    DE20250626: Fixed bungalow-2 flow rates and radiator sizing, disabled Thermostat:OperativeTemparature.
+    DHD20250627: partition effective U-value (w/film) now 3.30W/m2K to match paper's implied values.
+    DE20250702: Modified heatpump to reflect DHD model from paper.
+    DE20250707: Implemented load and weather compensation plugins.
+
 
 20250413:
     freezepoint name: V0.0.3 (main)
