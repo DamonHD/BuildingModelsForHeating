@@ -1,0 +1,396 @@
+Program Version,EnergyPlus, Version 9.4.0-998c4b761e, YMD=2025.09.03 14:02
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,1,Calendar Year of Simulation[] ! When Annual Report Variables Requested
+7,7,Environment,Site Outdoor Air Drybulb Temperature [C] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+8,9,Environment,Site Outdoor Air Drybulb Temperature [C] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+9,11,Environment,Site Outdoor Air Drybulb Temperature [C] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+10,7,Environment,Site Outdoor Air Dewpoint Temperature [C] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+11,9,Environment,Site Outdoor Air Dewpoint Temperature [C] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+12,11,Environment,Site Outdoor Air Dewpoint Temperature [C] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+13,7,Environment,Site Outdoor Air Barometric Pressure [Pa] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+14,9,Environment,Site Outdoor Air Barometric Pressure [Pa] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+15,11,Environment,Site Outdoor Air Barometric Pressure [Pa] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+16,7,Environment,Site Wind Speed [m/s] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+17,9,Environment,Site Wind Speed [m/s] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+18,11,Environment,Site Wind Speed [m/s] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+19,7,Environment,Site Wind Direction [deg] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+20,9,Environment,Site Wind Direction [deg] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+21,11,Environment,Site Wind Direction [deg] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+22,7,Environment,Site Diffuse Solar Radiation Rate per Area [W/m2] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+23,9,Environment,Site Diffuse Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+24,11,Environment,Site Diffuse Solar Radiation Rate per Area [W/m2] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+25,7,Environment,Site Direct Solar Radiation Rate per Area [W/m2] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+26,9,Environment,Site Direct Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+27,11,Environment,Site Direct Solar Radiation Rate per Area [W/m2] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+28,7,Environment,Site Solar Azimuth Angle [deg] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+29,9,Environment,Site Solar Azimuth Angle [deg] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+30,11,Environment,Site Solar Azimuth Angle [deg] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+31,7,Environment,Site Solar Altitude Angle [deg] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+32,9,Environment,Site Solar Altitude Angle [deg] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+33,11,Environment,Site Solar Altitude Angle [deg] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+34,7,BLOCK1:ZONE1,Zone Total Internal Latent Gain Energy [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+35,9,BLOCK1:ZONE1,Zone Total Internal Latent Gain Energy [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+36,11,BLOCK1:ZONE1,Zone Total Internal Latent Gain Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+111,7,BLOCK1:ZONE1,Zone Windows Total Transmitted Solar Radiation Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+112,9,BLOCK1:ZONE1,Zone Windows Total Transmitted Solar Radiation Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+113,11,BLOCK1:ZONE1,Zone Windows Total Transmitted Solar Radiation Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+114,7,BLOCK1:ZONE1,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+115,9,BLOCK1:ZONE1,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+116,11,BLOCK1:ZONE1,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+117,7,BLOCK1:ZONE1,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+118,9,BLOCK1:ZONE1,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+119,11,BLOCK1:ZONE1,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+120,7,BLOCK1:ZONE1_WALL_2_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+121,9,BLOCK1:ZONE1_WALL_2_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+122,11,BLOCK1:ZONE1_WALL_2_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+123,7,BLOCK1:ZONE1_WALL_3_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+124,9,BLOCK1:ZONE1_WALL_3_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+125,11,BLOCK1:ZONE1_WALL_3_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+126,7,BLOCK1:ZONE1_WALL_4_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+127,9,BLOCK1:ZONE1_WALL_4_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+128,11,BLOCK1:ZONE1_WALL_4_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+129,7,BLOCK1:ZONE1_WALL_5_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+130,9,BLOCK1:ZONE1_WALL_5_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+131,11,BLOCK1:ZONE1_WALL_5_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+132,7,BLOCK1:ZONE1_GROUNDFLOOR_0_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+133,9,BLOCK1:ZONE1_GROUNDFLOOR_0_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+134,11,BLOCK1:ZONE1_GROUNDFLOOR_0_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+135,7,BLOCK1:ZONE1_ROOF_1_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+136,9,BLOCK1:ZONE1_ROOF_1_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+137,11,BLOCK1:ZONE1_ROOF_1_0_0,Surface Inside Face Conduction Heat Transfer Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+138,7,BLOCK1:ZONE1,Zone Mean Radiant Temperature [C] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute],ON
+139,9,BLOCK1:ZONE1,Zone Mean Radiant Temperature [C] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute],ON
+140,11,BLOCK1:ZONE1,Zone Mean Radiant Temperature [C] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute],ON
+141,7,BLOCK1:ZONE1,Zone Mean Air Temperature [C] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute],ON
+142,9,BLOCK1:ZONE1,Zone Mean Air Temperature [C] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute],ON
+143,11,BLOCK1:ZONE1,Zone Mean Air Temperature [C] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute],ON
+144,7,BLOCK1:ZONE1,Zone Operative Temperature [C] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute],ON
+145,9,BLOCK1:ZONE1,Zone Operative Temperature [C] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute],ON
+146,11,BLOCK1:ZONE1,Zone Operative Temperature [C] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute],ON
+257,7,BLOCK1:ZONE1,Zone Air System Sensible Heating Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+258,9,BLOCK1:ZONE1,Zone Air System Sensible Heating Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+259,11,BLOCK1:ZONE1,Zone Air System Sensible Heating Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+260,7,BLOCK1:ZONE1,Zone Air Relative Humidity [%] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute],ON
+261,9,BLOCK1:ZONE1,Zone Air Relative Humidity [%] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute],ON
+262,11,BLOCK1:ZONE1,Zone Air Relative Humidity [%] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute],ON
+410,7,Whole Building,Facility Total Produced Electricity Energy [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+411,9,Whole Building,Facility Total Produced Electricity Energy [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+412,11,Whole Building,Facility Total Produced Electricity Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+413,7,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Summer Clothes Not Comfortable Time [hr] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute],ON
+414,9,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Summer Clothes Not Comfortable Time [hr] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute],ON
+415,11,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Summer Clothes Not Comfortable Time [hr] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute],ON
+416,7,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Winter Clothes Not Comfortable Time [hr] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute],ON
+417,9,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Winter Clothes Not Comfortable Time [hr] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute],ON
+418,11,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Winter Clothes Not Comfortable Time [hr] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute],ON
+419,7,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Summer or Winter Clothes Not Comfortable Time [hr] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute],ON
+420,9,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Summer or Winter Clothes Not Comfortable Time [hr] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute],ON
+421,11,BLOCK1:ZONE1,Zone Thermal Comfort ASHRAE 55 Simple Model Summer or Winter Clothes Not Comfortable Time [hr] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute],ON
+520,7,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Total Heating Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+521,9,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Total Heating Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+522,11,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Total Heating Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+523,7,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Sensible Cooling Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+524,9,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Sensible Cooling Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+525,11,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Sensible Cooling Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+526,7,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Total Cooling Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+527,9,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Total Cooling Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+528,11,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Total Cooling Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+529,7,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Sensible Heating Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+530,9,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Sensible Heating Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+531,11,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Sensible Heating Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+532,7,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Total Heating Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+533,9,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Total Heating Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+534,11,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Total Heating Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+535,7,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Sensible Cooling Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+536,9,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Sensible Cooling Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+537,11,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Sensible Cooling Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+538,7,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Total Cooling Rate [W] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+539,9,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Total Cooling Rate [W] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+540,11,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Heat Recovery Total Cooling Rate [W] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+568,7,BLOCK1:ZONE1,Zone Mechanical Ventilation Standard Density Volume Flow Rate [m3/s] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+569,9,BLOCK1:ZONE1,Zone Mechanical Ventilation Standard Density Volume Flow Rate [m3/s] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+570,11,BLOCK1:ZONE1,Zone Mechanical Ventilation Standard Density Volume Flow Rate [m3/s] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+40,7,Electricity:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+76,7,InteriorLights:Electricity [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+41,9,Electricity:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+77,9,InteriorLights:Electricity [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+43,11,Electricity:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+79,11,InteriorLights:Electricity [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+100,7,ELECTRIC EQUIPMENT#BLOCK1:ZONE1#GeneralLights:InteriorLights:Electricity [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+101,9,ELECTRIC EQUIPMENT#BLOCK1:ZONE1#GeneralLights:InteriorLights:Electricity [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+103,11,ELECTRIC EQUIPMENT#BLOCK1:ZONE1#GeneralLights:InteriorLights:Electricity [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+474,7,DistrictCooling:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+425,7,DistrictHeating:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+544,7,Carbon Equivalent:Facility [kg] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+475,9,DistrictCooling:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+426,9,DistrictHeating:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+545,9,Carbon Equivalent:Facility [kg] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+477,11,DistrictCooling:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+428,11,DistrictHeating:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+547,11,Carbon Equivalent:Facility [kg] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+End of Data Dictionary
+1,SUMMER DESIGN DAY IN UNTITLED (01-01:31-12) JUN,  52.45,  -1.73,   0.00,  99.00
+3,1, 6,15, 1,SummerDesignDay
+7,21.2665,17.0, 5,60,26.2,14,60
+10,13.028395637302112,13.017693689158464, 5,60,13.040900018179223,14,60
+13,100141.3,100141.3, 1,30,100141.3, 1,30
+16,0.0,0.0, 1,30,0.0, 1,30
+19,0.0,0.0, 1,30,0.0, 1,30
+22,57.523760922087799,0.0, 1,30,111.69909924396126,12,60
+25,436.08747880379448,0.0, 1,30,846.7905747666464,12,60
+28,182.007660717797,5.452049399951831, 1,30,358.3487780945829,24,60
+31,20.491079674264875,-14.250588024022367,24,60,60.80369621718179,12,60
+34,0.0,0.0, 1,30,0.0, 1,30
+111,0.0,0.0, 1,30,0.0, 1,30
+114,0.0,0.0, 1,30,0.0, 1,30
+117,0.0,0.0, 1,30,0.0, 1,30
+120,11.208837403064225,-65.93240211780358, 9,60,82.04060416520179, 3,60
+123,-39.02378264613045,-133.74537639641853,19,60,49.36152144765274, 5,30
+126,10.105704009067847,-95.58089755224603,19,60,118.63184518128158, 4,30
+129,-4.411986848687938,-76.91907254923997,19,60,84.90564543719849, 3,60
+132,-277.814461222796,-480.31460925943108,19,60,-87.09442090966243, 6,30
+135,104.38178816661913,-372.72883995229418, 7,60,607.5307417830096,15,30
+138,31.31053861396737,30.13258528213562, 6,60,32.11273379038576,20,30
+141,31.65859368506561,30.16847636958995, 6,60,33.246469874079597,21,30
+144,31.484566149516487,30.150530825862785, 6,60,32.677323541570498,20,60
+413,0.0,0.0, 1,30,0.0, 1,30
+416,0.0,0.0, 1,30,0.0, 1,30
+419,0.0,0.0, 1,30,0.0, 1,30
+257,0.0,0.0, 1,30,0.0, 1,30
+260,32.17821460517566,28.927371324913559,19,30,34.98453109482645, 6,60
+410,0.0,0.0, 1,30,0.0, 1,30
+520,0.0,0.0, 1,30,0.0, 1,30
+523,0.0,0.0, 1,30,0.0, 1,30
+526,0.0,0.0, 1,30,0.0, 1,30
+529,0.0,0.0, 1,30,0.0, 1,30
+532,0.0,0.0, 1,30,0.0, 1,30
+535,0.0,0.0, 1,30,0.0, 1,30
+538,0.0,0.0, 1,30,0.0, 1,30
+568,0.0,0.0, 1,30,0.0, 1,30
+40,16622141.759999998,0.0, 1,30,1187295.8399999999, 7,30
+76,16622141.759999998,0.0, 1,30,1187295.8399999999, 7,30
+100,16622141.759999998,0.0, 1,30,1187295.8399999999, 7,30
+425,0.0,0.0, 1,30,0.0, 1,30
+474,0.0,0.0, 1,30,0.0, 1,30
+544,0.0,0.0, 1,30,0.0, 1,30
+4,1, 6
+8,21.2665,17.0,15, 5,60,26.2,15,14,60
+11,13.028395637302112,13.017693689158464,15, 5,60,13.040900018179223,15,14,60
+14,100141.3,100141.3,15, 1,30,100141.3,15, 1,30
+17,0.0,0.0,15, 1,30,0.0,15, 1,30
+20,0.0,0.0,15, 1,30,0.0,15, 1,30
+23,57.523760922087799,0.0,15, 1,30,111.69909924396126,15,12,60
+26,436.08747880379448,0.0,15, 1,30,846.7905747666464,15,12,60
+29,182.007660717797,5.452049399951831,15, 1,30,358.3487780945829,15,24,60
+32,20.491079674264875,-14.250588024022367,15,24,60,60.80369621718179,15,12,60
+35,0.0,0.0,15, 1,30,0.0,15, 1,30
+112,0.0,0.0,15, 1,30,0.0,15, 1,30
+115,0.0,0.0,15, 1,30,0.0,15, 1,30
+118,0.0,0.0,15, 1,30,0.0,15, 1,30
+121,11.208837403064225,-65.93240211780358,15, 9,60,82.04060416520179,15, 3,60
+124,-39.02378264613045,-133.74537639641853,15,19,60,49.36152144765274,15, 5,30
+127,10.105704009067847,-95.58089755224603,15,19,60,118.63184518128158,15, 4,30
+130,-4.411986848687938,-76.91907254923997,15,19,60,84.90564543719849,15, 3,60
+133,-277.814461222796,-480.31460925943108,15,19,60,-87.09442090966243,15, 6,30
+136,104.38178816661913,-372.72883995229418,15, 7,60,607.5307417830096,15,15,30
+139,31.31053861396737,30.13258528213562,15, 6,60,32.11273379038576,15,20,30
+142,31.65859368506561,30.16847636958995,15, 6,60,33.246469874079597,15,21,30
+145,31.484566149516487,30.150530825862785,15, 6,60,32.677323541570498,15,20,60
+414,0.0,0.0,15, 1,30,0.0,15, 1,30
+417,0.0,0.0,15, 1,30,0.0,15, 1,30
+420,0.0,0.0,15, 1,30,0.0,15, 1,30
+258,0.0,0.0,15, 1,30,0.0,15, 1,30
+261,32.17821460517566,28.927371324913559,15,19,30,34.98453109482645,15, 6,60
+411,0.0,0.0,15, 1,30,0.0,15, 1,30
+521,0.0,0.0,15, 1,30,0.0,15, 1,30
+524,0.0,0.0,15, 1,30,0.0,15, 1,30
+527,0.0,0.0,15, 1,30,0.0,15, 1,30
+530,0.0,0.0,15, 1,30,0.0,15, 1,30
+533,0.0,0.0,15, 1,30,0.0,15, 1,30
+536,0.0,0.0,15, 1,30,0.0,15, 1,30
+539,0.0,0.0,15, 1,30,0.0,15, 1,30
+569,0.0,0.0,15, 1,30,0.0,15, 1,30
+41,16622141.759999998,0.0,15, 1,30,1187295.8399999999,15, 7,30
+77,16622141.759999998,0.0,15, 1,30,1187295.8399999999,15, 7,30
+101,16622141.759999998,0.0,15, 1,30,1187295.8399999999,15, 7,30
+426,0.0,0.0,15, 1,30,0.0,15, 1,30
+475,0.0,0.0,15, 1,30,0.0,15, 1,30
+545,0.0,0.0,15, 1,30,0.0,15, 1,30
+5,1
+9,21.2665,17.0, 6,15, 5,60,26.2, 6,15,14,60
+12,13.028395637302112,13.017693689158464, 6,15, 5,60,13.040900018179223, 6,15,14,60
+15,100141.3,100141.3, 6,15, 1,30,100141.3, 6,15, 1,30
+18,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+21,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+24,57.523760922087799,0.0, 6,15, 1,30,111.69909924396126, 6,15,12,60
+27,436.08747880379448,0.0, 6,15, 1,30,846.7905747666464, 6,15,12,60
+30,182.007660717797,5.452049399951831, 6,15, 1,30,358.3487780945829, 6,15,24,60
+33,20.491079674264875,-14.250588024022367, 6,15,24,60,60.80369621718179, 6,15,12,60
+36,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+113,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+116,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+119,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+122,11.208837403064225,-65.93240211780358, 6,15, 9,60,82.04060416520179, 6,15, 3,60
+125,-39.02378264613045,-133.74537639641853, 6,15,19,60,49.36152144765274, 6,15, 5,30
+128,10.105704009067847,-95.58089755224603, 6,15,19,60,118.63184518128158, 6,15, 4,30
+131,-4.411986848687938,-76.91907254923997, 6,15,19,60,84.90564543719849, 6,15, 3,60
+134,-277.814461222796,-480.31460925943108, 6,15,19,60,-87.09442090966243, 6,15, 6,30
+137,104.38178816661913,-372.72883995229418, 6,15, 7,60,607.5307417830096, 6,15,15,30
+140,31.31053861396737,30.13258528213562, 6,15, 6,60,32.11273379038576, 6,15,20,30
+143,31.65859368506561,30.16847636958995, 6,15, 6,60,33.246469874079597, 6,15,21,30
+146,31.484566149516487,30.150530825862785, 6,15, 6,60,32.677323541570498, 6,15,20,60
+415,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+418,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+421,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+259,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+262,32.17821460517566,28.927371324913559, 6,15,19,30,34.98453109482645, 6,15, 6,60
+412,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+522,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+525,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+528,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+531,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+534,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+537,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+540,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+570,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+43,16622141.759999998,0.0, 6,15, 1,30,1187295.8399999999, 6,15, 7,30
+79,16622141.759999998,0.0, 6,15, 1,30,1187295.8399999999, 6,15, 7,30
+103,16622141.759999998,0.0, 6,15, 1,30,1187295.8399999999, 6,15, 7,30
+428,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+477,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+547,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+1,WINTER DESIGN DAY IN UNTITLED (01-01:31-12),  52.45,  -1.73,   0.00,  99.00
+3,1, 1,15, 0,WinterDesignDay
+7,-5.099999999999998,-5.1, 1,30,-5.1, 1,30
+10,-5.100004697823291,-5.100004697823289, 1,30,-5.100004697823289, 1,30
+13,100141.3,100141.3, 1,30,100141.3, 1,30
+16,1.7000000000000002,1.7, 1,30,1.7, 1,30
+19,160.0,160.0, 1,30,160.0, 1,30
+22,0.0,0.0, 1,30,0.0, 1,30
+25,0.0,0.0, 1,30,0.0, 1,30
+28,179.71690247241885,6.227881438817209, 1,30,352.75996762973457,24,60
+31,-18.744925584263535,-58.70356265445002, 1,30,16.219573743652114,13,30
+34,0.0,0.0, 1,30,0.0, 1,30
+111,0.0,0.0, 1,30,0.0, 1,30
+114,0.0,0.0, 1,30,0.0, 1,30
+117,0.0,0.0, 1,30,0.0, 1,30
+120,-164.42258368532704,-164.506772419051,24,60,-164.32119406127445, 1,30
+123,-163.67411733992143,-163.75805128545907,24,60,-163.57303615516578, 1,30
+126,-163.6741145065499,-163.75804845064787,24,60,-163.57303332359613, 1,30
+129,-164.42258203181653,-164.50677076469845,24,60,-164.32119240881415, 1,30
+132,7.129115071266202,4.016088299468319,24,60,10.893412713375869, 1,30
+135,-483.97837543277748,-483.98922010335289, 1,30,-483.96946191359725,24,60
+138,17.890446036706526,17.88217528409721,24,60,17.9004497473912, 1,30
+141,21.0,20.999999999999998, 2,30,21.000000000000008,19,60
+144,19.445223018353265,19.441087642048609,24,60,19.4502248736956, 1,30
+413,0.0,0.0, 1,30,0.0, 1,30
+416,0.0,0.0, 1,30,0.0, 1,30
+419,0.0,0.0, 1,30,0.0, 1,30
+257,1132.6480448738367,1128.3634955945288, 1,30,1136.1927831646809,24,60
+260,16.012724487710956,16.012724253041705, 1,60,16.012725191718716, 3,30
+410,0.0,0.0, 1,30,0.0, 1,30
+520,1132.6480448738367,1128.363495594529, 1,30,1136.192783164681,24,60
+523,0.0,0.0, 1,30,0.0, 1,30
+526,0.0,0.0, 1,30,0.0, 1,30
+529,0.0,0.0, 1,30,0.0, 1,30
+532,0.0,0.0, 1,30,0.0, 1,30
+535,0.0,0.0, 1,30,0.0, 1,30
+538,0.0,0.0, 1,30,0.0, 1,30
+568,0.0,0.0, 1,30,0.0, 1,30
+40,0.0,0.0, 1,30,0.0, 1,30
+76,0.0,0.0, 1,30,0.0, 1,30
+100,0.0,0.0, 1,30,0.0, 1,30
+425,97860791.07709947,2031054.2920701523, 1,30,2045147.0096964259,24,60
+474,0.0,0.0, 1,30,0.0, 1,30
+544,0.0,0.0, 1,30,0.0, 1,30
+4,1, 1
+8,-5.099999999999998,-5.1,15, 1,30,-5.1,15, 1,30
+11,-5.100004697823291,-5.100004697823289,15, 1,30,-5.100004697823289,15, 1,30
+14,100141.3,100141.3,15, 1,30,100141.3,15, 1,30
+17,1.7000000000000002,1.7,15, 1,30,1.7,15, 1,30
+20,160.0,160.0,15, 1,30,160.0,15, 1,30
+23,0.0,0.0,15, 1,30,0.0,15, 1,30
+26,0.0,0.0,15, 1,30,0.0,15, 1,30
+29,179.71690247241885,6.227881438817209,15, 1,30,352.75996762973457,15,24,60
+32,-18.744925584263535,-58.70356265445002,15, 1,30,16.219573743652114,15,13,30
+35,0.0,0.0,15, 1,30,0.0,15, 1,30
+112,0.0,0.0,15, 1,30,0.0,15, 1,30
+115,0.0,0.0,15, 1,30,0.0,15, 1,30
+118,0.0,0.0,15, 1,30,0.0,15, 1,30
+121,-164.42258368532704,-164.506772419051,15,24,60,-164.32119406127445,15, 1,30
+124,-163.67411733992143,-163.75805128545907,15,24,60,-163.57303615516578,15, 1,30
+127,-163.6741145065499,-163.75804845064787,15,24,60,-163.57303332359613,15, 1,30
+130,-164.42258203181653,-164.50677076469845,15,24,60,-164.32119240881415,15, 1,30
+133,7.129115071266202,4.016088299468319,15,24,60,10.893412713375869,15, 1,30
+136,-483.97837543277748,-483.98922010335289,15, 1,30,-483.96946191359725,15,24,60
+139,17.890446036706526,17.88217528409721,15,24,60,17.9004497473912,15, 1,30
+142,21.0,20.999999999999998,15, 2,30,21.000000000000008,15,19,60
+145,19.445223018353265,19.441087642048609,15,24,60,19.4502248736956,15, 1,30
+414,0.0,0.0,15, 1,30,0.0,15, 1,30
+417,0.0,0.0,15, 1,30,0.0,15, 1,30
+420,0.0,0.0,15, 1,30,0.0,15, 1,30
+258,1132.6480448738367,1128.3634955945288,15, 1,30,1136.1927831646809,15,24,60
+261,16.012724487710956,16.012724253041705,15, 1,60,16.012725191718716,15, 3,30
+411,0.0,0.0,15, 1,30,0.0,15, 1,30
+521,1132.6480448738367,1128.363495594529,15, 1,30,1136.192783164681,15,24,60
+524,0.0,0.0,15, 1,30,0.0,15, 1,30
+527,0.0,0.0,15, 1,30,0.0,15, 1,30
+530,0.0,0.0,15, 1,30,0.0,15, 1,30
+533,0.0,0.0,15, 1,30,0.0,15, 1,30
+536,0.0,0.0,15, 1,30,0.0,15, 1,30
+539,0.0,0.0,15, 1,30,0.0,15, 1,30
+569,0.0,0.0,15, 1,30,0.0,15, 1,30
+41,0.0,0.0,15, 1,30,0.0,15, 1,30
+77,0.0,0.0,15, 1,30,0.0,15, 1,30
+101,0.0,0.0,15, 1,30,0.0,15, 1,30
+426,97860791.07709947,2031054.2920701523,15, 1,30,2045147.0096964259,15,24,60
+475,0.0,0.0,15, 1,30,0.0,15, 1,30
+545,0.0,0.0,15, 1,30,0.0,15, 1,30
+5,1
+9,-5.099999999999998,-5.1, 1,15, 1,30,-5.1, 1,15, 1,30
+12,-5.100004697823291,-5.100004697823289, 1,15, 1,30,-5.100004697823289, 1,15, 1,30
+15,100141.3,100141.3, 1,15, 1,30,100141.3, 1,15, 1,30
+18,1.7000000000000002,1.7, 1,15, 1,30,1.7, 1,15, 1,30
+21,160.0,160.0, 1,15, 1,30,160.0, 1,15, 1,30
+24,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+27,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+30,179.71690247241885,6.227881438817209, 1,15, 1,30,352.75996762973457, 1,15,24,60
+33,-18.744925584263535,-58.70356265445002, 1,15, 1,30,16.219573743652114, 1,15,13,30
+36,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+113,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+116,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+119,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+122,-164.42258368532704,-164.506772419051, 1,15,24,60,-164.32119406127445, 1,15, 1,30
+125,-163.67411733992143,-163.75805128545907, 1,15,24,60,-163.57303615516578, 1,15, 1,30
+128,-163.6741145065499,-163.75804845064787, 1,15,24,60,-163.57303332359613, 1,15, 1,30
+131,-164.42258203181653,-164.50677076469845, 1,15,24,60,-164.32119240881415, 1,15, 1,30
+134,7.129115071266202,4.016088299468319, 1,15,24,60,10.893412713375869, 1,15, 1,30
+137,-483.97837543277748,-483.98922010335289, 1,15, 1,30,-483.96946191359725, 1,15,24,60
+140,17.890446036706526,17.88217528409721, 1,15,24,60,17.9004497473912, 1,15, 1,30
+143,21.0,20.999999999999998, 1,15, 2,30,21.000000000000008, 1,15,19,60
+146,19.445223018353265,19.441087642048609, 1,15,24,60,19.4502248736956, 1,15, 1,30
+415,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+418,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+421,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+259,1132.6480448738367,1128.3634955945288, 1,15, 1,30,1136.1927831646809, 1,15,24,60
+262,16.012724487710956,16.012724253041705, 1,15, 1,60,16.012725191718716, 1,15, 3,30
+412,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+522,1132.6480448738367,1128.363495594529, 1,15, 1,30,1136.192783164681, 1,15,24,60
+525,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+528,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+531,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+534,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+537,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+540,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+570,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+43,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+79,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+103,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+428,97860791.07709947,2031054.2920701523, 1,15, 1,30,2045147.0096964259, 1,15,24,60
+477,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+547,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+End of Data
+ Number of Records Written=         252

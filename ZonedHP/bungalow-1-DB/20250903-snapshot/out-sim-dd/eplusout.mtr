@@ -1,0 +1,72 @@
+Program Version,EnergyPlus, Version 9.4.0-998c4b761e, YMD=2025.09.03 14:02
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Meters Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Meters Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Meters Requested
+6,1,Calendar Year of Simulation[] ! When Annual Meters Requested
+40,7,Electricity:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+76,7,InteriorLights:Electricity [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+41,9,Electricity:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+77,9,InteriorLights:Electricity [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+43,11,Electricity:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+79,11,InteriorLights:Electricity [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+100,7,ELECTRIC EQUIPMENT#BLOCK1:ZONE1#GeneralLights:InteriorLights:Electricity [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+101,9,ELECTRIC EQUIPMENT#BLOCK1:ZONE1#GeneralLights:InteriorLights:Electricity [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+103,11,ELECTRIC EQUIPMENT#BLOCK1:ZONE1#GeneralLights:InteriorLights:Electricity [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+474,7,DistrictCooling:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+425,7,DistrictHeating:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+544,7,Carbon Equivalent:Facility [kg] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+475,9,DistrictCooling:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+426,9,DistrictHeating:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+545,9,Carbon Equivalent:Facility [kg] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+477,11,DistrictCooling:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+428,11,DistrictHeating:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+547,11,Carbon Equivalent:Facility [kg] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+End of Data Dictionary
+1,SUMMER DESIGN DAY IN UNTITLED (01-01:31-12) JUN,  52.45,  -1.73,   0.00,  99.00
+3,1, 6,15, 1,SummerDesignDay
+40,16622141.759999998,0.0, 1,30,1187295.8399999999, 7,30
+76,16622141.759999998,0.0, 1,30,1187295.8399999999, 7,30
+100,16622141.759999998,0.0, 1,30,1187295.8399999999, 7,30
+425,0.0,0.0, 1,30,0.0, 1,30
+474,0.0,0.0, 1,30,0.0, 1,30
+544,0.0,0.0, 1,30,0.0, 1,30
+4,1, 6
+41,16622141.759999998,0.0,15, 1,30,1187295.8399999999,15, 7,30
+77,16622141.759999998,0.0,15, 1,30,1187295.8399999999,15, 7,30
+101,16622141.759999998,0.0,15, 1,30,1187295.8399999999,15, 7,30
+426,0.0,0.0,15, 1,30,0.0,15, 1,30
+475,0.0,0.0,15, 1,30,0.0,15, 1,30
+545,0.0,0.0,15, 1,30,0.0,15, 1,30
+5,1
+43,16622141.759999998,0.0, 6,15, 1,30,1187295.8399999999, 6,15, 7,30
+79,16622141.759999998,0.0, 6,15, 1,30,1187295.8399999999, 6,15, 7,30
+103,16622141.759999998,0.0, 6,15, 1,30,1187295.8399999999, 6,15, 7,30
+428,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+477,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+547,0.0,0.0, 6,15, 1,30,0.0, 6,15, 1,30
+1,WINTER DESIGN DAY IN UNTITLED (01-01:31-12),  52.45,  -1.73,   0.00,  99.00
+3,1, 1,15, 0,WinterDesignDay
+40,0.0,0.0, 1,30,0.0, 1,30
+76,0.0,0.0, 1,30,0.0, 1,30
+100,0.0,0.0, 1,30,0.0, 1,30
+425,97860791.07709947,2031054.2920701523, 1,30,2045147.0096964259,24,60
+474,0.0,0.0, 1,30,0.0, 1,30
+544,0.0,0.0, 1,30,0.0, 1,30
+4,1, 1
+41,0.0,0.0,15, 1,30,0.0,15, 1,30
+77,0.0,0.0,15, 1,30,0.0,15, 1,30
+101,0.0,0.0,15, 1,30,0.0,15, 1,30
+426,97860791.07709947,2031054.2920701523,15, 1,30,2045147.0096964259,15,24,60
+475,0.0,0.0,15, 1,30,0.0,15, 1,30
+545,0.0,0.0,15, 1,30,0.0,15, 1,30
+5,1
+43,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+79,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+103,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+428,97860791.07709947,2031054.2920701523, 1,15, 1,30,2045147.0096964259, 1,15,24,60
+477,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+547,0.0,0.0, 1,15, 1,30,0.0, 1,15, 1,30
+End of Data
+ Number of Records Written=          36

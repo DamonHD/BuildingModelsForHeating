@@ -1,0 +1,141 @@
+Program Version,EnergyPlus, Version 9.4.0-998c4b761e, YMD=2025.09.03 14:02,
+   ** Warning ** Timestep: Requested number (2) is less than the suggested minimum of 4.
+   **   ~~~   ** Please see entry for Timestep in Input/Output Reference for discussion of considerations.
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** GetSurfaceData: Entered Floor Area entered for Zone="BLOCK1:ZONE1" significantly different from calculated Floor Area
+   **   ~~~   ** Entered Zone Floor Area value=54.97, Calculated Zone Floor Area value=64.00, entered Floor Area will be used in calculations.
+   ************* Note that the following warning(s) may/will occur if you have not enclosed your zone completely.
+   ** Warning ** Entered Volume entered for Zone="BLOCK1:ZONE1" significantly different from calculated Volume
+   **   ~~~   ** Entered Zone Volume value=104.44, Calculated Zone Volume value=147.20, entered volume will be used in calculations.
+   ** Warning ** CheckUsedConstructions: There are 5 nominally unused constructions in input.
+   **   ~~~   ** Each Unused construction is shown.
+   ************* Construction=LINEARBRIDGINGCONSTRUCTION
+   ************* Construction=IRTSURFACE
+   ************* Construction=PROJECT GROUND FLOOR_REV
+   ************* Construction=PROJECT FLAT ROOF_REV
+   ************* Construction=PROJECT WALL_REV
+   ** Warning ** Calculated design cooling load for zone=BLOCK1:ZONE1 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated partial vapor pressure is greater than the barometric pressure, so that calculated humidity ratio is invalid (PsyWFnTdpPb).
+   **   ~~~   **  Routine=UpdateZoneSizing, During Sizing, Environment=WINTER DESIGN DAY IN UNTITLED (01-01:31-12), at Simulation time=01/15 24:00 - 24:30
+   **   ~~~   **  Dew-Point= 100.00 Barometric Pressure= 100141.33
+   **   ~~~   ** Instead, calculated Humidity Ratio at 99.0 (1 degree less) = 26.5866 will be used. Simulation continues.
+   ** Warning ** Temperature out of range [-100. to 200.] (PsyPsatFnTemp)
+   **   ~~~   **  Routine=CalcPurchAirLoads, During Sizing, Environment=WINTER DESIGN DAY IN UNTITLED (01-01:31-12), at Simulation time=01/15 24:00 - 24:30
+   **   ~~~   **  Input Temperature=-6843.95
+   ** Warning ** SizePurchasedAir: : Potential issue with equipment sizing for ZoneHVAC:IdealLoadsAirSystem BLOCK1:ZONE1 IDEAL LOADS AIR
+   **   ~~~   ** ...Rated Total Cooling Capacity = 0.00 [W]
+   **   ~~~   ** ...Air flow rate used for sizing = 0.00000 [m3/s]
+   **   ~~~   ** ...Coil inlet air temperature used for sizing = 100.00 [C]
+   **   ~~~   ** ...Coil outlet air temperature used for sizing = 12.00 [C]
+   ** Warning ** Output:Meter: invalid Key Name="NATURALGAS:FACILITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="INTERIOREQUIPMENT:ELECTRICITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="NATURALGAS:FACILITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="INTERIOREQUIPMENT:ELECTRICITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="NATURALGAS:FACILITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="INTERIOREQUIPMENT:ELECTRICITY" - not found.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL 80% ACCEPTABILITY STATUS, Frequency=Daily
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL 90% ACCEPTABILITY STATUS, Frequency=Daily
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL RUNNING AVERAGE OUTDOOR AIR TEMPERATURE, Frequency=Daily
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL TEMPERATURE, Frequency=Daily
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL 80% ACCEPTABILITY STATUS, Frequency=Monthly
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL 90% ACCEPTABILITY STATUS, Frequency=Monthly
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL RUNNING AVERAGE OUTDOOR AIR TEMPERATURE, Frequency=Monthly
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL TEMPERATURE, Frequency=Monthly
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL 80% ACCEPTABILITY STATUS, Frequency=
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL 90% ACCEPTABILITY STATUS, Frequency=
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL RUNNING AVERAGE OUTDOOR AIR TEMPERATURE, Frequency=
+   ************* Key=People BLOCK1:ZONE1, VarName=ZONE THERMAL COMFORT ASHRAE 55 ADAPTIVE MODEL TEMPERATURE, Frequency=
+   ************* Key=*, VarName=FAN ELECTRICITY RATE, Frequency=Daily
+   ************* Key=*, VarName=WATER USE EQUIPMENT HEATING RATE, Frequency=Daily
+   ************* Key=*, VarName=FAN ELECTRICITY RATE, Frequency=Monthly
+   ************* Key=*, VarName=WATER USE EQUIPMENT HEATING RATE, Frequency=Monthly
+   ************* Key=*, VarName=FAN ELECTRICITY RATE, Frequency=
+   ************* Key=*, VarName=WATER USE EQUIPMENT HEATING RATE, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Daily
+   ************* Key=*, VarName=OTHER EQUIPMENT TOTAL HEATING RATE, Frequency=Daily
+   ************* Key=*, VarName=OTHER EQUIPMENT LOST HEAT RATE, Frequency=Daily
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=Daily
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=Daily
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT TOTAL HEATING RATE, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT LOST HEAT RATE, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=Monthly
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=
+   ************* Key=BLOCK1:ZONE1, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=
+   ************* Key=*, VarName=OTHER EQUIPMENT TOTAL HEATING RATE, Frequency=
+   ************* Key=*, VarName=OTHER EQUIPMENT LOST HEAT RATE, Frequency=
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=
+   ************* There are 1 unused objects in input.
+   ************* Use Output:Diagnostics,DisplayUnusedObjects; to see them.
+   ************* There are 12 unused schedules in input.
+   ************* There are 3 unused week schedules in input.
+   ************* There are 5 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Recurring Error Summary =====
+   ************* The following recurring error messages occurred.
+   *************
+   *************  ** Warning ** Entered Humidity Ratio invalid (PsyWFnTdpPb)
+   *************  **   ~~~   **   This error occurred 1 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 1 times.
+   *************  **   ~~~   **   Max=26.586608 []  Min=26.586608 []
+   *************
+   *************  ** Warning ** Temperature out of range [-100. to 200.] (PsyPsatFnTemp)
+   *************  **   ~~~   **   This error occurred 1 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 1 times.
+   *************  **   ~~~   **   Max=-6843.953369 C  Min=-6843.953369 C
+   *************
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 4 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 14 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  0.31sec
