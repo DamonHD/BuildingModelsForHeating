@@ -17,3 +17,4 @@ lower than the target 2kW.
 
 
 DHD20250926: reverting/updating to 20250916 snapshot with correct exterior; U-values far too good though. 
+DHD20250926: minor re-adjustments to target temperatures for nth time (to be 21C/18C).
