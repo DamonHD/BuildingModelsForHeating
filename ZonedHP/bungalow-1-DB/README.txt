@@ -4,3 +4,16 @@ Some versions may be exported as EnergyPlus files: eg .idf
 
 Working on moving values in "HeatTransfer Surface" (HTML) table to match paper.
 HeatTransfer target U values: floor 0, walls/roof with film 0.61 W/m2K.
+
+2025-09-16:
+Building now has approx correct external dimensions and character (no windows).
+U values are better than needed for bungalow-1,
+so design-day heat demand seen in out-3mod-dd/eplusout.eso is ~1146W 
+lower than the target 2kW.
+230,1,BLOCK1:ZONE1 IDEAL LOADS AIR,Zone Ideal Loads Supply Air Total Heating Rate [W] !TimeStep
+...
+230,1145.9117657398529
+
+
+
+DHD20250926: reverting/updating to 20250916 snapshot with correct exterior; U-values far too good though. 
