@@ -1,0 +1,55 @@
+Program Version,EnergyPlus, Version 9.4.0-998c4b761e, YMD=2025.09.26 14:37,
+   ** Warning ** Timestep: Requested number (2) is less than the suggested minimum of 4.
+   **   ~~~   ** Please see entry for Timestep in Input/Output Reference for discussion of considerations.
+   ** Warning ** ManageSizing: The ZoneComponentLoadSummary report was requested but no sizing objects were found so that report cannot be generated.
+   ** Warning ** ManageSizing: For a zone sizing run, there must be at least 1 Sizing:Zone input object. SimulationControl Zone Sizing option ignored.
+   ** Warning ** GetSurfaceData: Entered Floor Area entered for Zone="BLOCK1:ZONE1" significantly different from calculated Floor Area
+   **   ~~~   ** Entered Zone Floor Area value=54.97, Calculated Zone Floor Area value=64.00, entered Floor Area will be used in calculations.
+   ************* Note that the following warning(s) may/will occur if you have not enclosed your zone completely.
+   ** Warning ** Entered Volume entered for Zone="BLOCK1:ZONE1" significantly different from calculated Volume
+   **   ~~~   ** Entered Zone Volume value=104.44, Calculated Zone Volume value=147.20, entered volume will be used in calculations.
+   ** Warning ** CheckUsedConstructions: There are 4 nominally unused constructions in input.
+   **   ~~~   ** Each Unused construction is shown.
+   ************* Construction=LINEARBRIDGINGCONSTRUCTION
+   ************* Construction=LOW-LOSS GROUND FLOOR_REV
+   ************* Construction=PROJECT FLAT ROOF_REV
+   ************* Construction=PROJECT WALL_REV
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=*, VarName=ZONE RADIANT HVAC HEATING RATE, Frequency=TimeStep
+   ************* Key=*, VarName=SURFACE WINDOW HEAT GAIN RATE, Frequency=TimeStep
+   ************* Key=*, VarName=SURFACE WINDOW HEAT LOSS RATE, Frequency=TimeStep
+   ************* Key=*, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=TimeStep
+   ************* Key=*, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=TimeStep
+   ************* Key=*, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=TimeStep
+   ************* Key=*, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=TimeStep
+   ************* Key=*, VarName=ZONE INFILTRATION AIR CHANGE RATE, Frequency=TimeStep
+   ************* Key=*, VarName=ZONE VENTILATION AIR CHANGE RATE, Frequency=TimeStep
+   ************* Key=*, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=TimeStep
+   ************* Key=*, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=TimeStep
+   ************* Key=*, VarName=OTHER EQUIPMENT TOTAL HEATING RATE, Frequency=TimeStep
+   ************* There are 9 unused schedules in input.
+   ************* There are 3 unused week schedules in input.
+   ************* There are 5 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 2 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 7 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  0.28sec
