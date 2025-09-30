@@ -24,6 +24,6 @@ DHD20250930: adjusting roof towards U=0.61; MW Glass Wool (rolls)@0.04 to woodwo
 DHD20250930: adjusting roof towards U=0.61; MW Glass Wool (rolls)@0.04 to Aerated Concrete@0.12 same 0.145m, U now 0.628 vs 0.246.
 DHD20250930: adjusting walls towards U=0.61; vegetable fibre board@0.072 same 0.08m, U now 0.622 vs 0.351, heat los ~2200W.
 
-DHD20250930: overridding winter DD ext temp from Birmingham -5.1C to -3C.
+DHD20250930: overriding winter DD ext temp from Birmingham -5.1C to -3C and wind speed to 0.
 
 
