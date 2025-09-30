@@ -22,7 +22,7 @@ DHD20250926: changed floor to use PUR@0.026W/mK; layer still 0.133m, floor U now
 DHD20250926: adjusting walls towards U=0.61; XPS to woodwool@0.1 same 0.08m, U now 0.771 vs 0.351, heat loss 1811W.
 DHD20250930: adjusting roof towards U=0.61; MW Glass Wool (rolls)@0.04 to woodwool@0.1 same 0.145m, U now 0.531 vs 0.246.
 DHD20250930: adjusting roof towards U=0.61; MW Glass Wool (rolls)@0.04 to Aerated Concrete@0.12 same 0.145m, U now 0.628 vs 0.246.
-DHD20250926: adjusting walls towards U=0.61; vegetable fibre board@0.072 same 0.08m, U now 0.622 vs 0.351.
+DHD20250926: adjusting walls towards U=0.61; vegetable fibre board@0.072 same 0.08m, U now 0.622 vs 0.351, heat los ~2200W.
 
 
 
