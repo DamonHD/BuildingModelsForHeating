@@ -19,4 +19,6 @@ lower than the target 2kW.
 DHD20250926: reverting/updating to 20250916 snapshot with correct exterior; U-values far too good though. 
 DHD20250926: minor re-adjustments to target temperatures for nth time (to be 21C/18C).
 DHD20250926: changed floor to use PUR@0.026W/mK; layer still 0.133m, floor U now 0.171 vs 0.247, heat loss still ~1145W.
-DHD20250906: adjusting walls towards U=0.61; XPS to woodwool@0.1 same 0.08m, walls U now 0.771 vs 0.351, heat loss 1811W.
+DHD20250926: adjusting walls towards U=0.61; XPS to woodwool@0.1 same 0.08m, walls U now 0.771 vs 0.351, heat loss 1811W.
+
+DHD20250930: adjusting roof towards U=0.61; 
