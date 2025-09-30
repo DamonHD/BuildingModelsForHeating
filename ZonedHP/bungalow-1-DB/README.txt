@@ -20,5 +20,10 @@ DHD20250926: reverting/updating to 20250916 snapshot with correct exterior; U-va
 DHD20250926: minor re-adjustments to target temperatures for nth time (to be 21C/18C).
 DHD20250926: changed floor to use PUR@0.026W/mK; layer still 0.133m, floor U now 0.171 vs 0.247, heat loss still ~1145W.
 DHD20250926: adjusting walls towards U=0.61; XPS to woodwool@0.1 same 0.08m, U now 0.771 vs 0.351, heat loss 1811W.
+
 DHD20250930: adjusting roof towards U=0.61; MW Glass Wool (rolls)@0.04 to woodwool@0.1 same 0.145m, U now 0.531 vs 0.246.
 DHD20250930: adjusting roof towards U=0.61; MW Glass Wool (rolls)@0.04 to Aerated Concrete@0.12 same 0.145m, U now 0.628 vs 0.246.
+DHD20250926: adjusting walls towards U=0.61; vegetable fibre board@0.072 same 0.08m, U now 0.622 vs 0.351.
+
+
+
