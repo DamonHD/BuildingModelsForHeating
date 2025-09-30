@@ -781,6 +781,23 @@ Output:Diagnostics, DisplayAdvancedReportVariables, DisplayExtraWarnings;
 
 ! DHD Extras
 
+Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
+Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
+Output:Variable,*,Zone Air Temperature,Hourly;
+! DHD20250407: heat demand in W.
+Output:Variable,*,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate,Hourly;
+Output:Variable,*,Zone Ideal Loads Zone Total Heating Rate, Hourly;
+! DHD20250407: solar gains in W; should be all zero.
+!Output:Variable,*,Surface Outside Face Solar Radiation Heat Gain Rate,Hourly;
+! DHD20250407: heat flows in W.
+Output:Variable,*,Surface Average Face Conduction Heat Transfer Rate,Hourly;
+! DHD20250413: surface temperatures.
+Output:Variable,*,Surface Outside Face Outdoor Air Drybulb Temperature,Hourly;
+Output:Variable,*,Surface Inside Face Temperature,Hourly;
+Output:Variable,*,Surface Outside Face Temperature,Hourly;
+Output:Variable,*,Surface Inside Face Adjacent Air Temperature,Hourly;
+
+
   OutputControl:Table:Style,
     HTML;
 
