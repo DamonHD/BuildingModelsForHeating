@@ -1,11 +1,11 @@
 ! bungalow-2.idf
 !
-! Initial approximation to bungalow from 10.3390/su16114710 paper.
+! Approximation to bungalow from 10.3390/su16114710 paper.
 !
 ! IN PROGRESS
 !
 ! Some features of 10.3390/su16114710 bungalow, Salford EH1 weather.
-! NOTE: Salford location and design day lines copied in from EH1 model.
+! NOTE: Salford location and design day lines copied in from EH1 model with permission.
 !
 ! hart-davis2024zone bungalow parameters:
 !     IWL (Internal Wall Length) = 4m, thus whole external wall length 8m.
@@ -212,6 +212,45 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
 
+! DHD20251007: material brought in from bungalow-1-DB model.
+  ! Asphalt 1- thickness 0.01
+  Material, Asphalt 1_.01,
+    Rough,                                         !- Roughness
+    .01,                                           !- Thickness {m}
+    0.7,                                           !- Conductivity {w/m-K}
+    2100,                                          !- Density {kg/m3}
+    1000,                                          !- Specific Heat {J/kg-K}
+    0.9,                                           !- Thermal Emittance
+    0.85,                                          !- Solar Absorptance
+    0.9;                                           !- Visible Absorptance
+  ! Wood derivatives - woodwool- thickness 0.145
+  Material, Wood derivatives - woodwool_.145,
+    Rough,                                         !- Roughness
+    .145,                                          !- Thickness {m}
+    0.1,                                           !- Conductivity {w/m-K}
+    500,                                           !- Density {kg/m3}
+    1000,                                          !- Specific Heat {J/kg-K}
+    0.9,                                           !- Thermal Emittance
+    0.6,                                           !- Solar Absorptance
+    0.6;                                           !- Visible Absorptance
+  ! Void / air gap
+  Material:NoMass, 3_RVAL_3,                       !- Material name - Air gap >=25mm
+    Rough,                                         !- Roughness
+    .18,                                           !- Resistance {m2-K/w}
+    0.9,                                           !- Thermal Emittance
+    0.7,                                           !- Solar Absorptance
+    0.7;                                           !- Visible Absorptance
+  ! Plasterboard- thickness 0.013
+  Material, Plasterboard_.013,
+    Rough,                                         !- Roughness
+    .013,                                          !- Thickness {m}
+    0.25,                                          !- Conductivity {w/m-K}
+    2800,                                          !- Density {kg/m3}
+    896,                                           !- Specific Heat {J/kg-K}
+    0.9,                                           !- Thermal Emittance
+    0.5,                                           !- Solar Absorptance
+    0.5;                                           !- Visible Absorptance
+
 ! DHD20250330: low-thermal-capacity (~fibreglass quit) insulation adjusted to achieve 0.61 STDEWR U-value.
   Material,
     STDEWR INSULATION,       !- Name
@@ -253,7 +292,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
 
-! DHD20250330: roof and wall with computed U-value and low/no thermal mass.
+! DHD20250330: wall with computed U-value and low/no thermal mass (was also roof).
   Construction,
     STDEWR,                  !- Name
     STDEWR INSULATION;       !- Layer 1
@@ -261,6 +300,15 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   Construction,
     LTFLOOR,                 !- Name
     ZEROU;                   !- Outside Layer
+
+  ! DHD20251007: construction brought over from bungalow-1-DB model.
+  ! Lossy flat roof
+  Construction,
+    Lossy flat roof,         !- Name
+    Asphalt 1_.01,                                 !- .01m
+    Wood derivatives - woodwool_.145,              !- .145m
+    3_RVAL_3,                                      !- R-value
+    Plasterboard_.013;                             !- .013m
 
   ! DHD20250602: one side of internal partition wall.
   Construction,
@@ -554,8 +602,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! NW = Z4
   BuildingSurface:Detailed,
     EXT SURFACE ROOF NW,     !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
+    Roof,                    !- Surface Type
+    Lossy flat roof,         !- Construction Name
     Z4,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -572,8 +620,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! NE = Z3
   BuildingSurface:Detailed,
     EXT SURFACE ROOF NE,     !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
+    Roof,                    !- Surface Type
+    Lossy flat roof,         !- Construction Name
     Z3,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -590,8 +638,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! SE = Z1
   BuildingSurface:Detailed,
     EXT SURFACE ROOF SE,     !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
+    Roof,                    !- Surface Type
+    Lossy flat roof,         !- Construction Name
     Z1,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -608,8 +656,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! SW = Z2
   BuildingSurface:Detailed,
     EXT SURFACE ROOF SW,     !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
+    Roof,                    !- Surface Type
+    Lossy flat roof,         !- Construction Name
     Z2,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
