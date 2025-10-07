@@ -165,5 +165,5 @@ DHD20250627: partition effective U-value (w/film) now 3.30W/m2K to match paper's
  DE20250630: Fixed simulation issues (again)
  DE20250702: Modified heatpump to reflect DHD model from paper
  DE20250707: Implemented load and weather compensation plugins
-DHD20251007: transplanted roof from bungalow-1-DB model to bungalow-2; dd heat loss ~1777W = 20250624-snaphot.
+DHD20251007: transplanted roof from bungalow-1-DB model to bungalow-2; dd heat loss ~1777W = 20250624-snapshot.
 

@@ -22,6 +22,12 @@ RELEASES
 ========
 
 
+20251007:
+    freezepoint name: V0.1.1 (main)
+    Changes since last freezepoint (developer/mgr initials and brief description):
+    DHD20251007: ... bungalow-2 roof replaced with more conventional construction.
+
+
 20250713:
     freezepoint name: V0.1.0 (main)
     Changes since last freezepoint (developer/mgr initials and brief description):
