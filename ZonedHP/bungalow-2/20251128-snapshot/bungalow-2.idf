@@ -277,8 +277,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
  ! DHD20250602: internal wall approximation including door in mean U-value: ~3.30W/m2K (from IDU and IWU).
  ! Like plasterboard on studs, but almost no thermal capacity.
- ! Effective U-value with film 3.18 w/ 12.0cm thickness and 0.160 conductivity.
- ! Effective U-value with film 3.30 w/ 12.0cm thickness and 0.190 conductivity.
+ ! Effective U-value with film 3.18 w/ 12mm thickness and 0.160 conductivity.
+ ! Effective U-value with film 3.30 w/ 12mm thickness and 0.190 conductivity.
    Material,
     IW MEAN,                 !- Name
     MediumSmooth,            !- Roughness
