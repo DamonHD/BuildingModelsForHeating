@@ -597,7 +597,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 4, 0;                 !- X,Y,Z ==> Vertex 4 {m}
 
 ! ROOF
-! DHD20250401: using Surface Type 'Wall' to get same film coefficients as Wall.
 ! DHD20250603: roof split to match the rooms/zones.    
 ! NW = Z4
   BuildingSurface:Detailed,
