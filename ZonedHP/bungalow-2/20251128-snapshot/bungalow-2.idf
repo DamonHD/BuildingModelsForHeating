@@ -223,10 +223,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.9,                                           !- Thermal Emittance
     0.85,                                          !- Solar Absorptance
     0.9;                                           !- Visible Absorptance
-  ! Wood derivatives - woodwool- thickness 0.145
-  Material, Wood derivatives - woodwool_.145,
+  ! Wood derivatives - woodwool
+  Material, Wood derivatives - woodwool_r,
     Rough,                                         !- Roughness
-    .145,                                          !- Thickness {m}
+    .125,                                          !- Thickness {m}
     0.1,                                           !- Conductivity {w/m-K}
     500,                                           !- Density {kg/m3}
     1000,                                          !- Specific Heat {J/kg-K}
@@ -306,7 +306,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   Construction,
     Lossy flat roof,         !- Name
     Asphalt 1_.01,                                 !- .01m
-    Wood derivatives - woodwool_.145,              !- .145m
+    Wood derivatives - woodwool_r,                 !- .145m
     3_RVAL_3,                                      !- R-value
     Plasterboard_.013;                             !- .013m
 
