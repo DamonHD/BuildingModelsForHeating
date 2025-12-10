@@ -168,3 +168,4 @@ DHD20250627: partition effective U-value (w/film) now 3.30W/m2K to match paper's
 DHD20251007: transplanted roof from bungalow-1-DB model to bungalow-2; dd heat loss ~1777W = 20250624-snapshot.
 DHD20251128: increasing roof U-value (with film) from 0.545 to ~0.61W/m2K; woodwool .145m to .125m; DD heatloss ~1877W.
 DHD20251128: reverted SurfaceConvectionAlgorithm inside and outside to TARP; DD heat loss ~2018W.
+DHD20251210: to support comparison.py on my Mac, brew install --cask panda
