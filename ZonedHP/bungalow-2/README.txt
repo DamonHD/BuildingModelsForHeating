@@ -146,6 +146,12 @@ Otherwise, tests can be run as a normal python script:
         9 tests passed, 0 tests failed.
 
 
+For running comparison.py pandas is needed, eg with "pip3s install pandas".
+Note: https://docs.python.org/3/using/cmdline.html#environment-variables
+Note: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_latex.html
+Note: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_html.html
+
+
 NOTES
 =====
 
