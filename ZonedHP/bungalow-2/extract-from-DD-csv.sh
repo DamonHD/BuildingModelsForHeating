@@ -7,6 +7,7 @@
 #
 # eg:
 #     sh extract-from-DD-csv.sh out-dd-AAAA-LC/eplusout.csv
+#     out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1778,742
 
 
 # Extracts from final (24:00) row named input .csv file.
@@ -24,12 +25,13 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     $1 ~ /24:00:00$/ {
         printf("%s,", INPUTDIR);
         z1=$3; z2=$4; z3=$5; z4=$6;
-        #printf("%.1f,", z1);
+        #printf("%.1f,", z1);#DEBUG
         heatdemand=$22;
         pump=$19
         hp=$18
         h4=pump+hp
-        printf("%.0f,%0.f,%0.f,%.0f\n", pump, hp, h4, heatdemand);
+        #printf("%.0f,%0.f,%0.f,%.0f\n", pump, hp, h4, heatdemand);#DEBUG
+        printf("%.1f,%.1f,%.1f,%.1f,%0.f,%.0f\n", z1,z2,z3,z4, heatdemand, h4);
         exit;
     }
     '
