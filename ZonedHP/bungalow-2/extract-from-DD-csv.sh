@@ -20,23 +20,17 @@ INPUT="$1"
 
 if [ ! -s "$INPUT" ]; then exit 1; fi
 
+exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
+    $1 ~ /24:00:00$/ {
+        printf("%s,", INPUTDIR);
+        exit;
+    }
+    '
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Should not get here.
 exit 1
 
 # Expected input final line something like:
