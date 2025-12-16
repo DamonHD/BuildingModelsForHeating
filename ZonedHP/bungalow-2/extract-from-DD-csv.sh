@@ -23,12 +23,16 @@ if [ ! -s "$INPUT" ]; then exit 1; fi
 exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     $1 ~ /24:00:00$/ {
         printf("%s,", INPUTDIR);
+        z1=$3; z2=$4; z3=$5; z4=$6;
+        heatdemand=$22;
+        pump=$19
+        hp=$18
+        h4=pump+hp
+        printf("%.1f,", z1);
+        printf("\n");
         exit;
     }
     '
-
-
-
 
 # Should not get here.
 exit 1
