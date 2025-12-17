@@ -148,6 +148,7 @@ Otherwise, tests can be run as a normal python script:
 Summarising the results without pandas (sh/awk):
 
 		% sh extract-from-DD-csv-all.sh
+		simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
 		out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1778,742
 		out-dd-AABB-LC,21.0,21.0,18.0,18.0,1666,747
 		out-dd-ABAB-LC,21.0,18.0,18.0,21.0,1666,769
