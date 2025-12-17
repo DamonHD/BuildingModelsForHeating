@@ -145,7 +145,7 @@ Otherwise, tests can be run as a normal python script:
 
         9 tests passed, 0 tests failed.
 
-Summarising the results without pandas (sh/awk):
+Summarising the results without pandas (sh/awk) as of 20251217:
 
 		% sh extract-from-DD-csv-all.sh
 		simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
