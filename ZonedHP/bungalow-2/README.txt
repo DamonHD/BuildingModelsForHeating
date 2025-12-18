@@ -161,6 +161,14 @@ Updating the template from the non-HP IDF 20251218:
  2) sh generate_rooms.sh && sh runall-dd.sh
  3) sh extract-from-DD-csv-all.sh
  4) Continue with merge and maybe commit and back to (1) until done...
+Note: after construction and SurfaceConvectionAlgorithm changes as at 15:11Z:
+		simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
+		out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1893,850
+		out-dd-AABB-LC,21.0,21.0,18.0,18.0,1792,836
+		out-dd-ABAB-LC,20.5,18.0,18.0,20.5,1776,830
+		out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766
+		out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725
+		out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722
 
 
 Add the correct EnergyPlus and Python directories to the PATH.
