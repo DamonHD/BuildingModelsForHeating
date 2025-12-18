@@ -156,6 +156,12 @@ Summarising the results without pandas (sh/awk) as of 20251217:
 		out-dd-AABB-WC,20.0,20.0,18.0,18.0,1629,680
 		out-dd-ABAB-WC,19.7,18.0,18.0,19.7,1619,677
 
+Updating the template from the non-HP IDF 20251218:
+ 1) Merging in changes to the template.
+ 2) sh generate_rooms.sh && sh runall-dd.sh
+ 3) sh extract-from-DD-csv-all.sh
+ 4) Continue with merge and maybe commit and back to (1) until done...
+
 
 Add the correct EnergyPlus and Python directories to the PATH.
 For running comparison.py pandas is needed, eg with "pip3s install pandas".
@@ -188,3 +194,4 @@ DHD20251128: increasing roof U-value (with film) from 0.545 to ~0.61W/m2K; woodw
 DHD20251128: reverted SurfaceConvectionAlgorithm inside and outside to TARP; DD heat loss ~2018W.
 DHD20251210: to support comparison.py on my Mac, brew install --cask panda
 DHD20251217: created sh extract-from-DD-csv-all.sh to summarise results just with *nix common command line tools.
+DHD20251218: transplanting roof from bungalow-2 to bungalow-2 with heat pump template...

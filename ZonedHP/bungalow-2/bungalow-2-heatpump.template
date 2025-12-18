@@ -1,11 +1,9 @@
 ! bungalow-2.idf
 !
-! Initial approximation to bungalow from 10.3390/su16114710 paper.
-!
-! IN PROGRESS
+! Approximation with heat-pump to bungalow from 10.3390/su16114710 paper.
 !
 ! Some features of 10.3390/su16114710 bungalow, Salford EH1 weather.
-! NOTE: Salford location and design day lines copied in from EH1 model.
+! NOTE: Salford location and design day lines copied in from EH1 model with permission.
 !
 ! hart-davis2024zone bungalow parameters:
 !     IWL (Internal Wall Length) = 4m, thus whole external wall length 8m.
@@ -90,12 +88,12 @@ RunPeriod,                                        !- Annual simulation
 
 ! DHD change.
 SimulationControl,
-   No,                                           !- Do the zone sizing calculation
-   No,                                           !- Do the system sizing calculation
-   No,                                           !- Do the plant sizing calculation
+   No,                                            !- Do the zone sizing calculation
+   No,                                            !- Do the system sizing calculation
+   No,                                            !- Do the plant sizing calculation
    Yes,                                           !- Do the design day calculation
    Yes,                                           !- Do the weather file calculation
-   No;                                           ! Zone sizing.
+   No;                                            ! Zone sizing.
 
 
 !-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
