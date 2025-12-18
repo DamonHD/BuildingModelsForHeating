@@ -183,6 +183,45 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
 
+! DHD20251007: material brought in from bungalow-1-DB model.
+  ! Asphalt 1- thickness 0.01
+  Material, Asphalt 1_.01,
+    Rough,                                         !- Roughness
+    .01,                                           !- Thickness {m}
+    0.7,                                           !- Conductivity {w/m-K}
+    2100,                                          !- Density {kg/m3}
+    1000,                                          !- Specific Heat {J/kg-K}
+    0.9,                                           !- Thermal Emittance
+    0.85,                                          !- Solar Absorptance
+    0.9;                                           !- Visible Absorptance
+  ! Wood derivatives - woodwool
+  Material, Wood derivatives - woodwool_r,
+    Rough,                                         !- Roughness
+    .125,                                          !- Thickness {m}
+    0.1,                                           !- Conductivity {w/m-K}
+    500,                                           !- Density {kg/m3}
+    1000,                                          !- Specific Heat {J/kg-K}
+    0.9,                                           !- Thermal Emittance
+    0.6,                                           !- Solar Absorptance
+    0.6;                                           !- Visible Absorptance
+  ! Void / air gap
+  Material:NoMass, 3_RVAL_3,                       !- Material name - Air gap >=25mm
+    Rough,                                         !- Roughness
+    .18,                                           !- Resistance {m2-K/w}
+    0.9,                                           !- Thermal Emittance
+    0.7,                                           !- Solar Absorptance
+    0.7;                                           !- Visible Absorptance
+  ! Plasterboard- thickness 0.013
+  Material, Plasterboard_.013,
+    Rough,                                         !- Roughness
+    .013,                                          !- Thickness {m}
+    0.25,                                          !- Conductivity {w/m-K}
+    2800,                                          !- Density {kg/m3}
+    896,                                           !- Specific Heat {J/kg-K}
+    0.9,                                           !- Thermal Emittance
+    0.5,                                           !- Solar Absorptance
+    0.5;                                           !- Visible Absorptance
+
 ! DHD20250330: low-thermal-capacity (~fibreglass quit) insulation adjusted to achieve 0.61 STDEWR U-value.
   Material,
     STDEWR INSULATION,       !- Name
@@ -207,19 +246,17 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.0000001,               !- Solar Absorptance
     0.0000001;               !- Visible Absorptance
 
-
-
-
- ! DHD20250602: internal wall approximation including door in mean U-value: > 2 W/m2K (from IDU and IWU).
- ! Like plasterboard on studs.
- ! TODO FIXME not finished
+ ! DHD20250602: internal wall approximation including door in mean U-value: ~3.30W/m2K (from IDU and IWU).
+ ! Like plasterboard on studs, but almost no thermal capacity.
+ ! Effective U-value with film 3.18 w/ 12mm thickness and 0.160 conductivity.
+ ! Effective U-value with film 3.30 w/ 12mm thickness and 0.190 conductivity.
    Material,
     IW MEAN,                 !- Name
     MediumSmooth,            !- Roughness
     0.01200,                 !- Thickness {m}
-    0.16000,                 !- Conductivity {W/m-K}
+    0.19000,                 !- Conductivity {W/m-K}
     950.000,                 !- Density {kg/m3}
-    840,                     !- Specific Heat {J/kg-K}
+    100,                     !- Specific Heat {J/kg-K}
     0.900000,                !- Thermal Absorptance
     0.600000,                !- Solar Absorptance
     0.600000;                !- Visible Absorptance
@@ -230,7 +267,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
 
-! DHD20250330: roof and wall with computed U-value and low/no thermal mass.
+! DHD20250330: wall with computed U-value and low/no thermal mass (was also roof).
   Construction,
     STDEWR,                  !- Name
     STDEWR INSULATION;       !- Layer 1
@@ -238,6 +275,15 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   Construction,
     LTFLOOR,                 !- Name
     ZEROU;                   !- Outside Layer
+
+  ! DHD20251007: construction brought over from bungalow-1-DB model.
+  ! Lossy flat roof
+  Construction,
+    Lossy flat roof,         !- Name
+    Asphalt 1_.01,                                 !- .01m
+    Wood derivatives - woodwool_r,                 !- .145m
+    3_RVAL_3,                                      !- R-value
+    Plasterboard_.013;                             !- .013m
 
   ! DHD20250602: one side of internal partition wall.
   Construction,
@@ -526,13 +572,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 4, 0;                 !- X,Y,Z ==> Vertex 4 {m}
 
 ! ROOF
-! DHD20250401: using Surface Type 'Wall' to get same film coefficients as Wall.
 ! DHD20250603: roof split to match the rooms/zones.    
 ! NW = Z4
   BuildingSurface:Detailed,
     EXT SURFACE ROOF NW,     !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
+    Roof,                    !- Surface Type
+    Lossy flat roof,         !- Construction Name
     Z4,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -549,8 +594,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! NE = Z3
   BuildingSurface:Detailed,
     EXT SURFACE ROOF NE,     !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
+    Roof,                    !- Surface Type
+    Lossy flat roof,         !- Construction Name
     Z3,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -567,8 +612,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! SE = Z1
   BuildingSurface:Detailed,
     EXT SURFACE ROOF SE,     !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
+    Roof,                    !- Surface Type
+    Lossy flat roof,         !- Construction Name
     Z1,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
@@ -585,8 +630,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! SW = Z2
   BuildingSurface:Detailed,
     EXT SURFACE ROOF SW,     !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
+    Roof,                    !- Surface Type
+    Lossy flat roof,         !- Construction Name
     Z2,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
