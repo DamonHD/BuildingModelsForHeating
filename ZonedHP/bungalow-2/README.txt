@@ -161,6 +161,8 @@ Updating the template from the non-HP IDF 20251218:
  2) sh generate_rooms.sh && sh runall-dd.sh
  3) sh extract-from-DD-csv-all.sh
  4) Continue with merge and maybe commit and back to (1) until done...
+Notes:
+  * Switching (back) to TARP for in&out SurfaceConvectionAlgorithm made A room temp sag disappear.
 
 
 Add the correct EnergyPlus and Python directories to the PATH.
