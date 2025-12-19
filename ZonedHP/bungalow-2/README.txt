@@ -182,6 +182,8 @@ DHD20251219: questions:
   * Why has the bad setback effect disappeared?
 
 
+
+
 NOTES
 =====
 
