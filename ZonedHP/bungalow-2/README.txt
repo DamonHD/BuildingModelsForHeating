@@ -120,6 +120,12 @@ An output folder is generated per scenario.
 Running Tests
 -------------
 
+Add the correct EnergyPlus and Python directories to the PATH.
+For running comparison.py pandas is needed, eg with "pip3s install pandas".
+Note: https://docs.python.org/3/using/cmdline.html#environment-variables
+Note: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_latex.html
+Note: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_html.html
+
 If python is installed (tested on v3.13.3), outputs can be sanity checked
 by running test_bungalow-2.py. Note that tests are run against the output
 of runall-dd.sh, and so `$ ./generate_rooms.sh && ./runall-dd.sh`
@@ -170,12 +176,6 @@ Note: after construction and SurfaceConvectionAlgorithm changes as at 15:11Z:
 		out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725
 		out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722
 
-
-Add the correct EnergyPlus and Python directories to the PATH.
-For running comparison.py pandas is needed, eg with "pip3s install pandas".
-Note: https://docs.python.org/3/using/cmdline.html#environment-variables
-Note: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_latex.html
-Note: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_html.html
 
 
 NOTES
