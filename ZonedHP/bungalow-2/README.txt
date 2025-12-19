@@ -152,7 +152,6 @@ Otherwise, tests can be run as a normal python script:
         9 tests passed, 0 tests failed.
 
 Summarising the results without pandas (sh/awk) as of 20251217:
-
 		% sh extract-from-DD-csv-all.sh
 		simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
 		out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1778,742
@@ -176,6 +175,11 @@ Note: after construction and SurfaceConvectionAlgorithm changes as at 15:11Z:
 		out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725
 		out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722
 
+DHD20251219: questions:
+  * Why is the HP version of bungalow-2 not same heat loss, given construction is same?
+       * Is it because of the SurfaceConvectionAlgorithm?
+       * Is it because of the temperature control not being operative for the HP?
+  * Why has the bad setback effect disappeared?
 
 
 NOTES
