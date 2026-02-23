@@ -209,3 +209,4 @@ DHD20251128: reverted SurfaceConvectionAlgorithm inside and outside to TARP; DD 
 DHD20251210: to support comparison.py on my Mac, brew install --cask panda
 DHD20251217: created sh extract-from-DD-csv-all.sh to summarise results just with *nix common command line tools.
 DHD20251218: transplanting roof from bungalow-2 to bungalow-2 with heat pump template...
+DHD20260223: moved snapshots into subdirectory to reduce clutter.
