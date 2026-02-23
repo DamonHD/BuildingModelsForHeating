@@ -4,7 +4,7 @@ Hart-Davis, Damon and Liu, Lirong and Leach, Matthew
 MDPI Sustainability 2024
 https://www.mdpi.com/2071-1050/16/11/4710
 
-This is designed to run in EnergyPlus V24.2 or newer.
+This is intended to be run in EnergyPlus V24.2 (or newer).
 
 ! Some features of 10.3390/su16114710 bungalow, mid-UK / Salford EH1 / Birmingham weather.
 ! NOTE: Salford location and design day lines copied in from EH1 model.
@@ -25,7 +25,7 @@ This is designed to run in EnergyPlus V24.2 or newer.
 !     Expected heat demand at design conditions: 2000W
 !     Whole house HTC ~ 83.3W/K
 !
-! Building: Fictional 1 zone building with resistive walls and flat roof.
+! Building: Fictional 4 zone building with resistive walls and flat roof.
 !
 ! The building is oriented due north.
 !
