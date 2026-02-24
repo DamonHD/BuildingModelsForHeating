@@ -1,0 +1,4 @@
+TO-DO list
+
+DHD20260224: have eplusout.csv extract parameters by name
+    (air & operative temps at least may move)
