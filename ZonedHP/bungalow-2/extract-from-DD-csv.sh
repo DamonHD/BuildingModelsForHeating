@@ -22,6 +22,20 @@ INPUT="$1"
 if [ ! -s "$INPUT" ]; then exit 1; fi
 
 exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
+    BEGIN {
+    # Find the correct index/field for each output value required by name.
+    z1name="Z1:Zone Air Temperature [C](Hourly)"
+    z2name="Z2:Zone Air Temperature [C](Hourly)"
+    z3name="Z3:Zone Air Temperature [C](Hourly)"
+    z4name="Z4:Zone Air Temperature [C](Hourly)"
+    pumpname="SUPPLY PUMP:Pump Electricity Rate [W](Hourly)"
+    heatdemandname="Baseboard Total Heating Rate All Zones:PythonPlugin:OutputVariable [W](Hourly)"
+    hpname="HEAT PUMP:Heat Pump Electricity Rate [W](Hourly)"
+    
+    
+    # TODO
+    
+    }
     $1 ~ /24:00:00$/ {
         printf("%s,", INPUTDIR);
         z1=$3; z2=$4; z3=$5; z4=$6;
