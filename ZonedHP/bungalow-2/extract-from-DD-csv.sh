@@ -29,7 +29,7 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     z3name="Z3:Zone Air Temperature [C](Hourly)"
     z4name="Z4:Zone Air Temperature [C](Hourly)"
     pumpname="SUPPLY PUMP:Pump Electricity Rate [W](Hourly)"
-    heatdemandname="Baseboard Total Heating Rate All Zones:PythonPlugin:OutputVariable [W](Hourly)"
+    heatdemandname="Baseboard Total Heating Rate All Zones:PythonPlugin:OutputVariable [W](Hourly) "
     hpname="HEAT PUMP:Heat Pump Electricity Rate [W](Hourly)"
     }
     # Extract the index (field number) for the given E+ variable.
@@ -48,18 +48,18 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
         z2i = getIndex(z2name);
         z3i = getIndex(z3name);
         z4i = getIndex(z4name);
-    
-    # TODO
-    
- 
+        pumpi = getIndex(pumpname);
+        heatdemandi = getIndex(heatdemandname);
+        hpi = getIndex(hpname);
     }
     $1 ~ /24:00:00$/ {
+        # Extract values from final hour of the simulation results.
         printf("%s,", INPUTDIR);
-        z1=$3; z2=$4; z3=$5; z4=$6;
+        z1=$z1i; z2=$z2i; z3=$z3i; z4=$z4i;
         #printf("%.1f,", z1);#DEBUG
-        heatdemand=$22;
-        pump=$19
-        hp=$18
+        heatdemand=$heatdemandi;
+        pump=$pumpi
+        hp=$hpi
         h4=pump+hp
         #printf("%.0f,%0.f,%0.f,%.0f\n", pump, hp, h4, heatdemand);#DEBUG
         printf("%.1f,%.1f,%.1f,%.1f,%0.f,%.0f\n", z1,z2,z3,z4, heatdemand, h4);
