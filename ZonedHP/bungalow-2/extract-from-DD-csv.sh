@@ -15,7 +15,7 @@
 # This output contains key parameter values: zone temps, heat demand, H4 demand.
 # The output values are rounded to a sensible precision.
 # Input filename must not contain commas, spaces, quotes or tricky metachars.
-# In case of error returns no output on stdout.
+# In case of error returns no output on stdout, or line starting "ERROR: ".
 
 INPUT="$1"
 
