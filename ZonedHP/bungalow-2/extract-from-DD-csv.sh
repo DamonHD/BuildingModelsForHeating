@@ -31,14 +31,25 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     pumpname="SUPPLY PUMP:Pump Electricity Rate [W](Hourly)"
     heatdemandname="Baseboard Total Heating Rate All Zones:PythonPlugin:OutputVariable [W](Hourly)"
     hpname="HEAT PUMP:Heat Pump Electricity Rate [W](Hourly)"
-    
-    
-    # TODO
-    
     }
+    # Extract the index (field number) for the given E+ variable.
+    # Exit with an error if not found.
+    function getIndex(varName) {
+        for(i = 2; i <= NF; ++i) {
+            if($i == varName) { return(i); }
+            }
+        print "ERROR: did not find: "varName;
+        exit 1
+        }
     NR==1 {
         # Capture header line and field indices.
         if("Date/Time" != $1) { print "ERROR: bad header"; exit 1; }
+    
+        z1i = getIndex(z1name);
+    
+    # TODO
+    
+ 
     }
     $1 ~ /24:00:00$/ {
         printf("%s,", INPUTDIR);
