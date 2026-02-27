@@ -36,6 +36,10 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     # TODO
     
     }
+    NR==1 {
+        # Capture header line and field indices.
+        if("Date/Time" != $1) { print "ERROR: bad header"; exit 1; }
+    }
     $1 ~ /24:00:00$/ {
         printf("%s,", INPUTDIR);
         z1=$3; z2=$4; z3=$5; z4=$6;
