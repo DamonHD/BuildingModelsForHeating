@@ -182,7 +182,7 @@ DHD20251219: questions:
   * Why has the bad setback effect disappeared?
 
 DHD20260302: template default vs simple vs TARP
-    Default does not show expected bad setback with LC, others do.
+    Default (air temp setpoint) does not show expected bad setback with LC, others (operative) do.
     ###
     % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
     ...
