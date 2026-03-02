@@ -182,6 +182,8 @@ DHD20251219: questions:
   * Why has the bad setback effect disappeared?
 
 DHD20260302: template default vs simple vs TARP
+    Default does not show expected bad setback with LC, others do.
+    ###
     % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
     ...
     simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
@@ -191,6 +193,7 @@ DHD20260302: template default vs simple vs TARP
 	out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766
 	out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725
 	out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722
+	###
     % cp snapshots/DE20260114-heatpump-operative-simple-snapshot/bungalow-2-heatpump.template .
     % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
     ...
@@ -201,6 +204,7 @@ DHD20260302: template default vs simple vs TARP
 	out-dd-AAAA-WC,20.8,20.8,20.8,20.8,1794,749
 	out-dd-AABB-WC,20.0,20.0,18.7,18.7,1683,703
 	out-dd-ABAB-WC,19.7,18.6,18.6,19.7,1671,698
+	###
 	% cp snapshots/DE20260114-heatpump-operative-tarp-snapshot/bungalow-2-heatpump.template .
     % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
     ...
