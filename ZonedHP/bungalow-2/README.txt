@@ -181,7 +181,36 @@ DHD20251219: questions:
        * Is it because of the temperature control not being operative for the HP?
   * Why has the bad setback effect disappeared?
 
-
+DHD20260302: template default vs simple vs TARP
+    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
+    ...
+    simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
+	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1893,850
+	out-dd-AABB-LC,21.0,21.0,18.0,18.0,1792,836
+	out-dd-ABAB-LC,20.5,18.0,18.0,20.5,1776,830
+	out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766
+	out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725
+	out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722
+    % cp snapshots/DE20260114-heatpump-operative-simple-snapshot/bungalow-2-heatpump.template .
+    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
+    ...
+    simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
+	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1810,764
+	out-dd-AABB-LC,21.0,21.0,18.5,18.5,1717,777
+	out-dd-ABAB-LC,20.8,18.4,18.4,20.8,1705,797
+	out-dd-AAAA-WC,20.8,20.8,20.8,20.8,1794,749
+	out-dd-AABB-WC,20.0,20.0,18.7,18.7,1683,703
+	out-dd-ABAB-WC,19.7,18.6,18.6,19.7,1671,698
+	% cp snapshots/DE20260114-heatpump-operative-tarp-snapshot/bungalow-2-heatpump.template .
+    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
+    ...
+	simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
+	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1894,822
+	out-dd-AABB-LC,21.0,21.0,19.7,19.7,1848,828
+	out-dd-ABAB-LC,21.0,19.6,19.6,21.0,1845,845
+	out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766
+	out-dd-AABB-WC,20.0,20.0,19.8,19.8,1818,759
+	out-dd-ABAB-WC,20.0,19.8,19.8,20.0,1817,759
 
 
 NOTES
