@@ -24,6 +24,10 @@ if [ ! -s "$INPUT" ]; then exit 1; fi
 exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     BEGIN {
     # Find the correct index/field for each output value required by name.
+    z1namePref="Z1:Zone Operative Temperature [C](Hourly)"
+    z2namePref="Z2:Zone Operative Temperature [C](Hourly)"
+    z3namePref="Z3:Zone Operative Temperature [C](Hourly)"
+    z4namePref="Z4:Zone Operative Temperature [C](Hourly)"
     z1name="Z1:Zone Air Temperature [C](Hourly)"
     z2name="Z2:Zone Air Temperature [C](Hourly)"
     z3name="Z3:Zone Air Temperature [C](Hourly)"
@@ -33,24 +37,29 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     hpname="HEAT PUMP:Heat Pump Electricity Rate [W](Hourly)"
     }
     # Extract the index (field number) for the given E+ variable.
+    # A preferred name is given first, then an alternate/fallback.
     # Exit with an error if not found.
-    function getIndex(varName) {
+    function getIndex(varNamePref, varNameAlt) {
         for(i = 2; i <= NF; ++i) {
-            if($i == varName) { return(i); }
+            if($i == varNamePref) { return(i); }
             }
-        print "ERROR: did not find: "varName;
+        #print "ERROR: did not find: "varNamePref;
+        for(i = 2; i <= NF; ++i) {
+            if($i == varNameAlt) { return(i); }
+            }
+        print "ERROR: did not find: "varNamePref" or "varNameAlt;
         exit 1
         }
     NR==1 {
         # Capture header line and field indices.
         if("Date/Time" != $1) { print "ERROR: bad header"; exit 1; }
-        z1i = getIndex(z1name);
-        z2i = getIndex(z2name);
-        z3i = getIndex(z3name);
-        z4i = getIndex(z4name);
-        pumpi = getIndex(pumpname);
-        heatdemandi = getIndex(heatdemandname);
-        hpi = getIndex(hpname);
+        z1i = getIndex(z1namePref,z1name);
+        z2i = getIndex(z2namePref,z2name);
+        z3i = getIndex(z3namePref,z3name);
+        z4i = getIndex(z4namePref,z4name);
+        pumpi = getIndex(pumpname,"");
+        heatdemandi = getIndex(heatdemandname,"");
+        hpi = getIndex(hpname,"");
     }
     $1 ~ /24:00:00$/ {
         # Extract values from final hour of the simulation results.
