@@ -181,7 +181,7 @@ DHD20251219: questions:
        * Is it because of the temperature control not being operative for the HP?
   * Why has the bad setback effect disappeared?
 
-DHD20260302: template default vs simple vs TARP
+DHD20260302: template default (air temp TARP) vs operative simple vs operative TARP
     Default (air temp setpoint) does not show expected bad setback with LC, others (operative) do.
     ###
     % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
