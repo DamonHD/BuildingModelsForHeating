@@ -215,6 +215,19 @@ DHD20260302: template default (air temp TARP) vs operative simple vs operative T
 	out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766
 	out-dd-AABB-WC,20.0,20.0,19.8,19.8,1818,759
 	out-dd-ABAB-WC,20.0,19.8,19.8,20.0,1817,759
+	
+DHD20260309: adjusting extract script to extract operative temp where intended to be the setpoint:
+    % cp snapshots/DE20260114-heatpump-operative-tarp-snapshot/bungalow-2-heatpump.template .
+    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
+    ...
+    out-dd-AAAA-LC,19.1,19.1,19.1,19.1,1894,822
+	out-dd-AABB-LC,19.0,19.0,18.0,18.0,1848,828
+	out-dd-ABAB-LC,18.9,18.0,18.0,18.9,1845,845
+	out-dd-AAAA-WC,18.3,18.3,18.3,18.3,1835,766
+	out-dd-AABB-WC,18.2,18.2,18.0,18.0,1818,759
+	out-dd-ABAB-WC,18.1,18.0,18.0,18.1,1817,759
+
+
 
 
 NOTES
