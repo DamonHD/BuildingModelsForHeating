@@ -229,7 +229,7 @@ DHD20260309: adjusting extract script to extract operative temp where intended t
 	out-dd-ABAB-WC,18.1,18.0,18.0,18.1,1817,759
 
 DHD20260310: default template: amended stats to include flow and return temperature (C).
-    Note that 
+    Note that flow has hit max for out-dd-ABAB-LC so setpoint cannot be met.
     % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
     ...
 	simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W,flow_C,return_C
