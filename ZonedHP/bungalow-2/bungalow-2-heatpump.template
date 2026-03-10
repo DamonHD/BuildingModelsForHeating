@@ -1437,6 +1437,7 @@ Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariab
   Output:Variable,*,Heat Pump Load Side Heat Transfer Rate,Hourly;
   Output:Variable,*,Pump Fluid Heat Gain Rate,Hourly;
   Output:Variable,*,Pump Electricity Rate,Hourly;
+  Output:Variable,*,Zone Operative Temperature,Hourly; ! NOTE: provisional
   ! Required for plugins
   Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
   Output:Variable,*,Heat Pump Load Side Inlet Temperature,Hourly;
@@ -1479,6 +1480,7 @@ Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariab
   
   ! DHD outputs:
   ! ------------
+  Output:Variable,*,Zone Mean Radiant Temperature,Hourly; ! NOTE: provisional
   ! Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
   ! Output:Variable,*,Zone Air System Sensible Cooling Energy,Hourly;
   ! Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
