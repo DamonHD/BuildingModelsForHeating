@@ -240,6 +240,12 @@ DHD20260310: default template: amended stats to include flow and return temperat
 	out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725,49.6,46.4
 	out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722,49.6,46.4
 
+DHD20260310: to allow for increased heat loss (to get to 2kW) I expect to need to:
+  * adjust RAD_UA_FACTOR and RAD_FLOW_MAX in generate_rooms.sh
+  * recalibrate self.wc_slope and self.wc_intercept in bungalow-2-plugin.py
+  * Get the Python tests passing again 
+Then these would need to be revisited for each new archetype.
+
 
 
 NOTES
