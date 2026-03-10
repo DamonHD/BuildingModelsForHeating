@@ -220,6 +220,7 @@ DHD20260309: adjusting extract script to extract operative temp where intended t
     % cp snapshots/DE20260114-heatpump-operative-tarp-snapshot/bungalow-2-heatpump.template .
     % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
     ...
+	simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
     out-dd-AAAA-LC,19.1,19.1,19.1,19.1,1894,822
 	out-dd-AABB-LC,19.0,19.0,18.0,18.0,1848,828
 	out-dd-ABAB-LC,18.9,18.0,18.0,18.9,1845,845
@@ -227,6 +228,17 @@ DHD20260309: adjusting extract script to extract operative temp where intended t
 	out-dd-AABB-WC,18.2,18.2,18.0,18.0,1818,759
 	out-dd-ABAB-WC,18.1,18.0,18.0,18.1,1817,759
 
+DHD20260310: default template: amended stats to include flow and return temperature (C).
+    Note that 
+    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
+    ...
+	simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W,flow_C,return_C
+	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1893,850,53.0,49.5
+	out-dd-AABB-LC,21.0,21.0,18.0,18.0,1792,836,54.9,51.6
+	out-dd-ABAB-LC,20.5,18.0,18.0,20.5,1776,830,55.0,51.7
+	out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766,49.6,46.2
+	out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725,49.6,46.4
+	out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722,49.6,46.4
 
 
 
@@ -256,3 +268,5 @@ DHD20251210: to support comparison.py on my Mac, brew install --cask panda
 DHD20251217: created sh extract-from-DD-csv-all.sh to summarise results just with *nix common command line tools.
 DHD20251218: transplanting roof from bungalow-2 to bungalow-2 with heat pump template...
 DHD20260223: moved snapshots into subdirectory to reduce clutter.
+DHD20260309: operative temperature shown where it is present (and assumed to be the setpoint).
+DHD20260310: flow and return temperatures shown in summary.

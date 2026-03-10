@@ -22,6 +22,7 @@ INPUT="$1"
 if [ ! -s "$INPUT" ]; then exit 1; fi
 
 exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
+
     BEGIN {
     # Find the correct index/field for each output value required by name.
     z1namePref="Z1:Zone Operative Temperature [C](Hourly)"
@@ -35,7 +36,10 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     pumpname="SUPPLY PUMP:Pump Electricity Rate [W](Hourly)"
     heatdemandname="Baseboard Total Heating Rate All Zones:PythonPlugin:OutputVariable [W](Hourly) "
     hpname="HEAT PUMP:Heat Pump Electricity Rate [W](Hourly)"
+    flowTname="HEAT PUMP:Heat Pump Load Side Outlet Temperature [C](Hourly)"
+    returnTname="HEAT PUMP:Heat Pump Load Side Inlet Temperature [C](Hourly)"
     }
+ 
     # Extract the index (field number) for the given E+ variable.
     # A preferred name is given first, then an alternate/fallback.
     # Exit with an error if not found.
@@ -50,6 +54,7 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
         print "ERROR: did not find: "varNamePref" or "varNameAlt;
         exit 1
         }
+ 
     NR==1 {
         # Capture header line and field indices.
         if("Date/Time" != $1) { print "ERROR: bad header"; exit 1; }
@@ -60,18 +65,21 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
         pumpi = getIndex(pumpname,"");
         heatdemandi = getIndex(heatdemandname,"");
         hpi = getIndex(hpname,"");
-    }
+        flowTi = getIndex(flowTname,"");
+        returnTi = getIndex(returnTname,"");
+        }
+
     $1 ~ /24:00:00$/ {
         # Extract values from final hour of the simulation results.
         printf("%s,", INPUTDIR);
         z1=$z1i; z2=$z2i; z3=$z3i; z4=$z4i;
-        #printf("%.1f,", z1);#DEBUG
         heatdemand=$heatdemandi;
         pump=$pumpi
         hp=$hpi
         h4=pump+hp
-        #printf("%.0f,%0.f,%0.f,%.0f\n", pump, hp, h4, heatdemand);#DEBUG
-        printf("%.1f,%.1f,%.1f,%.1f,%0.f,%.0f\n", z1,z2,z3,z4, heatdemand, h4);
+        flowT=$flowTi
+        returnT=$returnTi
+        printf("%.1f,%.1f,%.1f,%.1f,%0.f,%.0f,%.1f,%.1f\n", z1,z2,z3,z4, heatdemand, h4, flowT, returnT);
         exit;
     }
     '
