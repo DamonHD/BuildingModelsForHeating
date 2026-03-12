@@ -1,4 +1,4 @@
-Claude was asked by the expected heat loss was not being seen for the AAAA-WC model, copied here.
+Claude was asked why the expected heat loss was not being seen for the AAAA-WC model, copied here.
 
 (Claude opus 4.6 extended research mode, ~18 minutes run-time)
 
