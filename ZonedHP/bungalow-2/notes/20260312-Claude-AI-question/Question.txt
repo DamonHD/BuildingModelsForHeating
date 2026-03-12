@@ -1,0 +1,1 @@
+Why, given the fabric U-values, the steady-state heat loss on design day for this model is not exactly 2kW: https://github.com/DamonHD/BuildingModelsForHeating/blob/main/ZonedHP/bungalow-2/bungalow-2-heatpump-AAAA-WeatherCompHeatPumpController.idf

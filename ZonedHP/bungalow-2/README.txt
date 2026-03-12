@@ -277,3 +277,4 @@ DHD20251218: transplanting roof from bungalow-2 to bungalow-2 with heat pump tem
 DHD20260223: moved snapshots into subdirectory to reduce clutter.
 DHD20260309: operative temperature shown where it is present (and assumed to be the setpoint).
 DHD20260310: flow and return temperatures shown in summary.
+DHD20260312: Claude AI suggestions for deviation from expected heat loss (see notes/20260312-Claude-AI-question)
