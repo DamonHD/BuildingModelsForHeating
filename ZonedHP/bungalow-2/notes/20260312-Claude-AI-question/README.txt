@@ -13,3 +13,7 @@ Initial observations:
   * Claude seems to be claiming heat loss is *higher* than 2kW: it is *lower* here.
   * Claude claims all sorts of additional loss factors such as infiltration and solar gain
     which have been carefully arranged to be zero.
+
+Superficially this seems to be wrong and unhelpful,
+but a more thorough reading may yield some helpful elements,
+even if no more than verifying the claimed additional loss factors to be absent as designed.
