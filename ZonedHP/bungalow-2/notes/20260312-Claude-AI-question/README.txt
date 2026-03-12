@@ -16,4 +16,4 @@ Initial observations:
 
 Superficially this seems to be wrong and unhelpful,
 but a more thorough reading may yield some helpful elements,
-even if no more than verifying the claimed additional loss factors to be absent as designed.
+even if just verifying the claimed additional loss factors to be absent.
