@@ -14,6 +14,9 @@ Initial observations:
   * Claude claims all sorts of additional loss factors such as infiltration and solar gain
     which have been carefully arranged to be zero.
 
-Superficially this seems to be wrong and unhelpful,
+Superficially this seems to be wrong and mainly unhelpful,
 but a more thorough reading may yield some helpful elements,
 even if just verifying the claimed additional loss factors to be absent.
+
+The most useful take-away is a reminder that there will have to be some fudge factors
+to get an E+ model system results close to the idealised Java conduction-only model.
