@@ -115,7 +115,7 @@ SimulationControl,
 !-   ===========  ALL OBJECTS IN CLASS: INSIDE CONVECTION ALGORITHM ===========
 
 ! DHD20250413: bringing heat flows closer to U-values (TARP or Simple).
-  SurfaceConvectionAlgorithm:Inside,TARP;
+  SurfaceConvectionAlgorithm:Inside,Simple;
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTSIDE CONVECTION ALGORITHM ===========
 

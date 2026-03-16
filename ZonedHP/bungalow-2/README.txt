@@ -279,3 +279,4 @@ DHD20260309: operative temperature shown where it is present (and assumed to be 
 DHD20260310: flow and return temperatures now shown in CSV results and summary.
 DHD20260312: Claude AI suggestions for deviation from expected heat loss mainly unhelpful (see notes/20260312-Claude-AI-question).
 DHD20260316: bug: even when thermostat set point is defined to be operative, it still seems to actually be air (DE20260114-heatpump-operative-tarp-snapshot).
+DHD20260316: SurfaceConvectionAlgorithm:Inside Simple and Outside TARP brings AAAA-LC DD heat loss to 1993W, but max (55C) flow.
