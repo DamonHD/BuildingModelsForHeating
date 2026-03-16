@@ -22,7 +22,8 @@ WC_CONTROL_SCHEME=WeatherCompHeatPumpController
 # This value is chosen so that the not-setback case is correctly sized,
 # but the setback cases are undersized, causing a ~1K drop in room temperature
 # in the A rooms.
-RAD_UA_FACTOR=20.00
+# DHD20260315: DE values RAD_UA_FACTOR=20.00 RAD_FLOW_MAX=0.03e-3
+RAD_UA_FACTOR=30.00
 RAD_FLOW_MAX=0.03e-3
 
 # Design day outside air temperature

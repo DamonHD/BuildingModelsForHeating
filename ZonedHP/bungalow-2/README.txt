@@ -280,3 +280,4 @@ DHD20260310: flow and return temperatures now shown in CSV results and summary.
 DHD20260312: Claude AI suggestions for deviation from expected heat loss mainly unhelpful (see notes/20260312-Claude-AI-question).
 DHD20260316: bug: even when thermostat set point is defined to be operative, it still seems to actually be air (DE20260114-heatpump-operative-tarp-snapshot).
 DHD20260316: SurfaceConvectionAlgorithm:Inside Simple and Outside TARP brings AAAA-LC DD heat loss to 1993W, but max (55C) flow.
+DHD20260316: raising RAD_UA_FACTOR from 20.0 to 30.0 has all scenarios room temps correct and shows LC bad setback; flow stays <50C.
