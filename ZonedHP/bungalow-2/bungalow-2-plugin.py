@@ -197,6 +197,7 @@ class WeatherCompHeatPumpController(EnergyPlusPlugin):
         # with the outside temperatures set at -3 C and 15 C.
         #
         # NOTE: These will need to be recalculated if the radiators are resized.
+        # DHD20260323: DE values self.wc_slope = -1.19; self.wc_intercept = 46.0
         self.wc_slope = -1.19
         self.wc_intercept = 46.0
 
