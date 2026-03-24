@@ -283,4 +283,4 @@ DHD20260316: SurfaceConvectionAlgorithm:Inside Simple and Outside TARP brings AA
 DHD20260316: raising RAD_UA_FACTOR from 20.0 to 30.0 has all scenarios room temps correct and shows some LC bad setback; flow stays <<50C.
 DHD20260324: operative ignored because "self.z1_temp = get_var_handle("Zone Air Temperature", "Z1")" in plugin.py?
 DHD20260324: adjusting bungalow-2-plugin.py parameters from DE values self.wc_slope = -1.19; self.wc_intercept = 46.0
-DHD20260324: LC AAAA flow*ext: 30.9C@15C, 46.3C@-3C, 43.8C@0C => wc_slope = -0.856, wc_intercept = 43.8; WC AAAA room temps now correct.
+DHD20260324: LC AAAA flow*ext: 30.9C@15C, 46.3C@-3C, 43.8C@0C => wc_slope = -0.856, wc_intercept = 43.8; WC AAAA room temps now correct, loss 1993W.
