@@ -201,6 +201,9 @@ class WeatherCompHeatPumpController(EnergyPlusPlugin):
         #     recording the flow temperature at each
         #  2) calculate the slope and intercept of the flow temperatures
         #     assuming a straight line
+        # Eg for LC AAAA flow temp at external: 30.9C@15C and 46.3C@-3C,
+        # .........
+        #
         # DHD20260323: DE values self.wc_slope = -1.19; self.wc_intercept = 46.0
         self.wc_slope = -1.19
         self.wc_intercept = 46.0
