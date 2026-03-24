@@ -282,3 +282,4 @@ DHD20260316: bug: even when thermostat set point is defined to be operative, it 
 DHD20260316: SurfaceConvectionAlgorithm:Inside Simple and Outside TARP brings AAAA-LC DD heat loss to 1993W, but max (55C) flow.
 DHD20260316: raising RAD_UA_FACTOR from 20.0 to 30.0 has all scenarios room temps correct and shows some LC bad setback; flow stays <<50C.
 DHD20260324: adjusting bungalow-2-plugin.py parameters from DE values self.wc_slope = -1.19; self.wc_intercept = 46.0
+DHD20260324: operative ignored because "self.z1_temp = get_var_handle("Zone Air Temperature", "Z1")" in plugin.py?

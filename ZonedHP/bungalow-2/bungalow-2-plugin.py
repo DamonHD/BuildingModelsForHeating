@@ -197,6 +197,10 @@ class WeatherCompHeatPumpController(EnergyPlusPlugin):
         # with the outside temperatures set at -3 C and 15 C.
         #
         # NOTE: These will need to be recalculated if the radiators are resized.
+        #  1) run LC AAAA at two different outside temperatures,
+        #     recording the flow temperature at each
+        #  2) calculate the slope and intercept of the flow temperatures
+        #     assuming a straight line
         # DHD20260323: DE values self.wc_slope = -1.19; self.wc_intercept = 46.0
         self.wc_slope = -1.19
         self.wc_intercept = 46.0
