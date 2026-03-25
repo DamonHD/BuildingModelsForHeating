@@ -247,6 +247,15 @@ DHD20260310: to allow for increased heat loss (to get to 2kW) I expect to need t
   * Get the Python tests passing again 
 Then these would need to be revisited for each new archetype.
 
+DHD20260325: with AAAA -3C DD heat loss at 1993W:
+    simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W,flow_C,return_C
+	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1993,773,46.3,42.6
+	out-dd-AABB-LC,21.0,21.0,18.0,18.0,1890,757,47.7,44.2
+	out-dd-ABAB-LC,21.0,18.0,18.0,21.0,1890,787,49.4,46.0
+	out-dd-AAAA-WC,21.0,21.0,21.0,21.0,1993,774,46.4,42.7
+	out-dd-AABB-WC,20.6,20.6,18.0,18.0,1875,728,46.4,42.9
+	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,1859,722,46.4,43.0
+
 
 
 NOTES
