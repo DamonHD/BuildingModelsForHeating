@@ -255,7 +255,7 @@ DHD20260325: with AAAA -3C DD heat loss at 1993W:
 	out-dd-AAAA-WC,21.0,21.0,21.0,21.0,1993,774,46.4,42.7
 	out-dd-AABB-WC,20.6,20.6,18.0,18.0,1875,728,46.4,42.9
 	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,1859,722,46.4,43.0
-
+DHD20260330: planning to tweak rad size down to reveal full LC bad-setback AAAA < AABB < ABAB electricity demand.
 
 
 NOTES
