@@ -255,11 +255,33 @@ DHD20260325: with AAAA -3C DD heat loss at 1993W:
 	out-dd-AAAA-WC,21.0,21.0,21.0,21.0,1993,774,46.4,42.7
 	out-dd-AABB-WC,20.6,20.6,18.0,18.0,1875,728,46.4,42.9
 	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,1859,722,46.4,43.0
-DHD20260330: planning to tweak rad size down(?) to reveal full LC bad-setback AAAA < AABB < ABAB electricity demand.
+DHD20260330: could tweak rad size down(?) to reveal full LC bad-setback AAAA < AABB < ABAB electricity demand.
     Original HG piece has flow 46C at DD -3C for AAAA, and then for AABB:
     "Now, with a 21°C room temperature, our mean water temperature would have been 46°C at the design outside temperature.
      However, it will now need 51.5 degrees celsius."
     Maybe the E+ rad-room delta-T to power relationship is significantly different to HG power law...
+    This is fairly close already:
+    % python3 test_bungalow_2.py 
+	Running 15 tests.
+	
+	Running test 0 test_AAAA_LC_heatflows_balance: PASS
+	Running test 1 test_AAAA_LC_room_temps: PASS
+	Running test 2 test_AAAA_WC_heatflows_balance: PASS
+	Running test 3 test_AAAA_WC_room_temps: PASS
+	Running test 4 test_AABB_LC_heatflows_balance: PASS
+	Running test 5 test_AABB_LC_room_temps: PASS
+	Running test 6 test_AABB_WC_heatflows_balance: PASS
+	Running test 7 test_AABB_WC_room_temps: PASS
+	Running test 8 test_ABAB_LC_heatflows_balance: PASS
+	Running test 9 test_ABAB_LC_room_temps: PASS
+	Running test 10 test_ABAB_WC_heatflows_balance: PASS
+	Running test 11 test_ABAB_WC_room_temps: PASS
+	Running test 12 test_LC_energy_usage_ordering: FAIL
+	Running test 13 test_WC_energy_usage_ordering: PASS
+	Running test 14 test_converges: PASS
+	
+	14 tests passed, 1 tests failed.
+    
 
 
 NOTES
