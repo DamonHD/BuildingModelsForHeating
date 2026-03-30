@@ -256,6 +256,9 @@ DHD20260325: with AAAA -3C DD heat loss at 1993W:
 	out-dd-AABB-WC,20.6,20.6,18.0,18.0,1875,728,46.4,42.9
 	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,1859,722,46.4,43.0
 DHD20260330: planning to tweak rad size down to reveal full LC bad-setback AAAA < AABB < ABAB electricity demand.
+    Original HG piece has flow 46C at DD -3C for AAAA and for AAABB:
+    "Now, with a 21°C room temperature, our mean water temperature would have been 46°C at the design outside temperature.
+     However, it will now need 51.5 degrees celsius."
 
 
 NOTES
