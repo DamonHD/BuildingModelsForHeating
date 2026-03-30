@@ -95,6 +95,7 @@ Some basics of the IDF file:
 !    8,4,0,  !- X,Y,Z ==> Vertex 3 {m}
 !    8,0,0;  !- X,Y,Z ==> Vertex 4 {m}
 
+
 USAGE
 =====
 
@@ -161,131 +162,12 @@ Summarising the results without pandas (sh/awk) as of 20251217:
 		out-dd-AABB-WC,20.0,20.0,18.0,18.0,1629,680
 		out-dd-ABAB-WC,19.7,18.0,18.0,19.7,1619,677
 
-Updating the template from the non-HP IDF 20251218:
- 1) Merging in changes to the template.
- 2) sh generate_rooms.sh && sh runall-dd.sh
- 3) sh extract-from-DD-csv-all.sh
- 4) Continue with merge and maybe commit and back to (1) until done...
-Note: after construction and SurfaceConvectionAlgorithm changes as at 15:11Z:
-		simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
-		out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1893,850
-		out-dd-AABB-LC,21.0,21.0,18.0,18.0,1792,836
-		out-dd-ABAB-LC,20.5,18.0,18.0,20.5,1776,830
-		out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766
-		out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725
-		out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722
 
-DHD20251219: questions:
-  * Why is the HP version of bungalow-2 not same heat loss, given construction is same?
-       * Is it because of the SurfaceConvectionAlgorithm?
-       * Is it because of the temperature control not being operative for the HP?
-  * Why has the bad setback effect disappeared?
-
-DHD20260302: template default (air temp TARP) vs operative simple vs operative TARP
-    Default (air temp setpoint) does not show expected bad setback with LC, others (operative) do.
-    ###
-    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
-    ...
-    simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
-	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1893,850
-	out-dd-AABB-LC,21.0,21.0,18.0,18.0,1792,836
-	out-dd-ABAB-LC,20.5,18.0,18.0,20.5,1776,830
-	out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766
-	out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725
-	out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722
-	###
-    % cp snapshots/DE20260114-heatpump-operative-simple-snapshot/bungalow-2-heatpump.template .
-    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
-    ...
-    simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
-	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1810,764
-	out-dd-AABB-LC,21.0,21.0,18.5,18.5,1717,777
-	out-dd-ABAB-LC,20.8,18.4,18.4,20.8,1705,797
-	out-dd-AAAA-WC,20.8,20.8,20.8,20.8,1794,749
-	out-dd-AABB-WC,20.0,20.0,18.7,18.7,1683,703
-	out-dd-ABAB-WC,19.7,18.6,18.6,19.7,1671,698
-	###
-	% cp snapshots/DE20260114-heatpump-operative-tarp-snapshot/bungalow-2-heatpump.template .
-    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
-    ...
-	simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
-	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1894,822
-	out-dd-AABB-LC,21.0,21.0,19.7,19.7,1848,828
-	out-dd-ABAB-LC,21.0,19.6,19.6,21.0,1845,845
-	out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766
-	out-dd-AABB-WC,20.0,20.0,19.8,19.8,1818,759
-	out-dd-ABAB-WC,20.0,19.8,19.8,20.0,1817,759
-	
-DHD20260309: adjusting extract script to extract operative temp where intended to be the setpoint:
-    % cp snapshots/DE20260114-heatpump-operative-tarp-snapshot/bungalow-2-heatpump.template .
-    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
-    ...
-	simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W
-    out-dd-AAAA-LC,19.1,19.1,19.1,19.1,1894,822
-	out-dd-AABB-LC,19.0,19.0,18.0,18.0,1848,828
-	out-dd-ABAB-LC,18.9,18.0,18.0,18.9,1845,845
-	out-dd-AAAA-WC,18.3,18.3,18.3,18.3,1835,766
-	out-dd-AABB-WC,18.2,18.2,18.0,18.0,1818,759
-	out-dd-ABAB-WC,18.1,18.0,18.0,18.1,1817,759
-
-DHD20260310: default template: amended stats to include flow and return temperature (C).
-    Note that flow has hit max for out-dd-ABAB-LC so setpoint cannot be met.
-    % sh generate_rooms.sh && sh runall-dd.sh && sh extract-from-DD-csv-all.sh
-    ...
-	simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W,flow_C,return_C
-	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1893,850,53.0,49.5
-	out-dd-AABB-LC,21.0,21.0,18.0,18.0,1792,836,54.9,51.6
-	out-dd-ABAB-LC,20.5,18.0,18.0,20.5,1776,830,55.0,51.7
-	out-dd-AAAA-WC,20.1,20.1,20.1,20.1,1835,766,49.6,46.2
-	out-dd-AABB-WC,19.4,19.4,18.0,18.0,1736,725,49.6,46.4
-	out-dd-ABAB-WC,19.1,18.0,18.0,19.1,1729,722,49.6,46.4
-
-DHD20260310: to allow for increased heat loss (to get to 2kW) I expect to need to:
-  * possibly thin the internal walls to avoid restricting heat flow past their edges
-  * adjust RAD_UA_FACTOR and RAD_FLOW_MAX in generate_rooms.sh
-  * recalibrate self.wc_slope and self.wc_intercept in bungalow-2-plugin.py
-  * Get the Python tests passing again 
-Then these would need to be revisited for each new archetype.
-
-DHD20260325: with AAAA -3C DD heat loss at 1993W:
-    simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W,flow_C,return_C
-	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1993,773,46.3,42.6
-	out-dd-AABB-LC,21.0,21.0,18.0,18.0,1890,757,47.7,44.2
-	out-dd-ABAB-LC,21.0,18.0,18.0,21.0,1890,787,49.4,46.0
-	out-dd-AAAA-WC,21.0,21.0,21.0,21.0,1993,774,46.4,42.7
-	out-dd-AABB-WC,20.6,20.6,18.0,18.0,1875,728,46.4,42.9
-	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,1859,722,46.4,43.0
-DHD20260330: could tweak rad size down(?) to reveal full LC bad-setback AAAA < AABB < ABAB electricity demand.
-    Original HG piece has flow 46C at DD -3C for AAAA, and then for AABB:
-    "Now, with a 21°C room temperature, our mean water temperature would have been 46°C at the design outside temperature.
-     However, it will now need 51.5 degrees celsius."
-    Maybe the E+ rad-room delta-T to power relationship is significantly different to HG power law...
-    This is fairly close already:
-    % python3 test_bungalow_2.py 
-	Running 15 tests.
-	
-	Running test 0 test_AAAA_LC_heatflows_balance: PASS
-	Running test 1 test_AAAA_LC_room_temps: PASS
-	Running test 2 test_AAAA_WC_heatflows_balance: PASS
-	Running test 3 test_AAAA_WC_room_temps: PASS
-	Running test 4 test_AABB_LC_heatflows_balance: PASS
-	Running test 5 test_AABB_LC_room_temps: PASS
-	Running test 6 test_AABB_WC_heatflows_balance: PASS
-	Running test 7 test_AABB_WC_room_temps: PASS
-	Running test 8 test_ABAB_LC_heatflows_balance: PASS
-	Running test 9 test_ABAB_LC_room_temps: PASS
-	Running test 10 test_ABAB_WC_heatflows_balance: PASS
-	Running test 11 test_ABAB_WC_room_temps: PASS
-	Running test 12 test_LC_energy_usage_ordering: FAIL
-	Running test 13 test_WC_energy_usage_ordering: PASS
-	Running test 14 test_converges: PASS
-	
-	14 tests passed, 1 tests failed.
-    
+See WorkingNotes.txt for 'lab notes' of work done.
 
 
-NOTES
-=====
+NOTES / Changes
+===============
 
 DHD20250413: 'operative' (@0.5) thermostat raises ZONE ONE PURCHASED AIR,Zone Ideal Loads Zone Total Heating Rate [W] to 2025W (cf 3825W at 0.89).
 DHD20250413: now 28.35GJ (7876kWh, 900W) annual for Birmingham weather annual simulation.  (Manchester EGCC from paper 875W.)
