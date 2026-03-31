@@ -205,8 +205,10 @@ class WeatherCompHeatPumpController(EnergyPlusPlugin):
         # slope = (46.3-30.9)/(-3-15) = -0.856, intercept = 43.8C
         #
         # DHD20260323: DE values self.wc_slope = -1.19; self.wc_intercept = 46.0
-        self.wc_slope = -0.856
-        self.wc_intercept = 43.8
+        #
+        # DHD20260331: RAD_UA_FACTOR=30.50 LC AAAA flow@ext: 46.0@-3, 43.6@0, 30.8@15: i=43.6, s=-0.844
+        self.wc_slope = -0.844
+        self.wc_intercept = 43.5
 
     def set_flow_temp(self, state, t):
         self.api.exchange.set_actuator_value(state, self.flow_temp_setpoint, t)

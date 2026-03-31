@@ -124,7 +124,7 @@ DHD20260330: thoughts...
 	
 	14 tests passed, 1 tests failed.
 
-DHD20260331: tweaking rad: with RAD_UA_FACTOR=30.50 (note LC AAAA DD flow temp is now 46.0C of HG piece):
+DHD20260331: tweaking rad: with RAD_UA_FACTOR=30.50 i=43.5, s=-0.844 (LC AAAA DD flow temp is now 46.0C of HG piece):
 	sh generate_rooms.sh && sh runall-dd.sh && python3 ./test_bungalow_2.py && sh extract-from-DD-csv-all.sh
 	...
 	Running test 0 test_AAAA_LC_heatflows_balance: PASS
@@ -148,8 +148,8 @@ DHD20260331: tweaking rad: with RAD_UA_FACTOR=30.50 (note LC AAAA DD flow temp i
 	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,1993,768,46.0,42.3
 	out-dd-AABB-LC,21.0,21.0,18.0,18.0,1890,752,47.4,43.9
 	out-dd-ABAB-LC,21.0,18.0,18.0,21.0,1890,781,49.1,45.6
-	out-dd-AAAA-WC,21.0,21.0,21.0,21.0,1994,774,46.4,42.7
-	out-dd-AABB-WC,20.7,20.7,18.0,18.0,1879,730,46.4,42.9
-	out-dd-ABAB-WC,20.2,18.0,18.0,20.2,1862,724,46.4,42.9
+	out-dd-AAAA-WC,21.0,21.0,21.0,21.0,1993,768,46.0,42.4
+	out-dd-AABB-WC,20.6,20.6,18.0,18.0,1875,723,46.0,42.6
+	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,1859,717,46.0,42.6
 
 
