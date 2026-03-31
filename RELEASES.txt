@@ -21,6 +21,11 @@ SIGNIFICANT CHANGES SINCE LAST RELEASE
 RELEASES
 ========
 
+20260331:
+    freezepoint name: V0.1.3 (main)
+    Changes since last freezepoint (developer/mgr initials and brief description):
+    DHD20260331: w/ RAD_UA_FACTOR=30.50, i=43.5, s=-0.844 DD flow temp is now 46.0C of HG piece, heat loss 1993W.
+
 
 20251202:
     freezepoint name: V0.1.2 (main)
