@@ -31,7 +31,8 @@ RAD_FLOW_MAX=0.03e-3
 # Sets both the wet and dry bulbs to this value.
 # NOTE: Bad setback effect on LC models stops above 2 C
 # Usual target value: DD_OUTSIDE_TEMP=-3.0
-# For WC curve caibration: DD_OUTSIDE_TEMP=15.0
+# For WC curve calibration: DD_OUTSIDE_TEMP=15.0
+# For easy calculation of the intercept: DD_OUTSIDE_TEMP=0.0
 DD_OUTSIDE_TEMP=-3.0
 
 # Generate the AAAA, ABAB and AABB cases from the given parameters
