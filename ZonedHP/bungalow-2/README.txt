@@ -4,6 +4,8 @@ Hart-Davis, Damon and Liu, Lirong and Leach, Matthew
 MDPI Sustainability 2024
 https://www.mdpi.com/2071-1050/16/11/4710
 
+(See WorkingNotes.txt for 'lab notes' of work done.)
+
 This is intended to be run in EnergyPlus V24.2 (or newer).
 
 ! Some features of 10.3390/su16114710 bungalow, mid-UK / Salford EH1 / Birmingham weather.
