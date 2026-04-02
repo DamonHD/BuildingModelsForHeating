@@ -152,7 +152,7 @@ DHD20260331: tweaking rad: with RAD_UA_FACTOR=30.50 i=43.5, s=-0.844 (LC AAAA DD
 	out-dd-AABB-WC,20.6,20.6,18.0,18.0,1875,723,46.0,42.6
 	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,1859,717,46.0,42.6
 Snapshot taken...
-This is now consistent with the Sustainability paper:
+This is now consistent with the Sustainability paper (eg Table 14 and text close below):
     "With the AABB layout, the bad setback effect was partly suppressed. Somewhat over
     half of the TRV-based heat savings were lost but electricity consumption fell with setbacks
     in place."
