@@ -100,7 +100,7 @@ DHD20260330: thoughts...
 	or to better match 46C/51.5C flow temps from AAAA and AABB.
     Original HG piece has flow 46C at DD -3C for AAAA, and then for AABB:
 	    "Now, with a 21°C room temperature, our mean water temperature would have been 46°C at the design outside temperature.
-	     However, it will now need 51.5 degrees celsius."
+	    However, it will now need 51.5 degrees celsius."
     Maybe the E+ rad-room delta-T to power relationship is significantly different to HG power law...
     This is fairly close already:
     % python3 test_bungalow_2.py 
@@ -152,5 +152,10 @@ DHD20260331: tweaking rad: with RAD_UA_FACTOR=30.50 i=43.5, s=-0.844 (LC AAAA DD
 	out-dd-AABB-WC,20.6,20.6,18.0,18.0,1875,723,46.0,42.6
 	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,1859,717,46.0,42.6
 Snapshot taken...
-
+This is now consistent with the Sustainability paper:
+    "With the AABB layout, the bad setback effect was partly suppressed. Somewhat over
+    half of the TRV-based heat savings were lost but electricity consumption fell with setbacks
+    in place."
+So the test should probably fixed!
+Note that flow temperatures do not need to get as high in LC as for the paper's model.
 
