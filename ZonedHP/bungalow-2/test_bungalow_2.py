@@ -249,8 +249,10 @@ def test_LC_energy_usage_ordering():
     aabb = sim_results["out-dd-AABB-LC"][HEAT_PUMP_ELECTRICITY_RATE]
     abab = sim_results["out-dd-ABAB-LC"][HEAT_PUMP_ELECTRICITY_RATE]
 
-    assert aaaa < aabb < abab
-
+    # DHD20260402: note that in Sust paper AABB has lower heat and elec demand than AAAA.
+    # Bad setback effect described in paper is just AAAA < ABAB.
+    #assert aaaa < aabb < abab
+    assert aaaa < abab
 
 def test_WC_energy_usage_ordering():
     aaaa = sim_results["out-dd-AAAA-WC"][HEAT_PUMP_ELECTRICITY_RATE]

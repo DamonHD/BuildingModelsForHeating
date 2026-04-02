@@ -204,3 +204,4 @@ DHD20260324: operative ignored because "self.z1_temp = get_var_handle("Zone Air 
 DHD20260324: adjusting bungalow-2-plugin.py parameters from DE values self.wc_slope = -1.19; self.wc_intercept = 46.0
 DHD20260324: LC AAAA flow@ext: 30.9C@15C, 46.3C@-3C, 43.8C@0C => wc_slope = -0.856, wc_intercept = 43.8; WC AAAA room temps now correct, loss 1993W.
 DHD20260331: w/ RAD_UA_FACTOR=30.50, i=43.5, s=-0.844 DD flow temp is now 46.0C of HG piece, heat loss 1993W.
+DHD20260402: amended test_LC_energy_usage_ordering() to only check AAAA < ABAB electricity demand, to match the paper.

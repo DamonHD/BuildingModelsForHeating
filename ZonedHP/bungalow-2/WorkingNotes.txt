@@ -156,6 +156,6 @@ This is now consistent with the Sustainability paper (eg Table 14 and text close
     "With the AABB layout, the bad setback effect was partly suppressed. Somewhat over
     half of the TRV-based heat savings were lost but electricity consumption fell with setbacks
     in place."
-So the test should probably fixed!
+So the test test_LC_energy_usage_ordering() should be fixed!
 Note that flow temperatures do not need to get as high in LC as for the paper's model.
 
