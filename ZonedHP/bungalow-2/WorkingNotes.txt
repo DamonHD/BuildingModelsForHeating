@@ -157,5 +157,24 @@ This is now consistent with the Sustainability paper (eg Table 14 and text close
     half of the TRV-based heat savings were lost but electricity consumption fell with setbacks
     in place."
 So the test test_LC_energy_usage_ordering() should be fixed!
+	Running 15 tests.
+	
+	Running test 0 test_AAAA_LC_heatflows_balance: PASS
+	Running test 1 test_AAAA_LC_room_temps: PASS
+	Running test 2 test_AAAA_WC_heatflows_balance: PASS
+	Running test 3 test_AAAA_WC_room_temps: PASS
+	Running test 4 test_AABB_LC_heatflows_balance: PASS
+	Running test 5 test_AABB_LC_room_temps: PASS
+	Running test 6 test_AABB_WC_heatflows_balance: PASS
+	Running test 7 test_AABB_WC_room_temps: PASS
+	Running test 8 test_ABAB_LC_heatflows_balance: PASS
+	Running test 9 test_ABAB_LC_room_temps: PASS
+	Running test 10 test_ABAB_WC_heatflows_balance: PASS
+	Running test 11 test_ABAB_WC_room_temps: PASS
+	Running test 12 test_LC_energy_usage_ordering: PASS
+	Running test 13 test_WC_energy_usage_ordering: PASS
+	Running test 14 test_converges: PASS
+	
+	15 tests passed, 0 tests failed.
 Note that flow temperatures do not need to get as high in LC as for the paper's model.
 
