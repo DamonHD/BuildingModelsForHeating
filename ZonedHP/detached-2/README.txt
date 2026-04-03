@@ -5,3 +5,5 @@ MDPI Sustainability 2024
 https://www.mdpi.com/2071-1050/16/11/4710
 
 Called 'detached-2' to match 'bungalow-2'.
+
+Floor plan is same as bungalow-2, building has two levels.
