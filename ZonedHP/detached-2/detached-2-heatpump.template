@@ -4,7 +4,7 @@
 !
 ! Approximation with heat-pump to detached house from 10.3390/su16114710 paper.
 !
-! Some features of 10.3390/su16114710 bungalow, Salford EH1 weather.
+! Some features of 10.3390/su16114710 detached house, Salford EH1 weather.
 ! NOTE: Salford location and design day lines copied in from EH1 model with permission.
 !
 ! hart-davis2024zone bungalow parameters:
