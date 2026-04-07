@@ -2,11 +2,18 @@
 
 # WIP!
 
-# The zone layout of the model GROUND FLOOR.
+# The zone layout of the model GROUND FLOOR:
 # +---------+
 # | Z3 | Z4 |
 # |----+----|
 # | Z1 | Z2 |
+# +---------+
+#
+# The floor above:
+# +---------+
+# | Z8 | Z7 |
+# |----+----|
+# | Z5 | Z6 |
 # +---------+
 #
 # 'A' zones are set to 21 C
@@ -24,7 +31,7 @@ WC_CONTROL_SCHEME=WeatherCompHeatPumpController
 # This value is chosen so that the not-setback case is correctly sized,
 # but the setback cases are undersized, causing a ~1K drop in room temperature
 # in the A rooms.
-# DHD20260315: DE values RAD_UA_FACTOR=20.00 RAD_FLOW_MAX=0.03e-3
+# DHD20260407: bungalow-2 values RAD_UA_FACTOR=30.5 RAD_FLOW_MAX=0.03e-3
 RAD_UA_FACTOR=30.50
 RAD_FLOW_MAX=0.03e-3
 
@@ -44,15 +51,19 @@ DD_OUTSIDE_TEMP=-3.0
 # $4: Design day outside temperature
 generate_case () {
 # AAAA
-# +-------+
-# | A | A |
-# |---+---|
-# | A | A |
-# +-------+
+# +-------+    +-------+
+# | A | A | up | A | A |
+# |---+---| -> +---+---+
+# | A | A |    | A | A |
+# +-------+    +-------+
 sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
+    -e "s/::Z5_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
+    -e "s/::Z6_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
+    -e "s/::Z7_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
+    -e "s/::Z8_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::HP_CONTROL_SCHEME::/$1/g" \
     -e "s/::RAD_UA_FACTOR::/$2/g" \
     -e "s/::RAD_FLOW_MAX::/$3/g" \
