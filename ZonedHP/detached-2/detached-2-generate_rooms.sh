@@ -91,15 +91,19 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     $TEMPLATE > detached-2-heatpump-ABAB-$1.idf
 
 # AABB
-# +-------+
-# | B | B |
-# |---+---|
-# | A | A |
-# +-------+
+# +-------+    +-------+
+# | B | B | up | B | B |
+# |---+---| -> +---+---+
+# | A | A |    | A | A |
+# +-------+    +-------+
 sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::Z4_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
+    -e "s/::Z5_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
+    -e "s/::Z6_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
+    -e "s/::Z7_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
+    -e "s/::Z8_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::HP_CONTROL_SCHEME::/$1/g" \
     -e "s/::RAD_UA_FACTOR::/$2/g" \
     -e "s/::RAD_FLOW_MAX::/$3/g" \
