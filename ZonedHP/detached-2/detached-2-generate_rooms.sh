@@ -9,9 +9,9 @@
 # | Z1 | Z2 |
 # +---------+
 #
-# The floor above:
+# The floor above (zone is that of the room below + 4):
 # +---------+
-# | Z8 | Z7 |
+# | Z7 | Z8 |
 # |----+----|
 # | Z5 | Z6 |
 # +---------+
