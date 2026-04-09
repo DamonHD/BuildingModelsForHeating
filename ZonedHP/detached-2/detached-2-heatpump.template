@@ -1403,13 +1403,13 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 PythonPlugin:Instance,
   Heat Pump Control Scheme,              !- Name
   Yes,                                   !- Run During Warmup days
-  bungalow-2-plugin,                     !- Python Module Name
+  detached-2-plugin,                     !- Python Module Name
   ::HP_CONTROL_SCHEME::;                 !- Plugin Class Name
   
 PythonPlugin:Instance,
   Total Baseboard Heating Transfer Rate, !- Name
   Yes,                                   !- Run During Warmup days
-  bungalow-2-plugin,                     !- Python Module Name
+  detached-2-plugin,                     !- Python Module Name
   BaseboardTotalHeatDemand;              !- Plugin Class Name
   
 PythonPlugin:Variables,

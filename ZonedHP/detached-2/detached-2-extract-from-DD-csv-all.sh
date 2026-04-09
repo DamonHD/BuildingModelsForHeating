@@ -8,6 +8,6 @@ for control in LC WC;
       for pattern in AAAA AABB ABAB;
           do
               sourceCSV="out-dd-${pattern}-${control}/eplusout.csv"
-              sh detached-extract-from-DD-csv.sh "$sourceCSV"
+              sh detached-2-extract-from-DD-csv.sh "$sourceCSV"
           done
   done
