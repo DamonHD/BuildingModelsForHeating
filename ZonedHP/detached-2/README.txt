@@ -14,6 +14,17 @@ Partial run script (with tests):
   sh detached-2-extract-from-DD-csv-all.sh && \
   python3 ./detached-2-test.py
   
- DHD20260409T10:38Z runs as a clone of bungalow-2.
+
  
- TODO: raise the roof 2.3m, clone exterior walls for 1st floor, insert interior floor between gnd/1st.
+ NEXT: raise the roof 2.3m, clone exterior walls for 1st floor, insert interior floor between gnd/1st.
+ 
+ 
+ 
+ 
+ 
+ 
+
+NOTES / Changes
+===============
+
+DHD20260409T10:38Z runs as a clone of bungalow-2.
