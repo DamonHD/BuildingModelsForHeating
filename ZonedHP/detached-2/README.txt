@@ -13,3 +13,5 @@ Partial run script (with tests):
   sh detached-2-runall-dd.sh && \
   sh detached-2-extract-from-DD-csv-all.sh && \
   python3 ./detached-2-test.py
+  
+ DHD20260409T10:38Z runs as a clone of bungalow-2.
