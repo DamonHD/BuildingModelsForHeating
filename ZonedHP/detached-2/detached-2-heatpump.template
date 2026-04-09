@@ -43,7 +43,7 @@
 !                    SE            SW
 !          (0,0,0)        (4,0,0)       (8,0,0)
 !
-! Z5 to Z8 directly above Z1 to Z4, ie Z5/Z1, Z6/Z2, Z7/Z3, Z8/Z4.
+! Z5 to Z8 2.3m directly above Z1 to Z4, ie Z5/Z1, Z6/Z2, Z7/Z3, Z8/Z4.
 !
 ! NW = Z4
 !    4,4,0,  !- X,Y,Z ==> Vertex 1 {m}
@@ -304,8 +304,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
- !   autocalculate,           !- Ceiling Height {m}
- !   autocalculate;           !- Volume {m3}
     2.3,                     !- Ceiling Height {m}
     36.8,                    !- Volume {m3}
     16;                      !- Floor Area {m3}
@@ -318,8 +316,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
- !   autocalculate,           !- Ceiling Height {m}
- !   autocalculate;           !- Volume {m3}
     2.3,                     !- Ceiling Height {m}
     36.8,                    !- Volume {m3}
     16;                      !- Floor Area {m3}
@@ -332,8 +328,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
- !   autocalculate,           !- Ceiling Height {m}
- !   autocalculate;           !- Volume {m3}
     2.3,                     !- Ceiling Height {m}
     36.8,                    !- Volume {m3}
     16;                      !- Floor Area {m3}
@@ -346,8 +340,54 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0,                       !- Z Origin {m}
     1,                       !- Type
     1,                       !- Multiplier
- !   autocalculate,           !- Ceiling Height {m}
- !   autocalculate;           !- Volume {m3}
+    2.3,                     !- Ceiling Height {m}
+    36.8,                    !- Volume {m3}
+    16;                      !- Floor Area {m3}
+
+  Zone,
+    Z5,                      !- Name
+    0,                       !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.3,                     !- Ceiling Height {m}
+    36.8,                    !- Volume {m3}
+    16;                      !- Floor Area {m3}
+
+  Zone,
+    Z6,                      !- Name
+    0,                       !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.3,                     !- Ceiling Height {m}
+    36.8,                    !- Volume {m3}
+    16;                      !- Floor Area {m3}
+
+  Zone,
+    Z7,                      !- Name
+    0,                       !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.3,                     !- Ceiling Height {m}
+    36.8,                    !- Volume {m3}
+    16;                      !- Floor Area {m3}
+
+  Zone,
+    Z8,                      !- Name
+    0,                       !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
     2.3,                     !- Ceiling Height {m}
     36.8,                    !- Volume {m3}
     16;                      !- Floor Area {m3}
@@ -1365,10 +1405,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    ! U-Factor times area value should be 25
-    ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
-    ! This isn't efficient enough to heat the room, so setting it to 250 to match
-    ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
     ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
@@ -1382,12 +1418,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    ! U-Factor times area value should be 25
-    ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
-    ! This isn't efficient enough to heat the room, so setting it to 250 to match
-    ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1399,12 +1431,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    ! U-Factor times area value should be 25
-    ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
-    ! This isn't efficient enough to heat the room, so setting it to 250 to match
-    ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
@@ -1416,12 +1444,60 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    ! U-Factor times area value should be 25
-    ! when calculated from UA = radW / radMWATdT as defined in https://www.mdpi.com/2071-1050/16/11/4710
-    ! This isn't efficient enough to heat the room, so setting it to 250 to match
-    ! the behaviour of the ideal loads model.
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,                  !- Max Water Flow Rate {m3/s} (from example in reference)
+    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.001;                   !- Field Convergence Tolerance (from example in reference)
+
+  ZoneHVAC:Baseboard:Convective:Water,
+    Z5 Radiator,             !- Name
+    ,                        !- Availability Schedule Name
+    Z5 Radiator Inlet Node,  !- Inlet Node Name
+    Z5 Radiator Outlet Node, !- Outlet Node Name
+    HeatingDesignCapacity,   !- Heating Design Capacity Method
+    445,                     !- Heating Design Capacity {W}
+    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
+    ,                        !- Fraction of Autosized Heating Design Capacity
+    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
+    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.001;                   !- Field Convergence Tolerance (from example in reference)
+
+  ZoneHVAC:Baseboard:Convective:Water,
+    Z6 Radiator,             !- Name
+    ,                        !- Availability Schedule Name
+    Z6 Radiator Inlet Node,  !- Inlet Node Name
+    Z6 Radiator Outlet Node, !- Outlet Node Name
+    HeatingDesignCapacity,   !- Heating Design Capacity Method
+    445,                     !- Heating Design Capacity {W}
+    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
+    ,                        !- Fraction of Autosized Heating Design Capacity
+    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
+    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.001;                   !- Field Convergence Tolerance (from example in reference)
+
+  ZoneHVAC:Baseboard:Convective:Water,
+    Z7 Radiator,             !- Name
+    ,                        !- Availability Schedule Name
+    Z7 Radiator Inlet Node,  !- Inlet Node Name
+    Z7 Radiator Outlet Node, !- Outlet Node Name
+    HeatingDesignCapacity,   !- Heating Design Capacity Method
+    445,                     !- Heating Design Capacity {W}
+    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
+    ,                        !- Fraction of Autosized Heating Design Capacity
+    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
+    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
+    0.001;                   !- Field Convergence Tolerance (from example in reference)
+
+  ZoneHVAC:Baseboard:Convective:Water,
+    Z8 Radiator,             !- Name
+    ,                        !- Availability Schedule Name
+    Z8 Radiator Inlet Node,  !- Inlet Node Name
+    Z8 Radiator Outlet Node, !- Outlet Node Name
+    HeatingDesignCapacity,   !- Heating Design Capacity Method
+    445,                     !- Heating Design Capacity {W}
+    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
+    ,                        !- Fraction of Autosized Heating Design Capacity
+    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
+    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
 
@@ -1478,7 +1554,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ! Zones for each room.
   ZoneList,
     ALL ROOMS,               !- Name
-    Z1, Z2, Z3, Z4;
+    Z1, Z2, Z3, Z4, Z5, Z6, Z7, Z8;
 
   ZoneList, Z1 Rooms, Z1;
   ZoneControl:Thermostat,
@@ -1487,10 +1563,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z1_SETPOINT_CONTROL::;  !- Control 1 Name
-  ! DHD20250413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-!  ZoneControl:Thermostat:OperativeTemperature,
-!    Z1 Thermostat, !- Name
-!    CONSTANT, 0.5;
    
   ZoneList, Z2 Rooms, Z2;
   ZoneControl:Thermostat,
@@ -1499,10 +1571,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z2_SETPOINT_CONTROL::;  !- Control 1 Name
-  ! DHD20250413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-!  ZoneControl:Thermostat:OperativeTemperature,
-!    Z2 Thermostat, !- Name
-!    CONSTANT, 0.5;
    
   ZoneList, Z3 Rooms, Z3;
   ZoneControl:Thermostat,
@@ -1511,10 +1579,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z3_SETPOINT_CONTROL::;  !- Control 1 Name
-  ! DHD20250413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-!  ZoneControl:Thermostat:OperativeTemperature,
-!    Z3 Thermostat, !- Name
-!    CONSTANT, 0.5;
    
   ZoneList, Z4 Rooms, Z4;
   ZoneControl:Thermostat,
@@ -1523,10 +1587,39 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z4_SETPOINT_CONTROL::;  !- Control 1 Name
-  ! DHD20250413: operative control.  Helps compensate for convection/film effects at inner surfaces.
-!  ZoneControl:Thermostat:OperativeTemperature,
-!    Z4 Thermostat, !- Name
-!    CONSTANT, 0.5;
+ 
+  ZoneList, Z5 Rooms, Z5;
+  ZoneControl:Thermostat,
+    Z5 Thermostat, !- Name
+    Z5 Rooms,        !- Zone or ZoneList Name
+    ALWAYS 1,                !- Control Type Schedule Name
+    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
+    ::Z5_SETPOINT_CONTROL::;  !- Control 1 Name
+   
+  ZoneList, Z6 Rooms, Z6;
+  ZoneControl:Thermostat,
+    Z6 Thermostat, !- Name
+    Z6 Rooms,        !- Zone or ZoneList Name
+    ALWAYS 1,                !- Control Type Schedule Name
+    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
+    ::Z6_SETPOINT_CONTROL::;  !- Control 1 Name
+   
+  ZoneList, Z7 Rooms, Z7;
+  ZoneControl:Thermostat,
+    Z7 Thermostat, !- Name
+    Z7 Rooms,        !- Zone or ZoneList Name
+    ALWAYS 1,                !- Control Type Schedule Name
+    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
+    ::Z7_SETPOINT_CONTROL::;  !- Control 1 Name
+   
+  ZoneList, Z8 Rooms, Z8;
+  ZoneControl:Thermostat,
+    Z8 Thermostat, !- Name
+    Z8 Rooms,        !- Zone or ZoneList Name
+    ALWAYS 1,                !- Control Type Schedule Name
+    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
+    ::Z8_SETPOINT_CONTROL::;  !- Control 1 Name
+ 
   
   ! Thermostat for not-setback rooms.
   ThermostatSetpoint:SingleHeating,

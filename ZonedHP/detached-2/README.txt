@@ -17,6 +17,7 @@ Partial run script (with tests):
 
  
  NEXT: create Z5--Z8 + pipework, clone interior walls for 1st floor, insert interior floor between gnd/1st.
+ TODO: break out "445, !- Heating Design Capacity {W}" as RAD_XXX external variable.
  
  
  
