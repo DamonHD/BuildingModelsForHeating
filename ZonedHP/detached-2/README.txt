@@ -16,7 +16,7 @@ Partial run script (with tests):
   
 
  
- NEXT: create Z5--Z8, clone interior walls for 1st floor, insert interior floor between gnd/1st.
+ NEXT: create Z5--Z8 + pipework, clone interior walls for 1st floor, insert interior floor between gnd/1st.
  
  
  
@@ -27,5 +27,6 @@ Partial run script (with tests):
 NOTES / Changes
 ===============
 
-DHD20260409T10:38Z runs as a clone of bungalow-2.
-DHD20260409: raised roof 2.3m, created exterior walls for 1st floor, ...
+DHD20260409T10:38Z now runs as a clone of bungalow-2.
+DHD20260409: raised roof 2.3m
+DHD20260409: created exterior walls for 1st floor
