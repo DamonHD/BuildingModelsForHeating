@@ -8,6 +8,8 @@ Called 'detached-2' to match 'bungalow-2'.
 
 Floor plan is same as bungalow-2, building has two levels.
 
-Partial run script (without tests):
-
-    % sh detached-2-generate_rooms.sh && sh detached-2-runall-dd.sh && sh detached-2-extract-from-DD-csv-all.sh
+Partial run script (with tests):
+% sh detached-2-generate_rooms.sh && \
+  sh detached-2-runall-dd.sh && \
+  sh detached-2-extract-from-DD-csv-all.sh && \
+  python3 ./detached-2-test.py
