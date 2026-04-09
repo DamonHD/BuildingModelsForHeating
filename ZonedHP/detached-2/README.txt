@@ -7,3 +7,7 @@ https://www.mdpi.com/2071-1050/16/11/4710
 Called 'detached-2' to match 'bungalow-2'.
 
 Floor plan is same as bungalow-2, building has two levels.
+
+Partial run script (without tests):
+
+    % sh detached-2-generate_rooms.sh && sh detached-2-runall-dd.sh && sh detached-2-extract-from-DD-csv-all.sh
