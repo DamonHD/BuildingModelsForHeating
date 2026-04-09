@@ -16,7 +16,7 @@ Partial run script (with tests):
   
 
  
- NEXT: clone exterior and interior walls for 1st floor, insert interior floor between gnd/1st.
+ NEXT: clone interior walls for 1st floor, insert interior floor between gnd/1st.
  
  
  
@@ -28,4 +28,4 @@ NOTES / Changes
 ===============
 
 DHD20260409T10:38Z runs as a clone of bungalow-2.
-DHD20260409: raised roof 2.3m ...
+DHD20260409: raised roof 2.3m, exterior walls for 1st floor,  ...
