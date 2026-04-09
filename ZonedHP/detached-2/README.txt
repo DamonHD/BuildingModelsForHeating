@@ -15,3 +15,5 @@ Partial run script (with tests):
   python3 ./detached-2-test.py
   
  DHD20260409T10:38Z runs as a clone of bungalow-2.
+ 
+ TODO: raise the roof 2.3m, clone exterior walls for 1st floor, insert interior floor between gnd/1st.
