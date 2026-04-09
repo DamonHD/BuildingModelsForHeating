@@ -16,9 +16,9 @@ Partial run script (with tests):
   
 
  
- NEXT: create Z5--Z8 + pipework, clone interior walls for 1st floor, insert interior floor between gnd/1st.
+ NEXT: clone interior walls for 1st floor, insert interior floor between gnd/1st.
  TODO: break out "445, !- Heating Design Capacity {W}" as RAD_XXX external variable.
- 
+ TODO: break out total flow and capacity of system to external variables?
  
  
  
@@ -31,3 +31,4 @@ NOTES / Changes
 DHD20260409T10:38Z now runs as a clone of bungalow-2.
 DHD20260409: raised roof 2.3m to make space for 1st floor (F1)
 DHD20260409: created exterior walls for 1st floor (against new zones Z5 to Z8)
+DHD20260409: created new zones Z5 to Z8 and associated radiators etc

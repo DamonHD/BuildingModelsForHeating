@@ -542,7 +542,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8, 8, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     8, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
-! FIRST FLOOR
+! FIRST FLOOR (F1)
   BuildingSurface:Detailed,
     EXT SURFACE NORTH WEST F1,!- Name
     Wall,                    !- Surface Type
@@ -1048,6 +1048,38 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z4 Zone Air Node,        !- Zone Air Node Name
     Z4 Return Outlet;        !- Zone Return Air Node or NodeList Name
 
+  ZoneHVAC:EquipmentConnections,
+    Z5,                      !- Zone Name
+    Z5 Equipment,            !- Zone Conditioning Equipment List Name
+    ,                        !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Z5 Zone Air Node,        !- Zone Air Node Name
+    Z5 Return Outlet;        !- Zone Return Air Node or NodeList Name
+
+  ZoneHVAC:EquipmentConnections,
+    Z6,                      !- Zone Name
+    Z6 Equipment,            !- Zone Conditioning Equipment List Name
+    ,                        !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Z6 Zone Air Node,        !- Zone Air Node Name
+    Z6 Return Outlet;        !- Zone Return Air Node or NodeList Name
+
+  ZoneHVAC:EquipmentConnections,
+    Z7,                      !- Zone Name
+    Z7 Equipment,            !- Zone Conditioning Equipment List Name
+    ,                        !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Z7 Zone Air Node,        !- Zone Air Node Name
+    Z7 Return Outlet;        !- Zone Return Air Node or NodeList Name
+
+  ZoneHVAC:EquipmentConnections,
+    Z8,                      !- Zone Name
+    Z8 Equipment,            !- Zone Conditioning Equipment List Name
+    ,                        !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Z8 Zone Air Node,        !- Zone Air Node Name
+    Z8 Return Outlet;        !- Zone Return Air Node or NodeList Name
+
 !-   ===========  ALL OBJECTS IN CLASS: ZONE EQUIPMENT LIST ===========
 
   ZoneHVAC:EquipmentList,
@@ -1085,6 +1117,46 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     SequentialLoad,          !- Load Distribution Scheme
 	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
 	Z4 Radiator,                            !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
+    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+
+  ZoneHVAC:EquipmentList,
+    Z5 Equipment,            !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
+	Z5 Radiator,                            !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
+    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+
+  ZoneHVAC:EquipmentList,
+    Z6 Equipment,            !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
+	Z6 Radiator,                            !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
+    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+
+  ZoneHVAC:EquipmentList,
+    Z7 Equipment,            !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
+	Z7 Radiator,                            !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
+    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+
+  ZoneHVAC:EquipmentList,
+    Z8 Equipment,            !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
+	Z8 Radiator,                            !- Zone Equipment 1 Name
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
@@ -1301,6 +1373,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z2 Demand Radiator Branch,
     Z3 Demand Radiator Branch,
     Z4 Demand Radiator Branch,
+    Z5 Demand Radiator Branch,
+    Z6 Demand Radiator Branch,
+    Z7 Demand Radiator Branch,
+    Z8 Demand Radiator Branch,
     Demand Bypass Branch,
     Demand Outlet Branch;
 
@@ -1345,6 +1421,38 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z4 Radiator Outlet Node;  !- Component 1 Outlet Node Name
 
   Branch,
+    Z5 Demand Radiator Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
+    Z5 Radiator,  !- Component 1 Name
+    Z5 Radiator Inlet Node,  !- Component 1 Inlet Node Name
+    Z5 Radiator Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Z6 Demand Radiator Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
+    Z6 Radiator,  !- Component 1 Name
+    Z6 Radiator Inlet Node,  !- Component 1 Inlet Node Name
+    Z6 Radiator Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Z7 Demand Radiator Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
+    Z7 Radiator,  !- Component 1 Name
+    Z7 Radiator Inlet Node,  !- Component 1 Inlet Node Name
+    Z7 Radiator Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
+    Z8 Demand Radiator Branch,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
+    Z8 Radiator,  !- Component 1 Name
+    Z8 Radiator Inlet Node,  !- Component 1 Inlet Node Name
+    Z8 Radiator Outlet Node;  !- Component 1 Outlet Node Name
+
+  Branch,
     Demand Bypass Branch,  !- Name
     ,                        !- Pressure Drop Curve Name
     Pipe:Adiabatic,          !- Component 1 Object Type
@@ -1377,6 +1485,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z2 Demand Radiator Branch,  !- Outlet Branch 1 Name
     Z3 Demand Radiator Branch,  !- Outlet Branch 1 Name
     Z4 Demand Radiator Branch,  !- Outlet Branch 1 Name
+    Z5 Demand Radiator Branch,  !- Outlet Branch 1 Name
+    Z6 Demand Radiator Branch,  !- Outlet Branch 1 Name
+    Z7 Demand Radiator Branch,  !- Outlet Branch 1 Name
+    Z8 Demand Radiator Branch,  !- Outlet Branch 1 Name
     Demand Bypass Branch;  !- Outlet Branch 2 Name
 
   Connector:Mixer,
@@ -1386,6 +1498,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z2 Demand Radiator Branch,  !- Inlet Branch 1 Name
     Z3 Demand Radiator Branch,  !- Inlet Branch 1 Name
     Z4 Demand Radiator Branch,  !- Inlet Branch 1 Name
+    Z5 Demand Radiator Branch,  !- Inlet Branch 1 Name
+    Z6 Demand Radiator Branch,  !- Inlet Branch 1 Name
+    Z7 Demand Radiator Branch,  !- Inlet Branch 1 Name
+    Z8 Demand Radiator Branch,  !- Inlet Branch 1 Name
     Demand Bypass Branch;  !- Inlet Branch 2 Name
 
 !--------------------------------------------------------------------------------------------
@@ -1499,7 +1615,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
     ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
-
 
   Pipe:Adiabatic,
     Demand Inlet Pipe,  !- Name
