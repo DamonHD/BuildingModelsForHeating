@@ -16,7 +16,7 @@ Partial run script (with tests):
   
 
  
- NEXT: raise the roof 2.3m, clone exterior walls for 1st floor, insert interior floor between gnd/1st.
+ NEXT: raise the roof 2.3m, clone exterior and interior walls for 1st floor, insert interior floor between gnd/1st.
  
  
  
