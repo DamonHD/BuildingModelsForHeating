@@ -28,5 +28,5 @@ NOTES / Changes
 ===============
 
 DHD20260409T10:38Z now runs as a clone of bungalow-2.
-DHD20260409: raised roof 2.3m
-DHD20260409: created exterior walls for 1st floor
+DHD20260409: raised roof 2.3m to make space for 1st floor (F1)
+DHD20260409: created exterior walls for 1st floor (against new zones Z5 to Z8)
