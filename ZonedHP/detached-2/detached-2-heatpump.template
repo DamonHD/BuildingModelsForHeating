@@ -831,7 +831,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
 
 ! INTERNAL WALLS
-! Z1/Z2 partition.
+ ! Z1 to Z4 internal partitions (ground floor)
+  ! Z1/Z2 partition.
   BuildingSurface:Detailed,
     PZ1Z2,                   !- Name
     Wall,                    !- Surface Type
@@ -866,7 +867,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     4, 0, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
-! Z1/Z3 partition.
+  ! Z1/Z3 partition.
   BuildingSurface:Detailed,
     PZ1Z3,                   !- Name
     Wall,                    !- Surface Type
@@ -901,7 +902,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 4, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     4, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
-! Z2/Z4 partition.
+  ! Z2/Z4 partition.
   BuildingSurface:Detailed,
     PZ2Z4,                   !- Name
     Wall,                    !- Surface Type
@@ -936,7 +937,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8, 4, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     8, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
-! Z3/Z4 partition.
+  ! Z3/Z4 partition.
   BuildingSurface:Detailed,
     PZ3Z4,                   !- Name
     Wall,                    !- Surface Type
@@ -970,6 +971,147 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 8, 0,                 !- X,Y,Z ==> Vertex 2 {m}
     4, 4, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     4, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
+
+ ! Z5 to Z8 internal partitions (1st floor)
+  ! Z5/Z6 partition.
+  BuildingSurface:Detailed,
+    PZ5Z6,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z5,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ6Z5,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4, 0, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
+    4, 0, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    4, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    PZ6Z5,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z6,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ5Z6,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4, 4, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    4, 0, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    4, 0, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
+
+  ! Z5/Z7 partition.
+  BuildingSurface:Detailed,
+    PZ5Z7,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z5,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ7Z5,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4, 4, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    0, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    0, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    PZ7Z5,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z7,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ5Z7,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0, 4, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
+    0, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    4, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
+
+  ! Z6/Z8 partition.
+  BuildingSurface:Detailed,
+    PZ6Z8,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z6,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ8Z6,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8, 4, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
+    8, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    4, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    PZ8Z6,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z8,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ6Z8,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4, 4, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    8, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    8, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
+
+  ! Z7/Z8 partition.
+  BuildingSurface:Detailed,
+    PZ7Z8,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z7,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ8Z7,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4, 4, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    4, 8, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    4, 8, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    PZ8Z7,                   !- Name
+    Wall,                    !- Surface Type
+    PARTITION,               !- Construction Name
+    Z8,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    PZ7Z8,                   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4, 8, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
+    4, 8, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    4, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPE ===========
 
