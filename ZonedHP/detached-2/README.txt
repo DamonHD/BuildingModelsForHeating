@@ -32,3 +32,4 @@ DHD20260409T10:38Z now runs as a clone of bungalow-2.
 DHD20260409: raised roof 2.3m to make space for 1st floor (F1)
 DHD20260409: created exterior walls for 1st floor (against new zones Z5 to Z8)
 DHD20260409: created new zones Z5 to Z8 and associated radiators etc
+DHD20260420: adding IF MEAN internal floor material to match IW MEAN internal wall thermally, per paper.
