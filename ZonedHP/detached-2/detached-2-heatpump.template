@@ -777,13 +777,13 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 ! INTERNAL FLOOR (G/1): thermal performance matches internal walls, per paper.
 ! Floor split to match the rooms/zones.    
   BuildingSurface:Detailed,
-    INTERNAL FLOOR NW G1,    !- Name
+    INTERNAL FLOOR NW 1tG,   !- Name
     Floor,                   !- Surface Type
     INTFLOOR,                !- Construction Name
     Z8,                      !- Zone Name
     ,                        !- Space Name
     Surface,                 !- Outside Boundary Condition
-    INTERNAL FLOOR NW 1G,    !- Outside Boundary Condition Object
+    INTERNAL FLOOR NW Gt1,   !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
     0,                       !- View Factor to Ground
@@ -794,13 +794,13 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
-    INTERNAL FLOOR NW 1G,    !- Name
+    INTERNAL FLOOR NW Gt1,   !- Name
     Ceiling,                 !- Surface Type
     INTFLOOR,                !- Construction Name
     Z4,                      !- Zone Name
     ,                        !- Space Name
     Surface,                 !- Outside Boundary Condition
-    INTERNAL FLOOR NW G1,    !- Outside Boundary Condition Object
+    INTERNAL FLOOR NW 1tG,   !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
     0,                       !- View Factor to Ground
