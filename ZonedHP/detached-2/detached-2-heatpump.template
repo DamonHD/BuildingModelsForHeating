@@ -279,9 +279,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.600000,                !- Solar Absorptance
     0.600000;                !- Visible Absorptance
  
- 
- 
- 
 
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
 
@@ -307,6 +304,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   Construction,
     PARTITION,               !- Name
     IW MEAN;  !- Outside Layer
+
+  ! DHD20260420: one side of internal floor.
+  Construction, 
+    INTFLOOR,                !- Name
+    IF MEAN;  !- Outside Layer
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
 
@@ -769,6 +771,51 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8, 0, 0,                 !- X,Y,Z ==> Vertex 2 {m}
     4, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     4, 4, 0;                 !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+! INTERNAL FLOOR (G/1): thermal performance matches internal walls, per paper.
+! Floor split to match the rooms/zones.    
+  BuildingSurface:Detailed,
+    INTERNAL FLOOR NW G1,    !- Name
+    Floor,                   !- Surface Type
+    INTFLOOR,                !- Construction Name
+    Z8,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    INTERNAL FLOOR NW 1G,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    8, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    4, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    INTERNAL FLOOR NW 1G,    !- Name
+    Ceiling,                 !- Surface Type
+    INTFLOOR,                !- Construction Name
+    Z4,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    INTERNAL FLOOR NW G1,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    4, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    8, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    8, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+
+
+
+
 
 ! ROOF
 ! DHD20250603: roof split to match the rooms/zones.    
