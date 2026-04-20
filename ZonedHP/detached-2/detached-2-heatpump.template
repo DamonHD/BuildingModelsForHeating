@@ -824,7 +824,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE ROOF NW,     !- Name
     Roof,                    !- Surface Type
     Lossy flat roof,         !- Construction Name
-    Z4,                      !- Zone Name
+    Z8,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -842,7 +842,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE ROOF NE,     !- Name
     Roof,                    !- Surface Type
     Lossy flat roof,         !- Construction Name
-    Z3,                      !- Zone Name
+    Z7,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -860,7 +860,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE ROOF SE,     !- Name
     Roof,                    !- Surface Type
     Lossy flat roof,         !- Construction Name
-    Z1,                      !- Zone Name
+    Z5,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -878,7 +878,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     EXT SURFACE ROOF SW,     !- Name
     Roof,                    !- Surface Type
     Lossy flat roof,         !- Construction Name
-    Z2,                      !- Zone Name
+    Z6,                      !- Zone Name
     ,                        !- Space Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
