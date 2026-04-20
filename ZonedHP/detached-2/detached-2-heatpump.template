@@ -2021,4 +2021,4 @@ Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariab
   Output:Table:SummaryReports,
     AllSummaryAndSizingPeriod;
     
-  ! Output:Diagnostics,DisplayExtrawarnings;
+  Output:Diagnostics,DisplayExtrawarnings;
