@@ -1,0 +1,232 @@
+Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.04.20 12:09,
+   ************* PythonPlugin: Class LoadCompHeatPumpController imported from: /Users/dhd/git/BuildingModelsForHeating/ZonedHP/detached-2/detached-2-plugin.py
+   ************* PythonPlugin: Class BaseboardTotalHeatDemand imported from: /Users/dhd/git/BuildingModelsForHeating/ZonedHP/detached-2/detached-2-plugin.py
+   ** Warning ** ManageSizing: The ZoneComponentLoadSummary report was requested but no sizing objects were found so that report cannot be generated.
+   ** Warning ** SetUpZoneGeometry: Entered Ceiling Height for Zone="Z1" significantly different from calculated Ceiling Height
+   **   ~~~   ** SetUpZoneGeometry: Entered Ceiling Height=2.30, Calculated Ceiling Height=4.60, entered height will be used in calculations.
+   ** Warning ** SetUpZoneGeometry: Entered Ceiling Height for Zone="Z2" significantly different from calculated Ceiling Height
+   **   ~~~   ** SetUpZoneGeometry: Entered Ceiling Height=2.30, Calculated Ceiling Height=4.60, entered height will be used in calculations.
+   ** Warning ** SetUpZoneGeometry: Entered Ceiling Height for Zone="Z3" significantly different from calculated Ceiling Height
+   **   ~~~   ** SetUpZoneGeometry: Entered Ceiling Height=2.30, Calculated Ceiling Height=4.60, entered height will be used in calculations.
+   ** Warning ** SetUpZoneGeometry: Entered Ceiling Height for Zone="Z4" significantly different from calculated Ceiling Height
+   **   ~~~   ** SetUpZoneGeometry: Entered Ceiling Height=2.30, Calculated Ceiling Height=4.60, entered height will be used in calculations.
+   ** Warning ** CalculateZoneVolume: The Zone="Z1" is not fully enclosed. To be fully enclosed, each edge of a surface must also be an edge on one other surface.
+   **   ~~~   **   The zone volume was calculated using the floor area times ceiling height method where the floor and ceiling are the same except for the z-coordinates.
+   **   ~~~   **   The surface "EXT SURFACE EAST SOUTH" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 0.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 0.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE SOUTH EAST" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 0.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 0.0000, 0.0000, 2.3000}
+   **   ~~~   **   The surface "PZ1Z2" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 0.0000, 2.3000}
+   **   ~~~   **   The surface "PZ1Z3" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF SE" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 0.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF SE" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 0.0000, 0.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF SE" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 0.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 0.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF SE" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 0.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 4.6000}
+   ** Warning ** CalculateZoneVolume: The Zone="Z2" is not fully enclosed. To be fully enclosed, each edge of a surface must also be an edge on one other surface.
+   **   ~~~   **   The zone volume was calculated using the floor area times ceiling height method where the floor and ceiling are the same except for the z-coordinates.
+   **   ~~~   **   The surface "EXT SURFACE SOUTH WEST" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 0.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 0.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE WEST SOUTH" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 8.0000, 0.0000, 2.3000}
+   **   ~~~   **   The surface "PZ2Z1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 0.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ2Z4" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 8.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF SW" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF SW" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 0.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF SW" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 0.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 8.0000, 0.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF SW" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 0.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 8.0000, 4.0000, 4.6000}
+   ** Warning ** CalculateZoneVolume: The Zone="Z3" is not fully enclosed. To be fully enclosed, each edge of a surface must also be an edge on one other surface.
+   **   ~~~   **   The zone volume was calculated using the floor area times ceiling height method where the floor and ceiling are the same except for the z-coordinates.
+   **   ~~~   **   The surface "EXT SURFACE NORTH EAST" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 8.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 8.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE EAST NORTH" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 0.0000, 8.0000, 2.3000}
+   **   ~~~   **   The surface "PZ3Z1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 0.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ3Z4" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 8.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF NE" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 8.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 0.0000, 8.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF NE" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 8.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 0.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF NE" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF NE" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 8.0000, 4.6000}
+   ** Warning ** CalculateZoneVolume: The Zone="Z4" is not fully enclosed. To be fully enclosed, each edge of a surface must also be an edge on one other surface.
+   **   ~~~   **   The zone volume was calculated using the floor area times ceiling height method where the floor and ceiling are the same except for the z-coordinates.
+   **   ~~~   **   The surface "EXT SURFACE NORTH WEST" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 8.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 8.0000, 8.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE WEST NORTH" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 8.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 8.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ4Z2" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ4Z3" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 8.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF NW" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 8.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 8.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF NW" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 8.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF NW" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 8.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE ROOF NW" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 8.0000, 8.0000, 4.6000}
+   ** Warning ** CalculateZoneVolume: The Zone="Z5" is not fully enclosed. To be fully enclosed, each edge of a surface must also be an edge on one other surface.
+   **   ~~~   **   The zone volume was calculated using the floor area times ceiling height method where the floor is horizontal, the walls are vertical, and the wall heights are all the same.
+   **   ~~~   **   The surface "EXT SURFACE EAST SOUTH F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 0.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 0.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE EAST SOUTH F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 0.0000, 0.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE SOUTH EAST F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 0.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 0.0000, 0.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE SOUTH EAST F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 0.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 0.0000, 2.3000}
+   **   ~~~   **   The surface "PZ5Z6" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 0.0000, 4.6000}
+   **   ~~~   **   The surface "PZ5Z6" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 0.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ5Z7" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "PZ5Z7" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 0.0000, 4.0000, 2.3000}
+   ** Warning ** CalculateZoneVolume: The Zone="Z6" is not fully enclosed. To be fully enclosed, each edge of a surface must also be an edge on one other surface.
+   **   ~~~   **   The zone volume was calculated using the floor area times ceiling height method where the floor is horizontal, the walls are vertical, and the wall heights are all the same.
+   **   ~~~   **   The surface "EXT SURFACE SOUTH WEST F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 0.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 0.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE SOUTH WEST F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 0.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 8.0000, 0.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE WEST SOUTH F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 8.0000, 0.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE WEST SOUTH F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 0.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 8.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ6Z5" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 0.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "PZ6Z5" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 0.0000, 2.3000}
+   **   ~~~   **   The surface "PZ6Z8" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 8.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "PZ6Z8" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 2.3000}
+   ** Warning ** CalculateZoneVolume: The Zone="Z7" is not fully enclosed. To be fully enclosed, each edge of a surface must also be an edge on one other surface.
+   **   ~~~   **   The zone volume was calculated using the floor area times ceiling height method where the floor is horizontal, the walls are vertical, and the wall heights are all the same.
+   **   ~~~   **   The surface "EXT SURFACE NORTH EAST F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 8.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 8.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE NORTH EAST F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 8.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 0.0000, 8.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE EAST NORTH F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 0.0000, 8.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE EAST NORTH F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 8.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 0.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ7Z5" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 0.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "PZ7Z5" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 0.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ7Z8" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 8.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "PZ7Z8" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 8.0000, 2.3000}
+   ** Warning ** CalculateZoneVolume: The Zone="Z8" is not fully enclosed. To be fully enclosed, each edge of a surface must also be an edge on one other surface.
+   **   ~~~   **   The zone volume was calculated using the floor area times ceiling height method where the floor is horizontal, the walls are vertical, and the wall heights are all the same.
+   **   ~~~   **   The surface "EXT SURFACE NORTH WEST F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 8.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 8.0000, 8.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE NORTH WEST F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 8.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 8.0000, 2.3000}
+   **   ~~~   **   The surface "EXT SURFACE WEST NORTH F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 8.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 8.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "EXT SURFACE WEST NORTH F1" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 8.0000, 8.0000, 2.3000}
+   **   ~~~   **   The surface "PZ8Z6" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 8.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **   The surface "PZ8Z6" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 8.0000, 4.0000, 2.3000}
+   **   ~~~   **   The surface "PZ8Z7" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 4.0000, 4.6000}
+   **   ~~~   **     Vertex end   { 4.0000, 8.0000, 4.6000}
+   **   ~~~   **   The surface "PZ8Z7" has an edge that was used only once: it is not an edge on another surface
+   **   ~~~   **     Vertex start { 4.0000, 8.0000, 2.3000}
+   **   ~~~   **     Vertex end   { 4.0000, 4.0000, 2.3000}
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ************* Simulation Error Summary *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 1 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 13 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  0.38sec
