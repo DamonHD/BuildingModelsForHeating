@@ -774,8 +774,11 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 
 
+
+
 ! INTERNAL FLOOR (G/1): thermal performance matches internal walls, per paper.
 ! Floor split to match the rooms/zones.    
+  ! Z4/Z8
   BuildingSurface:Detailed,
     INTERNAL FLOOR NW 1tG,   !- Name
     Floor,                   !- Surface Type
@@ -810,7 +813,40 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
     8, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
+  ! Z3/Z7
+  BuildingSurface:Detailed,
+    INTERNAL FLOOR NE 1tG,   !- Name
+    Floor,                   !- Surface Type
+    INTFLOOR,                !- Construction Name
+    Z7,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    INTERNAL FLOOR NE Gt1,   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices    
+    4, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    0, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    0, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
+  BuildingSurface:Detailed,
+    INTERNAL FLOOR NE Gt1,   !- Name
+    Floor,                   !- Surface Type
+    INTFLOOR,                !- Construction Name
+    Z3,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    INTERNAL FLOOR NE 1tG,   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    0, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+    4, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
 
 
