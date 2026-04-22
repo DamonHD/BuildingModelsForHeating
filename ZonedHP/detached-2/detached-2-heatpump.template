@@ -843,6 +843,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     NoWind,                  !- Wind Exposure
     0,                       !- View Factor to Ground
     4,                       !- Number of Vertices
+
+!    4, 8, 2.3,               !- X,Y,Z ==> Vertex 4 {m}
+!    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
+!    0, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
+!    0, 8, 2.3;               !- X,Y,Z ==> Vertex 1 {m}
+  
     0, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
     0, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
     4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
@@ -855,7 +861,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 ! ROOF
 ! DHD20250603: roof split to match the rooms/zones.    
-! NW = Z4
+! NW = Z4/Z8
   BuildingSurface:Detailed,
     EXT SURFACE ROOF NW,     !- Name
     Roof,                    !- Surface Type
@@ -873,7 +879,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     8, 4, 4.6,               !- X,Y,Z ==> Vertex 3 {m}
     8, 8, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
 
-! NE = Z3
+! NE = Z3/Z7
   BuildingSurface:Detailed,
     EXT SURFACE ROOF NE,     !- Name
     Roof,                    !- Surface Type
@@ -891,7 +897,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 4, 4.6,               !- X,Y,Z ==> Vertex 3 {m}
     4, 8, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
 
-! SE = Z1
+! SE = Z1/Z5
   BuildingSurface:Detailed,
     EXT SURFACE ROOF SE,     !- Name
     Roof,                    !- Surface Type
@@ -909,7 +915,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 0, 4.6,               !- X,Y,Z ==> Vertex 3 {m}
     4, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
 
-! SW = Z2
+! SW = Z2/Z6
   BuildingSurface:Detailed,
     EXT SURFACE ROOF SW,     !- Name
     Roof,                    !- Surface Type
