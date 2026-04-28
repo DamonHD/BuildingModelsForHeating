@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.04.28 12:47,
+Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.04.28 12:48,
    ************* PythonPlugin: Class LoadCompHeatPumpController imported from: /Users/dhd/git/BuildingModelsForHeating/ZonedHP/detached-2/detached-2-plugin.py
    ************* PythonPlugin: Class BaseboardTotalHeatDemand imported from: /Users/dhd/git/BuildingModelsForHeating/ZonedHP/detached-2/detached-2-plugin.py
    ** Warning ** ManageSizing: The ZoneComponentLoadSummary report was requested but no sizing objects were found so that report cannot be generated.
