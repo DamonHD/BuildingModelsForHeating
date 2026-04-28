@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.04.20 12:09
+Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.04.28 12:47
 ! <Version>, Version ID
  Version, 24.2
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -60,16 +60,16 @@ Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.
 ! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
  Shading Summary,0,0,0
 ! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
- Zone Summary,8,40,0
+ Zone Summary,8,48,0
 ! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
- Zone Information, Z1,0.0,0.00,0.00,0.00,2.00,2.00,1.68,1,1,1,0.00,4.00,0.00,4.00,0.00,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
- Zone Information, Z2,0.0,0.00,0.00,0.00,6.00,2.00,1.68,1,1,1,4.00,8.00,0.00,4.00,0.00,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
- Zone Information, Z3,0.0,0.00,0.00,0.00,2.00,6.00,1.68,1,1,1,0.00,4.00,4.00,8.00,0.00,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
- Zone Information, Z4,0.0,0.00,0.00,0.00,6.00,6.00,1.68,1,1,1,4.00,8.00,4.00,8.00,0.00,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
- Zone Information, Z5,0.0,0.00,0.00,0.00,2.00,2.00,3.45,1,1,1,0.00,4.00,0.00,4.00,2.30,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,4,0,0,Yes
- Zone Information, Z6,0.0,0.00,0.00,0.00,6.00,2.00,3.45,1,1,1,4.00,8.00,0.00,4.00,2.30,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,4,0,0,Yes
- Zone Information, Z7,0.0,0.00,0.00,0.00,2.00,6.00,3.45,1,1,1,0.00,4.00,4.00,8.00,2.30,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,4,0,0,Yes
- Zone Information, Z8,0.0,0.00,0.00,0.00,6.00,6.00,3.45,1,1,1,4.00,8.00,4.00,8.00,2.30,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,4,0,0,Yes
+ Zone Information, Z1,0.0,0.00,0.00,0.00,2.00,2.00,1.15,1,1,1,0.00,4.00,0.00,4.00,0.00,2.30,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
+ Zone Information, Z2,0.0,0.00,0.00,0.00,6.00,2.00,1.15,1,1,1,4.00,8.00,0.00,4.00,0.00,2.30,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
+ Zone Information, Z3,0.0,0.00,0.00,0.00,2.00,6.00,1.15,1,1,1,0.00,4.00,4.00,8.00,0.00,2.30,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
+ Zone Information, Z4,0.0,0.00,0.00,0.00,6.00,6.00,1.15,1,1,1,4.00,8.00,4.00,8.00,0.00,2.30,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
+ Zone Information, Z5,0.0,0.00,0.00,0.00,2.00,2.00,3.45,1,1,1,0.00,4.00,0.00,4.00,2.30,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
+ Zone Information, Z6,0.0,0.00,0.00,0.00,6.00,2.00,3.45,1,1,1,4.00,8.00,0.00,4.00,2.30,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
+ Zone Information, Z7,0.0,0.00,0.00,0.00,2.00,6.00,3.45,1,1,1,0.00,4.00,4.00,8.00,2.30,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
+ Zone Information, Z8,0.0,0.00,0.00,0.00,6.00,6.00,3.45,1,1,1,4.00,8.00,4.00,8.00,2.30,4.60,2.30,36.80,Simple,TARP,16.00,18.40,18.40,0.00,6,0,0,Yes
 ! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
  Zone Internal Gains Nominal, Z1,16.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
  Zone Internal Gains Nominal, Z2,16.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
@@ -113,6 +113,11 @@ Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.
  CTF,   2,      0.95653080E-13,      0.56542362E-13,      0.95653080E-13,       0.0000000    
  CTF,   1,     -0.39876543    ,      0.23456790    ,     -0.39876543    ,      0.92690457E-12
  CTF,   0,       16.232099    ,       15.598765    ,       16.232099    
+ Construction CTF,INTFLOOR,   5,   1,   2,   0.250,      15.83    ,   0.900,   0.900,   0.600,   0.600,MediumSmooth
+ Material CTF Summary,IF MEAN,  0.0120,         0.190,    950.000,      100.000,  0.6316E-01
+ CTF,   2,      0.95653080E-13,      0.56542362E-13,      0.95653080E-13,       0.0000000    
+ CTF,   1,     -0.39876543    ,      0.23456790    ,     -0.39876543    ,      0.92690457E-12
+ CTF,   0,       16.232099    ,       15.598765    ,       16.232099    
 ! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
 RoomAir Model,Z1,Mixing/Well-Stirred
 RoomAir Model,Z2,Mixing/Well-Stirred
@@ -143,14 +148,14 @@ Environment:Design Day Data,-3.00,0.00,DefaultMultipliers,Wetbulb,-3.00,{C},1004
 Environment:Design Day Misc, 15,1230.6,0.1413,5.6936E-002,1.0,-9.21,-21.3,ASHRAEClearSky
 Environment:WarmupDays,  6
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,Z1,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,1.9137131303E-003,1.7336780774E-006,Pass,Pass,2.2444545605E-003,2.4033930491E-006,Pass,Pass
- Warmup Convergence Information,Z2,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,1.9137131303E-003,1.7336780774E-006,Pass,Pass,2.2444545605E-003,2.4033930491E-006,Pass,Pass
- Warmup Convergence Information,Z3,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,1.9137131303E-003,1.7336780774E-006,Pass,Pass,2.2444545605E-003,2.4033930491E-006,Pass,Pass
- Warmup Convergence Information,Z4,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,1.9137131303E-003,1.7336780774E-006,Pass,Pass,2.2444545605E-003,2.4033930491E-006,Pass,Pass
- Warmup Convergence Information,Z5,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,6.7321374596E-004,1.3557191988E-006,Pass,Pass,1.5777502966E-003,1.1455359536E-006,Pass,Pass
- Warmup Convergence Information,Z6,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,6.7321374596E-004,1.3557191988E-006,Pass,Pass,1.5777502966E-003,1.1455359536E-006,Pass,Pass
- Warmup Convergence Information,Z7,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,6.7321374596E-004,1.3557191988E-006,Pass,Pass,1.5777502966E-003,1.1455359536E-006,Pass,Pass
- Warmup Convergence Information,Z8,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,6.7321374596E-004,1.3557191988E-006,Pass,Pass,1.5777502966E-003,1.1455359536E-006,Pass,Pass
+ Warmup Convergence Information,Z1,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.6033246442E-007,2.7353059716E-007,Pass,Pass,7.2257657330E-008,2.2197632644E-008,Pass,Pass
+ Warmup Convergence Information,Z2,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.6033246442E-007,2.7353059716E-007,Pass,Pass,7.2257657330E-008,2.2197632644E-008,Pass,Pass
+ Warmup Convergence Information,Z3,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.6033247168E-007,2.7353060295E-007,Pass,Pass,7.2257657850E-008,2.2197632769E-008,Pass,Pass
+ Warmup Convergence Information,Z4,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.6033247168E-007,2.7353060295E-007,Pass,Pass,7.2257657850E-008,2.2197632769E-008,Pass,Pass
+ Warmup Convergence Information,Z5,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.7717227837E-007,3.1582123419E-007,Pass,Pass,7.0094248100E-008,2.0783311259E-008,Pass,Pass
+ Warmup Convergence Information,Z6,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.7717227837E-007,3.1582123419E-007,Pass,Pass,7.0094248100E-008,2.0783311259E-008,Pass,Pass
+ Warmup Convergence Information,Z7,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.7717227415E-007,3.1582127141E-007,Pass,Pass,7.0094249027E-008,2.0783311392E-008,Pass,Pass
+ Warmup Convergence Information,Z8,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.7717227415E-007,3.1582127141E-007,Pass,Pass,7.0094249027E-008,2.0783311392E-008,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data
