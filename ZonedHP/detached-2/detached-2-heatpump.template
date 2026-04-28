@@ -833,7 +833,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
   BuildingSurface:Detailed,
     INTERNAL FLOOR NE Gt1,   !- Name
-    Floor,                   !- Surface Type
+    Ceiling,                 !- Surface Type
     INTFLOOR,                !- Construction Name
     Z3,                      !- Zone Name
     ,                        !- Space Name
@@ -842,13 +842,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
     0,                       !- View Factor to Ground
-    4,                       !- Number of Vertices
-
-!    4, 8, 2.3,               !- X,Y,Z ==> Vertex 4 {m}
-!    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-!    0, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-!    0, 8, 2.3;               !- X,Y,Z ==> Vertex 1 {m}
-  
+    4,                       !- Number of Vertices 
     0, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
     0, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
     4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
