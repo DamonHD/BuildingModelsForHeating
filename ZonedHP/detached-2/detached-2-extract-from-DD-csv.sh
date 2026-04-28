@@ -29,10 +29,18 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
     z2namePref="Z2:Zone Operative Temperature [C](Hourly)"
     z3namePref="Z3:Zone Operative Temperature [C](Hourly)"
     z4namePref="Z4:Zone Operative Temperature [C](Hourly)"
+    z5namePref="Z5:Zone Operative Temperature [C](Hourly)"
+    z6namePref="Z6:Zone Operative Temperature [C](Hourly)"
+    z7namePref="Z7:Zone Operative Temperature [C](Hourly)"
+    z8namePref="Z8:Zone Operative Temperature [C](Hourly)"
     z1name="Z1:Zone Air Temperature [C](Hourly)"
     z2name="Z2:Zone Air Temperature [C](Hourly)"
     z3name="Z3:Zone Air Temperature [C](Hourly)"
     z4name="Z4:Zone Air Temperature [C](Hourly)"
+    z5name="Z5:Zone Air Temperature [C](Hourly)"
+    z6name="Z6:Zone Air Temperature [C](Hourly)"
+    z7name="Z7:Zone Air Temperature [C](Hourly)"
+    z8name="Z8:Zone Air Temperature [C](Hourly)"
     pumpname="SUPPLY PUMP:Pump Electricity Rate [W](Hourly)"
     heatdemandname="Baseboard Total Heating Rate All Zones:PythonPlugin:OutputVariable [W](Hourly) "
     hpname="HEAT PUMP:Heat Pump Electricity Rate [W](Hourly)"
@@ -62,6 +70,10 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
         z2i = getIndex(z2namePref,z2name);
         z3i = getIndex(z3namePref,z3name);
         z4i = getIndex(z4namePref,z4name);
+        z5i = getIndex(z5namePref,z5name);
+        z6i = getIndex(z6namePref,z6name);
+        z7i = getIndex(z7namePref,z7name);
+        z8i = getIndex(z8namePref,z8name);
         pumpi = getIndex(pumpname,"");
         heatdemandi = getIndex(heatdemandname,"");
         hpi = getIndex(hpname,"");
@@ -73,13 +85,14 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
         # Extract values from final hour of the simulation results.
         printf("%s,", INPUTDIR);
         z1=$z1i; z2=$z2i; z3=$z3i; z4=$z4i;
+        z5=$z5i; z6=$z6i; z7=$z7i; z8=$z8i;
         heatdemand=$heatdemandi;
         pump=$pumpi
         hp=$hpi
         h4=pump+hp
         flowT=$flowTi
         returnT=$returnTi
-        printf("%.1f,%.1f,%.1f,%.1f,%0.f,%.0f,%.1f,%.1f\n", z1,z2,z3,z4, heatdemand, h4, flowT, returnT);
+        printf("%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%0.f,%.0f,%.1f,%.1f\n", z1,z2,z3,z4,z5,z6,z7,z8, heatdemand, h4, flowT, returnT);
         exit;
     }
     '
