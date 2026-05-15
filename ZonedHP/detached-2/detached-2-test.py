@@ -96,6 +96,10 @@ def test_converges():
 
 def test_AAAA_LC_heatflows_balance():
     results = sim_results["out-dd-AAAA-LC"]
+
+    print(results[Z1_HEATING_RATE]),
+    print(results[Z8_HEATING_RATE]),
+
     total_heating_supply = (
         results[HEAT_PUMP_HEATING_RATE] + results[WATER_PUMP_HEATING_RATE]
     )
@@ -273,7 +277,6 @@ def test_AABB_WC_room_temps():
 
 
 def test_ABAB_LC_room_temps():
-    print(42)
     results = sim_results["out-dd-ABAB-LC"]
     assert float_near(results[Z1_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z2_AIR_TEMP], B_ROOM_TEMP_C, 0.01)

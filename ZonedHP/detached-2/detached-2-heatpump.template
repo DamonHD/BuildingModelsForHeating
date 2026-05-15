@@ -1474,10 +1474,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ,                        !- User Defined Fluid Type
     Hot Loop Operation,      !- Plant Equipment Operation Scheme Name
     Supply Outlet Outlet Node,   !- Loop Temperature Setpoint Node Name
-    55,                     !- Maximum Loop Temperature {C}
+    55,                      !- Maximum Loop Temperature {C}
     10,                      !- Minimum Loop Temperature {C}
     ! 24 L/m
-    0.0004,                !- Maximum Loop Flow Rate {m3/s}
+    0.0004,                  !- Maximum Loop Flow Rate {m3/s}
     0.0,                     !- Minimum Loop Flow Rate {m3/s}
     ! 30 L
     0.03,                        !- Plant Loop Volume {m3}

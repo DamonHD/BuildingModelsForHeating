@@ -24,7 +24,7 @@ class BaseboardTotalHeatDemand(EnergyPlusPlugin):
                 self.api.exchange.get_variable_handle(
                     state, "Baseboard Total Heating Rate", f"Z{i} Radiator"
                 )
-                for i in range(1, 5)
+                for i in range(1, 9) # to at least 1 more than number of zones...
             ]
             self.total_rad_htr = self.api.exchange.get_global_handle(
                 state, "TotalBaseboardHeatTransferRate"

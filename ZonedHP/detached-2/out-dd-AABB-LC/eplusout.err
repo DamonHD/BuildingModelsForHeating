@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.05.15 11:04,
+Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.05.15 14:38,
    ************* PythonPlugin: Class LoadCompHeatPumpController imported from: /Users/dhd/git/BuildingModelsForHeating/ZonedHP/detached-2/detached-2-plugin.py
    ************* PythonPlugin: Class BaseboardTotalHeatDemand imported from: /Users/dhd/git/BuildingModelsForHeating/ZonedHP/detached-2/detached-2-plugin.py
    ** Warning ** ManageSizing: The ZoneComponentLoadSummary report was requested but no sizing objects were found so that report cannot be generated.
@@ -13,4 +13,4 @@ Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.05.15 11:04,
    ************* Simulation Error Summary *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
    ************* EnergyPlus Sizing Error Summary. During Sizing: 1 Warning; 0 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 1 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  0.13sec
+   ************* EnergyPlus Completed Successfully-- 1 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  0.14sec
