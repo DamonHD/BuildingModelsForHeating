@@ -64,3 +64,4 @@ DHD20260409: created new zones Z5 to Z8 and associated radiators etc
 DHD20260420: adding IF MEAN internal floor material to match IW MEAN internal wall thermally, per paper
 DHD20260428: internal floors inserted
 DHD20260515: fixed plugin and tests for 8 zones
+DHD20260515: checked that Heating Design Capacity {W} number (was 445, now 9999) not magic (may in fact be ignored)

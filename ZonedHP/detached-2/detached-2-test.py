@@ -96,10 +96,6 @@ def test_converges():
 
 def test_AAAA_LC_heatflows_balance():
     results = sim_results["out-dd-AAAA-LC"]
-
-    print(results[Z1_HEATING_RATE]),
-    print(results[Z8_HEATING_RATE]),
-
     total_heating_supply = (
         results[HEAT_PUMP_HEATING_RATE] + results[WATER_PUMP_HEATING_RATE]
     )

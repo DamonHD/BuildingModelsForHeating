@@ -1821,7 +1821,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z1 Radiator Inlet Node,  !- Inlet Node Name
     Z1 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
@@ -1834,7 +1834,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z2 Radiator Inlet Node,  !- Inlet Node Name
     Z2 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
@@ -1847,7 +1847,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z3 Radiator Inlet Node,  !- Inlet Node Name
     Z3 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
@@ -1860,7 +1860,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z4 Radiator Inlet Node,  !- Inlet Node Name
     Z4 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
@@ -1873,7 +1873,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z5 Radiator Inlet Node,  !- Inlet Node Name
     Z5 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
@@ -1886,7 +1886,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z6 Radiator Inlet Node,  !- Inlet Node Name
     Z6 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
@@ -1899,7 +1899,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z7 Radiator Inlet Node,  !- Inlet Node Name
     Z7 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
@@ -1912,7 +1912,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z8 Radiator Inlet Node,  !- Inlet Node Name
     Z8 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
     ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
