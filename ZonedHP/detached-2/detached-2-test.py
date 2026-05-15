@@ -30,10 +30,18 @@ Z1_AIR_TEMP = "Z1:Zone Air Temperature [C](Hourly)"
 Z2_AIR_TEMP = "Z2:Zone Air Temperature [C](Hourly)"
 Z3_AIR_TEMP = "Z3:Zone Air Temperature [C](Hourly)"
 Z4_AIR_TEMP = "Z4:Zone Air Temperature [C](Hourly)"
+Z5_AIR_TEMP = "Z5:Zone Air Temperature [C](Hourly)"
+Z6_AIR_TEMP = "Z6:Zone Air Temperature [C](Hourly)"
+Z7_AIR_TEMP = "Z7:Zone Air Temperature [C](Hourly)"
+Z8_AIR_TEMP = "Z8:Zone Air Temperature [C](Hourly)"
 Z1_HEATING_RATE = "Z1 RADIATOR:Baseboard Total Heating Rate [W](Hourly)"
 Z2_HEATING_RATE = "Z2 RADIATOR:Baseboard Total Heating Rate [W](Hourly)"
 Z3_HEATING_RATE = "Z3 RADIATOR:Baseboard Total Heating Rate [W](Hourly)"
 Z4_HEATING_RATE = "Z4 RADIATOR:Baseboard Total Heating Rate [W](Hourly)"
+Z5_HEATING_RATE = "Z5 RADIATOR:Baseboard Total Heating Rate [W](Hourly)"
+Z6_HEATING_RATE = "Z6 RADIATOR:Baseboard Total Heating Rate [W](Hourly)"
+Z7_HEATING_RATE = "Z7 RADIATOR:Baseboard Total Heating Rate [W](Hourly)"
+Z8_HEATING_RATE = "Z8 RADIATOR:Baseboard Total Heating Rate [W](Hourly)"
 HEAT_PUMP_HEATING_RATE = "HEAT PUMP:Heat Pump Load Side Heat Transfer Rate [W](Hourly)"
 WATER_PUMP_HEATING_RATE = "SUPPLY PUMP:Pump Fluid Heat Gain Rate [W](Hourly)"
 BASEBOARD_HEATING_RATE = (
@@ -96,6 +104,10 @@ def test_AAAA_LC_heatflows_balance():
         + results[Z2_HEATING_RATE]
         + results[Z3_HEATING_RATE]
         + results[Z4_HEATING_RATE]
+        + results[Z5_HEATING_RATE]
+        + results[Z6_HEATING_RATE]
+        + results[Z7_HEATING_RATE]
+        + results[Z8_HEATING_RATE]
     )
     total_baseboard_heating_rate = results[BASEBOARD_HEATING_RATE]
 
@@ -113,6 +125,10 @@ def test_AAAA_WC_heatflows_balance():
         + results[Z2_HEATING_RATE]
         + results[Z3_HEATING_RATE]
         + results[Z4_HEATING_RATE]
+        + results[Z5_HEATING_RATE]
+        + results[Z6_HEATING_RATE]
+        + results[Z7_HEATING_RATE]
+        + results[Z8_HEATING_RATE]
     )
     total_baseboard_heating_rate = results[BASEBOARD_HEATING_RATE]
 
@@ -130,6 +146,10 @@ def test_AABB_LC_heatflows_balance():
         + results[Z2_HEATING_RATE]
         + results[Z3_HEATING_RATE]
         + results[Z4_HEATING_RATE]
+        + results[Z5_HEATING_RATE]
+        + results[Z6_HEATING_RATE]
+        + results[Z7_HEATING_RATE]
+        + results[Z8_HEATING_RATE]
     )
     total_baseboard_heating_rate = results[BASEBOARD_HEATING_RATE]
 
@@ -147,6 +167,10 @@ def test_AABB_WC_heatflows_balance():
         + results[Z2_HEATING_RATE]
         + results[Z3_HEATING_RATE]
         + results[Z4_HEATING_RATE]
+        + results[Z5_HEATING_RATE]
+        + results[Z6_HEATING_RATE]
+        + results[Z7_HEATING_RATE]
+        + results[Z8_HEATING_RATE]
     )
     total_baseboard_heating_rate = results[BASEBOARD_HEATING_RATE]
 
@@ -164,6 +188,10 @@ def test_ABAB_LC_heatflows_balance():
         + results[Z2_HEATING_RATE]
         + results[Z3_HEATING_RATE]
         + results[Z4_HEATING_RATE]
+        + results[Z5_HEATING_RATE]
+        + results[Z6_HEATING_RATE]
+        + results[Z7_HEATING_RATE]
+        + results[Z8_HEATING_RATE]
     )
     total_baseboard_heating_rate = results[BASEBOARD_HEATING_RATE]
 
@@ -181,6 +209,10 @@ def test_ABAB_WC_heatflows_balance():
         + results[Z2_HEATING_RATE]
         + results[Z3_HEATING_RATE]
         + results[Z4_HEATING_RATE]
+        + results[Z5_HEATING_RATE]
+        + results[Z6_HEATING_RATE]
+        + results[Z7_HEATING_RATE]
+        + results[Z8_HEATING_RATE]
     )
     total_baseboard_heating_rate = results[BASEBOARD_HEATING_RATE]
 
@@ -198,6 +230,10 @@ def test_AAAA_LC_room_temps():
     assert float_near(results[Z2_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z3_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z4_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z5_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z6_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z7_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z8_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
 
 
 def test_AAAA_WC_room_temps():
@@ -206,6 +242,10 @@ def test_AAAA_WC_room_temps():
     assert float_near(results[Z2_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z3_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z4_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z5_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z6_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z7_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z8_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
 
 
 def test_AABB_LC_room_temps():
@@ -214,6 +254,10 @@ def test_AABB_LC_room_temps():
     assert float_near(results[Z2_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z3_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z4_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z5_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z6_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z7_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z8_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
 
 
 def test_AABB_WC_room_temps():
@@ -222,6 +266,10 @@ def test_AABB_WC_room_temps():
     assert results[Z2_AIR_TEMP] > A_ROOM_SAG_MIN_C
     assert float_near(results[Z3_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z4_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
+    assert results[Z5_AIR_TEMP] > A_ROOM_SAG_MIN_C
+    assert results[Z6_AIR_TEMP] > A_ROOM_SAG_MIN_C
+    assert float_near(results[Z7_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z8_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
 
 
 def test_ABAB_LC_room_temps():
@@ -230,6 +278,10 @@ def test_ABAB_LC_room_temps():
     assert float_near(results[Z2_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z3_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z4_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z5_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z6_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z7_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
+    assert float_near(results[Z8_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
 
 
 def test_ABAB_WC_room_temps():
@@ -238,6 +290,10 @@ def test_ABAB_WC_room_temps():
     assert float_near(results[Z2_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z3_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
     assert results[Z4_AIR_TEMP] > A_ROOM_SAG_MIN_C
+    assert float_near(results[Z5_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
+    assert results[Z6_AIR_TEMP] > A_ROOM_SAG_MIN_C
+    assert results[Z7_AIR_TEMP] > A_ROOM_SAG_MIN_C
+    assert float_near(results[Z8_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
 
 
 # Electricity usage
