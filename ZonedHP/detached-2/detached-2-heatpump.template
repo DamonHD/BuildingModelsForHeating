@@ -1876,7 +1876,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
+    ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
     ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1889,7 +1889,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
+    ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
     ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1902,7 +1902,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
+    ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
     ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1915,7 +1915,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
+    ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
     ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 

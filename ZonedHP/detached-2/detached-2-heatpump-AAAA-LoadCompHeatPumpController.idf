@@ -79,7 +79,7 @@
 
 ! From EH1 model.
 RunPeriod,                                        !- Annual simulation
-   Salford Energy House 1.0 (01-01:31-12),        !- Location
+   Salford,                                       !- Location
    1,1, 2002,                                     !- Start Month , Day
    12,31, 2002,                                   !- End Month , Day
    ,                                              !- Day of Week for Start Day
@@ -98,7 +98,6 @@ SimulationControl,
    Yes,                                           !- Do the design day calculation
    Yes,                                           !- Do the weather file calculation
    No;                                            ! Zone sizing.
-
 
 !-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
 
@@ -140,7 +139,7 @@ SimulationControl,
 !-   ===========  ALL OBJECTS IN CLASS: LOCATION ===========
 
 ! From EH1 model.
-Site:Location,Salford Energy House 1.0 (01-01:31-12)  (01-01:31-12),  !- Location Name
+Site:Location,Salford,                            !- Location Name
    53.35,                                         !- Latitude
    -2.28,                                         !- Longitude
    0,                                             !- Time Zone
@@ -148,7 +147,7 @@ Site:Location,Salford Energy House 1.0 (01-01:31-12)  (01-01:31-12),  !- Locatio
 
 !-   ===========  ALL OBJECTS IN CLASS: DESIGNDAY ===========
 
-! From EH1 model.
+! Derived from EH1 model.
 ! DHD20250401: adjusted winter DD to 'UK' -3C, no wind.
 SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
    1,                                             !- Month
@@ -279,14 +278,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.600000,                !- Solar Absorptance
     0.600000;                !- Visible Absorptance
  
-
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
 
-! DHD20250330: wall with computed U-value and low/no thermal mass (was also roof).
+  ! DHD20250330: wall with computed U-value and low/no thermal capacity (was also roof).
   Construction,
     STDEWR,                  !- Name
     STDEWR INSULATION;       !- Layer 1
 
+  ! Near-zero-loss ground floor.
   Construction,
     LTFLOOR,                 !- Name
     ZEROU;                   !- Outside Layer
@@ -308,7 +307,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ! DHD20260420: one side of internal floor.
   Construction, 
     INTFLOOR,                !- Name
-    IF MEAN;  !- Outside Layer
+    IF MEAN;                 !- Outside Layer
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
 
@@ -1825,7 +1824,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,       !- U-Factor Times Area Value
+    16.31,       !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1838,7 +1837,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,       !- U-Factor Times Area Value
+    16.31,       !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1851,7 +1850,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,       !- U-Factor Times Area Value
+    16.31,       !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1864,7 +1863,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,       !- U-Factor Times Area Value
+    16.31,       !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1877,7 +1876,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,       !- U-Factor Times Area Value
+    30.50,      !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1890,7 +1889,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,       !- U-Factor Times Area Value
+    30.50,      !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1903,7 +1902,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,       !- U-Factor Times Area Value
+    30.50,      !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1916,7 +1915,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     445,                     !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,       !- U-Factor Times Area Value
+    30.50,      !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -2050,7 +2049,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Setback Setpoint Control,  !- Name
     ALWAYS 18;               !- Heating Setpoint Temperature Schedule Name
 
-
 ! ==============  Plugin work =====================================
 
 PythonPlugin:Instance,
@@ -2073,7 +2071,7 @@ PythonPlugin:OutputVariable,
   Baseboard Total Heating Rate All Zones, !- Name
   TotalBaseboardHeatTransferRate,         !- Python Plugin Variable Name
   Averaged,                               !- Type of Data in Variable FIXME: dunno what the options are
-  ZoneTimeStep,                                 !- Update Frequency
+  ZoneTimeStep,                           !- Update Frequency
   W;                                      !- Units
 
 Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariable,Hourly;
@@ -2084,7 +2082,6 @@ Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariab
 !     ErrorsOnly; ! EnergyPlus Runtime Language Debug Output Level
 
 !-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
-
 
   ! DE Outputs
   ! ----------
@@ -2173,7 +2170,6 @@ Output:Variable,Baseboard Total Heating Rate All Zones,PythonPlugin:OutputVariab
   Output:Constructions,Constructions;
 
   Output:VariableDictionary,Regular;
-
 
 ! DHD Extras
 

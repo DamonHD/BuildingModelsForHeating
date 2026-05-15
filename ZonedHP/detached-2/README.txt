@@ -19,6 +19,32 @@ Partial run script (with tests):
  NEXT: clone interior walls for 1st floor, insert interior floor between gnd/1st.
  TODO: break out "445, !- Heating Design Capacity {W}" as RAD_XXX external variable.
  TODO: break out total flow and capacity of system to external variables?
+
+
+DHD20260515: before introducing/changing RAD2_UA_FACTOR:
+    out-dd-AAAA-LC,21.0,21.0,21.0,21.0,19.3,19.3,19.3,19.3,1230,835,37.9,32.9
+    out-dd-AABB-LC,21.0,21.0,18.0,18.0,19.3,19.3,18.0,18.0,1056,818,38.5,33.8
+	out-dd-ABAB-LC,21.0,18.0,18.0,21.0,18.0,19.3,19.3,18.0,1083,873,40.9,36.1
+	out-dd-AAAA-WC,21.0,21.0,21.0,21.0,21.0,21.0,21.0,21.0,1014,1076,46.0,40.9
+	out-dd-AABB-WC,21.0,21.0,18.0,18.0,21.0,21.0,18.0,18.0,951,1016,46.0,41.2
+	out-dd-ABAB-WC,21.0,18.0,18.0,21.0,18.0,20.5,20.5,18.0,1031,1010,46.0,41.2
+Room heat loss from upstairs wrt downstairs
+    = (roof area + ext wall area) / ext wall area
+    = (16m^2 + 18.4m^2) / 18.4m^2
+    = ~1.87
+Thus updated IDF generator to:
+	# DHD20260515: shrunk by ~1.87x to reflect reduced heat loss downstairs.
+	RAD_UA_FACTOR=16.31
+	# DHD20260515: second (upstairs) radiator size; same as for bungalow-2.
+	RAD2_UA_FACTOR=30.50
+Results in:
+	out-dd-AAAA-LC,21.0,21.0,21.0,21.0,21.0,21.0,21.0,21.0,1015,1001,43.1,37.9
+	out-dd-AABB-LC,21.0,21.0,18.0,18.0,21.0,21.0,18.0,18.0,951,1004,45.5,40.7
+	out-dd-ABAB-LC,20.9,18.0,18.0,20.9,18.0,21.0,21.0,18.0,1003,1148,51.5,46.7
+	out-dd-AAAA-WC,21.0,21.0,21.0,21.0,21.0,21.0,21.0,21.0,1014,1076,46.0,40.9
+	out-dd-AABB-WC,21.0,21.0,18.0,18.0,21.0,21.0,18.0,18.0,951,1016,46.0,41.2
+	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,18.0,20.4,20.4,18.0,937,1001,46.0,41.3
+
  
  
  
