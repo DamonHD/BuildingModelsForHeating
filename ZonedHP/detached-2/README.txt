@@ -45,8 +45,11 @@ Results in:
 	out-dd-AABB-WC,21.0,21.0,18.0,18.0,21.0,21.0,18.0,18.0,951,1016,46.0,41.2
 	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,18.0,20.4,20.4,18.0,937,1001,46.0,41.3
 
- 
- 
+
+
+pytest detached-2-test.py
+https://docs.pytest.org/en/stable/how-to/output.html
+https://docs.pytest.org/en/stable/how-to/capture-stdout-stderr.html
  
  
  

@@ -273,6 +273,7 @@ def test_AABB_WC_room_temps():
 
 
 def test_ABAB_LC_room_temps():
+    print(42)
     results = sim_results["out-dd-ABAB-LC"]
     assert float_near(results[Z1_AIR_TEMP], A_ROOM_TEMP_C, 0.01)
     assert float_near(results[Z2_AIR_TEMP], B_ROOM_TEMP_C, 0.01)
