@@ -771,10 +771,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     4, 4, 0;                 !- X,Y,Z ==> Vertex 4 {m}
 
-
-
-
-
 ! INTERNAL FLOOR (G/1): thermal performance matches internal walls, per paper.
 ! Floor split to match the rooms/zones.    
   ! Z4/Z8
@@ -1479,8 +1475,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ! 24 L/m
     0.0004,                  !- Maximum Loop Flow Rate {m3/s}
     0.0,                     !- Minimum Loop Flow Rate {m3/s}
-    ! 30 L
-    0.03,                        !- Plant Loop Volume {m3}
+    ! 60 L
+    0.06,                    !- Plant Loop Volume {m3}
     Supply Pump Inlet Node,    !- Plant Side Inlet Node Name
     Supply Outlet Outlet Node,   !- Plant Side Outlet Node Name
     Supply Branches,  !- Plant Side Branch List Name
