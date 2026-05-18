@@ -92,7 +92,7 @@ exec awk -F, < "$INPUT" -v INPUTDIR="$(dirname "$INPUT")" '
         h4=pump+hp
         flowT=$flowTi
         returnT=$returnTi
-        printf("%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%0.f,%.0f,%.1f,%.1f\n", z1,z2,z3,z4,z5,z6,z7,z8, heatdemand, h4, flowT, returnT);
+        printf("%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%0.f,%.0f,%.1f,%.1f\n", z1,z2,z3,z4,z5,z6,z7,z8, heatdemand, h4, flowT, returnT);
         exit;
     }
     '
