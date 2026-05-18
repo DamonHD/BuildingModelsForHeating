@@ -31,7 +31,7 @@ DHD20260515: before introducing/changing RAD2_UA_FACTOR:
 Room heat loss from upstairs wrt downstairs
     = (roof area + ext wall area) / ext wall area
     = (16m^2 + 18.4m^2) / 18.4m^2
-    = ~1.87
+    = ~1.870
 Thus updated IDF generator to:
 	# DHD20260515: shrunk by ~1.87x to reflect reduced heat loss downstairs.
 	RAD_UA_FACTOR=16.31
