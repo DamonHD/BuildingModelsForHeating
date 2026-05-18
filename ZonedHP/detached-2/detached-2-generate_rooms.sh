@@ -34,9 +34,9 @@ WC_CONTROL_SCHEME=WeatherCompHeatPumpController
 # DHD20260407: bungalow-2 values RAD_UA_FACTOR=30.5 RAD_FLOW_MAX=0.03e-3
 RAD_FLOW_MAX=0.03e-3
 # DHD20260515: heat loss per room nominally ~1.870x higher upstairs.
-RAD_UA_FACTOR=33
-# DHD20260515: second (upstairs) radiator size; same as for bungalow-2.
-RAD2_UA_FACTOR=79
+RAD_UA_FACTOR=35
+# DHD20260515: second (upstairs) radiator set.
+RAD2_UA_FACTOR=87
 
 # Design day outside air temperature
 #

@@ -2,7 +2,7 @@
 
 # Extract from CSVs for all AAAA/AABB/ABAB and WC/LC combinations.
 
-echo "simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W,flow_C,return_C"
+echo "simulation_name,z1_C,z2_C,z3_C,z4_C,z5_C,z6_C,z7_C,z8_C,heat_demand_W,electricity_demand_W,flow_C,return_C"
 for control in LC WC;
   do
       for pattern in AAAA AABB ABAB;

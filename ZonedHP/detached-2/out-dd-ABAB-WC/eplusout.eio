@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.05.15 14:38
+Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2026.05.18 17:30
 ! <Version>, Version ID
  Version, 24.2
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -148,14 +148,14 @@ Environment:Design Day Data,-3.00,0.00,DefaultMultipliers,Wetbulb,-3.00,{C},1004
 Environment:Design Day Misc, 15,1230.6,0.1413,5.6936E-002,1.0,-9.21,-21.3,ASHRAEClearSky
 Environment:WarmupDays,  6
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,Z1,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,1.1425320018E-005,3.2911213282E-006,Pass,Pass,4.3975871863E-007,1.2667082008E-007,Pass,Pass
- Warmup Convergence Information,Z2,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.4545526363E-004,1.3097985103E-004,Pass,Pass,9.3708066794E-004,6.5755573224E-004,Pass,Pass
- Warmup Convergence Information,Z3,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,3.4545526363E-004,1.3097985103E-004,Pass,Pass,9.3708066794E-004,6.5755573224E-004,Pass,Pass
- Warmup Convergence Information,Z4,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,1.1425320018E-005,3.2911213282E-006,Pass,Pass,4.3975871863E-007,1.2667082008E-007,Pass,Pass
- Warmup Convergence Information,Z5,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,8.9719833901E-004,2.7290839712E-007,Pass,Pass,1.9487093657E-003,1.8990984293E-006,Pass,Pass
- Warmup Convergence Information,Z6,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,8.7868560034E-006,2.8047821442E-007,Pass,Pass,3.4253623110E-007,1.0931863470E-008,Pass,Pass
- Warmup Convergence Information,Z7,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,8.7868560034E-006,2.8047821399E-007,Pass,Pass,3.4253623109E-007,1.0931863324E-008,Pass,Pass
- Warmup Convergence Information,Z8,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,8.9719833901E-004,2.7290839712E-007,Pass,Pass,1.9487093657E-003,1.8990984293E-006,Pass,Pass
+ Warmup Convergence Information,Z1,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,1.3293100985E-003,8.0626739797E-004,Pass,Pass,1.5816785739E-003,7.1334689626E-004,Pass,Pass
+ Warmup Convergence Information,Z2,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,2.0723695355E-004,8.4856478707E-005,Pass,Pass,7.2743928524E-004,5.2317154574E-004,Pass,Pass
+ Warmup Convergence Information,Z3,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,2.0723695355E-004,8.4856478707E-005,Pass,Pass,7.2743928524E-004,5.2317154574E-004,Pass,Pass
+ Warmup Convergence Information,Z4,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,1.3293100985E-003,8.0626739797E-004,Pass,Pass,1.5816785739E-003,7.1334689626E-004,Pass,Pass
+ Warmup Convergence Information,Z5,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,7.5753234769E-004,2.6854624918E-004,Pass,Pass,1.2286516298E-003,8.5424795524E-004,Pass,Pass
+ Warmup Convergence Information,Z6,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,6.2325522550E-006,3.7114431068E-006,Pass,Pass,2.4881177795E-007,1.4815090447E-007,Pass,Pass
+ Warmup Convergence Information,Z7,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,6.2325522550E-006,3.7114431068E-006,Pass,Pass,2.4881177795E-007,1.4815090447E-007,Pass,Pass
+ Warmup Convergence Information,Z8,SizingPeriod: WINTER DESIGN DAY IN (MID) UK,7.5753234769E-004,2.6854624918E-004,Pass,Pass,1.2286516298E-003,8.5424795524E-004,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data

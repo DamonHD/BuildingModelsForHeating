@@ -46,15 +46,15 @@ Results in:
 	out-dd-ABAB-WC,20.1,18.0,18.0,20.1,18.0,20.4,20.4,18.0,937,1001,46.0,41.3
 
 DHD2060518: tuning parameters
-	RAD_UA_FACTOR=33
-	RAD2_UA_FACTOR=79
-	simulation_name,z1_C,z2_C,z3_C,z4_C,heat_demand_W,electricity_demand_W,flow_C,return_C
-	out-dd-AAAA-LC,21.00,21.00,21.00,21.00,21.00,21.00,21.00,21.00,2793,786,34.6,29.5
-	out-dd-AABB-LC,21.00,21.00,18.00,18.00,21.00,21.00,18.00,18.00,2638,760,35.4,30.5
-	out-dd-ABAB-LC,20.99,18.00,18.00,20.99,18.00,21.00,21.00,18.00,2637,848,39.0,34.2
+	RAD_UA_FACTOR=35
+	RAD2_UA_FACTOR=87
+	simulation_name,z1_C,z2_C,z3_C,z4_C,z5_C,z6_C,z7_C,z8_C,heat_demand_W,electricity_demand_W,flow_C,return_C
+	out-dd-AAAA-LC,21.00,21.00,21.00,21.00,21.00,21.00,21.00,21.00,2793,773,34.1,29.0
+	out-dd-AABB-LC,21.00,21.00,18.00,18.00,21.00,21.00,18.00,18.00,2638,746,34.8,29.9
+	out-dd-ABAB-LC,21.00,18.00,18.00,21.00,18.00,21.00,21.00,18.00,2637,831,38.3,33.5
 	out-dd-AAAA-WC,21.00,21.00,21.00,21.00,21.00,21.00,21.00,21.00,2793,1076,46.0,40.9
 	out-dd-AABB-WC,21.00,21.00,18.00,18.00,21.00,21.00,18.00,18.00,2637,1016,46.0,41.2
-	out-dd-ABAB-WC,21.00,18.00,18.00,21.00,18.00,21.00,21.00,18.00,2638,1016,46.0,41.2
+	out-dd-ABAB-WC,21.00,18.00,18.00,21.00,18.00,21.00,21.00,18.00,2637,1016,46.0,41.2
 TODO: set slope and intercept for WC
 
 
@@ -77,3 +77,6 @@ DHD20260420: adding IF MEAN internal floor material to match IW MEAN internal wa
 DHD20260428: internal floors inserted
 DHD20260515: fixed plugin and tests for 8 zones
 DHD20260515: checked that Heating Design Capacity {W} number (was 445, now 9999) not magic (may in fact be ignored)
+DHD20260518: extended summary temperature to 2DP to math test tolerance (and fixed header line)
+DHD20260518: tuned rad UA values for (LC) tests to pass: RAD_UA_FACTOR=34 RAD2_UA_FACTOR=83
+

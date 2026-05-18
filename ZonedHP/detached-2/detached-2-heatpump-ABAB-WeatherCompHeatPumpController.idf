@@ -771,10 +771,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     4, 4, 0;                 !- X,Y,Z ==> Vertex 4 {m}
 
-
-
-
-
 ! INTERNAL FLOOR (G/1): thermal performance matches internal walls, per paper.
 ! Floor split to match the rooms/zones.    
   ! Z4/Z8
@@ -1474,13 +1470,13 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ,                        !- User Defined Fluid Type
     Hot Loop Operation,      !- Plant Equipment Operation Scheme Name
     Supply Outlet Outlet Node,   !- Loop Temperature Setpoint Node Name
-    55,                     !- Maximum Loop Temperature {C}
+    55,                      !- Maximum Loop Temperature {C}
     10,                      !- Minimum Loop Temperature {C}
     ! 24 L/m
-    0.0004,                !- Maximum Loop Flow Rate {m3/s}
+    0.0004,                  !- Maximum Loop Flow Rate {m3/s}
     0.0,                     !- Minimum Loop Flow Rate {m3/s}
-    ! 30 L
-    0.03,                        !- Plant Loop Volume {m3}
+    ! 60 L
+    0.06,                    !- Plant Loop Volume {m3}
     Supply Pump Inlet Node,    !- Plant Side Inlet Node Name
     Supply Outlet Outlet Node,   !- Plant Side Outlet Node Name
     Supply Branches,  !- Plant Side Branch List Name
@@ -1821,10 +1817,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z1 Radiator Inlet Node,  !- Inlet Node Name
     Z1 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    16.31,       !- U-Factor Times Area Value
+    35,       !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1834,10 +1830,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z2 Radiator Inlet Node,  !- Inlet Node Name
     Z2 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    16.31,       !- U-Factor Times Area Value
+    35,       !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1847,10 +1843,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z3 Radiator Inlet Node,  !- Inlet Node Name
     Z3 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    16.31,       !- U-Factor Times Area Value
+    35,       !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1860,10 +1856,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z4 Radiator Inlet Node,  !- Inlet Node Name
     Z4 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    16.31,       !- U-Factor Times Area Value
+    35,       !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1873,10 +1869,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z5 Radiator Inlet Node,  !- Inlet Node Name
     Z5 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,      !- U-Factor Times Area Value
+    87,      !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1886,10 +1882,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z6 Radiator Inlet Node,  !- Inlet Node Name
     Z6 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,      !- U-Factor Times Area Value
+    87,      !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1899,10 +1895,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z7 Radiator Inlet Node,  !- Inlet Node Name
     Z7 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,      !- U-Factor Times Area Value
+    87,      !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
@@ -1912,10 +1908,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z8 Radiator Inlet Node,  !- Inlet Node Name
     Z8 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
-    445,                     !- Heating Design Capacity {W}
+    9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
     ,                        !- Fraction of Autosized Heating Design Capacity
-    30.50,      !- U-Factor Times Area Value
+    87,      !- U-Factor Times Area Value
     0.03e-3,        !- Max Water Flow Rate {m3/s} (from example in reference)
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
