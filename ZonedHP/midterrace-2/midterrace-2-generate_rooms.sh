@@ -3,18 +3,18 @@
 # WIP!
 
 # The zone layout of the model GROUND FLOOR:
-# +---------+
-# | Z3 | Z4 |
-# |----+----|
-# | Z1 | Z2 |
-# +---------+
+# +----+
+# | Z3 |
+# |----|
+# | Z1 |
+# +----+
 #
 # The floor above (zone is that of the room below + 4):
-# +---------+
-# | Z7 | Z8 |
-# |----+----|
-# | Z5 | Z6 |
-# +---------+
+# +----+
+# | Z7 |
+# |----|
+# | Z5 |
+# +----+
 #
 # 'A' zones are set to 21 C
 # 'B' zones are set to 18 C
@@ -33,6 +33,7 @@ WC_CONTROL_SCHEME=WeatherCompHeatPumpController
 # in the A rooms.
 # DHD20260407: bungalow-2 values RAD_UA_FACTOR=30.5 RAD_FLOW_MAX=0.03e-3
 RAD_FLOW_MAX=0.03e-3
+# DHD20260929: TODO new heat-loss factor/ratio calc.
 # DHD20260515: heat loss per room nominally ~1.870x higher upstairs.
 RAD_UA_FACTOR=35
 # DHD20260515: second (upstairs) radiator set.
