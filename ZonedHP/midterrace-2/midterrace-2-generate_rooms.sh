@@ -55,11 +55,11 @@ DD_OUTSIDE_TEMP=-3.0
 # $4: Design day outside temperature
 generate_case () {
 # AAAA
-# +-------+    +-------+
-# | A | A | up | A | A |
-# |---+---| -> +---+---+
-# | A | A |    | A | A |
-# +-------+    +-------+
+# +---+    +---+
+# | A | up | A |
+# |---| -> +---+
+# | A |    | A |
+# +---+    +---+
 sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
@@ -76,11 +76,11 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     $TEMPLATE > detached-2-heatpump-AAAA-$1.idf
 
 # ABAB
-# +-------+    +-------+
-# | B | A | up | A | B |
-# |---+---| -> +---+---+
-# | A | B |    | B | A |
-# +-------+    +-------+
+# +---+    +---+
+# | B | up | A |
+# |---| -> +---+
+# | A |    | B |
+# +---+    +---+
 sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
@@ -97,11 +97,11 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     $TEMPLATE > detached-2-heatpump-ABAB-$1.idf
 
 # AABB
-# +-------+    +-------+
-# | B | B | up | B | B |
-# |---+---| -> +---+---+
-# | A | A |    | A | A |
-# +-------+    +-------+
+# +---+    +---+
+# | B | up | B |
+# |---| -> +---+
+# | A |    | A |
+# +---+    +---+
 sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z2_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::Z3_SETPOINT_CONTROL::/Setback Setpoint Control/g" \
