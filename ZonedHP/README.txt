@@ -14,9 +14,19 @@ Items to note:
         DHD20250508: ext temperature and Zone Ideal Loads Zone Total Heating Rate [W] range from -4.5C to -1.5C and 1993W and 2188W.
 
   * bungalow-2
-     As bungalow-1 but partitioned into 4 rooms/zones.
+    As bungalow-1 but partitioned into 4 rooms/zones.
+
+  * detatched-2
+    As bungalow-2 but with an extra level and thus 4 more rooms on top.
+ 
+  * midterrace-2
+    As if LHS of detatched-2, adiabatic side-walls, and share room/zone numbering.
 
 
+All of bungalow-1, bungalow-2, detatched-2 and midterrace-2
+nominally share the same zone numbering plane and spatial layout,
+with only detatched-2 having all 8 zones.
+ 
 
 
 
