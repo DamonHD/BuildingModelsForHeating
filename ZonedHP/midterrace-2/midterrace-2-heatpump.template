@@ -15,36 +15,36 @@
 !     IDU (Internal Door U-value): 8 W/m2K
 !     IWU (Internal Wall U-value): 2 W/m2K
 !
-! Building: Fictional 4 zone building with resistive walls and flat roof.
+! Building: Fictional 4 zone building with resistive front/back walls, adiabtic side-walls and flat roof.
 !
 ! The building is oriented due north.
 !
 ! Floor Area:        64 m2
 ! Internal walls / partitions into 4 equal square rooms.
-! Number of Stories: 1
+! Number of Stories: 2
 ! Computed effective wall and roof U value (EWRU): 0.61 W/m2K
 !
 ! Zone Description Details (GROUND FLOOR):
 !
-!          (0,8,0)        (4,8,0)       (8,8,0)
-!              ______NE____________NW______
-!             |              |             |
-!             |              |             |
-!             |              |             |
-!           EN|      Z3      |     Z4      |WN
-!             |              |             |
-!             |              | (4,4,0)     |
-!     (0,4,0) |--------------+-------------| (8,4,0)
-!             |              |             |
-!             |              |             |
-!           ES|      Z1      |     Z2      |WS
-!             |              |             |
-!             |              |             |
-!             |______________|_____________|
-!                    SE            SW
-!          (0,0,0)        (4,0,0)       (8,0,0)
+!          (0,8,0)        (4,8,0)
+!              ______NE_______
+!             |              |
+!             |              |
+!             |              |
+!           EN|      Z3      |WN?
+!             |              |
+!             |              | (4,4,0) 
+!     (0,4,0) |--------------+
+!             |              |
+!             |              |
+!           ES|      Z1      |WS?
+!             |              |
+!             |              |
+!             |______________|
+!                    SE       
+!          (0,0,0)        (4,0,0)
 !
-! Z5 to Z8 2.3m directly above Z1 to Z4, ie Z5/Z1, Z6/Z2, Z7/Z3, Z8/Z4.
+! Z5 and Z7 2.3m directly above Z1 and Z3, ie Z5/Z1, Z7/Z3.
 !
 ! NW = Z4
 !    4,4,0,  !- X,Y,Z ==> Vertex 1 {m}
@@ -70,7 +70,7 @@
 ! Acknowledgements:
 ! 
 ! DERIVED FROM:
-!    bungalow-1 (20250531)
+!    bungalow-1 (20250531), bungalow-2, detatched-2
 !
 ! See https://energyplus.readthedocs.io/en/latest/acknowledgments/acknowledgments.html
 ! NOTICE: The U.S. Government is granted for itself and others acting on its behalf a paid-up, nonexclusive, irrevocable, worldwide license in this data to reproduce, prepare derivative works, and perform publicly and display publicly. Beginning five (5) years after permission to assert copyright is granted, subject to two possible five year renewals, the U.S. Government is granted for itself and others acting on its behalf a paid-up, non-exclusive, irrevocable worldwide license in this data to reproduce, prepare derivative works, distribute copies to the public, perform publicly and display publicly, and to permit others to do so.
