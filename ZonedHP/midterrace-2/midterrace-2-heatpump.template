@@ -1,8 +1,9 @@
-! detached-2-heatpump-template.idf
+! midterrace-2-heatpump-template.idf
 !
 ! WIP!
 !
-! Approximation with heat-pump to detached house from 10.3390/su16114710 paper.
+! Approximation with heat-pump to mid-terrace 2-floor with adiabtic side-walls
+! from LHS of detached house from 10.3390/su16114710 paper
 !
 ! Some features of 10.3390/su16114710 detached house, Salford EH1 weather.
 ! NOTE: Salford location and design day lines copied in from EH1 model with permission.
