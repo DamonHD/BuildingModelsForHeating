@@ -46,11 +46,6 @@
 !
 ! Z5 and Z7 2.3m directly above Z1 and Z3, ie Z5/Z1, Z7/Z3.
 !
-! NW = Z4
-!    4,4,0,  !- X,Y,Z ==> Vertex 1 {m}
-!    4,8,0,  !- X,Y,Z ==> Vertex 2 {m}
-!    8,8,0,  !- X,Y,Z ==> Vertex 3 {m}
-!    8,4,0;  !- X,Y,Z ==> Vertex 4 {m}
 ! NE = Z3
 !    0,4,0,  !- X,Y,Z ==> Vertex 1 {m}
 !    0,8,0,  !- X,Y,Z ==> Vertex 2 {m}
@@ -61,11 +56,6 @@
 !    0,4,0,  !- X,Y,Z ==> Vertex 2 {m}
 !    4,4,0,  !- X,Y,Z ==> Vertex 3 {m}
 !    4,0,0;  !- X,Y,Z ==> Vertex 4 {m}
-! SW = Z2
-!    4,0,0,  !- X,Y,Z ==> Vertex 1 {m}
-!    4,4,0,  !- X,Y,Z ==> Vertex 2 {m}
-!    8,4,0,  !- X,Y,Z ==> Vertex 3 {m}
-!    8,0,0;  !- X,Y,Z ==> Vertex 4 {m}
 !
 ! Acknowledgements:
 ! 
