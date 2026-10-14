@@ -26,8 +26,14 @@ Items to note:
 All of bungalow-1, bungalow-2, detatched-2 and midterrace-2
 nominally share the same zone numbering plane and spatial layout,
 with only detatched-2 having all 8 zones.
- 
 
+
+TO-DO (2026Q4)
+
+  * Complete midterrace-2 incl adjusted heat loss for upper vs lower floors
+  * Run design day sim
+  * Run as annual sim, either with constant weather or not an compared w/ design-day
+  * Add option to add thermal capacity to internal walls and cf DD and annual sims.
 
 
 
