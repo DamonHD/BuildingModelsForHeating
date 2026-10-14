@@ -16,11 +16,11 @@ Items to note:
   * bungalow-2
     As bungalow-1 but partitioned into 4 rooms/zones.
 
-  * detatched-2
+  * detached-2
     As bungalow-2 but with an extra level and thus 4 more rooms on top.
  
   * midterrace-2
-    As if LHS of detatched-2, adiabatic side-walls, and share room/zone numbering.
+    As if LHS of detached-2, adiabatic side-walls, and share room/zone numbering.
 
 
 All of bungalow-1, bungalow-2, detatched-2 and midterrace-2
