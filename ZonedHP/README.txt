@@ -33,7 +33,8 @@ TO-DO (2026Q4)
   * Complete midterrace-2 incl adjusted heat loss for upper vs lower floors
   * Run design day sim
   * Run as annual sim, either with constant weather or not an compared w/ design-day
-  * Add option to add thermal capacity to internal walls and cf DD and annual sims.
+  * Add option to add thermal capacity to internal walls and cf DD and annual sims
+  * Tidy, eg location, weather, shared HP model, to make running as batch better, ie for other researchers.
 
 
 
