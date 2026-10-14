@@ -30,11 +30,11 @@ with only detatched-2 having all 8 zones.
 
 TO-DO / PLAN (2026Q4)
 
-  * Complete midterrace-2 incl adjusted heat loss for upper vs lower floors
-  * Run design day sim
-  * Tidy, eg location, weather, shared HP model, collate to make running as batch better, eg for other researchers.
-  * Run as annual sim, either with constant weather or not an compared w/ design-day
-  * Add option to add thermal capacity to internal walls and cf DD and annual sims
+	  * (w/e 20261018) Complete midterrace-2 incl adjusted heat loss for upper vs lower floors
+	  * Run design day sim
+	  * (w/e 20261025) Tidy, eg location, weather, shared HP model, collate to make running as batch better, eg for other researchers.
+	  * (w/e 20261101) Run as annual sim, either with constant weather or not an compared w/ design-day
+	  * (w/e 20261108) Add option to add thermal capacity to internal walls and cf DD and annual sims
 
 
 
