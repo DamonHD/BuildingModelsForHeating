@@ -28,13 +28,13 @@ nominally share the same zone numbering plane and spatial layout,
 with only detatched-2 having all 8 zones.
 
 
-TO-DO (2026Q4)
+TO-DO / PLAN (2026Q4)
 
   * Complete midterrace-2 incl adjusted heat loss for upper vs lower floors
   * Run design day sim
+  * Tidy, eg location, weather, shared HP model, to make running as batch better, ie for other researchers.
   * Run as annual sim, either with constant weather or not an compared w/ design-day
   * Add option to add thermal capacity to internal walls and cf DD and annual sims
-  * Tidy, eg location, weather, shared HP model, to make running as batch better, ie for other researchers.
 
 
 
