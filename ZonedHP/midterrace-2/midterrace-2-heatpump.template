@@ -424,6 +424,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !-   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
 
 ! DHD20261030: intra-house walls, ie to houses on either side, adiabatic.
+! GROUND FLOOR
+! DHD20261030: split wall to match internal zones.
   BuildingSurface:Detailed,
     IHW SURFACE EAST NORTH,  !- Name
     Wall,                    !- Surface Type
@@ -441,6 +443,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0, 4, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     0, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
+! DHD20261030: split wall to match internal zones.
   BuildingSurface:Detailed,
     IWH SURFACE EAST SOUTH,  !- Name
     Wall,                    !- Surface Type
@@ -464,9 +467,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 
 
-! DHD20250602: split external wall to match internal zones.
 ! GROUND FLOOR
-
+! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
     EXT SURFACE NORTH EAST,  !- Name
     Wall,                    !- Surface Type
@@ -483,8 +485,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 8, 0,                 !- X,Y,Z ==> Vertex 2 {m}
     0, 8, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     0, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
-! DHD20250602: split external wall to match internal zones.
 
 ! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
