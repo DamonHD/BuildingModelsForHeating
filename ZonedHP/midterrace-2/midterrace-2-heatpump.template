@@ -424,6 +424,39 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 !-   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
 
 ! DHD20261030: intra-house walls, ie to houses on either side, adiabatic.
+  BuildingSurface:Detailed,
+    EXT SURFACE EAST NORTH,  !- Name
+    Wall,                    !- Surface Type
+    IHW,                     !- Construction Name
+    Z3,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.50,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    0, 8, 0,                 !- X,Y,Z ==> Vertex 2 {m}
+    0, 4, 0,                 !- X,Y,Z ==> Vertex 3 {m}
+    0, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    EXT SURFACE EAST SOUTH,  !- Name
+    Wall,                    !- Surface Type
+    IHW,                     !- Construction Name
+    Z1,                      !- Zone Name
+    ,                        !- Space Name
+    Surface,                 !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.50,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0, 4, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
+    0, 4, 0,                 !- X,Y,Z ==> Vertex 2 {m}
+    0, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
+    0, 0, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
 
 
@@ -452,39 +485,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
 ! DHD20250602: split external wall to match internal zones.
-  BuildingSurface:Detailed,
-    EXT SURFACE EAST NORTH,  !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z3,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    0, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    0, 8, 0,                 !- X,Y,Z ==> Vertex 2 {m}
-    0, 4, 0,                 !- X,Y,Z ==> Vertex 3 {m}
-    0, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
-  BuildingSurface:Detailed,
-    EXT SURFACE EAST SOUTH,  !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z1,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    0, 4, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    0, 4, 0,                 !- X,Y,Z ==> Vertex 2 {m}
-    0, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
-    0, 0, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
 ! DHD20250602: split external wall to match internal zones.
   BuildingSurface:Detailed,
