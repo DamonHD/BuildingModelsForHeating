@@ -19,7 +19,7 @@
 # 'A' zones are set to 21 C
 # 'B' zones are set to 18 C
 
-TEMPLATE='detached-2-heatpump.template'
+TEMPLATE='midterrace-2-heatpump.template'
 
 # Chooses between the load and weather compensated control schemes.
 LC_CONTROL_SCHEME=LoadCompHeatPumpController
@@ -73,7 +73,7 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::RAD2_UA_FACTOR::/$3/g" \
     -e "s/::RAD_FLOW_MAX::/$4/g" \
     -e "s/::DD_OUTSIDE_TEMP::/$5/g" \
-    $TEMPLATE > detached-2-heatpump-AAAA-$1.idf
+    $TEMPLATE > midterrace-2-heatpump-AAAA-$1.idf
 
 # ABAB
 # +---+    +---+
@@ -94,7 +94,7 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::RAD2_UA_FACTOR::/$3/g" \
     -e "s/::RAD_FLOW_MAX::/$4/g" \
     -e "s/::DD_OUTSIDE_TEMP::/$5/g" \
-    $TEMPLATE > detached-2-heatpump-ABAB-$1.idf
+    $TEMPLATE > midterrace-2-heatpump-ABAB-$1.idf
 
 # AABB
 # +---+    +---+
@@ -115,7 +115,7 @@ sed -e "s/::Z1_SETPOINT_CONTROL::/Not Setback Setpoint Control/g" \
     -e "s/::RAD2_UA_FACTOR::/$3/g" \
     -e "s/::RAD_FLOW_MAX::/$4/g" \
     -e "s/::DD_OUTSIDE_TEMP::/$5/g" \
-    $TEMPLATE > detached-2-heatpump-AABB-$1.idf
+    $TEMPLATE > midterrace-2-heatpump-AABB-$1.idf
 }
 
 generate_case $LC_CONTROL_SCHEME $RAD_UA_FACTOR $RAD2_UA_FACTOR $RAD_FLOW_MAX $DD_OUTSIDE_TEMP
