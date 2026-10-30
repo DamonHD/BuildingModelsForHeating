@@ -330,17 +330,17 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     36.8,                    !- Volume {m3}
     16;                      !- Floor Area {m3}
 
-  Zone,
-    Z2,                      !- Name
-    0,                       !- Direction of Relative North {deg}
-    0,                       !- X Origin {m}
-    0,                       !- Y Origin {m}
-    0,                       !- Z Origin {m}
-    1,                       !- Type
-    1,                       !- Multiplier
-    2.3,                     !- Ceiling Height {m}
-    36.8,                    !- Volume {m3}
-    16;                      !- Floor Area {m3}
+!  Zone,
+!    Z2,                      !- Name
+!    0,                       !- Direction of Relative North {deg}
+!    0,                       !- X Origin {m}
+!    0,                       !- Y Origin {m}
+!    0,                       !- Z Origin {m}
+!    1,                       !- Type
+!    1,                       !- Multiplier
+!    2.3,                     !- Ceiling Height {m}
+!    36.8,                    !- Volume {m3}
+!    16;                      !- Floor Area {m3}
 
   Zone,
     Z3,                      !- Name
@@ -354,17 +354,17 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     36.8,                    !- Volume {m3}
     16;                      !- Floor Area {m3}
 
-  Zone,
-    Z4,                      !- Name
-    0,                       !- Direction of Relative North {deg}
-    0,                       !- X Origin {m}
-    0,                       !- Y Origin {m}
-    0,                       !- Z Origin {m}
-    1,                       !- Type
-    1,                       !- Multiplier
-    2.3,                     !- Ceiling Height {m}
-    36.8,                    !- Volume {m3}
-    16;                      !- Floor Area {m3}
+!  Zone,
+!    Z4,                      !- Name
+!    0,                       !- Direction of Relative North {deg}
+!    0,                       !- X Origin {m}
+!    0,                       !- Y Origin {m}
+!    0,                       !- Z Origin {m}
+!    1,                       !- Type
+!    1,                       !- Multiplier
+!    2.3,                     !- Ceiling Height {m}
+!    36.8,                    !- Volume {m3}
+!    16;                      !- Floor Area {m3}
 
   Zone,
     Z5,                      !- Name
@@ -378,17 +378,17 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     36.8,                    !- Volume {m3}
     16;                      !- Floor Area {m3}
 
-  Zone,
-    Z6,                      !- Name
-    0,                       !- Direction of Relative North {deg}
-    0,                       !- X Origin {m}
-    0,                       !- Y Origin {m}
-    0,                       !- Z Origin {m}
-    1,                       !- Type
-    1,                       !- Multiplier
-    2.3,                     !- Ceiling Height {m}
-    36.8,                    !- Volume {m3}
-    16;                      !- Floor Area {m3}
+!  Zone,
+!    Z6,                      !- Name
+!    0,                       !- Direction of Relative North {deg}
+!    0,                       !- X Origin {m}
+!    0,                       !- Y Origin {m}
+!    0,                       !- Z Origin {m}
+!    1,                       !- Type
+!    1,                       !- Multiplier
+!    2.3,                     !- Ceiling Height {m}
+!    36.8,                    !- Volume {m3}
+!    16;                      !- Floor Area {m3}
 
   Zone,
     Z7,                      !- Name
@@ -402,17 +402,17 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     36.8,                    !- Volume {m3}
     16;                      !- Floor Area {m3}
 
-  Zone,
-    Z8,                      !- Name
-    0,                       !- Direction of Relative North {deg}
-    0,                       !- X Origin {m}
-    0,                       !- Y Origin {m}
-    0,                       !- Z Origin {m}
-    1,                       !- Type
-    1,                       !- Multiplier
-    2.3,                     !- Ceiling Height {m}
-    36.8,                    !- Volume {m3}
-    16;                      !- Floor Area {m3}
+!  Zone,
+!    Z8,                      !- Name
+!    0,                       !- Direction of Relative North {deg}
+!    0,                       !- X Origin {m}
+!    0,                       !- Y Origin {m}
+!    0,                       !- Z Origin {m}
+!    1,                       !- Type
+!    1,                       !- Multiplier
+!    2.3,                     !- Ceiling Height {m}
+!    36.8,                    !- Volume {m3}
+!    16;                      !- Floor Area {m3}
 
 !-   ===========  ALL OBJECTS IN CLASS: SURFACEGEOMETRY ===========
 
@@ -1331,28 +1331,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z1 Return Outlet;        !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
-    Z2,                      !- Zone Name
-    Z2 Equipment,            !- Zone Conditioning Equipment List Name
-    ,                        !- Zone Air Inlet Node or NodeList Name
-    ,                        !- Zone Air Exhaust Node or NodeList Name
-    Z2 Zone Air Node,        !- Zone Air Node Name
-    Z2 Return Outlet;        !- Zone Return Air Node or NodeList Name
-
-  ZoneHVAC:EquipmentConnections,
     Z3,                      !- Zone Name
     Z3 Equipment,            !- Zone Conditioning Equipment List Name
     ,                        !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
     Z3 Zone Air Node,        !- Zone Air Node Name
     Z3 Return Outlet;        !- Zone Return Air Node or NodeList Name
-
-  ZoneHVAC:EquipmentConnections,
-    Z4,                      !- Zone Name
-    Z4 Equipment,            !- Zone Conditioning Equipment List Name
-    ,                        !- Zone Air Inlet Node or NodeList Name
-    ,                        !- Zone Air Exhaust Node or NodeList Name
-    Z4 Zone Air Node,        !- Zone Air Node Name
-    Z4 Return Outlet;        !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     Z5,                      !- Zone Name
@@ -1363,28 +1347,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z5 Return Outlet;        !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
-    Z6,                      !- Zone Name
-    Z6 Equipment,            !- Zone Conditioning Equipment List Name
-    ,                        !- Zone Air Inlet Node or NodeList Name
-    ,                        !- Zone Air Exhaust Node or NodeList Name
-    Z6 Zone Air Node,        !- Zone Air Node Name
-    Z6 Return Outlet;        !- Zone Return Air Node or NodeList Name
-
-  ZoneHVAC:EquipmentConnections,
     Z7,                      !- Zone Name
     Z7 Equipment,            !- Zone Conditioning Equipment List Name
     ,                        !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
     Z7 Zone Air Node,        !- Zone Air Node Name
     Z7 Return Outlet;        !- Zone Return Air Node or NodeList Name
-
-  ZoneHVAC:EquipmentConnections,
-    Z8,                      !- Zone Name
-    Z8 Equipment,            !- Zone Conditioning Equipment List Name
-    ,                        !- Zone Air Inlet Node or NodeList Name
-    ,                        !- Zone Air Exhaust Node or NodeList Name
-    Z8 Zone Air Node,        !- Zone Air Node Name
-    Z8 Return Outlet;        !- Zone Return Air Node or NodeList Name
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE EQUIPMENT LIST ===========
 
@@ -1393,16 +1361,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     SequentialLoad,          !- Load Distribution Scheme
 	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
 	Z1 Radiator,                            !- Zone Equipment 1 Name
-    1,                       !- Zone Equipment 1 Cooling Sequence
-    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
-    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
-
-  ZoneHVAC:EquipmentList,
-    Z2 Equipment,            !- Name
-    SequentialLoad,          !- Load Distribution Scheme
-	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
-	Z2 Radiator,                            !- Zone Equipment 1 Name
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
@@ -1419,16 +1377,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
 
   ZoneHVAC:EquipmentList,
-    Z4 Equipment,            !- Name
-    SequentialLoad,          !- Load Distribution Scheme
-	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
-	Z4 Radiator,                            !- Zone Equipment 1 Name
-    1,                       !- Zone Equipment 1 Cooling Sequence
-    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
-    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
-
-  ZoneHVAC:EquipmentList,
     Z5 Equipment,            !- Name
     SequentialLoad,          !- Load Distribution Scheme
 	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
@@ -1439,30 +1387,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
 
   ZoneHVAC:EquipmentList,
-    Z6 Equipment,            !- Name
-    SequentialLoad,          !- Load Distribution Scheme
-	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
-	Z6 Radiator,                            !- Zone Equipment 1 Name
-    1,                       !- Zone Equipment 1 Cooling Sequence
-    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
-    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
-
-  ZoneHVAC:EquipmentList,
     Z7 Equipment,            !- Name
     SequentialLoad,          !- Load Distribution Scheme
 	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
 	Z7 Radiator,                            !- Zone Equipment 1 Name
-    1,                       !- Zone Equipment 1 Cooling Sequence
-    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
-    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
-
-  ZoneHVAC:EquipmentList,
-    Z8 Equipment,            !- Name
-    SequentialLoad,          !- Load Distribution Scheme
-	ZoneHVAC:Baseboard:Convective:Water, !- Zone Equipment 1 Object Type
-	Z8 Radiator,                            !- Zone Equipment 1 Name
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
@@ -1703,28 +1631,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z1 Radiator Outlet Node;  !- Component 1 Outlet Node Name
 
   Branch,
-    Z2 Demand Radiator Branch,  !- Name
-    ,                        !- Pressure Drop Curve Name
-    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
-    Z2 Radiator,  !- Component 1 Name
-    Z2 Radiator Inlet Node,  !- Component 1 Inlet Node Name
-    Z2 Radiator Outlet Node;  !- Component 1 Outlet Node Name
-
-  Branch,
     Z3 Demand Radiator Branch,  !- Name
     ,                        !- Pressure Drop Curve Name
     ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
     Z3 Radiator,  !- Component 1 Name
     Z3 Radiator Inlet Node,  !- Component 1 Inlet Node Name
     Z3 Radiator Outlet Node;  !- Component 1 Outlet Node Name
-
-  Branch,
-    Z4 Demand Radiator Branch,  !- Name
-    ,                        !- Pressure Drop Curve Name
-    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
-    Z4 Radiator,  !- Component 1 Name
-    Z4 Radiator Inlet Node,  !- Component 1 Inlet Node Name
-    Z4 Radiator Outlet Node;  !- Component 1 Outlet Node Name
 
   Branch,
     Z5 Demand Radiator Branch,  !- Name
@@ -1735,28 +1647,12 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Z5 Radiator Outlet Node;  !- Component 1 Outlet Node Name
 
   Branch,
-    Z6 Demand Radiator Branch,  !- Name
-    ,                        !- Pressure Drop Curve Name
-    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
-    Z6 Radiator,  !- Component 1 Name
-    Z6 Radiator Inlet Node,  !- Component 1 Inlet Node Name
-    Z6 Radiator Outlet Node;  !- Component 1 Outlet Node Name
-
-  Branch,
     Z7 Demand Radiator Branch,  !- Name
     ,                        !- Pressure Drop Curve Name
     ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
     Z7 Radiator,  !- Component 1 Name
     Z7 Radiator Inlet Node,  !- Component 1 Inlet Node Name
     Z7 Radiator Outlet Node;  !- Component 1 Outlet Node Name
-
-  Branch,
-    Z8 Demand Radiator Branch,  !- Name
-    ,                        !- Pressure Drop Curve Name
-    ZoneHVAC:Baseboard:Convective:Water,          !- Component 1 Object Type
-    Z8 Radiator,  !- Component 1 Name
-    Z8 Radiator Inlet Node,  !- Component 1 Inlet Node Name
-    Z8 Radiator Outlet Node;  !- Component 1 Outlet Node Name
 
   Branch,
     Demand Bypass Branch,  !- Name
@@ -1788,26 +1684,18 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     Demand Splitter,!- Name
     Demand Inlet Branch,  !- Inlet Branch Name
     Z1 Demand Radiator Branch,  !- Outlet Branch 1 Name
-    Z2 Demand Radiator Branch,  !- Outlet Branch 1 Name
     Z3 Demand Radiator Branch,  !- Outlet Branch 1 Name
-    Z4 Demand Radiator Branch,  !- Outlet Branch 1 Name
     Z5 Demand Radiator Branch,  !- Outlet Branch 1 Name
-    Z6 Demand Radiator Branch,  !- Outlet Branch 1 Name
     Z7 Demand Radiator Branch,  !- Outlet Branch 1 Name
-    Z8 Demand Radiator Branch,  !- Outlet Branch 1 Name
     Demand Bypass Branch;  !- Outlet Branch 2 Name
 
   Connector:Mixer,
     Demand Mixer,   !- Name
     Demand Outlet Branch,  !- Outlet Branch Name
     Z1 Demand Radiator Branch,  !- Inlet Branch 1 Name
-    Z2 Demand Radiator Branch,  !- Inlet Branch 1 Name
     Z3 Demand Radiator Branch,  !- Inlet Branch 1 Name
-    Z4 Demand Radiator Branch,  !- Inlet Branch 1 Name
     Z5 Demand Radiator Branch,  !- Inlet Branch 1 Name
-    Z6 Demand Radiator Branch,  !- Inlet Branch 1 Name
     Z7 Demand Radiator Branch,  !- Inlet Branch 1 Name
-    Z8 Demand Radiator Branch,  !- Inlet Branch 1 Name
     Demand Bypass Branch;  !- Inlet Branch 2 Name
 
 !--------------------------------------------------------------------------------------------
@@ -1832,36 +1720,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
-    Z2 Radiator,             !- Name
-    ,                        !- Availability Schedule Name
-    Z2 Radiator Inlet Node,  !- Inlet Node Name
-    Z2 Radiator Outlet Node, !- Outlet Node Name
-    HeatingDesignCapacity,   !- Heating Design Capacity Method
-    9999,                    !- Heating Design Capacity {W}
-    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
-    ,                        !- Fraction of Autosized Heating Design Capacity
-    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
-    0.001;                   !- Field Convergence Tolerance (from example in reference)
-
-  ZoneHVAC:Baseboard:Convective:Water,
     Z3 Radiator,             !- Name
     ,                        !- Availability Schedule Name
     Z3 Radiator Inlet Node,  !- Inlet Node Name
     Z3 Radiator Outlet Node, !- Outlet Node Name
-    HeatingDesignCapacity,   !- Heating Design Capacity Method
-    9999,                    !- Heating Design Capacity {W}
-    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
-    ,                        !- Fraction of Autosized Heating Design Capacity
-    ::RAD_UA_FACTOR::,       !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
-    0.001;                   !- Field Convergence Tolerance (from example in reference)
-
-  ZoneHVAC:Baseboard:Convective:Water,
-    Z4 Radiator,             !- Name
-    ,                        !- Availability Schedule Name
-    Z4 Radiator Inlet Node,  !- Inlet Node Name
-    Z4 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
     9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
@@ -1884,36 +1746,10 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0.001;                   !- Field Convergence Tolerance (from example in reference)
 
   ZoneHVAC:Baseboard:Convective:Water,
-    Z6 Radiator,             !- Name
-    ,                        !- Availability Schedule Name
-    Z6 Radiator Inlet Node,  !- Inlet Node Name
-    Z6 Radiator Outlet Node, !- Outlet Node Name
-    HeatingDesignCapacity,   !- Heating Design Capacity Method
-    9999,                    !- Heating Design Capacity {W}
-    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
-    ,                        !- Fraction of Autosized Heating Design Capacity
-    ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
-    0.001;                   !- Field Convergence Tolerance (from example in reference)
-
-  ZoneHVAC:Baseboard:Convective:Water,
     Z7 Radiator,             !- Name
     ,                        !- Availability Schedule Name
     Z7 Radiator Inlet Node,  !- Inlet Node Name
     Z7 Radiator Outlet Node, !- Outlet Node Name
-    HeatingDesignCapacity,   !- Heating Design Capacity Method
-    9999,                    !- Heating Design Capacity {W}
-    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
-    ,                        !- Fraction of Autosized Heating Design Capacity
-    ::RAD2_UA_FACTOR::,      !- U-Factor Times Area Value
-    ::RAD_FLOW_MAX::,        !- Max Water Flow Rate {m3/s} (from example in reference)
-    0.001;                   !- Field Convergence Tolerance (from example in reference)
-
-  ZoneHVAC:Baseboard:Convective:Water,
-    Z8 Radiator,             !- Name
-    ,                        !- Availability Schedule Name
-    Z8 Radiator Inlet Node,  !- Inlet Node Name
-    Z8 Radiator Outlet Node, !- Outlet Node Name
     HeatingDesignCapacity,   !- Heating Design Capacity Method
     9999,                    !- Heating Design Capacity {W}
     ,                        !- Heating Design Capacity Per Floor Area {W/m2}
@@ -1975,7 +1811,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ! Zones for each room.
   ZoneList,
     ALL ROOMS,               !- Name
-    Z1, Z2, Z3, Z4, Z5, Z6, Z7, Z8;
+    Z1, Z3, Z5, Z7;
 
   ZoneList, Z1 Rooms, Z1;
   ZoneControl:Thermostat,
@@ -1984,15 +1820,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z1_SETPOINT_CONTROL::;  !- Control 1 Name
-   
-  ZoneList, Z2 Rooms, Z2;
-  ZoneControl:Thermostat,
-    Z2 Thermostat, !- Name
-    Z2 Rooms,        !- Zone or ZoneList Name
-    ALWAYS 1,                !- Control Type Schedule Name
-    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
-    ::Z2_SETPOINT_CONTROL::;  !- Control 1 Name
-   
+
   ZoneList, Z3 Rooms, Z3;
   ZoneControl:Thermostat,
     Z3 Thermostat, !- Name
@@ -2000,15 +1828,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z3_SETPOINT_CONTROL::;  !- Control 1 Name
-   
-  ZoneList, Z4 Rooms, Z4;
-  ZoneControl:Thermostat,
-    Z4 Thermostat, !- Name
-    Z4 Rooms,        !- Zone or ZoneList Name
-    ALWAYS 1,                !- Control Type Schedule Name
-    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
-    ::Z4_SETPOINT_CONTROL::;  !- Control 1 Name
- 
+
   ZoneList, Z5 Rooms, Z5;
   ZoneControl:Thermostat,
     Z5 Thermostat, !- Name
@@ -2016,15 +1836,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z5_SETPOINT_CONTROL::;  !- Control 1 Name
-   
-  ZoneList, Z6 Rooms, Z6;
-  ZoneControl:Thermostat,
-    Z6 Thermostat, !- Name
-    Z6 Rooms,        !- Zone or ZoneList Name
-    ALWAYS 1,                !- Control Type Schedule Name
-    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
-    ::Z6_SETPOINT_CONTROL::;  !- Control 1 Name
-   
+
   ZoneList, Z7 Rooms, Z7;
   ZoneControl:Thermostat,
     Z7 Thermostat, !- Name
@@ -2032,16 +1844,8 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     ALWAYS 1,                !- Control Type Schedule Name
     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
     ::Z7_SETPOINT_CONTROL::;  !- Control 1 Name
-   
-  ZoneList, Z8 Rooms, Z8;
-  ZoneControl:Thermostat,
-    Z8 Thermostat, !- Name
-    Z8 Rooms,        !- Zone or ZoneList Name
-    ALWAYS 1,                !- Control Type Schedule Name
-    ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
-    ::Z8_SETPOINT_CONTROL::;  !- Control 1 Name
- 
-  
+
+
   ! Thermostat for not-setback rooms.
   ThermostatSetpoint:SingleHeating,
     Not Setback Setpoint Control,  !- Name
