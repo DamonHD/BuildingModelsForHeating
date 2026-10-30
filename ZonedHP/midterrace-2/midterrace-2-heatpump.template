@@ -15,7 +15,10 @@
 !     IDU (Internal Door U-value): 8 W/m2K
 !     IWU (Internal Wall U-value): 2 W/m2K
 !
-! Building: Fictional 4 zone building with resistive front/back walls, adiabtic side-walls and flat roof.
+! midterrace-2:
+!     IHW (Inter-House Wall)
+!
+! Building: Fictional 4 zone building with resistive front/back walls, adiabatic side-walls and flat roof.
 !
 ! The building is oriented due north.
 !
