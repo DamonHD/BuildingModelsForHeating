@@ -433,22 +433,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 ! DHD20250602: split external wall to match internal zones.
 ! GROUND FLOOR
-  BuildingSurface:Detailed,
-    EXT SURFACE NORTH WEST,  !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z4,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    8, 8, 0,                 !- X,Y,Z ==> Vertex 2 {m}
-    4, 8, 0,                 !- X,Y,Z ==> Vertex 3 {m}
-    4, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
   BuildingSurface:Detailed,
     EXT SURFACE NORTH EAST,  !- Name
@@ -520,76 +504,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     4, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
     4, 0, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
-  BuildingSurface:Detailed,
-    EXT SURFACE SOUTH WEST,  !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z2,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    4, 0, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    4, 0, 0,                 !- X,Y,Z ==> Vertex 2 {m}
-    8, 0, 0,                 !- X,Y,Z ==> Vertex 3 {m}
-    8, 0, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
-! DHD20250602: split external wall to match internal zones.
-  BuildingSurface:Detailed,
-    EXT SURFACE WEST SOUTH,  !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z2,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8, 0, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    8, 0, 0,                 !- X,Y,Z ==> Vertex 2 {m}
-    8, 4, 0,                 !- X,Y,Z ==> Vertex 3 {m}
-    8, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
-  BuildingSurface:Detailed,
-    EXT SURFACE WEST NORTH,  !- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z4,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8, 4, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    8, 4, 0,                 !- X,Y,Z ==> Vertex 2 {m}
-    8, 8, 0,                 !- X,Y,Z ==> Vertex 3 {m}
-    8, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
 ! FIRST FLOOR (F1)
-  BuildingSurface:Detailed,
-    EXT SURFACE NORTH WEST F1,!- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z8,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8, 8, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
-    8, 8, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-    4, 8, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-    4, 8, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
-
   BuildingSurface:Detailed,
     EXT SURFACE NORTH EAST F1,!- Name
     Wall,                    !- Surface Type
@@ -659,58 +574,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0, 0, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
     4, 0, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
     4, 0, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
-
-  BuildingSurface:Detailed,
-    EXT SURFACE SOUTH WEST F1,!- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z6,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    4, 0, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
-    4, 0, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-    8, 0, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-    8, 0, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
-
-! DHD20250602: split external wall to match internal zones.
-  BuildingSurface:Detailed,
-    EXT SURFACE WEST SOUTH F1,!- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z6,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8, 0, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
-    8, 0, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-    8, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-    8, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
-
-  BuildingSurface:Detailed,
-    EXT SURFACE WEST NORTH F1,!- Name
-    Wall,                    !- Surface Type
-    STDEWR,                  !- Construction Name
-    Z8,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0.50,                    !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8, 4, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
-    8, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-    8, 8, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-    8, 8, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
 
 ! FLOOR: essentially lossless.
 ! DHD20250603: floor split to match the rooms/zones.    
