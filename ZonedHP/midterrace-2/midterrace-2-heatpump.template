@@ -423,6 +423,14 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
 
+! DHD20261030: intra-house walls, ie to houses on either side, adiabatic.
+
+
+
+
+
+
+
 ! DHD20250602: split external wall to match internal zones.
 ! GROUND FLOOR
   BuildingSurface:Detailed,
@@ -780,41 +788,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 ! INTERNAL FLOOR (G/1): thermal performance matches internal walls, per paper.
 ! Floor split to match the rooms/zones.    
-  ! Z4/Z8
-  BuildingSurface:Detailed,
-    INTERNAL FLOOR NW 1tG,   !- Name
-    Floor,                   !- Surface Type
-    INTFLOOR,                !- Construction Name
-    Z8,                      !- Zone Name
-    ,                        !- Space Name
-    Surface,                 !- Outside Boundary Condition
-    INTERNAL FLOOR NW Gt1,   !- Outside Boundary Condition Object
-    NoSun,                   !- Sun Exposure
-    NoWind,                  !- Wind Exposure
-    0,                       !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    8, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-    4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-    4, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
-  BuildingSurface:Detailed,
-    INTERNAL FLOOR NW Gt1,   !- Name
-    Ceiling,                 !- Surface Type
-    INTFLOOR,                !- Construction Name
-    Z4,                      !- Zone Name
-    ,                        !- Space Name
-    Surface,                 !- Outside Boundary Condition
-    INTERNAL FLOOR NW 1tG,   !- Outside Boundary Condition Object
-    NoSun,                   !- Sun Exposure
-    NoWind,                  !- Wind Exposure
-    0,                       !- View Factor to Ground
-    4,                       !- Number of Vertices
-    4, 8, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    4, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-    8, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-    8, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
   ! Z3/Z7
   BuildingSurface:Detailed,
     INTERNAL FLOOR NE 1tG,   !- Name
@@ -849,41 +822,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0, 4, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
     4, 4, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
     4, 8, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
-  ! Z2/Z6
-  BuildingSurface:Detailed,
-    INTERNAL FLOOR SW 1tG,   !- Name
-    Floor,                   !- Surface Type
-    INTFLOOR,                !- Construction Name
-    Z6,                      !- Zone Name
-    ,                        !- Space Name
-    Surface,                 !- Outside Boundary Condition
-    INTERNAL FLOOR SW Gt1,   !- Outside Boundary Condition Object
-    NoSun,                   !- Sun Exposure
-    NoWind,                  !- Wind Exposure
-    0,                       !- View Factor to Ground
-    4,                       !- Number of Vertices
-    8, 4, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    8, 0, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-    4, 0, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-    4, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
-
- BuildingSurface:Detailed,
-    INTERNAL FLOOR SW Gt1,   !- Name
-    Ceiling,                 !- Surface Type
-    INTFLOOR,                !- Construction Name
-    Z2,                      !- Zone Name
-    ,                        !- Space Name
-    Surface,                 !- Outside Boundary Condition
-    INTERNAL FLOOR SW 1tG,   !- Outside Boundary Condition Object
-    NoSun,                   !- Sun Exposure
-    NoWind,                  !- Wind Exposure
-    0,                       !- View Factor to Ground
-    4,                       !- Number of Vertices
-    4, 4, 2.3,               !- X,Y,Z ==> Vertex 1 {m}
-    4, 0, 2.3,               !- X,Y,Z ==> Vertex 2 {m}
-    8, 0, 2.3,               !- X,Y,Z ==> Vertex 3 {m}
-    8, 4, 2.3;               !- X,Y,Z ==> Vertex 4 {m}
 
   ! Z1/Z5
   BuildingSurface:Detailed,
@@ -922,24 +860,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 ! ROOF
 ! DHD20250603: roof split to match the rooms/zones.    
-! NW = Z4/Z8
-  BuildingSurface:Detailed,
-    EXT SURFACE ROOF NW,     !- Name
-    Roof,                    !- Surface Type
-    Lossy flat roof,         !- Construction Name
-    Z8,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0,                       !- View Factor to Ground
-    4,                       !- Number of Vertices
-    4, 8, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
-    4, 4, 4.6,               !- X,Y,Z ==> Vertex 2 {m}
-    8, 4, 4.6,               !- X,Y,Z ==> Vertex 3 {m}
-    8, 8, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
-
 ! NE = Z3/Z7
   BuildingSurface:Detailed,
     EXT SURFACE ROOF NE,     !- Name
@@ -975,24 +895,6 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     0, 0, 4.6,               !- X,Y,Z ==> Vertex 2 {m}
     4, 0, 4.6,               !- X,Y,Z ==> Vertex 3 {m}
     4, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
-
-! SW = Z2/Z6
-  BuildingSurface:Detailed,
-    EXT SURFACE ROOF SW,     !- Name
-    Roof,                    !- Surface Type
-    Lossy flat roof,         !- Construction Name
-    Z6,                      !- Zone Name
-    ,                        !- Space Name
-    Outdoors,                !- Outside Boundary Condition
-    ,                        !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
-    0,                       !- View Factor to Ground
-    4,                       !- Number of Vertices
-    4, 4, 4.6,               !- X,Y,Z ==> Vertex 1 {m}
-    4, 0, 4.6,               !- X,Y,Z ==> Vertex 2 {m}
-    8, 0, 4.6,               !- X,Y,Z ==> Vertex 3 {m}
-    8, 4, 4.6;               !- X,Y,Z ==> Vertex 4 {m}
 
 ! INTERNAL WALLS
  ! Z1 to Z4 internal partitions (ground floor)
