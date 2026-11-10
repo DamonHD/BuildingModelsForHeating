@@ -16,7 +16,7 @@
 !     IWU (Internal Wall U-value): 2 W/m2K
 !
 ! midterrace-2:
-!     IHW (Inter-House Wall)
+!     IHW (Inter-House Wall): ~0 W/m2K
 !
 ! Building: Fictional 4 zone building with resistive front/back walls, adiabatic side-walls and flat roof.
 !
@@ -316,9 +316,9 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
     INTFLOOR,                !- Name
     IF MEAN;                 !- Outside Layer
 
-  ! DHD20261110: one side of inter-home wall.
+  ! DHD20261110: one side of inter-house wall.
   Construction, 
-    INTERHOMEWALL,           !- Name
+    INTERHOUSEWALL,          !- Name
     IHW;                     !- Outside Layer
  
 !-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
@@ -428,13 +428,13 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
 
 !-   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
 
-! DHD20261030: intra-house walls, ie to houses on either side, adiabatic.
+! DHD20261030: inter-house walls, ie to houses on either side, adiabatic.
 ! GROUND FLOOR
 ! DHD20261030: split wall to match internal zones.
   BuildingSurface:Detailed,
     IHW SURFACE EAST NORTH,  !- Name
     Wall,                    !- Surface Type
-    INTERHOMEWALL,           !- Construction Name
+    INTERHOUSEWALL,          !- Construction Name
     Z3,                      !- Zone Name
     ,                        !- Space Name
     Surface,                 !- Outside Boundary Condition
@@ -452,7 +452,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   BuildingSurface:Detailed,
     IWH SURFACE EAST SOUTH,  !- Name
     Wall,                    !- Surface Type
-    INTERHOMEWALL,           !- Construction Name
+    INTERHOUSEWALL,          !- Construction Name
     Z1,                      !- Zone Name
     ,                        !- Space Name
     Surface,                 !- Outside Boundary Condition
