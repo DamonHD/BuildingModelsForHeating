@@ -309,13 +309,18 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   ! DHD20250602: one side of internal partition wall.
   Construction,
     PARTITION,               !- Name
-    IW MEAN;  !- Outside Layer
+    IW MEAN;                 !- Outside Layer
 
   ! DHD20260420: one side of internal floor.
   Construction, 
     INTFLOOR,                !- Name
     IF MEAN;                 !- Outside Layer
 
+  ! DHD20261110: one side of inter-home wall.
+  Construction, 
+    INTERHOMEWALL,           !- Name
+    IHW;                     !- Outside Layer
+ 
 !-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
 
   Zone,
@@ -429,7 +434,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   BuildingSurface:Detailed,
     IHW SURFACE EAST NORTH,  !- Name
     Wall,                    !- Surface Type
-    IHW,                     !- Construction Name
+    INTERHOMEWALL,           !- Construction Name
     Z3,                      !- Zone Name
     ,                        !- Space Name
     Surface,                 !- Outside Boundary Condition
@@ -447,7 +452,7 @@ SizingPeriod:DesignDay, Winter Design Day in (mid) UK,  !- Design Day Name
   BuildingSurface:Detailed,
     IWH SURFACE EAST SOUTH,  !- Name
     Wall,                    !- Surface Type
-    IHW,                     !- Construction Name
+    INTERHOMEWALL,           !- Construction Name
     Z1,                      !- Zone Name
     ,                        !- Space Name
     Surface,                 !- Outside Boundary Condition
